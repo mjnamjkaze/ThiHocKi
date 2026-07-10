@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KiemTraHocKi" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#1A56DB</item>
+        <item name="colorPrimaryDark">#003FB1</item>
+        <item name="colorAccent">#006C49</item>
+        <item name="android:statusBarColor">#003FB1</item>
+        <item name="android:navigationBarColor">#F9F9FF</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+</resources>

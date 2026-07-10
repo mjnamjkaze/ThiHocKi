@@ -1,0 +1,19 @@
+# Gradle / Android
+.gradle/
+build/
+app/build/
+local.properties
+*.apk
+*.keystore
+
+# IDE
+.idea/
+*.iml
+
+# Node (dev server)
+node_modules/
+
+# Tài liệu nguồn của bên thứ ba (không phân phối lại)
+BO_DE_Toan_CK2__Lop_2_dfcd7.pdf
+stitch_semester_exam_platform.zip
+stitch_design/
