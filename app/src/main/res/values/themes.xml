@@ -7,5 +7,7 @@
         <item name="android:statusBarColor">#003FB1</item>
         <item name="android:navigationBarColor">#F9F9FF</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <!-- Android 15+ ép edge-to-edge: tắt để WebView không bị status bar đè lên -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
     </style>
 </resources>
