@@ -1,18 +1,19 @@
-# Ôn Thi Học Kì — Toán 2 Cuối Học Kì 2
+# Ôn Thi Học Kì — Toán 2 & Toán Tư Duy 2
 
-App Android giúp học sinh lớp 2 luyện **10 đề kiểm tra Toán cuối học kì 2** dưới dạng trắc nghiệm — chuyển thể đầy đủ từ bộ đề gốc (đủ đề, đủ câu, đủ hình minh họa), có chấm điểm theo biểu điểm 10 và lời giải chi tiết từng câu.
+App Android giúp học sinh lớp 2 luyện đề trắc nghiệm, chạy hoàn toàn offline:
+- **Toán 2 — Cuối học kì 2**: 10 đề (256 câu), chuyển thể đầy đủ từ bộ đề gốc, chấm theo biểu điểm 10
+- **Toán tư duy lớp 2**: 24 đề × 10 câu = **240 bài** chuyển thể từ "175 bài toán tư duy hàng tuần" + "1001 bài toán tư duy (phần 1, bài 1–65)"
 
 ## Tính năng
-- **256 câu hỏi / 10 đề**, mỗi đề 35 phút, thang điểm 10 đúng theo biểu điểm gốc
-- Mọi dạng bài (trắc nghiệm, tự luận, đúng/sai, nối, điền số, chắc chắn–có thể–không thể) đều được chuyển thể trắc nghiệm
-- Hình minh họa: sơ đồ/hình học vẽ lại bằng **SVG** sắc nét; ảnh gốc được xử lý tăng nét
+- Mọi dạng bài (trắc nghiệm, tự luận, đúng/sai, nối, điền số, quy luật hình…) đều chuyển thể trắc nghiệm 4 lựa chọn + **lời giải chi tiết từng câu**
+- Hình minh họa **vẽ lại bằng SVG** sắc nét, không watermark
 - Đồng hồ đếm ngược, lưới điều hướng câu hỏi, tự nộp khi hết giờ
-- Màn kết quả: vòng điểm, xếp loại, thống kê Đúng/Sai/Bỏ qua, **xem lời giải chi tiết**
+- Màn kết quả: vòng điểm, xếp loại, thống kê Đúng/Sai/Bỏ qua, xem lời giải
 - Lưu tiến độ & điểm cao nhất từng đề trên máy (localStorage) — chạy **hoàn toàn offline**
 
 ## Cấu trúc
-- `web/` — toàn bộ ứng dụng (HTML/CSS/JS + `data.js` chứa 10 đề + `assets/` hình)
-- `app/` — module Android (WebView + WebViewAssetLoader, đọc assets từ `../web`)
+- `web/` — toàn bộ ứng dụng (HTML/CSS/JS + `data.js` Toán CK2 + `data-tuduy.js` Toán tư duy + `assets/` hình, `assets/td/` hình tư duy)
+- `app/` — module Android (WebView + phục vụ assets nội bộ, đọc assets từ `../web`)
 
 ## Build
 ```powershell

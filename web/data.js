@@ -949,7 +949,10 @@ const EXAMS = [
 ];
 
 const SUBJECTS = [
-  { id: 'toan', name: 'Toán', icon: '∑', grade: 2, sem: 2, exams: EXAMS, ready: true },
+  { id: 'toan', name: 'Toán', short: 'Toán 2 CK2', icon: '∑', grade: 2, sem: 2, exams: EXAMS, ready: true,
+    heroTitle: 'Đề kiểm tra chất lượng cuối học kì 2',
+    heroMeta: '📚 10 đề &nbsp;•&nbsp; ⏱ 35 phút mỗi đề &nbsp;•&nbsp; đề gốc chuyển thể trắc nghiệm' },
+  // 'tuduy' được chèn vào vị trí thứ 2 bởi data-tuduy.js
   { id: 'tviet', name: 'Tiếng Việt', icon: '✎', ready: false },
   { id: 'tanh', name: 'Tiếng Anh', icon: 'A', ready: false },
   { id: 'tnxh', name: 'TN&XH', icon: '❀', ready: false },

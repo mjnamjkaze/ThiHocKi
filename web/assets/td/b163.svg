@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210">
+<polygon points="12,74 74,12 74,74" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,12 136,12 136,74" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,12 136,74 74,74" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="136,12 198,74 136,74" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="12,74 74,74 74,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="12,74 74,136 12,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,74 136,74 136,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,74 136,136 74,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="136,74 198,74 198,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="136,74 198,136 136,136" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="12,136 74,136 12,198" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,136 136,136 136,198" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="74,136 136,198 74,198" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="136,136 198,136 198,198" fill="#facc15" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

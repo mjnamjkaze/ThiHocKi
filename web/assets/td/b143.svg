@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 290">
+<line x1="240" y1="40" x2="240" y2="74" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="262" y1="18" x2="262" y2="52" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="262" y1="62" x2="262" y2="96" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="284" y1="18" x2="284" y2="52" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="284" y1="62" x2="284" y2="96" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="312" y1="8" x2="312" y2="108" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<line x1="334" y1="8" x2="334" y2="108" stroke="#a16207" stroke-width="7" stroke-linecap="round"/>
+<polygon points="40,140 74,140 74,170 96,170 57,248 18,170 40,170" fill="none" stroke="#a16207" stroke-width="4" stroke-linejoin="round"/>
+<text x="57" y="275" font-family="Arial" font-weight="bold" font-size="19" fill="#0f172a" text-anchor="middle" >(A)</text>
+<polygon points="150,145 186,145 200,170 214,145 250,145 250,245 150,245" fill="none" stroke="#a16207" stroke-width="4" stroke-linejoin="round"/>
+<text x="200" y="275" font-family="Arial" font-weight="bold" font-size="19" fill="#0f172a" text-anchor="middle" >(B)</text>
+<polygon points="300,175 325,152 340,138 355,152 380,175 340,248" fill="none" stroke="#a16207" stroke-width="4" stroke-linejoin="round"/>
+<text x="340" y="275" font-family="Arial" font-weight="bold" font-size="19" fill="#0f172a" text-anchor="middle" >(C)</text>
+<polygon points="430,140 466,140 466,175 500,175 500,208 534,208 534,245 430,245" fill="none" stroke="#a16207" stroke-width="4" stroke-linejoin="round"/>
+<text x="482" y="275" font-family="Arial" font-weight="bold" font-size="19" fill="#0f172a" text-anchor="middle" >(D)</text>
+</svg>

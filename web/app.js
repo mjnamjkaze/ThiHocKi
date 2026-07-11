@@ -18,6 +18,7 @@ const store = {
 
 const state = {
   screen: 'login',
+  subj: 'toan',        // môn đang xem (id trong SUBJECTS)
   examId: null,
   qIndex: 0,
   answers: {},
@@ -28,7 +29,16 @@ const state = {
   modal: null,
 };
 
-const getExam = (id) => EXAMS.find(e => e.id === id);
+const getSubject = (id) => SUBJECTS.find(s => s.id === id);
+const getExam = (id) => {
+  for (const s of SUBJECTS) {
+    if (!s.exams) continue;
+    const e = s.exams.find(e => e.id === id);
+    if (e) return e;
+  }
+  return null;
+};
+const subjectOfExam = (id) => SUBJECTS.find(s => s.exams && s.exams.some(e => e.id === id));
 const fmtScore = (s) => (Math.round(s * 100) / 100).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
@@ -55,7 +65,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.0 • Toán 2 — Bộ đề cuối học kì 2 (10 đề)</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.1 • Toán 2 (10 đề) + Toán tư duy 2 (24 đề)</div>
     </div>
   </div>`;
 }
@@ -70,13 +80,28 @@ window.doLogin = () => {
 function vHome() {
   const res = store.results;
   const done = EXAMS.filter(e => res[e.id]).length;
-  const avg = done ? EXAMS.reduce((s, e) => s + (res[e.id] ? res[e.id].best : 0), 0) / done : 0;
-  const bars = EXAMS.map(e => {
-    const b = res[e.id] ? res[e.id].best : 0;
-    const h = Math.max(4, Math.round(b / 10 * 100));
-    return `<div class="bar ${b >= 9 ? 'hi' : ''}" style="height:${h}%">${b ? `<span>${fmtScore(b)}</span>` : ''}</div>`;
+  // thẻ tiến độ cho từng môn đã mở
+  const progCards = SUBJECTS.filter(s => s.ready).map(sub => {
+    const ex = sub.exams;
+    const dn = ex.filter(e => res[e.id]).length;
+    const av = dn ? ex.reduce((t, e) => t + (res[e.id] ? res[e.id].best : 0), 0) / dn : 0;
+    const bars = ex.map(e => {
+      const b = res[e.id] ? res[e.id].best : 0;
+      const h = Math.max(4, Math.round(b / 10 * 100));
+      return `<div class="bar ${b >= 9 ? 'hi' : ''}" style="height:${h}%">${b && ex.length <= 12 ? `<span>${fmtScore(b)}</span>` : ''}</div>`;
+    }).join('');
+    const lbls = ex.length <= 12 ? `<div class="lbls">${ex.map((e, i) => `<div>Đ${i + 1}</div>`).join('')}</div>` : '';
+    return `
+    <div class="sect-title">${sub.name} — tiến độ</div>
+    <div class="card progress-card">
+      <div class="bars">${bars}</div>
+      ${lbls}
+      <div class="statline">
+        <div><div class="k">Đề đã làm</div><div class="v blue">${dn}/${ex.length}</div></div>
+        <div><div class="k">Điểm trung bình</div><div class="v green">${dn ? fmtScore(av) : '—'}</div></div>
+      </div>
+    </div>`;
   }).join('');
-  const lbls = EXAMS.map(e => `<div>Đ${e.id}</div>`).join('');
   return `
   <div class="topbar">
     <div class="avatar">${esc(store.user.charAt(0).toUpperCase() || 'H')}</div>
@@ -91,7 +116,7 @@ function vHome() {
       <span class="tag">KỲ THI SẮP TỚI</span>
       <h2>Toán 2 — Cuối học kì 2</h2>
       <div class="meta">⏱ 35 phút/đề &nbsp;•&nbsp; 📚 10 đề &nbsp;•&nbsp; hoàn thành ${done}/10</div>
-      <button class="btn" onclick="nav('subject')">Ôn tập ngay ▶</button>
+      <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
     </div>
 
     <div class="sect-title">Chọn lớp</div>
@@ -108,51 +133,46 @@ function vHome() {
     <div class="sect-title">Môn học</div>
     <div class="subj-grid">
       ${SUBJECTS.map(s => s.ready
-        ? `<button class="subj on" onclick="nav('subject')"><div class="ic">${s.icon}</div>${s.name}<span class="chip" style="font-size:11px;padding:3px 10px">10 đề</span></button>`
+        ? `<button class="subj on" onclick="nav('subject', {subj:'${s.id}'})"><div class="ic">${s.icon}</div>${s.name}<span class="chip" style="font-size:11px;padding:3px 10px">${s.exams.length} đề</span></button>`
         : `<div class="subj off"><div class="ic">${s.icon}</div>${s.name}<span class="soon">Sắp có</span></div>`).join('')}
     </div>
 
-    <div class="sect-title">Tiến độ học tập</div>
-    <div class="card progress-card">
-      <div class="bars">${bars}</div>
-      <div class="lbls">${lbls}</div>
-      <div class="statline">
-        <div><div class="k">Đề đã làm</div><div class="v blue">${done}/10</div></div>
-        <div><div class="k">Điểm trung bình</div><div class="v green">${done ? fmtScore(avg) : '—'}</div></div>
-      </div>
-    </div>
+    ${progCards}
   </div>`;
 }
 
 /* ================= SUBJECT (exam list) ================= */
 function vSubject() {
+  const sub = getSubject(state.subj) || SUBJECTS[0];
   const res = store.results;
-  const done = EXAMS.filter(e => res[e.id]).length;
-  const avg = done ? EXAMS.reduce((s, e) => s + (res[e.id] ? res[e.id].best : 0), 0) / done : 0;
+  const exams = sub.exams;
+  const done = exams.filter(e => res[e.id]).length;
+  const avg = done ? exams.reduce((s, e) => s + (res[e.id] ? res[e.id].best : 0), 0) / done : 0;
   return `
   <div class="topbar">
     <button class="icon-btn" onclick="nav('home')">←</button>
-    <h1>Môn Toán</h1>
+    <h1>Môn ${sub.name}</h1>
   </div>
   <div class="screen">
     <div class="hero">
       <span class="tag" style="background:var(--secondary-container);color:var(--secondary)">KHỐI 2</span>
-      <h2>Đề kiểm tra chất lượng cuối học kì 2</h2>
-      <div class="meta">📚 10 đề &nbsp;•&nbsp; ⏱ 35 phút mỗi đề &nbsp;•&nbsp; đề gốc chuyển thể trắc nghiệm</div>
+      <h2>${sub.heroTitle}</h2>
+      <div class="meta">${sub.heroMeta}</div>
     </div>
     <div class="row">
-      <div class="card" style="flex:1"><div class="small muted">Tiến độ</div><div class="v blue" style="font-size:22px;font-weight:800">${done}/10</div></div>
+      <div class="card" style="flex:1"><div class="small muted">Tiến độ</div><div class="v blue" style="font-size:22px;font-weight:800">${done}/${exams.length}</div></div>
       <div class="card" style="flex:1"><div class="small muted">Điểm trung bình</div><div class="v green" style="font-size:22px;font-weight:800">${done ? fmtScore(avg) : '—'}</div></div>
     </div>
     <div class="sect-title">Danh sách đề thi</div>
-    ${EXAMS.map(e => {
+    ${exams.map((e, i) => {
       const r = res[e.id];
+      const n = i + 1;
       return `
       <div class="card exam-item">
         <div class="head">
-          <div class="ic">${e.id < 10 ? '0' + e.id : e.id}</div>
+          <div class="ic">${n < 10 ? '0' + n : n}</div>
           <div>
-            <div class="ttl">${e.title} — Toán 2 CK2</div>
+            <div class="ttl">${e.title} — ${sub.short}</div>
             <div class="meta">⏱ ${e.time} phút · ${e.questions.length} câu hỏi · thang điểm 10</div>
           </div>
           ${r ? `<div class="badge-score"><div class="s">${fmtScore(r.best)}</div><div class="t">điểm cao nhất</div></div>` : ''}
@@ -169,6 +189,8 @@ function vSubject() {
 /* ================= EXAM ================= */
 window.startExam = (id) => {
   const exam = getExam(id);
+  const sub = subjectOfExam(id);
+  if (sub) state.subj = sub.id;
   state.examId = id;
   state.qIndex = 0;
   state.answers = {};
@@ -181,6 +203,8 @@ window.startExam = (id) => {
 window.reviewExam = (id) => {
   const r = store.results[id];
   if (!r) return;
+  const sub = subjectOfExam(id);
+  if (sub) state.subj = sub.id;
   state.examId = id;
   state.qIndex = 0;
   state.answers = r.last.answers;
@@ -388,7 +412,7 @@ function vResult() {
       </div>
       <span class="pass ${passed ? 'ok' : 'no'}">${rank}</span>
       <h2 style="margin:14px 0 4px;font-size:21px">Hoàn thành bài thi!</h2>
-      <div class="muted small">${exam.title} — Toán 2 Cuối học kì 2 ${r.auto ? '· (hết giờ, nộp tự động)' : ''}</div>
+      <div class="muted small">${exam.title} — ${(subjectOfExam(exam.id) || {}).short || ''} ${r.auto ? '· (hết giờ, nộp tự động)' : ''}</div>
       <div class="res-stats">
         <div><div class="n g">${r.correct}</div><div class="t">ĐÚNG</div></div>
         <div><div class="n r">${r.wrong}</div><div class="t">SAI</div></div>

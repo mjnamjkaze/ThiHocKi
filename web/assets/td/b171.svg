@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446 222">
+<defs><marker id="ka" markerWidth="9" markerHeight="9" refX="5.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#334155"/></marker></defs>
+<defs><marker id="kb" markerWidth="9" markerHeight="9" refX="1.5" refY="3" orient="auto"><path d="M7,0 L0,3 L7,6 Z" fill="#334155"/></marker></defs>
+<rect x="12" y="12" width="198" height="198" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<line x1="29" y1="61" x2="61" y2="29" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<line x1="133" y1="23" x2="89" y2="67" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)" marker-start="url(#kb)"/>
+<line x1="193" y1="29" x2="161" y2="61" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<polygon points="57,91 57,131 29,111" fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="91" y="91" width="40" height="40" rx="0" fill="none" stroke="#334155" stroke-width="2.5"/>
+<line x1="91" y1="91" x2="131" y2="131" stroke="#334155" stroke-width="2.5" />
+<line x1="131" y1="91" x2="91" y2="131" stroke="#334155" stroke-width="2.5" />
+<polygon points="165,91 165,131 193,111" fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="29" y1="161" x2="61" y2="193" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<line x1="89" y1="155" x2="133" y2="199" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)" marker-start="url(#kb)"/>
+<text x="177" y="189" font-family="Arial" font-weight="bold" font-size="36" fill="#e11d48" text-anchor="middle" >?</text>
+<line x1="270" y1="68" x2="238" y2="36" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<text x="254" y="98" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >A</text>
+<line x1="334" y1="36" x2="366" y2="68" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<text x="350" y="98" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >B</text>
+<line x1="238" y1="168" x2="270" y2="136" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<text x="254" y="198" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >C</text>
+<line x1="366" y1="136" x2="334" y2="168" stroke="#334155" stroke-width="2.5" marker-end="url(#ka)"/>
+<text x="350" y="198" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >D</text>
+</svg>

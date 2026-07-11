@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 165">
+<text x="90" y="40" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >T</text>
+<text x="124" y="40" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >S</text>
+<text x="158" y="40" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >P</text>
+<text x="90" y="88" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >P</text>
+<text x="124" y="88" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >S</text>
+<text x="158" y="88" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >P</text>
+<text x="44" y="84" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >+</text>
+<line x1="30" y1="106" x2="200" y2="106" stroke="#334155" stroke-width="3" />
+<text x="56" y="146" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >P</text>
+<text x="90" y="146" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >Q</text>
+<text x="124" y="146" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >R</text>
+<text x="158" y="146" font-family="Arial" font-weight="bold" font-size="34" fill="#0f172a" text-anchor="middle" >S</text>
+</svg>

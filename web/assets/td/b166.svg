@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228 228">
+<rect x="10" y="10" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="62" y="10" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="114" y="10" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="166" y="10" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="10" y="62" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="62" y="62" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="114" y="62" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="166" y="62" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="10" y="114" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="62" y="114" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="114" y="114" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="166" y="114" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="10" y="166" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="62" y="166" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="114" y="166" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<rect x="166" y="166" width="52" height="52" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<text x="36" y="45" font-family="Arial" font-weight="bold" font-size="26" fill="#0f172a" text-anchor="middle" >1</text>
+<text x="140" y="45" font-family="Arial" font-weight="bold" font-size="26" fill="#0f172a" text-anchor="middle" >2</text>
+<text x="36" y="97" font-family="Arial" font-weight="bold" font-size="26" fill="#0f172a" text-anchor="middle" >2</text>
+<text x="88" y="97" font-family="Arial" font-weight="bold" font-size="26" fill="#0f172a" text-anchor="middle" >3</text>
+<text x="192" y="149" font-family="Arial" font-weight="bold" font-size="26" fill="#0f172a" text-anchor="middle" >4</text>
+<text x="192" y="201" font-family="Arial" font-weight="bold" font-size="26" fill="#e11d48" text-anchor="middle" >?</text>
+</svg>
