@@ -1,6 +1,7 @@
 package com.gsvn.kiemtrahocki;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.webkit.WebResourceRequest;
@@ -11,6 +12,11 @@ import android.webkit.WebViewClient;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -37,8 +43,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Edge-to-edge nhất quán mọi phiên bản Android, rồi tự chèn padding theo insets
+        // (không phụ thuộc env(safe-area) của WebView) để status bar không đè lên nội dung.
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+
         webView = new WebView(this);
+        webView.setBackgroundColor(Color.parseColor("#F9F9FF")); // dải status/nav bar sáng, khớp nền app
         setContentView(webView);
+
+        // Nền app sáng -> icon status bar / nav bar màu tối cho dễ nhìn
+        WindowInsetsControllerCompat ic = WindowCompat.getInsetsController(getWindow(), webView);
+        ic.setAppearanceLightStatusBars(true);
+        ic.setAppearanceLightNavigationBars(true);
+
+        // Đẩy nội dung xuống dưới status bar, lên trên navigation bar & tránh tai thỏ
+        ViewCompat.setOnApplyWindowInsetsListener(webView, (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return insets;
+        });
 
         WebSettings s = webView.getSettings();
         s.setJavaScriptEnabled(true);

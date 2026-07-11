@@ -298,12 +298,7 @@ function vQnav(exam) {
 window.pick = (k) => {
   if (state.mode === 'review') return;
   state.answers[state.qIndex] = k;
-  render();
-  // tự chuyển câu sau 250ms cho mượt
-  const exam = getExam(state.examId);
-  if (state.qIndex < exam.questions.length - 1) {
-    setTimeout(() => { if (state.screen === 'exam' && state.mode === 'take') { state.qIndex++; render(); window.scrollTo(0, 0); } }, 350);
-  }
+  render();   // chỉ chọn đáp án, KHÔNG tự chuyển câu — học sinh tự bấm "Câu sau"
 };
 window.go = (d) => {
   const exam = getExam(state.examId);
