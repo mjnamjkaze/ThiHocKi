@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+<circle cx="70" cy="70" r="62" fill="#fff" stroke="#334155" stroke-width="4"/>
+<g font-family="Arial" font-size="13" font-weight="bold" fill="#334155" text-anchor="middle">
+<text x="70" y="21">12</text><text x="97" y="28">1</text><text x="117" y="48">2</text>
+<text x="124" y="75">3</text><text x="117" y="101">4</text><text x="97" y="121">5</text>
+<text x="70" y="128">6</text><text x="43" y="121">7</text><text x="23" y="101">8</text>
+<text x="16" y="75">9</text><text x="23" y="48">10</text><text x="43" y="28">11</text>
+</g>
+<g stroke="#334155" stroke-linecap="round">
+<line x1="70" y1="70" x2="70" y2="44" stroke-width="6" transform="rotate(230 70 70)"/>
+<line x1="70" y1="70" x2="70" y2="30" stroke-width="4" transform="rotate(240 70 70)"/>
+</g>
+<circle cx="70" cy="70" r="4" fill="#334155"/>
+</svg>
