@@ -4,6 +4,22 @@
 const $ = (s, el = document) => el.querySelector(s);
 const app = $('#app');
 
+/* URL Web App của Google Apps Script (xem GOOGLE_SHEET.md). Để trống = không gửi thống kê. */
+const SHEET_ENDPOINT = '';
+
+function sendResult(exam, res) {
+  if (!SHEET_ENDPOINT) return;
+  const sub = subjectOfExam(exam.id) || {};
+  fetch(SHEET_ENDPOINT, {
+    method: 'POST',
+    body: JSON.stringify({
+      user: store.user, subject: sub.short || sub.name || '', exam: exam.title,
+      score: res.score, correct: res.correct, wrong: res.wrong, skip: res.skip,
+      auto: res.auto, date: res.date,
+    }),
+  }).catch(() => {}); // mất mạng / lỗi server thì bỏ qua, không ảnh hưởng làm bài
+}
+
 const store = {
   get user() { return localStorage.getItem('otk.user') || ''; },
   set user(v) { localStorage.setItem('otk.user', v); },
@@ -379,6 +395,7 @@ window.doSubmit = (auto = false) => {
   score = Math.round(score * 100) / 100;
   const res = { score, correct, wrong, skip, answers: { ...state.answers }, date: new Date().toISOString(), auto };
   store.saveResult(exam.id, res);
+  sendResult(exam, res);
   state.lastResult = res;
   state.lastResultExam = exam.id;
   state.mode = 'review';
@@ -421,6 +438,7 @@ function vResult() {
     </div>
 
     <button class="btn btn-primary" onclick="reviewExam(${exam.id})">📖 Xem lời giải chi tiết</button>
+    <button class="btn btn-tonal" id="btn-share" onclick="shareResult()">📤 Chia sẻ kết quả</button>
     <div class="row">
       <button class="btn btn-tonal" style="flex:1" onclick="startExam(${exam.id})">↻ Làm lại</button>
       <button class="btn btn-ghost" style="flex:1" onclick="nav('home')">🏠 Trang chủ</button>
@@ -442,6 +460,44 @@ function vResult() {
     </div>
   </div>`;
 }
+window.shareResult = async () => {
+  const exam = getExam(state.examId);
+  const r = (state.lastResult && state.lastResultExam === state.examId)
+    ? state.lastResult : (store.results[state.examId] || {}).last;
+  if (!r) return;
+  const sub = subjectOfExam(exam.id) || {};
+  const rank = r.score >= 9 ? 'XUẤT SẮC 🌟' : r.score >= 7 ? 'GIỎI 👍' : r.score >= 5 ? 'ĐẠT ✓' : 'CẦN CỐ GẮNG 💪';
+  const when = new Date(r.date).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
+  const text = [
+    '📊 KẾT QUẢ ÔN THI HỌC KÌ',
+    `👦 Học sinh: ${store.user}`,
+    `📚 ${exam.title} — ${sub.short || ''}`,
+    `⭐ Điểm: ${fmtScore(r.score)}/10 — ${rank}`,
+    `✓ Đúng ${r.correct} · ✗ Sai ${r.wrong} · ⊘ Bỏ qua ${r.skip}`,
+    `🕐 ${when}`,
+    '🔗 https://mjnamjkaze.github.io/ThiHocKi/',
+  ].join('\n');
+  if (navigator.share) {
+    try { await navigator.share({ text }); return; }
+    catch (e) { if (e.name === 'AbortError') return; }
+  }
+  let copied = false;
+  try { await navigator.clipboard.writeText(text); copied = true; } catch {}
+  if (!copied) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { copied = document.execCommand('copy'); } catch {}
+    ta.remove();
+  }
+  const btn = $('#btn-share');
+  if (btn) {
+    btn.textContent = copied ? '✓ Đã sao chép — dán vào Zalo để gửi' : '⚠ Không sao chép được';
+    setTimeout(() => { const b = $('#btn-share'); if (b) b.textContent = '📤 Chia sẻ kết quả'; }, 2500);
+  }
+};
 window.openReviewAt = (i) => {
   const r = (state.lastResult && state.lastResultExam === state.examId)
     ? state.lastResult : (store.results[state.examId] || {}).last;
