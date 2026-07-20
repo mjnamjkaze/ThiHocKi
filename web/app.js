@@ -244,32 +244,15 @@ const fmtTime = (ms) => {
   return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
 };
 
-function vExam() {
-  const exam = getExam(state.examId);
-  const q = exam.questions[state.qIndex];
-  const n = exam.questions.length;
-  const answered = Object.keys(state.answers).length;
-  const picked = state.answers[state.qIndex];
+const isWide = () => window.matchMedia('(min-width: 900px)').matches;
+
+function vQcard(exam, i) {
+  const q = exam.questions[i];
+  const picked = state.answers[i];
   const review = state.mode === 'review';
   const imgs = q.imgs || (q.img ? [q.img] : []);
   return `
-  <div class="exam-top">
-    <div class="r1">
-      <button class="icon-btn" onclick="askExit()">←</button>
-      <div class="ttl">${exam.title}</div>
-      ${review
-        ? `<span class="chip">Chế độ xem lại</span>`
-        : `<span class="timer" id="timer">${fmtTime(state.endTime - Date.now())}</span>
-           <button class="btn-submit" onclick="askSubmit()">Nộp bài</button>`}
-    </div>
-    <div class="r2">
-      <div class="prog-txt">Câu <b>${state.qIndex + 1}</b>/${n}</div>
-      <div class="track"><div class="fill" style="width:${Math.round(answered / n * 100)}%"></div></div>
-      <div class="prog-txt">${Math.round(answered / n * 100)}%</div>
-    </div>
-  </div>
-  <div class="screen">
-    <div class="qcard">
+    <div class="qcard" id="q-${i}">
       <div class="qhead">
         <span class="qnum">${q.name}</span>
         <span class="qpts">(${q.pts} điểm)</span>
@@ -285,7 +268,7 @@ function vExam() {
             if (o.k === q.ans) cls += ' correct';
             else if (picked === o.k) cls += ' wrong';
           } else if (picked === o.k) cls += ' sel';
-          return `<button class="${cls}" onclick="pick('${o.k}')">
+          return `<button class="${cls}" onclick="pickAt(${i}, '${o.k}')">
             <span class="k">${o.k}</span>
             ${o.img ? `<img src="${o.img}" alt="Đáp án ${o.k}">` : `<span>${o.t}</span>`}
           </button>`;
@@ -293,7 +276,55 @@ function vExam() {
       </div>
       ${review ? `<div class="why"><b>Đáp án đúng: ${q.ans}.</b> ${q.why}
         ${picked ? (picked === q.ans ? ' <b style="color:var(--secondary)">✓ Em chọn đúng!</b>' : ` <b style="color:var(--error)">✗ Em đã chọn ${picked}.</b>`) : ' <b style="color:var(--tertiary)">Em chưa trả lời câu này.</b>'}</div>` : ''}
+    </div>`;
+}
+
+function vExamTop(exam) {
+  const n = exam.questions.length;
+  const answered = Object.keys(state.answers).length;
+  const review = state.mode === 'review';
+  return `
+  <div class="exam-top">
+    <div class="r1">
+      <button class="icon-btn" onclick="askExit()">←</button>
+      <div class="ttl">${exam.title}</div>
+      ${review
+        ? `<span class="chip">Chế độ xem lại</span>`
+        : `<span class="timer" id="timer">${fmtTime(state.endTime - Date.now())}</span>
+           <button class="btn-submit" onclick="askSubmit()">Nộp bài</button>`}
     </div>
+    <div class="r2">
+      <div class="prog-txt">${isWide() ? `Đã làm <b>${answered}</b>/${n}` : `Câu <b>${state.qIndex + 1}</b>/${n}`}</div>
+      <div class="track"><div class="fill" style="width:${Math.round(answered / n * 100)}%"></div></div>
+      <div class="prog-txt">${Math.round(answered / n * 100)}%</div>
+    </div>
+  </div>`;
+}
+
+/* Màn hình rộng (PC): trải toàn bộ câu hỏi trên một trang cuộn dọc */
+function vExamAll(exam) {
+  const review = state.mode === 'review';
+  return `
+  ${vExamTop(exam)}
+  <div class="screen exam-all">
+    ${exam.questions.map((q, i) => vQcard(exam, i)).join('')}
+    ${review
+      ? `<button class="btn btn-primary" onclick="nav('result')">Kết quả ›</button>`
+      : `<button class="btn btn-primary" onclick="askSubmit()">Nộp bài ✓</button>`}
+  </div>
+  ${state.modal || ''}`;
+}
+
+function vExam() {
+  const exam = getExam(state.examId);
+  if (isWide()) return vExamAll(exam);
+  const q = exam.questions[state.qIndex];
+  const n = exam.questions.length;
+  const review = state.mode === 'review';
+  return `
+  ${vExamTop(exam)}
+  <div class="screen">
+    ${vQcard(exam, state.qIndex)}
     <div class="exam-nav">
       <button class="btn btn-outline" ${state.qIndex === 0 ? 'disabled style="opacity:.4"' : ''} onclick="go(-1)">‹ Câu trước</button>
       <button class="btn btn-ghost sq" onclick="toggleNav(true)">▦</button>
@@ -335,17 +366,23 @@ function vQnav(exam) {
   </div>`;
 }
 
-window.pick = (k) => {
+window.pickAt = (i, k) => {
   if (state.mode === 'review') return;
-  state.answers[state.qIndex] = k;
+  state.answers[i] = k;
+  const y = window.scrollY;
   render();   // chỉ chọn đáp án, KHÔNG tự chuyển câu — học sinh tự bấm "Câu sau"
+  window.scrollTo(0, y);
 };
 window.go = (d) => {
   const exam = getExam(state.examId);
   state.qIndex = Math.min(exam.questions.length - 1, Math.max(0, state.qIndex + d));
   render(); window.scrollTo(0, 0);
 };
-window.jump = (i) => { state.qIndex = i; state.showNav = false; render(); window.scrollTo(0, 0); };
+window.jump = (i) => {
+  state.qIndex = i; state.showNav = false; render();
+  const el = isWide() ? document.getElementById('q-' + i) : null;
+  if (el) el.scrollIntoView(); else window.scrollTo(0, 0);
+};
 window.toggleNav = (v) => { state.showNav = v; render(); };
 
 window.askExit = () => {
@@ -505,6 +542,10 @@ window.openReviewAt = (i) => {
   state.mode = 'review';
   state.qIndex = i;
   nav('exam');
+  if (isWide()) {
+    const el = document.getElementById('q-' + i);
+    if (el) el.scrollIntoView();
+  }
 };
 
 /* ================= Android back button ================= */
@@ -535,6 +576,9 @@ function render() {
 }
 window.nav = nav;
 window.state = state;
+
+/* đổi kích thước cửa sổ qua ngưỡng desktop/mobile -> vẽ lại layout bài thi */
+window.matchMedia('(min-width: 900px)').addEventListener('change', () => render());
 
 render();
 if (store.user) nav('home');

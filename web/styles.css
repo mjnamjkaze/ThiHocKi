@@ -263,3 +263,26 @@ table.cal td.q { color: var(--error); font-weight: 800; }
   .subj-grid { grid-template-columns: repeat(4, 1fr); }
   .qnav .grid { grid-template-columns: repeat(10, 1fr); }
 }
+
+/* ===== desktop: trải hết câu hỏi 1 trang + chữ/hình to hơn ===== */
+@media (min-width: 900px) {
+  #app { max-width: 980px; }
+  .qcard { padding: 26px 30px; scroll-margin-top: 120px; }
+  .qcard + .qcard { margin-top: 8px; }
+  .qnum { font-size: 16px; padding: 7px 16px; }
+  .qpts { font-size: 14.5px; }
+  .qsec { font-size: 13.5px; }
+  .qtext { font-size: 22px; line-height: 1.6; }
+  .qimg { max-height: 480px; }
+  .opt { font-size: 20px; padding: 16px 18px; gap: 14px; }
+  .opt .k { width: 42px; height: 42px; font-size: 17px; }
+  .opt img { max-height: 110px; }
+  .why { font-size: 17px; line-height: 1.6; }
+  .exam-top .ttl { font-size: 19px; }
+  .timer { font-size: 17px; }
+  .btn-submit { font-size: 16px; padding: 10px 20px; }
+  .exam-all > .btn { margin-top: 8px; padding: 18px; font-size: 19px; }
+  table.cal { max-width: 560px; }
+  table.cal th { font-size: 18px; }
+  table.cal td { font-size: 17px; padding: 9px 6px; }
+}
