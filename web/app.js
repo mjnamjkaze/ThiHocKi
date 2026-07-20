@@ -5,7 +5,7 @@ const $ = (s, el = document) => el.querySelector(s);
 const app = $('#app');
 
 /* URL Web App của Google Apps Script (xem GOOGLE_SHEET.md). Để trống = không gửi thống kê. */
-const SHEET_ENDPOINT = '';
+const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyam1x-nBAO3SDF3t3jkWUx1g5S9lFxmdU3-zh44ApOVNjm8L798XawBy4vn1hWEZNa/exec';
 
 function sendResult(exam, res) {
   if (!SHEET_ENDPOINT) return;
