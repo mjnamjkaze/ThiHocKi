@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200">
+  <!-- 3 can thang bang: 20 ot = 1 cu den; 2 cu den = 1 cu cai trang; 1 cu cai trang = ? ot -->
+  <rect x="0" y="0" width="720" height="200" fill="#fff" rx="8"/>
+  <g stroke="#333" stroke-width="4" fill="none" stroke-linecap="round">
+    <line x1="30" y1="125" x2="255" y2="125"/>
+    <path d="M25,105 L40,121 L135,121 L150,105" />
+    <path d="M185,105 L200,121 L245,121 L260,105" />
+    <line x1="300" y1="125" x2="490" y2="125"/>
+    <path d="M300,105 L315,121 L380,121 L395,105" />
+    <path d="M400,105 L415,121 L480,121 L495,105" />
+    <line x1="530" y1="125" x2="700" y2="125"/>
+    <path d="M530,105 L545,121 L610,121 L625,105" />
+    <path d="M630,105 L645,121 L695,121 L710,105" />
+  </g>
+  <g fill="#555">
+    <polygon points="130,168 154,168 142,127"/>
+    <polygon points="383,168 407,168 395,127"/>
+    <polygon points="603,168 627,168 615,127"/>
+  </g>
+  <!-- 20 qua ot (2 hang x 10) -->
+  <g font-family="system-ui" font-size="13" text-anchor="middle">
+    <text x="33" y="88">🌶️</text><text x="44" y="88">🌶️</text><text x="55" y="88">🌶️</text><text x="66" y="88">🌶️</text><text x="77" y="88">🌶️</text><text x="88" y="88">🌶️</text><text x="99" y="88">🌶️</text><text x="110" y="88">🌶️</text><text x="121" y="88">🌶️</text><text x="132" y="88">🌶️</text>
+    <text x="33" y="103">🌶️</text><text x="44" y="103">🌶️</text><text x="55" y="103">🌶️</text><text x="66" y="103">🌶️</text><text x="77" y="103">🌶️</text><text x="88" y="103">🌶️</text><text x="99" y="103">🌶️</text><text x="110" y="103">🌶️</text><text x="121" y="103">🌶️</text><text x="132" y="103">🌶️</text>
+  </g>
+  <!-- cu den (tim tron) -->
+  <g fill="#b05fa0" stroke="#7c3f70" stroke-width="2">
+    <circle cx="222" cy="90" r="15"/>
+    <circle cx="330" cy="92" r="15"/>
+    <circle cx="365" cy="92" r="15"/>
+  </g>
+  <g stroke="#3f8f3f" stroke-width="3" stroke-linecap="round">
+    <line x1="222" y1="75" x2="222" y2="66"/>
+    <line x1="330" y1="77" x2="330" y2="68"/>
+    <line x1="365" y1="77" x2="365" y2="68"/>
+  </g>
+  <!-- cu cai trang (dai trang) -->
+  <g fill="#f7f7ee" stroke="#8a8a7a" stroke-width="2">
+    <ellipse cx="447" cy="96" rx="38" ry="12"/>
+    <ellipse cx="577" cy="96" rx="38" ry="12"/>
+  </g>
+  <g stroke="#3f8f3f" stroke-width="3" stroke-linecap="round">
+    <line x1="412" y1="90" x2="404" y2="82"/>
+    <line x1="542" y1="90" x2="534" y2="82"/>
+  </g>
+  <text x="668" y="102" font-family="system-ui" font-size="34" font-weight="bold" fill="#d33" text-anchor="middle">?</text>
+  <g font-family="system-ui" font-size="18" text-anchor="middle" fill="#555">
+    <text x="82" y="192">20 quả ớt</text>
+    <text x="222" y="192">củ dền</text>
+    <text x="347" y="192">2 củ dền</text>
+    <text x="447" y="192">củ cải trắng</text>
+    <text x="577" y="192">củ cải trắng</text>
+    <text x="668" y="192">? quả ớt</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220">
+  <rect x="0" y="0" width="700" height="220" fill="#fff" rx="8"/>
+  <g stroke="#333" stroke-width="3" fill="none" stroke-linecap="round">
+    <polyline points="30,160 210,160 250,80 290,160 520,160 670,90"/>
+  </g>
+  <g fill="#e05a2b">
+    <circle cx="30" cy="160" r="5"/>
+    <circle cx="210" cy="160" r="5"/>
+    <circle cx="250" cy="80" r="5"/>
+    <circle cx="290" cy="160" r="5"/>
+    <circle cx="520" cy="160" r="5"/>
+    <circle cx="670" cy="90" r="5"/>
+  </g>
+  <g font-family="system-ui" font-size="28" font-weight="bold" fill="#1565c0" text-anchor="middle">
+    <text x="26" y="140">A</text>
+    <text x="208" y="196">B</text>
+    <text x="250" y="60">C</text>
+    <text x="292" y="196">D</text>
+    <text x="520" y="196">E</text>
+    <text x="674" y="70">G</text>
+  </g>
+  <g font-family="system-ui" font-size="21" fill="#222" text-anchor="middle">
+    <text x="120" y="150">7 cm</text>
+    <text x="205" y="112">3 cm</text>
+    <text x="297" y="112">3 cm</text>
+    <text x="405" y="150">12 cm</text>
+    <text x="590" y="108">9 cm</text>
+  </g>
+</svg>

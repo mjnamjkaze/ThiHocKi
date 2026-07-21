@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" font-family="system-ui" stroke="#333" stroke-width="2" stroke-linejoin="round">
+  <rect x="0" y="0" width="700" height="330" rx="8" fill="#fff" stroke="none"/>
+  <!-- goc tuong va san -->
+  <line x1="350" y1="10" x2="350" y2="52" stroke-width="3"/>
+  <line x1="140" y1="278" x2="55" y2="315" stroke-width="3"/>
+  <line x1="560" y1="278" x2="645" y2="315" stroke-width="3"/>
+  <!-- thap lap phuong: hang 1-3-5-7 khoi nhin thay -->
+  <!-- hang 1 -->
+  <g>
+    <polygon points="350,52 380,66 350,80 320,66" fill="#ecf0f1"/>
+    <polygon points="320,66 350,80 350,114 320,100" fill="#7f8c8d"/>
+    <polygon points="350,80 380,66 380,100 350,114" fill="#bdc3c7"/>
+  </g>
+  <!-- hang 2: 3 khoi -->
+  <g>
+    <polygon points="290,100 320,114 290,128 260,114" fill="#ecf0f1"/><polygon points="260,114 290,128 290,162 260,148" fill="#7f8c8d"/><polygon points="290,128 320,114 320,148 290,162" fill="#bdc3c7"/>
+    <polygon points="350,100 380,114 350,128 320,114" fill="#ecf0f1"/><polygon points="320,114 350,128 350,162 320,148" fill="#7f8c8d"/><polygon points="350,128 380,114 380,148 350,162" fill="#bdc3c7"/>
+    <polygon points="410,100 440,114 410,128 380,114" fill="#ecf0f1"/><polygon points="380,114 410,128 410,162 380,148" fill="#7f8c8d"/><polygon points="410,128 440,114 440,148 410,162" fill="#bdc3c7"/>
+  </g>
+  <!-- hang 3: 5 khoi -->
+  <g>
+    <polygon points="230,148 260,162 230,176 200,162" fill="#ecf0f1"/><polygon points="200,162 230,176 230,210 200,196" fill="#7f8c8d"/><polygon points="230,176 260,162 260,196 230,210" fill="#bdc3c7"/>
+    <polygon points="290,148 320,162 290,176 260,162" fill="#ecf0f1"/><polygon points="260,162 290,176 290,210 260,196" fill="#7f8c8d"/><polygon points="290,176 320,162 320,196 290,210" fill="#bdc3c7"/>
+    <polygon points="350,148 380,162 350,176 320,162" fill="#ecf0f1"/><polygon points="320,162 350,176 350,210 320,196" fill="#7f8c8d"/><polygon points="350,176 380,162 380,196 350,210" fill="#bdc3c7"/>
+    <polygon points="410,148 440,162 410,176 380,162" fill="#ecf0f1"/><polygon points="380,162 410,176 410,210 380,196" fill="#7f8c8d"/><polygon points="410,176 440,162 440,196 410,210" fill="#bdc3c7"/>
+    <polygon points="470,148 500,162 470,176 440,162" fill="#ecf0f1"/><polygon points="440,162 470,176 470,210 440,196" fill="#7f8c8d"/><polygon points="470,176 500,162 500,196 470,210" fill="#bdc3c7"/>
+  </g>
+  <!-- hang 4: 7 khoi -->
+  <g>
+    <polygon points="170,196 200,210 170,224 140,210" fill="#ecf0f1"/><polygon points="140,210 170,224 170,258 140,244" fill="#7f8c8d"/><polygon points="170,224 200,210 200,244 170,258" fill="#bdc3c7"/>
+    <polygon points="230,196 260,210 230,224 200,210" fill="#ecf0f1"/><polygon points="200,210 230,224 230,258 200,244" fill="#7f8c8d"/><polygon points="230,224 260,210 260,244 230,258" fill="#bdc3c7"/>
+    <polygon points="290,196 320,210 290,224 260,210" fill="#ecf0f1"/><polygon points="260,210 290,224 290,258 260,244" fill="#7f8c8d"/><polygon points="290,224 320,210 320,244 290,258" fill="#bdc3c7"/>
+    <polygon points="350,196 380,210 350,224 320,210" fill="#ecf0f1"/><polygon points="320,210 350,224 350,258 320,244" fill="#7f8c8d"/><polygon points="350,224 380,210 380,244 350,258" fill="#bdc3c7"/>
+    <polygon points="410,196 440,210 410,224 380,210" fill="#ecf0f1"/><polygon points="380,210 410,224 410,258 380,244" fill="#7f8c8d"/><polygon points="410,224 440,210 440,244 410,258" fill="#bdc3c7"/>
+    <polygon points="470,196 500,210 470,224 440,210" fill="#ecf0f1"/><polygon points="440,210 470,224 470,258 440,244" fill="#7f8c8d"/><polygon points="470,224 500,210 500,244 470,258" fill="#bdc3c7"/>
+    <polygon points="530,196 560,210 530,224 500,210" fill="#ecf0f1"/><polygon points="500,210 530,224 530,258 500,244" fill="#7f8c8d"/><polygon points="530,224 560,210 560,244 530,258" fill="#bdc3c7"/>
+  </g>
+</svg>

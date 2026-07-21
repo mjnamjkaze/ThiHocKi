@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 215">
+  <rect x="0" y="0" width="700" height="215" rx="8" fill="#fff"/>
+  <g stroke="#333" stroke-width="2" fill="#eaf4ff">
+    <!-- Hình 1: 1 dọc + 1 góc + 1 ngang -->
+    <rect x="60" y="124" width="26" height="26"/>
+    <rect x="60" y="150" width="26" height="26"/>
+    <rect x="86" y="150" width="26" height="26"/>
+    <!-- Hình 2 -->
+    <rect x="180" y="98"  width="26" height="26"/>
+    <rect x="180" y="124" width="26" height="26"/>
+    <rect x="180" y="150" width="26" height="26"/>
+    <rect x="206" y="150" width="26" height="26"/>
+    <rect x="232" y="150" width="26" height="26"/>
+    <!-- Hình 3 -->
+    <rect x="330" y="72"  width="26" height="26"/>
+    <rect x="330" y="98"  width="26" height="26"/>
+    <rect x="330" y="124" width="26" height="26"/>
+    <rect x="330" y="150" width="26" height="26"/>
+    <rect x="356" y="150" width="26" height="26"/>
+    <rect x="382" y="150" width="26" height="26"/>
+    <rect x="408" y="150" width="26" height="26"/>
+    <!-- Hình 4 -->
+    <rect x="510" y="46"  width="26" height="26"/>
+    <rect x="510" y="72"  width="26" height="26"/>
+    <rect x="510" y="98"  width="26" height="26"/>
+    <rect x="510" y="124" width="26" height="26"/>
+    <rect x="510" y="150" width="26" height="26"/>
+    <rect x="536" y="150" width="26" height="26"/>
+    <rect x="562" y="150" width="26" height="26"/>
+    <rect x="588" y="150" width="26" height="26"/>
+    <rect x="614" y="150" width="26" height="26"/>
+  </g>
+  <g font-family="system-ui" font-size="20" fill="#333" text-anchor="middle">
+    <text x="86"  y="202">Hình 1</text>
+    <text x="219" y="202">Hình 2</text>
+    <text x="382" y="202">Hình 3</text>
+    <text x="575" y="202">Hình 4</text>
+  </g>
+</svg>

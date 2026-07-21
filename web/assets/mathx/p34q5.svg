@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300">
+  <rect x="0" y="0" width="700" height="300" fill="#fff" rx="8"/>
+  <!-- luoi 4x4 don vi 70px, goc (210,10); ve theo hinh goc PDF -->
+  <g stroke="#333" stroke-width="3" fill="#fdf6d8" stroke-linejoin="round">
+    <!-- tren: chu nhat 2x1 (cot 2-3) -->
+    <rect x="280" y="10" width="140" height="70"/>
+    <!-- dai giua: rong 4, cao 2 -->
+    <rect x="210" y="80" width="280" height="140"/>
+    <!-- duoi: rong 3, cao 1 (cot 1-3) -->
+    <rect x="210" y="220" width="210" height="70"/>
+  </g>
+  <g stroke="#333" stroke-width="3" fill="none">
+    <!-- cac duong chia trong dai giua: 3 duong doc, 1 duong ngang o giua (chi cot 2-3) -->
+    <line x1="280" y1="80" x2="280" y2="220"/>
+    <line x1="350" y1="80" x2="350" y2="220"/>
+    <line x1="420" y1="80" x2="420" y2="220"/>
+    <line x1="280" y1="150" x2="420" y2="150"/>
+    <!-- duong chia o dai duoi -->
+    <line x1="280" y1="220" x2="280" y2="290"/>
+  </g>
+</svg>

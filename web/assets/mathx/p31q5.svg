@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 270">
+  <rect x="0" y="0" width="700" height="270" fill="#fff" rx="8"/>
+  <g font-family="system-ui" font-size="26" font-weight="bold" text-anchor="middle">
+    <!-- grid cells -->
+    <g stroke="#333" stroke-width="2.5">
+      <rect x="250" y="10" width="50" height="50" fill="#fff3c4"/>
+      <rect x="300" y="10" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="350" y="10" width="50" height="50" fill="#fff3c4"/>
+      <rect x="400" y="10" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="250" y="60" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="300" y="60" width="50" height="50" fill="#fff3c4"/>
+      <rect x="350" y="60" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="400" y="60" width="50" height="50" fill="#fff3c4"/>
+      <rect x="250" y="110" width="50" height="50" fill="#fff3c4"/>
+      <rect x="300" y="110" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="350" y="110" width="50" height="50" fill="#fff3c4"/>
+      <rect x="400" y="110" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="250" y="160" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="300" y="160" width="50" height="50" fill="#fff3c4"/>
+      <rect x="350" y="160" width="50" height="50" fill="#d9f2ff"/>
+      <rect x="400" y="160" width="50" height="50" fill="#fff3c4"/>
+    </g>
+    <!-- letters -->
+    <g fill="#222">
+      <text x="275" y="44">B</text><text x="325" y="44">K</text><text x="375" y="44">Z</text><text x="425" y="44">E</text>
+      <text x="275" y="94">P</text><text x="325" y="94">A</text><text x="375" y="94">F</text><text x="425" y="94">H</text>
+      <text x="275" y="144">S</text><text x="325" y="144">M</text><text x="375" y="144">R</text><text x="425" y="144">W</text>
+      <text x="275" y="194">I</text><text x="325" y="194">N</text><text x="375" y="194">T</text><text x="425" y="194">L</text>
+    </g>
+    <!-- row labels -->
+    <g fill="#e05a2b">
+      <text x="225" y="44">1</text>
+      <text x="225" y="94">2</text>
+      <text x="225" y="144">3</text>
+      <text x="225" y="194">4</text>
+    </g>
+    <!-- column labels -->
+    <g fill="#1565c0">
+      <text x="275" y="245">A</text>
+      <text x="325" y="245">B</text>
+      <text x="375" y="245">C</text>
+      <text x="425" y="245">D</text>
+    </g>
+  </g>
+</svg>

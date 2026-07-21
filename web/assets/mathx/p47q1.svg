@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 370" font-family="system-ui">
+  <g fill="#e8eaf0" stroke="#333" stroke-width="3">
+    <rect x="60" y="30" width="200" height="200"/>
+    <rect x="180" y="10" width="200" height="200"/>
+    <rect x="300" y="120" width="200" height="200"/>
+    <rect x="100" y="150" width="200" height="200"/>
+    <rect x="160" y="70" width="200" height="200"/>
+  </g>
+  <g fill="#d32f2f">
+    <circle cx="250" cy="110" r="6"/>
+    <circle cx="250" cy="160" r="6"/>
+    <circle cx="370" cy="160" r="6"/>
+    <circle cx="200" cy="240" r="6"/>
+  </g>
+  <g font-size="28" font-weight="bold" fill="#333">
+    <text x="265" y="120">C</text>
+    <text x="265" y="170">A</text>
+    <text x="385" y="170">B</text>
+    <text x="215" y="250">D</text>
+  </g>
+</svg>

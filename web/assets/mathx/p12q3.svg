@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260">
+  <!-- 5 dong xu chong len nhau, thu tu ve tu duoi len: Z, V, W, Y, X -->
+  <rect x="0" y="0" width="700" height="260" fill="#fff" rx="8"/>
+  <g stroke="#8a6d1a" stroke-width="3" fill="#ffe9a8">
+    <circle cx="420" cy="85" r="75"/>
+    <circle cx="420" cy="175" r="75"/>
+    <circle cx="280" cy="175" r="75"/>
+    <circle cx="280" cy="85" r="75"/>
+    <circle cx="350" cy="130" r="75"/>
+  </g>
+  <g font-family="system-ui" font-size="28" font-style="italic" fill="#333" text-anchor="middle">
+    <text x="245" y="72">Y</text>
+    <text x="455" y="72">Z</text>
+    <text x="245" y="212">W</text>
+    <text x="455" y="212">V</text>
+    <text x="350" y="140">X</text>
+  </g>
+</svg>

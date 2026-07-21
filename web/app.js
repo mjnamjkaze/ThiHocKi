@@ -81,7 +81,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.2 • Toán 2 (10 đề) + Tư duy 2 (24 đề) + ASMO (4 đề)</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.3 • Toán 2 (15 đề) + Tư duy 2 (24 đề) + ASMO (4 đề) + MathX (50 đề)</div>
     </div>
   </div>`;
 }

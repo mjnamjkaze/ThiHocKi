@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260">
+  <!-- Cân 1: một chú lùn (trái, bổng lên) nhẹ hơn quả cân 7 kg (phải, hạ xuống) -->
+  <polygon points="170,215 150,245 190,245" fill="#333"/>
+  <line x1="70" y1="160" x2="270" y2="212" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+  <!-- chú lùn 1 -->
+  <g>
+    <polygon points="83,120 111,120 97,88" fill="#e0492e" stroke="#333" stroke-width="2"/>
+    <circle cx="97" cy="129" r="10" fill="#ffd9b3" stroke="#333" stroke-width="2"/>
+    <rect x="85" y="138" width="24" height="20" rx="4" fill="#3f7cd6" stroke="#333" stroke-width="2"/>
+  </g>
+  <!-- quả cân 7 kg -->
+  <g>
+    <rect x="215" y="150" width="66" height="56" rx="6" fill="#333"/>
+    <rect x="238" y="140" width="20" height="10" rx="4" fill="#333"/>
+    <text x="248" y="185" font-family="system-ui" font-size="21" font-weight="bold" fill="#fff" text-anchor="middle">7 kg</text>
+  </g>
+  <text x="170" y="255" font-family="system-ui" font-size="20" fill="#555" text-anchor="middle" font-weight="bold">Cân 1</text>
+
+  <!-- Cân 2: hai chú lùn (trái, hạ xuống) nặng hơn quả cân 11 kg (phải, bổng lên) -->
+  <polygon points="530,215 510,245 550,245" fill="#333"/>
+  <line x1="430" y1="212" x2="630" y2="160" stroke="#333" stroke-width="6" stroke-linecap="round"/>
+  <!-- chú lùn 2 -->
+  <g>
+    <polygon points="431,172 459,172 445,140" fill="#e0492e" stroke="#333" stroke-width="2"/>
+    <circle cx="445" cy="181" r="10" fill="#ffd9b3" stroke="#333" stroke-width="2"/>
+    <rect x="433" y="190" width="24" height="20" rx="4" fill="#3f7cd6" stroke="#333" stroke-width="2"/>
+  </g>
+  <!-- chú lùn 3 -->
+  <g>
+    <polygon points="465,164 493,164 479,132" fill="#38a34a" stroke="#333" stroke-width="2"/>
+    <circle cx="479" cy="173" r="10" fill="#ffd9b3" stroke="#333" stroke-width="2"/>
+    <rect x="467" y="182" width="24" height="20" rx="4" fill="#e8a33d" stroke="#333" stroke-width="2"/>
+  </g>
+  <!-- quả cân 11 kg -->
+  <g>
+    <rect x="580" y="98" width="72" height="62" rx="6" fill="#333"/>
+    <rect x="606" y="88" width="20" height="10" rx="4" fill="#333"/>
+    <text x="616" y="136" font-family="system-ui" font-size="21" font-weight="bold" fill="#fff" text-anchor="middle">11 kg</text>
+  </g>
+  <text x="530" y="255" font-family="system-ui" font-size="20" fill="#555" text-anchor="middle" font-weight="bold">Cân 2</text>
+</svg>

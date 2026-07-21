@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="250" fill="#fff" rx="8"/>
+  <defs>
+    <g id="man">
+      <circle cx="0" cy="4" r="15" fill="#8e5bb5" stroke="#333" stroke-width="1.5"/>
+      <path d="M0,-11 q3,-7 9,-9" fill="none" stroke="#333" stroke-width="2"/>
+    </g>
+  </defs>
+  <!-- hang 1: 1 le = 2 tao -->
+  <text x="185" y="62" font-size="42" text-anchor="middle">🍐</text>
+  <text x="185" y="90" font-size="18" fill="#333" text-anchor="middle">lê</text>
+  <text x="265" y="58" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">=</text>
+  <text x="335" y="62" font-size="40" text-anchor="middle">🍎</text>
+  <text x="395" y="62" font-size="40" text-anchor="middle">🍎</text>
+  <text x="365" y="90" font-size="18" fill="#333" text-anchor="middle">táo</text>
+  <!-- hang 2: 1 tao = 3 man -->
+  <text x="185" y="140" font-size="40" text-anchor="middle">🍎</text>
+  <text x="265" y="136" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">=</text>
+  <use href="#man" x="330" y="126"/>
+  <use href="#man" x="385" y="126"/>
+  <use href="#man" x="440" y="126"/>
+  <text x="385" y="168" font-size="18" fill="#333" text-anchor="middle">mận</text>
+  <!-- hang 3: 1 chuoi = 2 man -->
+  <text x="185" y="220" font-size="42" text-anchor="middle">🍌</text>
+  <text x="185" y="246" font-size="18" fill="#333" text-anchor="middle">chuối</text>
+  <text x="265" y="214" font-size="36" fill="#333" text-anchor="middle" font-weight="bold">=</text>
+  <use href="#man" x="330" y="204"/>
+  <use href="#man" x="385" y="204"/>
+</svg>

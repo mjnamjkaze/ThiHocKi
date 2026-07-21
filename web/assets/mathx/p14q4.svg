@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400">
+  <!-- Quy luat: tam giac (cung phan to mau) quay 1 goc vuong nguoc chieu kim dong ho: len -> trai -> xuong -> (phai = A) -->
+  <rect x="0" y="0" width="780" height="400" fill="#fff" rx="8"/>
+  <defs>
+    <g id="tgv1">
+      <polygon points="-30,-5 0,45 -60,45" fill="#9ecbf0" stroke="#333" stroke-width="2.5"/>
+      <polygon points="0,-55 -60,45 60,45" fill="none" stroke="#333" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="0" y1="-55" x2="0" y2="45" stroke="#333" stroke-width="2.5"/>
+    </g>
+    <g id="tgv2">
+      <polygon points="30,-5 0,45 60,45" fill="#9ecbf0" stroke="#333" stroke-width="2.5"/>
+      <polygon points="0,-55 -60,45 60,45" fill="none" stroke="#333" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="0" y1="-55" x2="0" y2="45" stroke="#333" stroke-width="2.5"/>
+    </g>
+    <g id="tgv3">
+      <polygon points="0,-55 -30,-5 0,-5" fill="#9ecbf0" stroke="#333" stroke-width="2.5"/>
+      <polygon points="0,-55 -60,45 60,45" fill="none" stroke="#333" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="0" y1="-55" x2="0" y2="45" stroke="#333" stroke-width="2.5"/>
+    </g>
+  </defs>
+  <use href="#tgv1" transform="translate(110,110)"/>
+  <use href="#tgv1" transform="translate(300,110) rotate(-90)"/>
+  <use href="#tgv1" transform="translate(490,110) rotate(-180)"/>
+  <text x="650" y="130" font-family="system-ui" font-size="64" font-weight="bold" fill="#333" text-anchor="middle">?</text>
+  <!-- Cac lua chon -->
+  <use href="#tgv1" transform="translate(110,295) rotate(-270)"/>
+  <use href="#tgv1" transform="translate(290,295)"/>
+  <use href="#tgv2" transform="translate(470,295) rotate(-270)"/>
+  <use href="#tgv1" transform="translate(650,295) rotate(-180)"/>
+  <g font-family="system-ui" font-size="24" fill="#333" text-anchor="middle">
+    <text x="110" y="382">(A)</text>
+    <text x="290" y="382">(B)</text>
+    <text x="470" y="382">(C)</text>
+    <text x="650" y="382">(D)</text>
+  </g>
+</svg>

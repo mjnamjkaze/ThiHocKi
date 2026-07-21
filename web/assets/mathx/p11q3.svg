@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 270">
+  <!-- Phep cong hang doc: tao dua dua + duahau tao + tao = 287 -->
+  <rect x="0" y="0" width="700" height="270" fill="#fff" rx="8"/>
+  <text x="400" y="70" font-size="40" text-anchor="middle" font-family="system-ui">🍎</text>
+  <text x="460" y="70" font-size="40" text-anchor="middle" font-family="system-ui">🍍</text>
+  <text x="520" y="70" font-size="40" text-anchor="middle" font-family="system-ui">🍍</text>
+  <text x="340" y="132" font-size="42" text-anchor="middle" font-family="system-ui" font-weight="bold" fill="#333">+</text>
+  <text x="460" y="135" font-size="40" text-anchor="middle" font-family="system-ui">🍉</text>
+  <text x="520" y="135" font-size="40" text-anchor="middle" font-family="system-ui">🍎</text>
+  <text x="520" y="198" font-size="40" text-anchor="middle" font-family="system-ui">🍎</text>
+  <line x1="365" y1="213" x2="555" y2="213" stroke="#333" stroke-width="4"/>
+  <text x="400" y="255" font-size="42" text-anchor="middle" font-family="system-ui" font-weight="bold" fill="#1565c0">2</text>
+  <text x="460" y="255" font-size="42" text-anchor="middle" font-family="system-ui" font-weight="bold" fill="#1565c0">8</text>
+  <text x="520" y="255" font-size="42" text-anchor="middle" font-family="system-ui" font-weight="bold" fill="#1565c0">7</text>
+</svg>

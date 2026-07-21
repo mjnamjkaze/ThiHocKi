@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 170" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="170" rx="8" fill="#fff"/>
+  <defs>
+    <g id="cyl2" stroke="#333" stroke-width="2">
+      <rect x="-22" y="-27" width="44" height="54" fill="currentColor" stroke="none"/>
+      <line x1="-22" y1="-27" x2="-22" y2="27"/>
+      <line x1="22" y1="-27" x2="22" y2="27"/>
+      <ellipse cx="0" cy="27" rx="22" ry="8" fill="currentColor"/>
+      <ellipse cx="0" cy="-27" rx="22" ry="8" fill="currentColor"/>
+      <ellipse cx="0" cy="-27" rx="22" ry="8" fill="#ffffff" fill-opacity="0.35"/>
+    </g>
+    <g id="sph2" stroke="#333" stroke-width="2">
+      <circle cx="0" cy="0" r="26" fill="currentColor"/>
+      <ellipse cx="-8" cy="-10" rx="8" ry="4" fill="#ffffff" fill-opacity="0.6" stroke="none"/>
+    </g>
+    <g id="cube2" stroke="#333" stroke-width="2" stroke-linejoin="round">
+      <polygon points="-22,-12 18,-12 18,28 -22,28" fill="currentColor"/>
+      <polygon points="-22,-12 -10,-26 30,-26 18,-12" fill="currentColor"/>
+      <polygon points="-22,-12 -10,-26 30,-26 18,-12" fill="#ffffff" fill-opacity="0.35" stroke="none"/>
+      <polygon points="18,-12 30,-26 30,14 18,28" fill="currentColor"/>
+      <polygon points="18,-12 30,-26 30,14 18,28" fill="#000000" fill-opacity="0.15" stroke="none"/>
+    </g>
+    <g id="box2" stroke="#333" stroke-width="2" stroke-linejoin="round">
+      <polygon points="-32,-2 28,-2 28,28 -32,28" fill="currentColor"/>
+      <polygon points="-32,-2 -20,-18 40,-18 28,-2" fill="currentColor"/>
+      <polygon points="-32,-2 -20,-18 40,-18 28,-2" fill="#ffffff" fill-opacity="0.35" stroke="none"/>
+      <polygon points="28,-2 40,-18 40,12 28,28" fill="currentColor"/>
+      <polygon points="28,-2 40,-18 40,12 28,28" fill="#000000" fill-opacity="0.15" stroke="none"/>
+    </g>
+  </defs>
+  <use href="#cyl2" x="55" y="90" color="#e53935"/>
+  <use href="#sph2" x="140" y="92" color="#fdd835"/>
+  <use href="#cube2" x="225" y="88" color="#42a5f5"/>
+  <use href="#box2" x="312" y="88" color="#c07a3a"/>
+  <use href="#cyl2" x="398" y="90" color="#e53935"/>
+  <text x="480" y="108" font-size="52" font-weight="bold" text-anchor="middle" fill="#d32f2f">?</text>
+  <use href="#cube2" x="562" y="88" color="#42a5f5"/>
+  <use href="#box2" x="648" y="88" color="#c07a3a"/>
+</svg>

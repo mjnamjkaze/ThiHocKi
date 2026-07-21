@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="250" rx="8" fill="#fff"/>
+  <rect x="270" y="225" width="160" height="12" rx="4" fill="#455a64" stroke="#333" stroke-width="2"/>
+  <polygon points="333,140 367,140 390,225 310,225" fill="#78909c" stroke="#333" stroke-width="2"/>
+  <line x1="110" y1="140" x2="590" y2="140" stroke="#333" stroke-width="5"/>
+  <circle cx="350" cy="140" r="6" fill="#333"/>
+  <line x1="110" y1="140" x2="70" y2="185" stroke="#333" stroke-width="2"/>
+  <line x1="110" y1="140" x2="150" y2="185" stroke="#333" stroke-width="2"/>
+  <path d="M58,185 Q110,220 162,185 Z" fill="#cfd8dc" stroke="#333" stroke-width="2"/>
+  <text x="60" y="182" font-size="36">🦆</text>
+  <polygon points="108,144 164,144 173,182 99,182" fill="#37474f" stroke="#333" stroke-width="2"/>
+  <text x="136" y="172" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">10 kg</text>
+  <line x1="590" y1="140" x2="550" y2="185" stroke="#333" stroke-width="2"/>
+  <line x1="590" y1="140" x2="630" y2="185" stroke="#333" stroke-width="2"/>
+  <path d="M538,185 Q590,220 642,185 Z" fill="#cfd8dc" stroke="#333" stroke-width="2"/>
+  <text x="545" y="182" font-size="38">🐶</text>
+  <polygon points="595,148 641,148 649,182 587,182" fill="#37474f" stroke="#333" stroke-width="2"/>
+  <text x="618" y="172" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">3 kg</text>
+</svg>

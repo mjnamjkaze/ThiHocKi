@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230">
+  <!-- Tam giac lon + duong trung binh DE + doan AF, DF, EF: 13 tam giac -->
+  <rect x="0" y="0" width="700" height="230" fill="#fff" rx="8"/>
+  <g stroke="#333" stroke-width="3" fill="none" stroke-linejoin="round">
+    <polygon points="350,15 80,210 620,210"/>
+    <line x1="215" y1="112.5" x2="485" y2="112.5"/>
+    <line x1="350" y1="15" x2="350" y2="210"/>
+    <line x1="215" y1="112.5" x2="350" y2="210"/>
+    <line x1="485" y1="112.5" x2="350" y2="210"/>
+  </g>
+</svg>
