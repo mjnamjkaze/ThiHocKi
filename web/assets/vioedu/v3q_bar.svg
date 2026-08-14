@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="Arial, Helvetica, sans-serif">
+  <rect width="560" height="320" fill="#fff"/>
+  <g stroke="#cbd5e1" stroke-width="1.5">
+    <line x1="70" y1="250" x2="530" y2="250"/><line x1="70" y1="210" x2="530" y2="210"/>
+    <line x1="70" y1="170" x2="530" y2="170"/><line x1="70" y1="130" x2="530" y2="130"/>
+    <line x1="70" y1="90" x2="530" y2="90"/><line x1="70" y1="50" x2="530" y2="50"/>
+  </g>
+  <g font-size="18" fill="#555" text-anchor="end">
+    <text x="58" y="256">0</text><text x="58" y="216">5</text><text x="58" y="176">10</text>
+    <text x="58" y="136">15</text><text x="58" y="96">20</text><text x="58" y="56">25</text>
+  </g>
+  <g stroke="#2b2b2b" stroke-width="3">
+    <line x1="70" y1="40" x2="70" y2="250"/><line x1="70" y1="250" x2="530" y2="250"/>
+  </g>
+  <g stroke="#1e3a8a" stroke-width="2">
+    <rect x="105" y="106" width="70" height="144" fill="#60a5fa"/>
+    <rect x="215" y="154" width="70" height="96" fill="#34d399"/>
+    <rect x="325" y="82" width="70" height="168" fill="#fbbf24"/>
+    <rect x="435" y="130" width="70" height="120" fill="#f472b6"/>
+  </g>
+  <g font-size="19" fill="#2b2b2b" text-anchor="middle">
+    <text x="140" y="275">Lớp 3A</text><text x="250" y="275">Lớp 3B</text>
+    <text x="360" y="275">Lớp 3C</text><text x="470" y="275">Lớp 3D</text>
+  </g>
+  <text x="300" y="305" font-size="19" fill="#555" text-anchor="middle">Số cây mỗi lớp trồng được</text>
+</svg>

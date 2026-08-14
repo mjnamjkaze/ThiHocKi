@@ -953,7 +953,6 @@ const SUBJECTS = [
     heroTitle: 'Đề kiểm tra chất lượng cuối học kì 2',
     heroMeta: '📚 10 đề &nbsp;•&nbsp; ⏱ 35 phút mỗi đề &nbsp;•&nbsp; đề gốc chuyển thể trắc nghiệm' },
   // 'tuduy' được chèn vào vị trí thứ 2 bởi data-tuduy.js
-  { id: 'tviet', name: 'Tiếng Việt', icon: '✎', ready: false },
-  { id: 'tanh', name: 'Tiếng Anh', icon: 'A', ready: false },
-  { id: 'tnxh', name: 'TN&XH', icon: '❀', ready: false },
+  // các môn VioEdu (lớp 2 & lớp 3) được push thêm bởi data-vioedu*.js
+  { id: 'tnxh', name: 'TN&XH', icon: '❀', grade: 2, ready: false },
 ];

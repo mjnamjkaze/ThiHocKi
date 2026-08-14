@@ -34,6 +34,7 @@ const store = {
 
 const state = {
   screen: 'login',
+  grade: Number(localStorage.getItem('otk.grade')) || 2,   // khối lớp đang chọn
   subj: 'toan',        // môn đang xem (id trong SUBJECTS)
   examId: null,
   qIndex: 0,
@@ -45,6 +46,9 @@ const state = {
   modal: null,
 };
 
+const gradeOf = (s) => s.grade || 2;
+const subjectsOfGrade = (g) => SUBJECTS.filter(s => gradeOf(s) === g);
+const readyGrades = () => [...new Set(SUBJECTS.filter(s => s.ready).map(gradeOf))].sort();
 const getSubject = (id) => SUBJECTS.find(s => s.id === id);
 const getExam = (id) => {
   for (const s of SUBJECTS) {
@@ -81,7 +85,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.3.1 • Toán 2 (15 đề) + Tư duy 2 (24 đề) + ASMO (4 đề) + MathX (50 đề)</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.4.0 • Lớp 2: Toán CK2 (15) · Tư duy (24) · ASMO (4) · MathX (50) · VioEdu (48)<br>Lớp 3: VioEdu Toán · Tiếng Việt · Toán Tiếng Anh (48 đề)</div>
     </div>
   </div>`;
 }
@@ -96,8 +100,8 @@ window.doLogin = () => {
 function vHome() {
   const res = store.results;
   const done = EXAMS.filter(e => res[e.id]).length;
-  // thẻ tiến độ cho từng môn đã mở
-  const progCards = SUBJECTS.filter(s => s.ready).map(sub => {
+  // thẻ tiến độ cho từng môn đã mở của khối lớp đang chọn
+  const progCards = subjectsOfGrade(state.grade).filter(s => s.ready).map(sub => {
     const ex = sub.exams;
     const dn = ex.filter(e => res[e.id]).length;
     const av = dn ? ex.reduce((t, e) => t + (res[e.id] ? res[e.id].best : 0), 0) / dn : 0;
@@ -118,6 +122,24 @@ function vHome() {
       </div>
     </div>`;
   }).join('');
+
+  const opened = readyGrades();
+  const vioExams = subjectsOfGrade(state.grade).filter(s => s.ready && s.id.startsWith('vio'))
+    .reduce((t, s) => t + s.exams.length, 0);
+  const hero = state.grade === 2
+    ? `<div class="hero">
+      <span class="tag">KỲ THI SẮP TỚI</span>
+      <h2>Toán 2 — Cuối học kì 2</h2>
+      <div class="meta">⏱ 35 phút/đề &nbsp;•&nbsp; 📚 15 đề &nbsp;•&nbsp; hoàn thành ${done}/${EXAMS.length}</div>
+      <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
+    </div>`
+    : `<div class="hero">
+      <span class="tag">ĐẤU TRƯỜNG VIOEDU</span>
+      <h2>VioEdu Lớp ${state.grade} — Toán · Tiếng Việt · Toán Tiếng Anh</h2>
+      <div class="meta">📚 ${vioExams} đề &nbsp;•&nbsp; 2024–2025 &amp; 2025–2026 &nbsp;•&nbsp; Sơ loại → Cấp Trường → Cấp Quận</div>
+      <button class="btn" onclick="nav('subject', {subj:'vio${state.grade}-toan'})">Ôn tập ngay ▶</button>
+    </div>`;
+
   return `
   <div class="topbar">
     <div class="avatar">${esc(store.user.charAt(0).toUpperCase() || 'H')}</div>
@@ -128,27 +150,27 @@ function vHome() {
     <button class="icon-btn" title="Đổi tên" onclick="nav('login')">⚙</button>
   </div>
   <div class="screen">
-    <div class="hero">
-      <span class="tag">KỲ THI SẮP TỚI</span>
-      <h2>Toán 2 — Cuối học kì 2</h2>
-      <div class="meta">⏱ 35 phút/đề &nbsp;•&nbsp; 📚 10 đề &nbsp;•&nbsp; hoàn thành ${done}/10</div>
-      <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
-    </div>
+    ${hero}
 
     <div class="sect-title">Chọn lớp</div>
     <div class="chips">
-      ${[1, 2, 3, 4, 5].map(g => `<button class="pick ${g === 2 ? 'active' : 'locked'}" ${g === 2 ? '' : 'disabled'}>Lớp ${g}${g === 2 ? '' : ' 🔒'}</button>`).join('')}
+      ${[1, 2, 3, 4, 5].map(g => {
+        const open = opened.includes(g);
+        const cur = g === state.grade;
+        return `<button class="pick ${cur ? 'active' : open ? '' : 'locked'}" ${open ? `onclick="setGrade(${g})"` : 'disabled'}>Lớp ${g}${open ? '' : ' 🔒'}</button>`;
+      }).join('')}
     </div>
 
+    ${state.grade === 2 ? `
     <div class="sect-title">Học kì</div>
     <div class="chips">
       <button class="pick locked" disabled>Giữa học kì 2 🔒</button>
       <button class="pick active">Cuối học kì 2</button>
-    </div>
+    </div>` : ''}
 
-    <div class="sect-title">Môn học</div>
+    <div class="sect-title">Môn học — Lớp ${state.grade}</div>
     <div class="subj-grid">
-      ${SUBJECTS.map(s => s.ready
+      ${subjectsOfGrade(state.grade).map(s => s.ready
         ? `<button class="subj on" onclick="nav('subject', {subj:'${s.id}'})"><div class="ic">${s.icon}</div>${s.name}<span class="chip" style="font-size:11px;padding:3px 10px">${s.exams.length} đề</span></button>`
         : `<div class="subj off"><div class="ic">${s.icon}</div>${s.name}<span class="soon">Sắp có</span></div>`).join('')}
     </div>
@@ -157,10 +179,17 @@ function vHome() {
   </div>`;
 }
 
+window.setGrade = (g) => {
+  state.grade = g;
+  localStorage.setItem('otk.grade', String(g));
+  render();
+};
+
 /* ================= SUBJECT (exam list) ================= */
 function vSubject() {
   const sub = getSubject(state.subj) || SUBJECTS[0];
   const res = store.results;
+  const grade = gradeOf(sub);
   const exams = sub.exams;
   const done = exams.filter(e => res[e.id]).length;
   const avg = done ? exams.reduce((s, e) => s + (res[e.id] ? res[e.id].best : 0), 0) / done : 0;
@@ -171,7 +200,7 @@ function vSubject() {
   </div>
   <div class="screen">
     <div class="hero">
-      <span class="tag" style="background:var(--secondary-container);color:var(--secondary)">KHỐI 2</span>
+      <span class="tag" style="background:var(--secondary-container);color:var(--secondary)">KHỐI ${grade}</span>
       <h2>${sub.heroTitle}</h2>
       <div class="meta">${sub.heroMeta}</div>
     </div>
@@ -206,7 +235,7 @@ function vSubject() {
 window.startExam = (id) => {
   const exam = getExam(id);
   const sub = subjectOfExam(id);
-  if (sub) state.subj = sub.id;
+  if (sub) { state.subj = sub.id; state.grade = gradeOf(sub); }
   state.examId = id;
   state.qIndex = 0;
   state.answers = {};
@@ -220,7 +249,7 @@ window.reviewExam = (id) => {
   const r = store.results[id];
   if (!r) return;
   const sub = subjectOfExam(id);
-  if (sub) state.subj = sub.id;
+  if (sub) { state.subj = sub.id; state.grade = gradeOf(sub); }
   state.examId = id;
   state.qIndex = 0;
   state.answers = r.last.answers;
