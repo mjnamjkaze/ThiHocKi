@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="300" fill="#fff"/>
+  <!-- tru va de can -->
+  <polygon points="350,95 315,250 385,250" fill="#90A4AE" stroke="#455A64" stroke-width="3"/>
+  <rect x="280" y="250" width="140" height="16" rx="6" fill="#546E7A"/>
+  <!-- don can -->
+  <rect x="110" y="86" width="480" height="14" rx="7" fill="#546E7A"/>
+  <circle cx="350" cy="93" r="14" fill="#37474F"/>
+  <!-- day treo -->
+  <g stroke="#78909C" stroke-width="3">
+    <line x1="200" y1="100" x2="150" y2="155"/><line x1="200" y1="100" x2="250" y2="155"/>
+    <line x1="500" y1="100" x2="450" y2="155"/><line x1="500" y1="100" x2="550" y2="155"/>
+  </g>
+  <!-- dia can -->
+  <path d="M140 155 H260 L240 183 H160 Z" fill="#B0BEC5" stroke="#455A64" stroke-width="3"/>
+  <path d="M440 155 H560 L540 183 H460 Z" fill="#B0BEC5" stroke="#455A64" stroke-width="3"/>
+  <!-- vat tren dia -->
+  <text x="200" y="150" font-size="42" text-anchor="middle">🍉</text>
+  <text x="470" y="150" font-size="32" text-anchor="middle">🍊</text>
+  <text x="500" y="150" font-size="32" text-anchor="middle">🍊</text>
+  <text x="530" y="150" font-size="32" text-anchor="middle">🍊</text>
+</svg>

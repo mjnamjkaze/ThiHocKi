@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="300" fill="#fff"/>
+  <polyline points="70,240 230,70 450,240 640,110" fill="none" stroke="#333" stroke-width="5"
+            stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#1565c0">
+    <circle cx="70" cy="240" r="9"/><circle cx="230" cy="70" r="9"/>
+    <circle cx="450" cy="240" r="9"/><circle cx="640" cy="110" r="9"/>
+  </g>
+  <g font-size="28" font-weight="bold" fill="#333">
+    <text x="40" y="278">A</text><text x="218" y="52">B</text>
+    <text x="440" y="278">C</text><text x="655" y="100">D</text>
+  </g>
+  <g font-size="24" font-weight="bold" fill="#c62828">
+    <text x="95" y="150">3 cm</text><text x="330" y="140">4 cm</text><text x="530" y="215">5 cm</text>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="250" fill="#fff"/>
+  <g fill="#D7A86E" stroke="#8D6E63" stroke-width="3">
+    <!-- 6 que ngang -->
+    <rect x="60" y="52" width="185" height="16" rx="8"/>
+    <rect x="245" y="52" width="185" height="16" rx="8"/>
+    <rect x="430" y="52" width="185" height="16" rx="8"/>
+    <rect x="60" y="176" width="185" height="16" rx="8"/>
+    <rect x="245" y="176" width="185" height="16" rx="8"/>
+    <rect x="430" y="176" width="185" height="16" rx="8"/>
+    <!-- 4 que doc -->
+    <rect x="52" y="60" width="16" height="124" rx="8"/>
+    <rect x="237" y="60" width="16" height="124" rx="8"/>
+    <rect x="422" y="60" width="16" height="124" rx="8"/>
+    <rect x="607" y="60" width="16" height="124" rx="8"/>
+  </g>
+  <text x="337" y="228" font-size="26" font-weight="bold" fill="#c62828" text-anchor="middle">3 hình vuông nhỏ xếp liền nhau</text>
+</svg>
