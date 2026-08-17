@@ -1,6 +1,7 @@
 // Bồi dưỡng học sinh giỏi Toán lớp 2 — 15 đề chuyên đề × 8 câu = 120 câu.
 // Mức độ: HSG cấp trường / cấp huyện (nâng cao vừa phải, bám chương trình lớp 2 — phạm vi 1000,
-// bảng nhân chia 2–5, đo lường, thời gian, hình học phẳng cơ bản).
+// bảng nhân chia 2–9, đo lường, thời gian, hình học phẳng cơ bản; riêng × 2 và : 2 được
+// phép vượt ra ngoài phạm vi bảng).
 // Nguồn tham khảo dạng bài: "80 bài Toán ôn luyện HSG lớp 2" (VnDoc), tuyển tập đề thi HSG Toán 2
 // (ThuVienDeThi), 25 đề Toán nâng cao lớp 2 (HocTot), chuyên đề Toán nâng cao lớp 2 (Monkey);
 // một số dạng suy luận tham khảo đề Kangaroo Pre-Ecolier & SASMO Primary 2 nhưng đã hạ độ khó

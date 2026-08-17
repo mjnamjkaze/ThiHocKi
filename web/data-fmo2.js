@@ -12,7 +12,8 @@
 //      suy luận lịch nhiều tầng, cryptarithm (phép tính chữ thay số).
 //   2. Rút số bước tính: mỗi câu tối đa 2–3 phép tính thay vì 4–6 như đề gốc.
 //   3. Việt hoá hoàn toàn — đề gốc AMO/FMO nhiều phần chỉ có tiếng Anh.
-//   4. Giữ số trong phạm vi 1 000, chỉ dùng bảng nhân chia 2–5 theo chương trình lớp 2.
+//   4. Giữ số trong phạm vi 1 000, dùng bảng nhân chia từ 2 đến 9 theo chương trình lớp 2.
+//      Riêng phép × 2 và : 2 được phép vượt ra ngoài phạm vi bảng (ví dụ 2 × 150; 480 : 2).
 //
 //  Mức nhắm tới: HSG cấp trường / cấp quận — làm quen dạng bài thi tư duy quốc tế,
 //  KHÔNG phải mức vòng chung kết. Hình vẽ lại bằng SVG trong assets/fmo2/.

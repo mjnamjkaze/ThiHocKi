@@ -11,8 +11,9 @@
 //   6. Tiếng Anh chuyên ngành          — Mathematical English vocabulary
 //
 // ĐỘ KHÓ: cố ý giữ ở mức VỪA PHẢI — dùng để làm quen dạng bài ASMO/AMO, KHÔNG phải đề thi thật
-// vòng chung kết. Mọi số liệu nằm trong phạm vi chương trình lớp 2 (số đến 1 000, bảng nhân chia
-// 2–5, chu vi hình đơn giản, khối hộp – khối lập phương – khối cầu, đo lường, thời gian).
+// vòng chung kết. Mọi số liệu nằm trong phạm vi chương trình lớp 2: số đến 1 000, bảng nhân chia
+// từ 2 đến 9, chu vi hình đơn giản, khối hộp – khối lập phương – khối cầu, đo lường, thời gian.
+// Riêng phép × 2 và : 2 được phép vượt ra ngoài phạm vi bảng (ví dụ 2 × 150; 480 : 2).
 // Đề thật các năm 2014 · 2015 · 2017 · 2018 nằm ở môn "ASMO" riêng.
 //
 // Toàn bộ câu hỏi biên soạn lại, có lời giải chi tiết bằng tiếng Việt.
