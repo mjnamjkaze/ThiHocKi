@@ -1,21 +1,27 @@
 # Ôn Thi Học Kì — Lớp 2 & Lớp 3
 
-App luyện đề trắc nghiệm (web tĩnh + WebView Android), chạy hoàn toàn offline. **204 đề · 1 935 câu.**
+Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **252 đề · 2 538 câu.**
+
+👉 **Dùng ngay: https://mjnamjkaze.github.io/ThiHocKi/**
 
 ### Lớp 2
 - **Toán 2 — Cuối học kì 2**: 15 đề (321 câu) chuyển thể từ bộ đề gốc + 5 đề Cánh Diều
 - **Toán tư duy lớp 2**: 24 đề × 10 câu chuyển thể từ "175 bài toán tư duy hàng tuần" + "1001 bài toán tư duy"
 - **HSG Toán lớp 2**: 15 đề chuyên đề × 8 câu (120 câu) bồi dưỡng học sinh giỏi — xem chi tiết bên dưới
+- **Tư duy ASMO/AMO lớp 2**: 6 chuyên đề × 15 câu (90 câu) — Logic · Số học · Hình không gian · Mô hình toán học · Tổ hợp · Tiếng Anh chuyên ngành
+- **FMO – Toán tư duy lớp 2**: 15 chuyên đề × 15 câu (225 câu, 70 hình SVG) — bản **hạ độ khó** từ bộ ôn thi FMO/AMO
 - **Tư duy MathX lớp 2**: 50 phiếu hàng tuần (258 câu)
 - **ASMO Toán quốc tế lớp 2**: 4 đề thi thật (2014 · 2015 · 2017 · 2018) × 20 câu, dịch tiếng Việt, đủ 5 lựa chọn A–E
 - **Đấu trường VioEdu lớp 2**: Toán · Tiếng Việt · Toán Tiếng Anh — mỗi môn 16 đề
 
 ### Lớp 3
+- **Toán 3 — Cuối học kì 2**: 12 đề (168 câu) — 4 Kết nối tri thức · 4 Chân trời sáng tạo · 4 Cánh Diều
+- **Toán nâng cao lớp 3**: 15 chuyên đề × 8 câu (120 câu), mức HSG cấp trường / quận – huyện
 - **Đấu trường VioEdu lớp 3**: Toán · Tiếng Việt · Toán Tiếng Anh — mỗi môn 16 đề
 
 ### Bộ đề HSG Toán lớp 2 (15 đề · 120 câu)
 Mức độ **HSG cấp trường / cấp huyện** — nâng cao vừa phải, bám sát chương trình lớp 2
-(phạm vi 1000, bảng nhân chia 2–5, đo lường, thời gian, hình học phẳng). Mỗi đề là một chuyên đề riêng:
+(phạm vi 1000, bảng nhân chia 2–9, đo lường, thời gian, hình học phẳng). Mỗi đề là một chuyên đề riêng:
 
 | # | Chuyên đề | # | Chuyên đề |
 |---|---|---|---|
@@ -47,28 +53,21 @@ Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằ
 
 ## Tính năng
 - **Chọn lớp** ngay ở trang chủ (lớp 2 / lớp 3), danh sách môn học đổi theo khối
-- Mọi dạng bài (trắc nghiệm, tự luận, đúng/sai, nối, điền số, quy luật hình…) đều chuyển thể trắc nghiệm 4 lựa chọn + **lời giải chi tiết từng câu**
+- Mọi dạng bài (trắc nghiệm, tự luận, đúng/sai, nối, điền số, quy luật hình…) đều chuyển thể trắc nghiệm 4 lựa chọn (riêng ASMO/AMO/FMO là 5 lựa chọn A–E) + **lời giải chi tiết từng câu**
 - Hình minh họa **vẽ lại bằng SVG** sắc nét, không watermark
 - Đồng hồ đếm ngược, lưới điều hướng câu hỏi, tự nộp khi hết giờ
 - Màn kết quả: vòng điểm, xếp loại, thống kê Đúng/Sai/Bỏ qua, xem lời giải
 - Lưu tiến độ & điểm cao nhất từng đề trên máy (localStorage) — chạy **hoàn toàn offline**
 
 ## Cấu trúc
-- `web/` — toàn bộ ứng dụng (HTML/CSS/JS). Mỗi ngân hàng đề là một file `data-*.js` tự đăng ký vào `SUBJECTS`:
-  `data.js` (Toán CK2) · `data-ck2cd.js` (Cánh Diều) · `data-tuduy.js` · `data-hsg2.js` · `data-mathx.js` · `data-asmo.js` ·
-  `data-vioedu2-{toan,tviet,tanh}.js` · `data-vioedu3-{toan,tviet,tanh}.js`
-- `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `vioedu/`)
-- `app/` — module Android (WebView + phục vụ assets nội bộ, đọc assets từ `../web`)
-- Web tĩnh tự deploy lên GitHub Pages khi push nhánh `main` (xem `.github/workflows/`)
+- `web/` — toàn bộ ứng dụng (HTML/CSS/JS), không cần build. Mỗi ngân hàng đề là một file `data-*.js` tự đăng ký vào `SUBJECTS`:
+  - Lớp 2: `data.js` (Toán CK2) · `data-ck2cd.js` (Cánh Diều) · `data-tuduy.js` · `data-hsg2.js` · `data-amo2.js` ·
+    `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-vioedu2-{toan,tviet,tanh}.js`
+  - Lớp 3: `data-ck2-l3.js` · `data-hsg3.js` · `data-vioedu3-{toan,tviet,tanh}.js`
+- `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `fmo2/`, `vioedu/`)
+- Tự deploy lên GitHub Pages khi push nhánh `main` (xem `.github/workflows/deploy-pages.yml`)
 
-## Build
-```powershell
-$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
-.\gradlew.bat assembleRelease
-# APK: app\build\outputs\apk\release\app-release.apk
-```
-
-Chạy thử trên trình duyệt (không cần Android):
+## Chạy thử tại máy
 ```
 cd web && node serve.mjs   # mở http://localhost:8123
 ```

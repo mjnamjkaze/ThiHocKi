@@ -1,14 +1,5 @@
-# Gradle / Android
-.gradle/
-build/
-app/build/
-local.properties
-*.apk
-*.keystore
-
 # IDE
 .idea/
-*.iml
 
 # Node (dev server)
 node_modules/
