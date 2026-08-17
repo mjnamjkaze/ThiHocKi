@@ -44,6 +44,8 @@ const state = {
   timerInt: null,
   showNav: false,
   modal: null,
+  grading: false,      // đang chấm bài (chặn nộp 2 lần)
+  celebrate: null,     // dữ liệu popup ăn mừng sau khi nộp
 };
 
 const gradeOf = (s) => s.grade || 2;
@@ -60,7 +62,20 @@ const getExam = (id) => {
 };
 const subjectOfExam = (id) => SUBJECTS.find(s => s.exams && s.exams.some(e => e.id === id));
 const fmtScore = (s) => (Math.round(s * 100) / 100).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
-const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+/* Đề bài được viết bằng HTML (<br>, <b>, &lt;, …). Khi cần chữ thuần (danh sách tóm tắt,
+   chia sẻ kết quả) phải bóc thẻ + giải mã entity, nếu không sẽ hiện ra "<br>" trên màn hình. */
+const plain = (s) => String(s == null ? '' : s)
+  .replace(/<br\s*\/?>/gi, ' ')
+  .replace(/<\/(p|div|li|tr|h[1-6])>/gi, ' ')
+  .replace(/<[^>]*>/g, '')
+  .replace(/&nbsp;/g, ' ')
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+  .replace(/&amp;/g, '&')
+  .replace(/\s+/g, ' ')
+  .trim();
+const cut = (s, n) => (s.length > n ? s.slice(0, n).trimEnd() + '…' : s);
 
 function nav(screen, extra = {}) {
   Object.assign(state, { screen }, extra);
@@ -240,6 +255,8 @@ window.startExam = (id) => {
   state.qIndex = 0;
   state.answers = {};
   state.mode = 'take';
+  state.celebrate = null;
+  state.grading = false;
   state.endTime = Date.now() + exam.time * 60 * 1000;
   clearInterval(state.timerInt);
   state.timerInt = setInterval(tick, 1000);
@@ -254,6 +271,7 @@ window.reviewExam = (id) => {
   state.qIndex = 0;
   state.answers = r.last.answers;
   state.mode = 'review';
+  state.celebrate = null;
   clearInterval(state.timerInt);
   nav('exam');
 };
@@ -419,10 +437,11 @@ window.askExit = () => {
   state.modal = `
   <div class="modal-back" onclick="closeModal()">
     <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-ic warn">🚪</div>
       <h3>Thoát bài thi?</h3>
-      <p>Bài làm hiện tại sẽ không được lưu.</p>
+      <p>Bài làm hiện tại sẽ <b style="color:var(--error)">không được lưu</b>.<br>Em có chắc muốn ra ngoài không?</p>
       <div class="row">
-        <button class="btn btn-ghost" onclick="closeModal()">Ở lại</button>
+        <button class="btn btn-ghost" onclick="closeModal()">Ở lại làm bài</button>
         <button class="btn btn-primary" onclick="clearInterval(state.timerInt);state.modal=null;nav('subject')">Thoát</button>
       </div>
     </div>
@@ -431,12 +450,23 @@ window.askExit = () => {
 };
 window.askSubmit = () => {
   const exam = getExam(state.examId);
-  const unanswered = exam.questions.length - Object.keys(state.answers).length;
+  const n = exam.questions.length;
+  const answered = Object.keys(state.answers).length;
+  const unanswered = n - answered;
+  const left = Math.max(0, state.endTime - Date.now());
   state.modal = `
   <div class="modal-back" onclick="closeModal()">
     <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-ic ${unanswered ? 'warn' : 'ok'}">${unanswered ? '📝' : '✅'}</div>
       <h3>Nộp bài?</h3>
-      <p>${unanswered > 0 ? `Em còn <b style="color:var(--error)">${unanswered} câu chưa trả lời</b>.<br>` : 'Em đã trả lời tất cả các câu hỏi.<br>'}Nộp bài để xem kết quả nhé!</p>
+      <div class="modal-facts">
+        <div><div class="n g">${answered}</div><div class="t">ĐÃ LÀM</div></div>
+        <div><div class="n ${unanswered ? 'r' : 'o'}">${unanswered}</div><div class="t">CHƯA LÀM</div></div>
+        <div><div class="n b mono">${fmtTime(left)}</div><div class="t">CÒN LẠI</div></div>
+      </div>
+      <p>${unanswered > 0
+        ? `Em còn <b style="color:var(--error)">${unanswered} câu chưa trả lời</b> — vẫn còn thời gian để thử nữa nhé!`
+        : 'Tuyệt vời, em đã trả lời <b style="color:var(--secondary)">tất cả các câu</b>!'}</p>
       <div class="row">
         <button class="btn btn-ghost" onclick="closeModal()">Làm tiếp</button>
         <button class="btn btn-primary" onclick="doSubmit()">Nộp bài ✓</button>
@@ -447,9 +477,40 @@ window.askSubmit = () => {
 };
 window.closeModal = () => { state.modal = null; render(); };
 
+/* Xếp loại + "giọng nói" của popup ăn mừng, dùng chung cho kết quả và chia sẻ */
+function rankOf(score) {
+  if (score >= 9) return { tier: 'xs', label: 'XUẤT SẮC 🌟', emoji: '🏆',
+    head: 'Xuất sắc!', msg: 'Gần như trọn vẹn! Em nắm rất chắc phần này rồi.' };
+  if (score >= 7) return { tier: 'gi', label: 'GIỎI 👍', emoji: '🎉',
+    head: 'Làm tốt lắm!', msg: 'Chỉ còn vài câu nữa là hoàn hảo. Xem lời giải để gỡ nốt nhé!' };
+  if (score >= 5) return { tier: 'dt', label: 'ĐẠT ✓', emoji: '💡',
+    head: 'Em đã vượt qua!', msg: 'Đọc kỹ lời giải mấy câu sai, lần sau điểm sẽ nhảy vọt.' };
+  return { tier: 'cg', label: 'CẦN CỐ GẮNG 💪', emoji: '💪',
+    head: 'Đừng bỏ cuộc nha!', msg: 'Xem lời giải từng câu rồi làm lại — ai cũng bắt đầu như vậy thôi.' };
+}
+
+/* Popup "Đang chấm bài…" — cho học sinh một nhịp chờ nhỏ trước khi thấy điểm */
+function vGrading() {
+  return `
+  <div class="modal-back grading">
+    <div class="grade-box">
+      <div class="grade-spin"><span>📝</span></div>
+      <h3>Đang chấm bài<span class="dots"><i>.</i><i>.</i><i>.</i></span></h3>
+      <p class="muted small">Cô giáo đang soát từng câu của em…</p>
+    </div>
+  </div>`;
+}
+
 window.doSubmit = (auto = false) => {
+  if (state.grading) return;              // chặn bấm 2 lần / hết giờ trùng lúc bấm nộp
+  state.grading = true;
   clearInterval(state.timerInt);
-  state.modal = null;
+  state.modal = vGrading();
+  render();
+  setTimeout(() => finishSubmit(auto), 1000);
+};
+
+function finishSubmit(auto) {
   const exam = getExam(state.examId);
   let score = 0, correct = 0, wrong = 0, skip = 0;
   exam.questions.forEach((q, i) => {
@@ -459,14 +520,100 @@ window.doSubmit = (auto = false) => {
     else wrong++;
   });
   score = Math.round(score * 100) / 100;
+  const prevRec = store.results[exam.id];
+  const prevBest = (prevRec || {}).best || 0;
   const res = { score, correct, wrong, skip, answers: { ...state.answers }, date: new Date().toISOString(), auto };
   store.saveResult(exam.id, res);
   sendResult(exam, res);
   state.lastResult = res;
   state.lastResultExam = exam.id;
   state.mode = 'review';
+  state.grading = false;
+  state.modal = null;
+  state.celebrate = { newBest: !!prevRec && score > prevBest, first: !prevRec, auto };
   nav('result');
-};
+}
+
+/* ================= POPUP ăn mừng ================= */
+function vCelebrate(exam, r) {
+  const c = state.celebrate;
+  const rk = rankOf(r.score);
+  const n = exam.questions.length;
+  const cf = rk.tier === 'cg' ? '' : confettiHtml(rk.tier === 'xs' ? 46 : 30);
+  const badge = c.newBest ? '<div class="cele-badge">🥇 Kỷ lục mới của em!</div>'
+    : c.first ? '<div class="cele-badge">✨ Lần đầu hoàn thành đề này</div>' : '';
+  return `
+  <div class="cele-back" onclick="closeCelebrate()">
+    ${cf}
+    <div class="cele t-${rk.tier}" onclick="event.stopPropagation()">
+      <div class="cele-cap">
+        <div class="cele-emo">${c.auto ? '⏰' : rk.emoji}</div>
+        <h3>${c.auto ? 'Hết giờ rồi!' : rk.head}</h3>
+        <div class="cele-sub">${esc(exam.title)} — ${esc((subjectOfExam(exam.id) || {}).short || '')}</div>
+      </div>
+      <div class="cele-ring">
+        <svg width="132" height="132" viewBox="0 0 132 132">
+          <circle cx="66" cy="66" r="56" fill="none" stroke="var(--surface-high)" stroke-width="11"/>
+          <circle id="cele-arc" cx="66" cy="66" r="56" fill="none" stroke="currentColor" stroke-width="11"
+            stroke-linecap="round" stroke-dasharray="${(2 * Math.PI * 56).toFixed(1)}"
+            stroke-dashoffset="${(2 * Math.PI * 56).toFixed(1)}"
+            data-target="${(2 * Math.PI * 56 * (1 - r.score / 10)).toFixed(1)}"/>
+        </svg>
+        <div class="v"><div class="n mono" id="cele-score" data-to="${r.score}">0</div><div class="d">/ 10 điểm</div></div>
+      </div>
+      <span class="pass ${r.score >= 5 ? 'ok' : 'no'}">${rk.label}</span>
+      ${badge}
+      <p class="cele-msg">${rk.msg}</p>
+      <div class="cele-stats">
+        <div><div class="n g">${r.correct}</div><div class="t">ĐÚNG</div></div>
+        <div><div class="n r">${r.wrong}</div><div class="t">SAI</div></div>
+        <div><div class="n o">${r.skip}</div><div class="t">BỎ QUA</div></div>
+      </div>
+      <div class="cele-acts">
+        <button class="btn btn-primary" onclick="state.celebrate=null;reviewExam(${exam.id})">📖 Xem lời giải chi tiết</button>
+        <button class="btn btn-ghost" onclick="closeCelebrate()">Xem bảng kết quả (${n} câu)</button>
+      </div>
+    </div>
+  </div>`;
+}
+window.closeCelebrate = () => { state.celebrate = null; render(); };
+
+function confettiHtml(count) {
+  const cols = ['#1a56db', '#6cf8bb', '#ffc94d', '#ff7a7a', '#a78bfa', '#34d399'];
+  let out = '';
+  for (let i = 0; i < count; i++) {
+    const left = Math.round(Math.random() * 100);
+    const col = cols[i % cols.length];
+    const dur = (2.2 + Math.random() * 1.8).toFixed(2);
+    const del = (Math.random() * 1.2).toFixed(2);
+    const w = 6 + Math.round(Math.random() * 6);
+    const round = Math.random() < .3 ? 'border-radius:50%;' : '';
+    out += `<i class="confetti" style="left:${left}%;background:${col};width:${w}px;height:${w + 5}px;${round}animation-duration:${dur}s;animation-delay:${del}s"></i>`;
+  }
+  return out;
+}
+
+/* chạy sau khi render: đếm điểm tăng dần + vẽ vòng tròn */
+function animCelebrate() {
+  const arc = document.getElementById('cele-arc');
+  if (arc) requestAnimationFrame(() => {
+    arc.style.transition = 'stroke-dashoffset 1.1s cubic-bezier(.3,1,.4,1)';
+    arc.style.strokeDashoffset = arc.dataset.target;
+  });
+  const el = document.getElementById('cele-score');
+  if (!el) return;
+  const to = Number(el.dataset.to) || 0;
+  const t0 = performance.now(), dur = 1000;
+  const step = (t) => {
+    if (!document.body.contains(el)) return;
+    const p = Math.min(1, (t - t0) / dur);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmtScore(to * e);
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = fmtScore(to);
+  };
+  requestAnimationFrame(step);
+}
 
 /* ================= RESULT ================= */
 function vResult() {
@@ -477,7 +624,7 @@ function vResult() {
   const pct = Math.round(r.score / 10 * 100);
   const ring = 2 * Math.PI * 74;
   const passed = r.score >= 5;
-  const rank = r.score >= 9 ? 'XUẤT SẮC 🌟' : r.score >= 7 ? 'GIỎI 👍' : r.score >= 5 ? 'ĐẠT ✓' : 'CẦN CỐ GẮNG 💪';
+  const rank = rankOf(r.score).label;
   return `
   <div class="topbar">
     <button class="icon-btn" onclick="nav('subject')">←</button>
@@ -519,12 +666,13 @@ function vResult() {
         const st = !a ? '⊘ Bỏ qua' : ok ? '✓ Chính xác' : `✗ Sai — em chọn ${a}, đáp án đúng ${q.ans}`;
         return `<button class="res-item ${cls}" onclick="openReviewAt(${i})">
           <div class="idx">${String(i + 1).padStart(2, '0')}</div>
-          <div class="tx"><div class="tt">${q.name} · ${esc(q.text).slice(0, 60)}</div><div class="st ${cls}">${st}</div></div>
+          <div class="tx"><div class="tt">${q.name} · ${esc(cut(plain(q.text), 60))}</div><div class="st ${cls}">${st}</div></div>
           <div class="arr">›</div>
         </button>`;
       }).join('')}
     </div>
-  </div>`;
+  </div>
+  ${state.celebrate ? vCelebrate(exam, r) : ''}`;
 }
 window.shareResult = async () => {
   const exam = getExam(state.examId);
@@ -532,7 +680,7 @@ window.shareResult = async () => {
     ? state.lastResult : (store.results[state.examId] || {}).last;
   if (!r) return;
   const sub = subjectOfExam(exam.id) || {};
-  const rank = r.score >= 9 ? 'XUẤT SẮC 🌟' : r.score >= 7 ? 'GIỎI 👍' : r.score >= 5 ? 'ĐẠT ✓' : 'CẦN CỐ GẮNG 💪';
+  const rank = rankOf(r.score).label;
   const when = new Date(r.date).toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
   const text = [
     '📊 KẾT QUẢ ÔN THI HỌC KÌ',
@@ -579,6 +727,8 @@ window.openReviewAt = (i) => {
 
 /* ================= Android back button ================= */
 window.androidBack = () => {
+  if (state.grading) return true;   // đang chấm bài, đợi 1 giây
+  if (state.celebrate) { state.celebrate = null; render(); return true; }
   if (state.modal) { state.modal = null; render(); return true; }
   if (state.showNav) { state.showNav = false; render(); return true; }
   switch (state.screen) {
@@ -602,6 +752,7 @@ function render() {
     case 'result': html = vResult(); break;
   }
   app.innerHTML = html;
+  if (state.celebrate) animCelebrate();
 }
 window.nav = nav;
 window.state = state;
