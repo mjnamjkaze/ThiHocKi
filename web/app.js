@@ -85,7 +85,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.4.0 • Lớp 2: Toán CK2 (15) · Tư duy (24) · ASMO (4) · MathX (50) · VioEdu (48)<br>Lớp 3: VioEdu Toán · Tiếng Việt · Toán Tiếng Anh (48 đề)</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.7.0 • Lớp 2: Toán CK2 (15) · Tư duy (24) · HSG (15) · ASMO (4) · AMO (6) · FMO (15) · MathX (50) · VioEdu (48)<br>Lớp 3: Toán CK2 (12) · Nâng cao (15) · VioEdu Toán · Tiếng Việt · Toán Tiếng Anh (48)</div>
     </div>
   </div>`;
 }

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 160" font-family="system-ui">
+<rect x="0" y="0" width="390" height="160" rx="8" fill="#fff"/>
+<text x="95" y="102" font-size="44" text-anchor="middle">🥇</text><text x="205" y="102" font-size="44" text-anchor="middle">🥈</text><text x="315" y="102" font-size="44" text-anchor="middle">🥉</text>
+</svg>
