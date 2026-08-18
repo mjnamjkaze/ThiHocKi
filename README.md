@@ -1,23 +1,23 @@
 # Ôn Thi Học Kì — Lớp 2 & Lớp 3
 
-Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **252 đề · 2 538 câu.**
+Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **313 đề · 2 538 câu — mỗi đề khoảng 10 câu.**
 
 👉 **Dùng ngay: https://mjnamjkaze.github.io/ThiHocKi/**
 
 ### Lớp 2
-- **Toán 2 — Cuối học kì 2**: 15 đề (321 câu) chuyển thể từ bộ đề gốc + 5 đề Cánh Diều
+- **Toán 2 — Cuối học kì 2**: 35 đề (321 câu) chuyển thể từ bộ đề gốc + 5 đề Cánh Diều
 - **Toán tư duy lớp 2**: 24 đề × 10 câu chuyển thể từ "175 bài toán tư duy hàng tuần" + "1001 bài toán tư duy"
 - **HSG Toán lớp 2**: 15 đề chuyên đề × 8 câu (120 câu) bồi dưỡng học sinh giỏi — xem chi tiết bên dưới
-- **Tư duy ASMO/AMO lớp 2**: 6 chuyên đề × 15 câu (90 câu) — Logic · Số học · Hình không gian · Mô hình toán học · Tổ hợp · Tiếng Anh chuyên ngành
-- **FMO – Toán tư duy lớp 2**: 15 chuyên đề × 15 câu (225 câu, 70 hình SVG) — bản **hạ độ khó** từ bộ ôn thi FMO/AMO
+- **Tư duy ASMO/AMO lớp 2**: 6 chuyên đề chia thành 12 đề (90 câu) — Logic · Số học · Hình không gian · Mô hình toán học · Tổ hợp · Tiếng Anh chuyên ngành
+- **FMO – Toán tư duy lớp 2**: 15 chuyên đề chia thành 30 đề (225 câu, 70 hình SVG) — bản **hạ độ khó** từ bộ ôn thi FMO/AMO
 - **Tư duy MathX lớp 2**: 50 phiếu hàng tuần (258 câu)
-- **ASMO Toán quốc tế lớp 2**: 4 đề thi thật (2014 · 2015 · 2017 · 2018) × 20 câu, dịch tiếng Việt, đủ 5 lựa chọn A–E
-- **Đấu trường VioEdu lớp 2**: Toán · Tiếng Việt · Toán Tiếng Anh — mỗi môn 16 đề
+- **ASMO Toán quốc tế lớp 2**: 4 đề thi thật (2014 · 2015 · 2017 · 2018) × 20 câu — chia đôi thành 8 đề × 10 câu, dịch tiếng Việt, đủ 5 lựa chọn A–E
+- **Đấu trường VioEdu lớp 2**: Toán (18 đề) · Tiếng Việt (16 đề) · Toán Tiếng Anh (16 đề)
 
 ### Lớp 3
-- **Toán 3 — Cuối học kì 2**: 12 đề (168 câu) — 4 Kết nối tri thức · 4 Chân trời sáng tạo · 4 Cánh Diều
+- **Toán 3 — Cuối học kì 2**: 12 đề gốc chia đôi thành 24 đề (168 câu) — Kết nối tri thức · Chân trời sáng tạo · Cánh Diều
 - **Toán nâng cao lớp 3**: 15 chuyên đề × 8 câu (120 câu), mức HSG cấp trường / quận – huyện
-- **Đấu trường VioEdu lớp 3**: Toán · Tiếng Việt · Toán Tiếng Anh — mỗi môn 16 đề
+- **Đấu trường VioEdu lớp 3**: Toán (18 đề) · Tiếng Việt (16 đề) · Toán Tiếng Anh (16 đề)
 
 ### Bộ đề HSG Toán lớp 2 (15 đề · 120 câu)
 Mức độ **HSG cấp trường / cấp huyện** — nâng cao vừa phải, bám sát chương trình lớp 2
@@ -42,7 +42,7 @@ một số dạng suy luận tham khảo [Kangaroo Pre-Ecolier](https://www.math
 và [SASMO Primary 2](https://www.internationalolympiadacademy.com/pdfs/Grade-2-SASMO.pdf) nhưng **đã hạ độ khó và Việt hoá**
 cho phù hợp học sinh lớp 2 Việt Nam. Toàn bộ 120 câu được biên soạn lại, có lời giải chi tiết; 16 hình minh hoạ vẽ bằng SVG.
 
-### Bộ đề VioEdu (96 đề)
+### Bộ đề VioEdu (100 đề)
 Đủ các vòng của **hai năm học 2024–2025 và 2025–2026**, mỗi năm: **Sơ loại vòng 1 → vòng 6 → Cấp Trường → Cấp Quận/Huyện**.
 Cấu trúc vòng thi và chủ điểm bám theo thể lệ chính thức [Đấu trường Toán học VioEdu](https://vio.edu.vn) (FPT).
 Các câu đánh dấu `/*src*/` trong file dữ liệu là câu **thật** từ đề công bố công khai
@@ -52,6 +52,9 @@ các câu còn lại được biên soạn bám sát chủ điểm và dạng b�
 Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằng tiếng Việt.
 
 ## Tính năng
+- **Mỗi đề khoảng 10 câu** — đề gốc dài hơn 12 câu được cắt thành nhiều phần liên tiếp (`Đề 1 · Phần 1/3`),
+  điểm từng câu quy đổi lại để mỗi phần vẫn đủ thang điểm 10 và thời gian chia theo tỉ lệ số câu.
+  Việc cắt do `web/split-exams.js` làm lúc nạp trang nên **ngân hàng câu hỏi gốc giữ nguyên**, không câu nào bị bỏ
 - **Chọn lớp** ngay ở trang chủ (lớp 2 / lớp 3), danh sách môn học đổi theo khối
 - Mọi dạng bài (trắc nghiệm, tự luận, đúng/sai, nối, điền số, quy luật hình…) đều chuyển thể trắc nghiệm 4 lựa chọn (riêng ASMO/AMO/FMO là 5 lựa chọn A–E) + **lời giải chi tiết từng câu**
 - Hình minh họa **vẽ lại bằng SVG** sắc nét, không watermark
@@ -64,6 +67,7 @@ Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằ
   - Lớp 2: `data.js` (Toán CK2) · `data-ck2cd.js` (Cánh Diều) · `data-tuduy.js` · `data-hsg2.js` · `data-amo2.js` ·
     `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-vioedu2-{toan,tviet,tanh}.js`
   - Lớp 3: `data-ck2-l3.js` · `data-hsg3.js` · `data-vioedu3-{toan,tviet,tanh}.js`
+- `web/split-exams.js` — chạy sau các file dữ liệu, chia đề dài thành các phần ~10 câu (đổi `MAX` để chỉnh độ dài đề)
 - `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `fmo2/`, `vioedu/`)
 - Tự deploy lên GitHub Pages khi push nhánh `main` (xem `.github/workflows/deploy-pages.yml`)
 

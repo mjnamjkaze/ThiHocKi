@@ -84,6 +84,15 @@ function nav(screen, extra = {}) {
 }
 
 /* ================= LOGIN ================= */
+/* Dòng tóm tắt số đề của một khối — đếm trực tiếp từ dữ liệu để không bị lệch
+   khi bộ đề được chia nhỏ (xem split-exams.js). */
+function footLine(g) {
+  const subs = subjectsOfGrade(g).filter(s => s.ready);
+  const vio = subs.filter(s => s.id.startsWith('vio'));
+  const items = subs.filter(s => !s.id.startsWith('vio')).map(s => `${s.name} (${s.exams.length})`);
+  if (vio.length) items.push(`VioEdu (${vio.reduce((t, s) => t + s.exams.length, 0)})`);
+  return `Lớp ${g}: ` + items.join(' · ');
+}
 function vLogin() {
   return `
   <div class="login-wrap">
@@ -100,7 +109,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.7.0 • Lớp 2: Toán CK2 (15) · Tư duy (24) · HSG (15) · ASMO (4) · AMO (6) · FMO (15) · MathX (50) · VioEdu (48)<br>Lớp 3: Toán CK2 (12) · Nâng cao (15) · VioEdu Toán · Tiếng Việt · Toán Tiếng Anh (48)</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.8.0 • ${readyGrades().map(footLine).join('<br>')}</div>
     </div>
   </div>`;
 }
@@ -145,7 +154,7 @@ function vHome() {
     ? `<div class="hero">
       <span class="tag">KỲ THI SẮP TỚI</span>
       <h2>Toán 2 — Cuối học kì 2</h2>
-      <div class="meta">⏱ 35 phút/đề &nbsp;•&nbsp; 📚 15 đề &nbsp;•&nbsp; hoàn thành ${done}/${EXAMS.length}</div>
+      <div class="meta">⏱ ~${Math.round(EXAMS.reduce((t, e) => t + e.time, 0) / EXAMS.length)} phút/đề &nbsp;•&nbsp; 📚 ${EXAMS.length} đề &nbsp;•&nbsp; hoàn thành ${done}/${EXAMS.length}</div>
       <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
     </div>`
     : `<div class="hero">
