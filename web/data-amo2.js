@@ -11,7 +11,7 @@
 //   6. Tiếng Anh chuyên ngành          — Mathematical English vocabulary
 //
 // ĐỘ KHÓ: cố ý giữ ở mức VỪA PHẢI — dùng để làm quen dạng bài ASMO/AMO, KHÔNG phải đề thi thật
-// vòng chung kết. Mọi số liệu nằm trong phạm vi chương trình lớp 2: số đến 1 000, bảng nhân chia
+// vòng chung kết. Mọi số liệu nằm trong phạm vi chương trình lớp 2: số đến 1000, bảng nhân chia
 // từ 2 đến 9, chu vi hình đơn giản, khối hộp – khối lập phương – khối cầu, đo lường, thời gian.
 // Riêng phép × 2 và : 2 được phép vượt ra ngoài phạm vi bảng (ví dụ 2 × 150; 480 : 2).
 // Đề thật các năm 2014 · 2015 · 2017 · 2018 nằm ở môn "ASMO" riêng.
@@ -247,9 +247,9 @@ const AMO2_EXAMS = [
       opts: AMO5('72 kg', '82 kg', '92 kg', '88 kg', '218 kg'), ans: 'B',
       why: 'Số gạo còn lại: 150 − 68 = 82 (kg).' },
     { sec: 'Phần A — Cơ bản (6 điểm)', name: 'Câu 5', pts: 0.6,
-      text: 'Mẹ mua 7 kg thịt, mỗi ki-lô-gam giá 90 000 đồng. Hỏi mẹ phải trả bao nhiêu tiền?',
-      opts: AMO5('97 000 đồng', '540 000 đồng', '720 000 đồng', '700 000 đồng', '630 000 đồng'), ans: 'E',
-      why: 'Số tiền phải trả: 90 000 × 7 = 630 000 (đồng).' },
+      text: 'Mẹ mua 7 kg thịt, mỗi ki-lô-gam giá 90000 đồng. Hỏi mẹ phải trả bao nhiêu tiền?',
+      opts: AMO5('97000 đồng', '540000 đồng', '720000 đồng', '700000 đồng', '630000 đồng'), ans: 'E',
+      why: 'Số tiền phải trả: 90000 × 7 = 630000 (đồng).' },
     { sec: 'Phần A — Cơ bản (6 điểm)', name: 'Câu 6', pts: 0.6,
       text: 'Một bao gạo nặng 486 kg, người ta lấy ra <sup>1</sup>⁄<sub>2</sub> số gạo đó. Hỏi trong bao còn lại bao nhiêu ki-lô-gam?',
       opts: AMO5('234 kg', '243 kg', '223 kg', '253 kg', '484 kg'), ans: 'B',
@@ -267,18 +267,18 @@ const AMO2_EXAMS = [
       opts: AMO5('15 bạn', '16 bạn', '17 bạn', '18 bạn', '47 bạn'), ans: 'C',
       why: 'Số bạn nam: 32 − 15 = 17 (bạn).' },
     { sec: 'Phần A — Cơ bản (6 điểm)', name: 'Câu 10', pts: 0.6,
-      text: 'Một cuốn vở giá 8 000 đồng. Hỏi mua 7 cuốn vở như thế hết bao nhiêu tiền?',
-      opts: AMO5('15 000 đồng', '48 000 đồng', '63 000 đồng', '72 000 đồng', '56 000 đồng'), ans: 'E',
-      why: 'Số tiền: 8 000 × 7 = 56 000 (đồng).' },
+      text: 'Một cuốn vở giá 8000 đồng. Hỏi mua 7 cuốn vở như thế hết bao nhiêu tiền?',
+      opts: AMO5('15000 đồng', '48000 đồng', '63000 đồng', '72000 đồng', '56000 đồng'), ans: 'E',
+      why: 'Số tiền: 8000 × 7 = 56000 (đồng).' },
 
     { sec: 'Phần B — Nâng cao (4 điểm)', name: 'Câu 11', pts: 0.8,
       text: 'Có 5 rổ trứng, mỗi rổ 8 quả. Người ta đã bán 17 quả. Hỏi còn lại bao nhiêu quả trứng?',
       opts: AMO5('20 quả', '25 quả', '28 quả', '23 quả', '40 quả'), ans: 'D',
       why: 'Tổng số trứng: 8 × 5 = 40 (quả). Số trứng còn lại: 40 − 17 = 23 (quả).' },
     { sec: 'Phần B — Nâng cao (4 điểm)', name: 'Câu 12', pts: 0.8,
-      text: 'Nam có 30 000 đồng, Nam mua 2 quyển vở giá 9 000 đồng một quyển. Hỏi Nam còn lại bao nhiêu tiền?',
-      opts: AMO5('9 000 đồng', '12 000 đồng', '11 000 đồng', '18 000 đồng', '21 000 đồng'), ans: 'B',
-      why: 'Tiền mua vở: 9 000 × 2 = 18 000 (đồng). Số tiền còn lại: 30 000 − 18 000 = 12 000 (đồng).' },
+      text: 'Nam có 30000 đồng, Nam mua 2 quyển vở giá 9000 đồng một quyển. Hỏi Nam còn lại bao nhiêu tiền?',
+      opts: AMO5('9000 đồng', '12000 đồng', '11000 đồng', '18000 đồng', '21000 đồng'), ans: 'B',
+      why: 'Tiền mua vở: 9000 × 2 = 18000 (đồng). Số tiền còn lại: 30000 − 18000 = 12000 (đồng).' },
     { sec: 'Phần B — Nâng cao (4 điểm)', name: 'Câu 13', pts: 0.8,
       text: 'Anh hái được 56 quả cam, em hái được bằng <sup>1</sup>⁄<sub>7</sub> số cam của anh. Hỏi cả hai anh em hái được bao nhiêu quả cam?',
       opts: AMO5('8 quả', '63 quả', '49 quả', '112 quả', '64 quả'), ans: 'E',

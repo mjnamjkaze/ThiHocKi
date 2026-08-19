@@ -2,7 +2,7 @@
 // 15 đề chuyên đề × 8 câu = 120 câu. Mỗi câu 1,25 điểm — thang 10 — 35 phút mỗi đề.
 //
 // MỨC ĐỘ: HSG cấp trường / cấp quận – huyện (nâng cao vừa phải, KHÔNG lấy nguyên đề quốc gia
-// hay olympic quốc tế). Bám sát chương trình lớp 3: phạm vi 100 000, bảng nhân chia,
+// hay olympic quốc tế). Bám sát chương trình lớp 3: phạm vi 100000, bảng nhân chia,
 // chu vi – diện tích, đo lường, thời gian, thống kê.
 //
 // NGUỒN THAM KHẢO DẠNG BÀI:
@@ -17,14 +17,14 @@
 
 const HSG3_EXAMS = [
 
-/* ═══════════ ĐỀ 1 — SỐ VÀ CẤU TẠO SỐ (đến 100 000) ═══════════ */
+/* ═══════════ ĐỀ 1 — SỐ VÀ CẤU TẠO SỐ (đến 100000) ═══════════ */
 {
   id: 801, title: 'Đề 1 · Số và cấu tạo số', time: 35,
   questions: [
     { sec: 'Cấu tạo số', name: 'Câu 1', pts: 1.25,
       text: 'Số <b>lớn nhất có năm chữ số</b> mà tổng các chữ số của nó bằng 5 là số nào?',
-      opts: o4('41 000', '50 000', '32 000', '11 111'), ans: 'B',
-      why: 'Muốn số lớn nhất thì chữ số ở hàng cao nhất phải lớn nhất. Dồn cả 5 đơn vị vào hàng chục nghìn, các hàng còn lại là 0, ta được 50 000.' },
+      opts: o4('41000', '50000', '32000', '11111'), ans: 'B',
+      why: 'Muốn số lớn nhất thì chữ số ở hàng cao nhất phải lớn nhất. Dồn cả 5 đơn vị vào hàng chục nghìn, các hàng còn lại là 0, ta được 50000.' },
     { sec: 'Đếm số', name: 'Câu 2', pts: 1.25,
       text: 'Có bao nhiêu số có ba chữ số mà <b>chữ số hàng trăm là 4</b>?',
       opts: o4('100 số', '99 số', '90 số', '10 số'), ans: 'A',
@@ -35,16 +35,16 @@ const HSG3_EXAMS = [
       why: 'Chữ số hàng trăm khác 0 nên có 3 cách chọn. Hàng chục còn 3 cách (kể cả 0), hàng đơn vị còn 2 cách. Tất cả: 3 × 3 × 2 = 18 (số).' },
     { sec: 'So sánh', name: 'Câu 4', pts: 1.25,
       text: 'Tổng của <b>số lớn nhất có bốn chữ số</b> và <b>số bé nhất có bốn chữ số</b> là:',
-      opts: o4('11 000', '10 099', '19 999', '10 999'), ans: 'D',
-      why: 'Số lớn nhất có bốn chữ số là 9 999; số bé nhất có bốn chữ số là 1 000. Tổng: 9 999 + 1 000 = 10 999.' },
+      opts: o4('11000', '10099', '19999', '10999'), ans: 'D',
+      why: 'Số lớn nhất có bốn chữ số là 9999; số bé nhất có bốn chữ số là 1000. Tổng: 9999 + 1000 = 10999.' },
     { sec: 'Đếm chữ số', name: 'Câu 5', pts: 1.25,
       text: 'Khi viết các số từ <b>1 đến 100</b>, chữ số <b>0</b> được viết bao nhiêu lần?',
       opts: o4('11 lần', '10 lần', '9 lần', '20 lần'), ans: 'A',
       why: 'Từ 1 đến 9 không có chữ số 0. Từ 10 đến 99, chữ số 0 chỉ xuất hiện ở hàng đơn vị của 10; 20; …; 90 — được 9 lần. Riêng số 100 có 2 chữ số 0. Tất cả: 9 + 2 = 11 lần.' },
     { sec: 'Cấu tạo số', name: 'Câu 6', pts: 1.25,
-      text: 'Số <b>2 013</b> thay đổi thế nào nếu ta <b>xoá bỏ chữ số 0</b> của nó?',
-      opts: o4('Giảm 1 000 đơn vị', 'Giảm 180 đơn vị', 'Giảm 1 800 đơn vị', 'Tăng 1 800 đơn vị'), ans: 'C',
-      why: 'Xoá chữ số 0 ta được số 213. Ta có 2 013 − 213 = 1 800, nên số đó giảm đi 1 800 đơn vị.' },
+      text: 'Số <b>2013</b> thay đổi thế nào nếu ta <b>xoá bỏ chữ số 0</b> của nó?',
+      opts: o4('Giảm 1000 đơn vị', 'Giảm 180 đơn vị', 'Giảm 1800 đơn vị', 'Tăng 1800 đơn vị'), ans: 'C',
+      why: 'Xoá chữ số 0 ta được số 213. Ta có 2013 − 213 = 1800, nên số đó giảm đi 1800 đơn vị.' },
     { sec: 'Tìm số', name: 'Câu 7', pts: 1.25,
       text: 'Một số có hai chữ số. Nếu viết thêm chữ số <b>0</b> vào bên phải số đó thì số mới hơn số cũ 261 đơn vị. Tìm số đó.',
       opts: o4('26', '29', '27', '31'), ans: 'B',
@@ -101,12 +101,12 @@ const HSG3_EXAMS = [
   questions: [
     { sec: 'Tính nhanh', name: 'Câu 1', pts: 1.25,
       text: 'Tính nhanh: <b>25 × 4 × 7</b>',
-      opts: o4('700', '175', '350', '1 400'), ans: 'A',
+      opts: o4('700', '175', '350', '1400'), ans: 'A',
       why: 'Nhóm 25 × 4 = 100 trước cho tròn trăm, rồi 100 × 7 = 700.' },
     { sec: 'Tính nhanh', name: 'Câu 2', pts: 1.25,
       text: 'Tính nhanh: <b>125 + 375 + 625 + 875</b>',
-      opts: o4('1 900', '2 100', '2 000', '1 800'), ans: 'C',
-      why: 'Ghép các cặp cho tròn nghìn: (125 + 875) + (375 + 625) = 1 000 + 1 000 = 2 000.' },
+      opts: o4('1900', '2100', '2000', '1800'), ans: 'C',
+      why: 'Ghép các cặp cho tròn nghìn: (125 + 875) + (375 + 625) = 1000 + 1000 = 2000.' },
     { sec: 'Tính nhanh', name: 'Câu 3', pts: 1.25,
       text: 'Tính nhanh: <b>24 × 7 + 24 × 3</b>',
       opts: o4('234', '240', '480', '168'), ans: 'B',
@@ -124,13 +124,13 @@ const HSG3_EXAMS = [
       opts: o4('450', '495', '485', '540'), ans: 'B',
       why: 'Tách 11 = 10 + 1: 45 × 10 + 45 × 1 = 450 + 45 = 495.' },
     { sec: 'Biểu thức', name: 'Câu 7', pts: 1.25,
-      text: 'Tính giá trị của biểu thức: <b>(72 − 8 × 9) × 2 026</b>',
-      opts: o4('2 026', '1', '64 832', '0'), ans: 'D',
+      text: 'Tính giá trị của biểu thức: <b>(72 − 8 × 9) × 2026</b>',
+      opts: o4('2026', '1', '64832', '0'), ans: 'D',
       why: 'Trong ngoặc làm nhân trước: 8 × 9 = 72, rồi 72 − 72 = 0. Số 0 nhân với số nào cũng bằng 0, nên kết quả là 0.' },
     { sec: 'Biểu thức', name: 'Câu 8', pts: 1.25,
-      text: 'Tính giá trị của biểu thức: <b>1 000 : 8 : 5</b>',
+      text: 'Tính giá trị của biểu thức: <b>1000 : 8 : 5</b>',
       opts: o4('25', '40', '125', '625'), ans: 'A',
-      why: 'Chỉ có phép chia nên làm từ trái sang phải: 1 000 : 8 = 125; 125 : 5 = 25. (Cũng có thể nhẩm 1 000 : (8 × 5) = 1 000 : 40 = 25.)' },
+      why: 'Chỉ có phép chia nên làm từ trái sang phải: 1000 : 8 = 125; 125 : 5 = 25. (Cũng có thể nhẩm 1000 : (8 × 5) = 1000 : 40 = 25.)' },
   ],
 },
 
@@ -221,9 +221,9 @@ const HSG3_EXAMS = [
       opts: o4('72 cái', '80 cái', '45 cái', '64 cái'), ans: 'A',
       why: 'Mỗi hộp có: 40 : 5 = 8 (cái). 9 hộp có: 8 × 9 = 72 (cái bánh).' },
     { sec: 'Rút về đơn vị', name: 'Câu 2', pts: 1.25,
-      text: 'Mua 4 quyển vở hết 28 000 đồng. Hỏi mua 7 quyển vở như thế hết bao nhiêu tiền?',
-      opts: o4('56 000 đồng', '42 000 đồng', '49 000 đồng', '35 000 đồng'), ans: 'C',
-      why: 'Giá một quyển vở: 28 000 : 4 = 7 000 (đồng). Mua 7 quyển hết: 7 000 × 7 = 49 000 (đồng).' },
+      text: 'Mua 4 quyển vở hết 28000 đồng. Hỏi mua 7 quyển vở như thế hết bao nhiêu tiền?',
+      opts: o4('56000 đồng', '42000 đồng', '49000 đồng', '35000 đồng'), ans: 'C',
+      why: 'Giá một quyển vở: 28000 : 4 = 7000 (đồng). Mua 7 quyển hết: 7000 × 7 = 49000 (đồng).' },
     { sec: 'Rút về đơn vị', name: 'Câu 3', pts: 1.25,
       text: 'Chia đều 24 kg gạo vào 6 túi. Hỏi 5 túi như thế đựng bao nhiêu ki-lô-gam gạo?',
       opts: o4('24 kg', '20 kg', '18 kg', '30 kg'), ans: 'B',
@@ -282,7 +282,7 @@ const HSG3_EXAMS = [
     { sec: 'Điền chữ số', name: 'Câu 7', pts: 1.25,
       text: 'Thay dấu <b>*</b> bằng chữ số thích hợp để số <b>201*</b> chia hết cho <b>cả 2 và 5</b>:',
       opts: o4('* = 5', '* = 0', '* = 2', '* = 4'), ans: 'B',
-      why: 'Số chia hết cho 2 phải tận cùng là chữ số chẵn; chia hết cho 5 phải tận cùng là 0 hoặc 5. Vừa chẵn vừa là 0 hoặc 5 thì chỉ có 0. Số đó là 2 010.' },
+      why: 'Số chia hết cho 2 phải tận cùng là chữ số chẵn; chia hết cho 5 phải tận cùng là 0 hoặc 5. Vừa chẵn vừa là 0 hoặc 5 thì chỉ có 0. Số đó là 2010.' },
     { sec: 'Toán đố', name: 'Câu 8', pts: 1.25,
       text: 'Có 100 quả trứng xếp vào các khay, mỗi khay 6 quả. Hỏi cần ít nhất bao nhiêu khay để xếp hết số trứng đó?',
       opts: o4('16 khay', '18 khay', '15 khay', '17 khay'), ans: 'D',
@@ -557,9 +557,9 @@ const HSG3_EXAMS = [
       opts: o4('80 quả', '100 quả', '90 quả', '75 quả'), ans: 'C',
       why: 'Trước khi bán 20 quả sau, người đó còn 40 + 20 = 60 (quả). Số cam này chính là phần còn lại sau khi bán một phần ba, tức 2 phần trong 3 phần. Mỗi phần: 60 : 2 = 30 (quả). Lúc đầu có 30 × 3 = 90 (quả cam).' },
     { sec: 'Thực tế', name: 'Câu 8', pts: 1.25,
-      text: 'Ba bạn góp tiền mua một món quà giá 90 000 đồng. An góp <sup>1</sup>⁄<sub>3</sub> giá món quà, Bình góp 25 000 đồng. Hỏi Cường phải góp bao nhiêu tiền?',
-      opts: o4('30 000 đồng', '40 000 đồng', '25 000 đồng', '35 000 đồng'), ans: 'D',
-      why: 'An góp: 90 000 : 3 = 30 000 (đồng). An và Bình góp: 30 000 + 25 000 = 55 000 (đồng). Cường góp: 90 000 − 55 000 = 35 000 (đồng).' },
+      text: 'Ba bạn góp tiền mua một món quà giá 90000 đồng. An góp <sup>1</sup>⁄<sub>3</sub> giá món quà, Bình góp 25000 đồng. Hỏi Cường phải góp bao nhiêu tiền?',
+      opts: o4('30000 đồng', '40000 đồng', '25000 đồng', '35000 đồng'), ans: 'D',
+      why: 'An góp: 90000 : 3 = 30000 (đồng). An và Bình góp: 30000 + 25000 = 55000 (đồng). Cường góp: 90000 − 55000 = 35000 (đồng).' },
   ],
 },
 
