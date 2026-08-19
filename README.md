@@ -1,6 +1,6 @@
 # Ôn Thi Học Kì — Lớp 2 & Lớp 3
 
-Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **313 đề · 2538 câu — mỗi đề khoảng 10 câu.**
+Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **340 đề · 2808 câu — mỗi đề khoảng 10 câu.**
 
 👉 **Dùng ngay: https://mjnamjkaze.github.io/ThiHocKi/**
 
@@ -13,11 +13,16 @@ Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **313 �
 - **Tư duy MathX lớp 2**: 50 phiếu hàng tuần (258 câu)
 - **ASMO Toán quốc tế lớp 2**: 4 đề thi thật (2014 · 2015 · 2017 · 2018) × 20 câu — chia đôi thành 8 đề × 10 câu, dịch tiếng Việt, đủ 5 lựa chọn A–E
 - **Đấu trường VioEdu lớp 2**: Toán (18 đề) · Tiếng Việt (16 đề) · Toán Tiếng Anh (16 đề)
+- **VioEdu lớp 2 — chuyên đề Đồng hồ · Ngày tháng · Sudoku**: 14 đề × 10 câu (140 câu, 79 câu có hình SVG)
+  mức cấp Trường + cấp Quận/Huyện — đọc đồng hồ tới từng 5 phút, giờ kém, tính giờ, tờ lịch tháng, sudoku 3×3 (số và hình)
 
 ### Lớp 3
 - **Toán 3 — Cuối học kì 2**: 12 đề gốc chia đôi thành 24 đề (168 câu) — Kết nối tri thức · Chân trời sáng tạo · Cánh Diều
 - **Toán nâng cao lớp 3**: 15 chuyên đề × 8 câu (120 câu), mức HSG cấp trường / quận – huyện
 - **Đấu trường VioEdu lớp 3**: Toán (18 đề) · Tiếng Việt (16 đề) · Toán Tiếng Anh (16 đề)
+- **VioEdu lớp 3 — chuyên đề Đồng hồ · Ngày tháng · Sudoku**: 13 đề × 10 câu (130 câu, 56 câu có hình SVG)
+  mức cấp Trường + cấp Quận/Huyện — đọc giờ chính xác đến phút, đồng hồ 24 giờ, cộng trừ thời gian, xem lịch,
+  tìm thứ – ngày nâng cao, năm nhuận · quý, sudoku 3×3 và sudoku 4×4 có ô vuông 2×2
 
 ### Bộ đề HSG Toán lớp 2 (15 đề · 120 câu)
 Mức độ **HSG cấp trường / cấp huyện** — nâng cao vừa phải, bám sát chương trình lớp 2
@@ -51,6 +56,19 @@ Các câu đánh dấu `/*src*/` trong file dữ liệu là câu **thật** từ
 các câu còn lại được biên soạn bám sát chủ điểm và dạng bài của từng vòng.
 Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằng tiếng Việt.
 
+### Chuyên đề Đồng hồ · Tính giờ · Ngày tháng · Sudoku (27 đề · 270 câu)
+Bổ sung cho hai môn VioEdu Toán, mức **cấp Trường + cấp Quận/Huyện**. Dạng bài bám theo
+[bộ đề ôn VioEdu lớp 2 (HoaTieu)](https://hoatieu.vn/de-thi-vioedu-lop-2-245854),
+[đề ôn cấp Trường lớp 2 và cấp Huyện lớp 3 (Toán IQ)](https://www.toaniq.com/de-on-thi-vioedu-lop-2-cap-truong-nam-2025-2026/),
+[trắc nghiệm xem đồng hồ – xem lịch lớp 3 (VietJack)](https://www.vietjack.com/toan-3-kn/trac-nghiem-bai-67-thuc-hanh-xem-dong-hoog-xem-lich.jsp)
+và [bài toán về thời gian lớp 3 (VnDoc)](https://vndoc.com/mot-so-bai-toan-lop-3-ve-thoi-gian-146903); toàn bộ câu hỏi được biên soạn lại.
+
+**135 câu có hình vẽ bằng code** (131 file SVG): mặt đồng hồ kim có vạch phút và kim giờ chạy dần theo phút,
+đồng hồ điện tử 24 giờ, tờ lịch tháng, bảng sudoku 3×3 · 4×4 · sudoku hình.
+Đề được sinh bằng `tools/gen-vioedu-time.mjs` nên **đáp án lấy thẳng từ dữ liệu vẽ ra hình**:
+giờ trong đáp án đúng bằng giờ đã vẽ, thứ trong tờ lịch lấy từ `Date` nên khớp lịch thật,
+và mỗi bảng sudoku đều được máy kiểm tra là **chỉ có duy nhất một cách điền** trước khi đưa vào đề.
+
 ## Tính năng
 - **Mỗi đề khoảng 10 câu** — đề gốc dài hơn 12 câu được cắt thành nhiều phần liên tiếp (`Đề 1 · Phần 1/3`),
   điểm từng câu quy đổi lại để mỗi phần vẫn đủ thang điểm 10 và thời gian chia theo tỉ lệ số câu.
@@ -74,6 +92,9 @@ Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằ
     `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-vioedu2-{toan,tviet,tanh}.js`
   - Lớp 3: `data-ck2-l3.js` · `data-hsg3.js` · `data-vioedu3-{toan,tviet,tanh}.js`
 - `web/split-exams.js` — chạy sau các file dữ liệu, chia đề dài thành các phần ~10 câu (đổi `MAX` để chỉnh độ dài đề)
+- `tools/` — bộ sinh đề chuyên đề thời gian: `vio-art.mjs` (vẽ đồng hồ · tờ lịch · bảng sudoku bằng SVG) và
+  `gen-vioedu-time.mjs` (sinh `web/data-vioedu{2,3}-tgian.js` + hình trong `web/assets/vioedu/t_*.svg`).
+  Sửa nội dung trong script rồi chạy `node tools/gen-vioedu-time.mjs`
 - `web/art.js` + `web/art.css` — **bộ minh hoạ gốc "Lớp Học Vui"**: 12 con vật × 10 tư thế (chung một bộ
   xương, khác nhau ở tai · đuôi · hoa văn · mũi nên thêm bạn mới chỉ là thêm 1 dòng trong bảng `CREW`),
   23 hình trang trí, phông nền, giấy màu, 8 huy hiệu — tất cả là SVG vẽ bằng code, dùng lại được cho
