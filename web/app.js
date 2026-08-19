@@ -488,13 +488,13 @@ window.closeModal = () => { state.modal = null; render(); };
 
 /* Xếp loại + "giọng nói" của popup ăn mừng, dùng chung cho kết quả và chia sẻ */
 function rankOf(score) {
-  if (score >= 9) return { tier: 'xs', label: 'XUẤT SẮC 🌟', emoji: '🏆',
+  if (score >= 9) return { tier: 'xs', label: 'XUẤT SẮC', ic: 'trophy',
     head: 'Xuất sắc!', msg: 'Gần như trọn vẹn! Em nắm rất chắc phần này rồi.' };
-  if (score >= 7) return { tier: 'gi', label: 'GIỎI 👍', emoji: '🎉',
+  if (score >= 7) return { tier: 'gi', label: 'GIỎI', ic: 'star',
     head: 'Làm tốt lắm!', msg: 'Chỉ còn vài câu nữa là hoàn hảo. Xem lời giải để gỡ nốt nhé!' };
-  if (score >= 5) return { tier: 'dt', label: 'ĐẠT ✓', emoji: '💡',
+  if (score >= 5) return { tier: 'dt', label: 'ĐẠT', ic: 'sparkle',
     head: 'Em đã vượt qua!', msg: 'Đọc kỹ lời giải mấy câu sai, lần sau điểm sẽ nhảy vọt.' };
-  return { tier: 'cg', label: 'CẦN CỐ GẮNG 💪', emoji: '💪',
+  return { tier: 'cg', label: 'CẦN CỐ GẮNG', ic: 'flame',
     head: 'Đừng bỏ cuộc nha!', msg: 'Xem lời giải từng câu rồi làm lại — ai cũng bắt đầu như vậy thôi.' };
 }
 
@@ -502,8 +502,9 @@ function rankOf(score) {
 function vGrading() {
   return `
   <div class="modal-back grading">
+    ${ART.defs()}
     <div class="grade-box">
-      <div class="grade-spin"><span>📝</span></div>
+      <div class="grade-mascot">${ART.mascot('run', { size: 104 })}</div>
       <h3>Đang chấm bài<span class="dots"><i>.</i><i>.</i><i>.</i></span></h3>
       <p class="muted small">Cô giáo đang soát từng câu của em…</p>
     </div>
@@ -543,24 +544,38 @@ function finishSubmit(auto) {
   nav('result');
 }
 
-/* ================= POPUP ăn mừng ================= */
+/* ================= POPUP ăn mừng =================
+   Cả màn ăn mừng dùng bộ hình gốc trong art.js: Cáo Bo + thế giới học vui.
+   Mỗi mức điểm là một tư thế khác nhau — để bé thấy Bo đang vui CÙNG mình. */
+const CELE_POSE = { xs: 'cheer', gi: 'present', dt: 'highfive', cg: 'support' };
+
 function vCelebrate(exam, r) {
   const c = state.celebrate;
   const rk = rankOf(r.score);
   const n = exam.questions.length;
-  const cf = rk.tier === 'cg' ? '' : confettiHtml(rk.tier === 'xs' ? 46 : 30);
-  const badge = c.newBest ? '<div class="cele-badge">🥇 Kỷ lục mới của em!</div>'
-    : c.first ? '<div class="cele-badge">✨ Lần đầu hoàn thành đề này</div>' : '';
+  const pose = c.auto ? 'wave' : (c.newBest ? 'medal' : (CELE_POSE[rk.tier] || 'cheer'));
+  const cf = rk.tier === 'cg' ? '' : ART.confetti(rk.tier === 'xs' ? 46 : 30);
+  const badge = c.newBest ? ART.badge('record', 'Kỷ lục mới của em!')
+    : c.first ? ART.badge('first', 'Lần đầu em hoàn thành đề này') : '';
   return `
   <div class="cele-back" onclick="closeCelebrate()">
+    ${ART.defs()}
     ${cf}
     <div class="cele t-${rk.tier}" onclick="event.stopPropagation()">
       <div class="cele-cap">
-        <div class="cele-emo">${c.auto ? '⏰' : rk.emoji}</div>
+        ${ART.scene()}
+        ${ART.micro()}
+        <div class="cele-hero">
+          <div class="hero-wrap">${ART.mascot(pose, { size: 120, surprise: !c.auto })}</div>
+          ${c.newBest ? `<span class="mi mi-crown">${ART.icon('crown', { size: 40 })}</span>` : ''}
+        </div>
         <h3>${c.auto ? 'Hết giờ rồi!' : rk.head}</h3>
         <div class="cele-sub">${esc(exam.title)} — ${esc((subjectOfExam(exam.id) || {}).short || '')}</div>
+        <span class="art-peek">${ART.icon('bunny', { size: 44, mood: 'smile' })}</span>
+        <span class="art-drop">${ART.icon('bunny', { size: 30, color: '#ffe0a8', mood: 'wow' })}</span>
       </div>
       <div class="cele-ring">
+        <div class="art-orbit">${ART.icon('star', { size: 26, mood: 'smile' })}</div>
         <svg width="132" height="132" viewBox="0 0 132 132">
           <circle cx="66" cy="66" r="56" fill="none" stroke="var(--surface-high)" stroke-width="11"/>
           <circle id="cele-arc" cx="66" cy="66" r="56" fill="none" stroke="currentColor" stroke-width="11"
@@ -570,7 +585,7 @@ function vCelebrate(exam, r) {
         </svg>
         <div class="v"><div class="n mono" id="cele-score" data-to="${r.score}">0</div><div class="d">/ 10 điểm</div></div>
       </div>
-      <span class="pass ${r.score >= 5 ? 'ok' : 'no'}">${rk.label}</span>
+      <span class="pass ${r.score >= 5 ? 'ok' : 'no'}">${ART.icon(rk.ic, { size: 20 })}${rk.label}</span>
       ${badge}
       <p class="cele-msg">${rk.msg}</p>
       <div class="cele-stats">
@@ -579,28 +594,13 @@ function vCelebrate(exam, r) {
         <div><div class="n o">${r.skip}</div><div class="t">BỎ QUA</div></div>
       </div>
       <div class="cele-acts">
-        <button class="btn btn-primary" onclick="state.celebrate=null;reviewExam(${exam.id})">📖 Xem lời giải chi tiết</button>
+        <button class="btn btn-primary" onclick="state.celebrate=null;reviewExam(${exam.id})">${ART.icon('book', { size: 20 })}Xem lời giải chi tiết</button>
         <button class="btn btn-ghost" onclick="closeCelebrate()">Xem bảng kết quả (${n} câu)</button>
       </div>
     </div>
   </div>`;
 }
 window.closeCelebrate = () => { state.celebrate = null; render(); };
-
-function confettiHtml(count) {
-  const cols = ['#1a56db', '#6cf8bb', '#ffc94d', '#ff7a7a', '#a78bfa', '#34d399'];
-  let out = '';
-  for (let i = 0; i < count; i++) {
-    const left = Math.round(Math.random() * 100);
-    const col = cols[i % cols.length];
-    const dur = (2.2 + Math.random() * 1.8).toFixed(2);
-    const del = (Math.random() * 1.2).toFixed(2);
-    const w = 6 + Math.round(Math.random() * 6);
-    const round = Math.random() < .3 ? 'border-radius:50%;' : '';
-    out += `<i class="confetti" style="left:${left}%;background:${col};width:${w}px;height:${w + 5}px;${round}animation-duration:${dur}s;animation-delay:${del}s"></i>`;
-  }
-  return out;
-}
 
 /* chạy sau khi render: đếm điểm tăng dần + vẽ vòng tròn */
 function animCelebrate() {

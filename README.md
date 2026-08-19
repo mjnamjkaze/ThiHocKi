@@ -1,6 +1,6 @@
 # Ôn Thi Học Kì — Lớp 2 & Lớp 3
 
-Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **313 đề · 2 538 câu — mỗi đề khoảng 10 câu.**
+Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **313 đề · 2538 câu — mỗi đề khoảng 10 câu.**
 
 👉 **Dùng ngay: https://mjnamjkaze.github.io/ThiHocKi/**
 
@@ -60,6 +60,9 @@ Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằ
 - Hình minh họa **vẽ lại bằng SVG** sắc nét, không watermark
 - Đồng hồ đếm ngược, lưới điều hướng câu hỏi, tự nộp khi hết giờ
 - Màn kết quả: vòng điểm, xếp loại, thống kê Đúng/Sai/Bỏ qua, xem lời giải
+- **Màn ăn mừng có linh vật Cáo Bo**: mỗi mức điểm một tư thế (reo hò · trao huy chương · đập tay · động viên),
+  nền "thế giới học vui", giấy màu nhiều hình dạng và vài chuyển động vui nhỏ (chim bay ngang, bóng bay,
+  vương miện rơi xuống khi phá kỷ lục) — tự tắt khi máy bật chế độ giảm chuyển động
 - Lưu tiến độ & điểm cao nhất từng đề trên máy (localStorage) — chạy **hoàn toàn offline**
 
 ## Cấu trúc
@@ -68,6 +71,10 @@ Môn Toán Tiếng Anh ra đề **song ngữ Anh – Việt**, lời giải bằ
     `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-vioedu2-{toan,tviet,tanh}.js`
   - Lớp 3: `data-ck2-l3.js` · `data-hsg3.js` · `data-vioedu3-{toan,tviet,tanh}.js`
 - `web/split-exams.js` — chạy sau các file dữ liệu, chia đề dài thành các phần ~10 câu (đổi `MAX` để chỉnh độ dài đề)
+- `web/art.js` + `web/art.css` — **bộ minh hoạ gốc "Lớp Học Vui"**: linh vật Cáo Bo (10 tư thế),
+  23 hình trang trí, phông nền, giấy màu, 8 huy hiệu — tất cả là SVG vẽ bằng code, dùng lại được cho
+  màn ăn mừng / hoàn thành bài học / mở huy hiệu. Xem thử cả bộ bằng trang dev `web/_preview_art.html`
+  (trang `_preview_*` không đẩy lên repo)
 - `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `fmo2/`, `vioedu/`)
 - Tự deploy lên GitHub Pages khi push nhánh `main` (xem `.github/workflows/deploy-pages.yml`)
 
