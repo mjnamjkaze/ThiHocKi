@@ -46,6 +46,8 @@ const state = {
   modal: null,
   grading: false,      // đang chấm bài (chặn nộp 2 lần)
   celebrate: null,     // dữ liệu popup ăn mừng sau khi nộp
+  who: null,           // bạn con vật ra ăn mừng lần này (bốc ngẫu nhiên lúc nộp)
+  lastWho: null,       // bạn của lần trước — để lần này chắc chắn ra bạn khác
 };
 
 const gradeOf = (s) => s.grade || 2;
@@ -504,7 +506,7 @@ function vGrading() {
   <div class="modal-back grading">
     ${ART.defs()}
     <div class="grade-box">
-      <div class="grade-mascot">${ART.mascot('run', { size: 104 })}</div>
+      <div class="grade-mascot">${ART.mascot('run', { size: 104, who: state.who })}</div>
       <h3>Đang chấm bài<span class="dots"><i>.</i><i>.</i><i>.</i></span></h3>
       <p class="muted small">Cô giáo đang soát từng câu của em…</p>
     </div>
@@ -514,6 +516,8 @@ function vGrading() {
 window.doSubmit = (auto = false) => {
   if (state.grading) return;              // chặn bấm 2 lần / hết giờ trùng lúc bấm nộp
   state.grading = true;
+  state.who = ART.pick(state.lastWho);     // mỗi lần nộp bài lại gặp một bạn khác
+  state.lastWho = state.who;
   clearInterval(state.timerInt);
   state.modal = vGrading();
   render();
@@ -566,11 +570,12 @@ function vCelebrate(exam, r) {
         ${ART.scene()}
         ${ART.micro()}
         <div class="cele-hero">
-          <div class="hero-wrap">${ART.mascot(pose, { size: 120, surprise: !c.auto })}</div>
+          <div class="hero-wrap">${ART.mascot(pose, { size: 120, surprise: !c.auto, who: state.who })}</div>
           ${c.newBest ? `<span class="mi mi-crown">${ART.icon('crown', { size: 40 })}</span>` : ''}
         </div>
         <h3>${c.auto ? 'Hết giờ rồi!' : rk.head}</h3>
         <div class="cele-sub">${esc(exam.title)} — ${esc((subjectOfExam(exam.id) || {}).short || '')}</div>
+        <div><span class="cele-who">${esc(ART.nameOf(state.who))} ăn mừng cùng em</span></div>
         <span class="art-peek">${ART.icon('bunny', { size: 44, mood: 'smile' })}</span>
         <span class="art-drop">${ART.icon('bunny', { size: 30, color: '#ffe0a8', mood: 'wow' })}</span>
       </div>

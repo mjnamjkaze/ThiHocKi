@@ -16,6 +16,8 @@
 .mascot .m-eye,
 .mascot .m-wowface,
 .mascot .m-heart,
+.mascot .m-ears,
+.mascot .m-trunk,
 .mascot .m-toss { transform-box: fill-box; }
 
 /* ---------------------------------------------------------- Cáo Bo động -- */
@@ -223,9 +225,61 @@
 
 @media (prefers-reduced-motion: reduce) {
   .mascot .m-all, .mascot .m-tail, .mascot .m-eye, .mascot .m-speed, .mascot .m-toss,
+  .mascot .m-ears, .mascot .m-trunk,
   .mascot .m-heart, .mascot .m-wowface, .cele-hero .mascot,
   .art-micro .mi, .art-peek .ai, .art-drop .ai, .art-orbit, .art-orbit .ai,
   .cf, .art-badge { animation: none !important; }
   .mascot .m-wowface { opacity: 0; }
   .mi-runstar, .mi-bird, .mi-shoot, .art-drop { display: none; }
+}
+
+/* ==================== NÉT RIÊNG CỦA TỪNG BẠN TRONG 12 CON VẬT ====================
+   Cùng một bộ xương nên nhịp thân giống nhau; cái làm bé nhận ra "à, bạn này!"
+   là chuyển động riêng ở TAI · ĐUÔI · VÒI. Đặt sau cùng để đè lên nhịp chung.
+   ============================================================================== */
+.mascot .m-ears { transform-origin: 50% 100%; }
+
+.mascot.s-rabbit .m-ears { animation: art-ear-twitch 4.4s ease-in-out infinite; }      /* thỏ giật tai */
+.mascot.s-pengu .m-ears { animation: art-ear-twitch 3.6s ease-in-out .8s infinite; }   /* chỏm lông rung */
+.mascot.s-dog .m-ears { animation: art-ear-flop 2.6s ease-in-out infinite; }           /* cún ve vẩy tai cụp */
+.mascot.s-pig .m-ears { animation: art-ear-flop 3.2s ease-in-out infinite; }
+.mascot.s-bear .m-ears, .mascot.s-panda .m-ears { animation: art-ear-wiggle 3.6s ease-in-out infinite; }
+.mascot.s-cat .m-ears, .mascot.s-tiger .m-ears { animation: art-ear-perk 5s ease-in-out infinite; }
+.mascot.s-monkey .m-ears { animation: art-ear-wiggle 4.2s ease-in-out infinite; }
+.mascot.s-eleph .m-ears { animation: art-ear-fan 3.4s ease-in-out infinite; }          /* voi quạt tai */
+.mascot.s-frog .m-ears { animation: art-ear-wiggle 2.8s ease-in-out infinite; }        /* bướu mắt phập phồng */
+.mascot.s-eleph .m-trunk { transform-origin: 50% 6%; animation: art-trunk 3.6s ease-in-out infinite; }
+
+.mascot.s-cat .m-tail, .mascot.s-tiger .m-tail { animation: art-wag 1.7s ease-in-out infinite; }
+.mascot.s-monkey .m-tail { animation: art-wag 2.1s ease-in-out infinite; }
+.mascot.s-pig .m-tail { animation: art-tail-wiggle 1.3s ease-in-out infinite; }
+.mascot.s-rabbit .m-tail, .mascot.s-bear .m-tail, .mascot.s-panda .m-tail { animation: art-tail-bounce 2.2s ease-in-out infinite; }
+
+@keyframes art-ear-twitch {
+  0%, 72%, 100% { transform: rotate(0) }
+  79% { transform: rotate(-8deg) }
+  87% { transform: rotate(6deg) }
+}
+@keyframes art-ear-flop { 0%, 100% { transform: rotate(-4deg) } 50% { transform: rotate(4deg) } }
+@keyframes art-ear-wiggle { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.07, .95) } }
+@keyframes art-ear-perk {
+  0%, 84%, 100% { transform: rotate(0) }
+  90% { transform: rotate(-5deg) translateY(-2px) }
+}
+@keyframes art-ear-fan { 0%, 100% { transform: scaleX(1) } 50% { transform: scaleX(1.12) } }
+@keyframes art-trunk { 0%, 100% { transform: rotate(-5deg) } 50% { transform: rotate(6deg) } }
+@keyframes art-tail-wiggle { 0%, 100% { transform: rotate(-13deg) } 50% { transform: rotate(13deg) } }
+@keyframes art-tail-bounce { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-4px) scale(1.06) } }
+
+/* tên bạn nhỏ hiện dưới chân, để bé biết hôm nay ai ra ăn mừng cùng mình */
+.cele-who {
+  display: inline-block; margin-top: 2px; padding: 3px 13px; border-radius: 999px;
+  font-family: var(--f-display); font-size: 12.5px; font-weight: 800; letter-spacing: .01em;
+  color: #fff; background: rgba(31, 43, 69, .26); backdrop-filter: blur(2px);
+  animation: art-who-in .5s ease-out .85s both;
+}
+@keyframes art-who-in { 0% { opacity: 0; transform: translateY(6px) } 100% { opacity: 1; transform: none } }
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot .m-ears, .mascot .m-trunk, .cele-who { animation: none !important; }
 }

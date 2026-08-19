@@ -3,12 +3,16 @@
    Toàn bộ là SVG vẽ tay bằng code, cùng một ngôn ngữ hình: bo tròn mập mạp,
    viền dày liền nét, mặt biểu cảm, tỉ lệ hơi cường điệu, màu ấm & vui.
 
-   Nhân vật chính: CÁO BO — bạn đồng hành của bé.
+   12 người bạn dùng CHUNG một bộ xương và CHUNG 10 tư thế — khác nhau ở
+   tai · đuôi · hoa văn · mũi · màu lông. Muốn thêm bạn mới: thêm 1 dòng
+   trong bảng CREW, mọi tư thế và hoạt hình có sẵn dùng lại được ngay.
 
    API (dùng lại được cho: nộp bài, xong bài học, thử thách ngày,
         mở huy hiệu, chuỗi ngày học, lên cấp…):
      ART.defs()              → gradient dùng chung, nhúng 1 lần vào DOM
-     ART.mascot(pose, opt)   → Cáo Bo, 10 tư thế
+     ART.mascot(pose, opt)   → 1 trong 12 bạn (opt.who), 10 tư thế
+     ART.pick(tru)           → bốc ngẫu nhiên 1 bạn (tránh trùng bạn vừa gặp)
+     ART.nameOf(who)         → tên tiếng Việt của bạn đó
      ART.icon(name, opt)     → hình trang trí nhỏ
      ART.scene(opt)          → phông nền "thế giới học vui"
      ART.confetti(n)         → mảnh giấy nhiều hình dạng
@@ -18,7 +22,7 @@
 const ART = (function () {
 
   const INK = 'var(--art-ink)';      /* màu viền chung — đổi 1 chỗ, đổi cả bộ */
-  const SW = 3.2;                    /* độ dày viền chuẩn của mascot */
+  const SW = 3.2;                    /* độ dày viền chuẩn của nhân vật */
   const IW = 2.6;                    /* độ dày viền của hình trang trí nhỏ */
 
   function r1(v) { return Math.round(v * 10) / 10; }
@@ -43,11 +47,43 @@ const ART = (function () {
     return `<g class="${cls || ''}">${ink}${col}</g>`;
   }
 
+  /* =============================================================== ĐÀN BẠN ==
+     12 bạn, mỗi lần bé nộp bài lại gặp một bạn khác ra ăn mừng.
+     ear   : point · point2 · round · side · long · floppy · pig · flap · bump · tuft
+     tail  : bushy · ball · thin · curl · curl2 · stub · none
+     mark  : hoa văn riêng (vằn hổ, khoang gấu trúc, đốm cún…)
+     nose  : (mặc định) · snout · beak · trunk
+     ------------------------------------------------------------------------ */
+  const CREW = {
+    fox:    { name: 'Cáo Bo',       c1: '#ffbc6b', c2: '#ff8d33', belly: '#fff2dc', ear: 'point',  inner: '#ffbfae', tail: 'bushy', tip: '#fff2dc' },
+    bear:   { name: 'Gấu Mít',      c1: '#e6ab72', c2: '#b0713c', belly: '#ffe6c8', ear: 'round',  inner: '#ffc59b', tail: 'ball',  muzzle: 19 },
+    cat:    { name: 'Mèo Miu',      c1: '#c8d4e4', c2: '#8f9fb8', belly: '#ffffff', ear: 'point2', inner: '#ffb7c9', tail: 'thin',  mark: 'cat', whisk: 1 },
+    rabbit: { name: 'Thỏ Bông',     c1: '#fffdfa', c2: '#e9dff0', belly: '#ffffff', ear: 'long',   inner: '#ffb7c9', tail: 'ball' },
+    panda:  { name: 'Gấu Trúc Pu',  c1: '#ffffff', c2: '#ecebf1', belly: '#ffffff', ear: 'round',  earFill: '#3f3646', tail: 'ball', limb: '#3f3646', paw: '#574d63', mark: 'panda', muzzle: 18 },
+    dog:    { name: 'Cún Đốm',      c1: '#ffe1b0', c2: '#eeb066', belly: '#fff3de', ear: 'floppy', inner: '#e79a6a', tail: 'thin',  mark: 'dog' },
+    pig:    { name: 'Heo Ủn',       c1: '#ffcbdd', c2: '#ff96b8', belly: '#ffe4ee', ear: 'pig',    inner: '#ff9db5', tail: 'curl',  nose: 'snout' },
+    tiger:  { name: 'Hổ Vằn',       c1: '#ffc45c', c2: '#ff8f14', belly: '#fff0d2', ear: 'round',  inner: '#ffbfae', tail: 'thin',  mark: 'tiger', whisk: 1 },
+    monkey: { name: 'Khỉ Tít',      c1: '#cfa579', c2: '#9c6b41', belly: '#ffdcb2', ear: 'side',   inner: '#ffc59b', tail: 'curl2', mark: 'monkey', muzzle: 19 },
+    eleph:  { name: 'Voi Bi',       c1: '#c6d5f4', c2: '#8ba4d6', belly: '#e7eeff', ear: 'flap',   inner: '#f0b9cd', tail: 'stub',  nose: 'trunk', eyeSp: 15, eyeY: 52 },
+    frog:   { name: 'Ếch Cốm',      c1: '#aeea77', c2: '#4fb84e', belly: '#eaffd4', ear: 'bump',   tail: 'none',  eyeY: 33, eyeSp: 17, bigEyes: 1, mouth: 'wide', mark: 'frog' },
+    pengu:  { name: 'Cánh Cụt Pin', c1: '#7183ba', c2: '#37456f', belly: '#ffffff', ear: 'tuft',   tail: 'none',  eyeSp: 9, eyeY: 52, nose: 'beak', mark: 'pengu', noMuzzle: 1 }
+  };
+  const CREW_KEYS = Object.keys(CREW);
+  CREW_KEYS.forEach(k => { CREW[k].k = k; });
+  function who(k) { return CREW[k] || CREW.fox; }
+  function fur(sp) { return 'url(#f-' + sp.k + ')'; }
+
+  /* bốc ngẫu nhiên một bạn, cố ý không lặp lại bạn vừa xuất hiện lần trước */
+  function pick(avoid) {
+    const pool = CREW_KEYS.filter(k => k !== avoid);
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
   /* ---------------------------------------------------------------- defs -- */
   function defs() {
     return `<svg class="art-defs" width="0" height="0" aria-hidden="true"><defs>
-      <linearGradient id="aFur" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#ffbc6b"/><stop offset="1" stop-color="#ff8d33"/></linearGradient>
+      ${CREW_KEYS.map(k => `<linearGradient id="f-${k}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="${CREW[k].c1}"/><stop offset="1" stop-color="${CREW[k].c2}"/></linearGradient>`).join('')}
       <linearGradient id="aCream" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="#fff7e8"/><stop offset="1" stop-color="#ffe3bd"/></linearGradient>
       <linearGradient id="aGold" x1="0" y1="0" x2="1" y2="1">
@@ -59,18 +95,18 @@ const ART = (function () {
     </defs></svg>`;
   }
 
-  /* ================================================================ MASCOT ==
-     Khung 150×168. Đầu (75,58) r30 · vai (48,102)/(102,102) · hông (63,126)
-     Thứ tự vẽ: đuôi → tay → chân → thân+tai+đầu (1 khối) → chi tiết →
-     bàn tay/bàn chân → đồ cầm trên tay → khuôn mặt.
+  /* ============================================================== NHÂN VẬT ==
+     Khung 150×168. Đầu (75,58) r30 · vai (44,102)/(106,102) · hông (62,128)
+     Thứ tự vẽ: đuôi → tai → tay/chân → thân+đầu → bụng → hoa văn →
+     bàn tay/bàn chân → đồ cầm → mặt → lớp trước (vòi voi).
      ------------------------------------------------------------------------ */
-  const FUR = 'url(#aFur)', CREAM = 'url(#aCream)', GOLD = 'url(#aGold)';
+  const CREAM = 'url(#aCream)', GOLD = 'url(#aGold)';
   const SH = { l: [44, 102], r: [106, 102] };
   const HIP = { l: [62, 128], r: [88, 128] };
 
   const POSES = {
     /* 1. đứng thở nhẹ, chớp mắt   */ idle:     { face: 'blink', arms: [[128, 34], [78, 32]],  legs: [[93, 20], [87, 20]] },
-    /* 2. chạy ùa vào màn hình     */ run:      { face: 'wow',   arms: [[152, 26], [332, 26]],   legs: [[128, 22], [52, 22]], speed: 1 },
+    /* 2. chạy ùa vào màn hình     */ run:      { face: 'wow',   arms: [[152, 26], [332, 26]], legs: [[128, 22], [52, 22]], speed: 1 },
     /* 3. nhảy cẫng lên            */ jump:     { face: 'joy',   arms: [[240, 30], [300, 30]], legs: [[140, 16], [40, 16]] },
     /* 4. cầm huy chương           */ medal:    { face: 'happy', arms: [[228, 34], [78, 32]],  legs: [[93, 20], [87, 20]], hold: { l: 'medal' } },
     /* 5. trao huy chương cho bé   */ present:  { face: 'joy',   arms: [[74, 28], [106, 28]],  legs: [[93, 20], [87, 20]], hold: { c: 'medal' } },
@@ -93,9 +129,130 @@ const ART = (function () {
     return { d: `M${h[0]} ${h[1]}L${tip[0]} ${tip[1]}`, tip: tip };
   }
 
-  /* --- khuôn mặt: mắt to, biểu cảm rõ --- */
-  function face(kind) {
-    const EL = 62, ER = 88, EY = 54;
+  /* ------------------------------------------------------------------ tai --
+     Vẽ TRƯỚC đầu để viền chân tai chui xuống dưới khối đầu — nhìn liền mạch.
+     Cả cụm nằm trong <g class="m-ears"> nên mỗi loài vẫy tai một kiểu riêng. */
+  function ears(sp) {
+    const F = sp.earFill || fur(sp), IN = sp.inner;
+    let parts = [], inner = '';
+    switch (sp.ear) {
+      case 'point':                                   /* tai nhọn: cáo */
+        parts = [{ d: 'M54 38L42 4 73 28Z', f: F }, { d: 'M96 38L108 4 77 28Z', f: F }];
+        inner = `<path d="M57 31L49 11 69 26Z" fill="${IN}"/><path d="M93 31L101 11 81 26Z" fill="${IN}"/>`;
+        break;
+      case 'point2':                                  /* tai nhọn nhỏ: mèo */
+        parts = [{ d: 'M56 40L46 10 76 30Z', f: F }, { d: 'M94 40L104 10 74 30Z', f: F }];
+        inner = `<path d="M58 35L51 17 70 28Z" fill="${IN}"/><path d="M92 35L99 17 80 28Z" fill="${IN}"/>`;
+        break;
+      case 'round':                                   /* tai tròn: gấu, hổ, gấu trúc */
+        parts = [{ d: circ(48, 30, 14), f: F }, { d: circ(102, 30, 14), f: F }];
+        if (IN) inner = `<path d="${circ(48, 30, 7.5)}" fill="${IN}"/><path d="${circ(102, 30, 7.5)}" fill="${IN}"/>`;
+        break;
+      case 'side':                                    /* tai hai bên: khỉ */
+        parts = [{ d: ell(41, 58, 10, 12), f: F }, { d: ell(109, 58, 10, 12), f: F }];
+        inner = `<path d="${ell(42, 58, 5.5, 7)}" fill="${IN}"/><path d="${ell(108, 58, 5.5, 7)}" fill="${IN}"/>`;
+        break;
+      case 'long':                                    /* tai dài: thỏ */
+        parts = [{ d: 'M64 34Q55 12 58 -2', f: F, w: 15 }, { d: 'M86 34Q95 12 92 -2', f: F, w: 15 }];
+        inner = `<path d="M63 29Q56 14 58 2" fill="none" stroke="${IN}" stroke-width="6.5" stroke-linecap="round"/>` +
+                `<path d="M87 29Q94 14 92 2" fill="none" stroke="${IN}" stroke-width="6.5" stroke-linecap="round"/>`;
+        break;
+      case 'floppy':                                  /* tai cụp: cún */
+        parts = [{ d: 'M54 42Q39 52 41 76', f: F, w: 18 }, { d: 'M96 42Q111 52 109 76', f: F, w: 18 }];
+        inner = `<path d="M54 47Q45 55 46 70" fill="none" stroke="${IN}" stroke-width="7" stroke-linecap="round" opacity=".8"/>` +
+                `<path d="M96 47Q105 55 104 70" fill="none" stroke="${IN}" stroke-width="7" stroke-linecap="round" opacity=".8"/>`;
+        break;
+      case 'pig':                                     /* tai lá: heo */
+        parts = [{ d: 'M64 30L40 33 50 60Z', f: F }, { d: 'M86 30L110 33 100 60Z', f: F }];
+        inner = `<path d="M61 35L47 36 53 52Z" fill="${IN}"/><path d="M89 35L103 36 97 52Z" fill="${IN}"/>`;
+        break;
+      case 'flap':                                    /* tai quạt: voi */
+        parts = [{ d: ell(40, 64, 19, 24), f: F }, { d: ell(110, 64, 19, 24), f: F }];
+        inner = `<path d="${ell(41, 64, 11, 15)}" fill="${IN}" opacity=".8"/><path d="${ell(109, 64, 11, 15)}" fill="${IN}" opacity=".8"/>`;
+        break;
+      case 'bump':                                    /* bướu mắt: ếch */
+        parts = [{ d: circ(58, 33, 15), f: F }, { d: circ(92, 33, 15), f: F }];
+        break;
+      case 'tuft':                                    /* chỏm lông: cánh cụt */
+        parts = [{ d: 'M75 30Q79 16 71 7', f: F, w: 7 }];
+        break;
+    }
+    if (!parts.length) return '';
+    return `<g class="m-ears">${sticker(parts)}${inner}</g>`;
+  }
+
+  /* ----------------------------------------------------------------- đuôi -- */
+  function tailOf(sp) {
+    const F = fur(sp);
+    let s = '';
+    switch (sp.tail) {
+      case 'bushy':
+        s = sticker([{ d: 'M106 118C136 116 143 88 127 72', f: F, w: 17 }]) +
+            `<path d="${circ(127, 72, 10)}" fill="${sp.tip || sp.belly}" stroke="${INK}" stroke-width="${SW}"/>`;
+        break;
+      case 'ball':
+        s = `<path d="${circ(120, 118, 12)}" fill="${sp.belly}" stroke="${INK}" stroke-width="${SW}"/>`;
+        break;
+      case 'thin':
+        s = sticker([{ d: 'M104 122Q137 122 130 88', f: F, w: 8 }]);
+        break;
+      case 'curl':
+        s = sticker([{ d: 'M104 116q9 -1 13 -6a8 8 0 1 1 6 12', f: F, w: 6 }]);
+        break;
+      case 'curl2':
+        s = sticker([{ d: 'M104 120Q141 116 132 84q-5 -15 -19 -7', f: F, w: 7 }]);
+        break;
+      case 'stub':
+        s = sticker([{ d: 'M104 118q19 6 17 -7', f: F, w: 6 }]);
+        break;
+      default: return '';
+    }
+    return `<g class="m-tail">${s}</g>`;
+  }
+
+  /* -------------------------------------------------------------- hoa văn -- */
+  function marks(sp) {
+    const st = (d, c, w) => `<path d="${d}" fill="none" stroke="${c}" stroke-width="${w || 4}" stroke-linecap="round"/>`;
+    switch (sp.mark) {
+      case 'tiger': {
+        const c = '#a3520a';
+        return st('M62 30q4 6 2 11', c, 4.4) + st('M75 26q1 7 0 11', c, 4.4) + st('M88 30q-4 6 -2 11', c, 4.4) +
+               st('M47 50q6 3 10 0', c, 3.8) + st('M103 50q-6 3 -10 0', c, 3.8) +
+               st('M45 100q7 5 11 1', c, 4.2) + st('M105 100q-7 5 -11 1', c, 4.2) + st('M48 116q7 4 11 0', c, 4.2);
+      }
+      case 'panda': {
+        const p = '#3f3646';
+        return `<path d="${ell(62, 52, 12, 14)}" fill="${p}" transform="rotate(-14 62 52)"/>` +
+               `<path d="${ell(88, 52, 12, 14)}" fill="${p}" transform="rotate(14 88 52)"/>` +
+               `<path d="${ell(62, 54, 8.6, 9.4)}" fill="#fff"/><path d="${ell(88, 54, 8.6, 9.4)}" fill="#fff"/>`;
+      }
+      case 'dog':
+        return `<path d="${ell(62, 50, 13.5, 13)}" fill="#d99453" opacity=".9" transform="rotate(-10 62 50)"/>` +
+               `<path d="${ell(62, 54, 8.6, 9.4)}" fill="#fff6e6"/>` +
+               `<path d="${ell(101, 102, 9, 7)}" fill="#d99453" opacity=".7"/>`;
+      case 'cat': {
+        const c = '#7b8ca6';
+        return st('M66 30q2 5 1 9', c, 3.4) + st('M75 27q0 6 0 9', c, 3.4) + st('M84 30q-2 5 -1 9', c, 3.4) +
+               st('M56 48q5 3 9 0', c, 3.2) + st('M94 48q-5 3 -9 0', c, 3.2);
+      }
+      case 'monkey':
+        return `<path d="${ell(75, 63, 23, 21)}" fill="#ffdcb2"/>` +
+               `<path d="M56 40q9 -8 19 -6q10 -2 19 6" fill="none" stroke="#8a5c33" stroke-width="3.4" stroke-linecap="round" opacity=".5"/>`;
+      case 'frog':
+        return `<path d="${ell(50, 98, 7.5, 5.5)}" fill="#3f9b3f" opacity=".45"/>` +
+               `<path d="${ell(101, 106, 6.5, 5)}" fill="#3f9b3f" opacity=".45"/>`;
+      case 'pengu':
+        return `<path d="${ell(75, 60, 22, 25)}" fill="#fff"/>`;
+    }
+    return '';
+  }
+
+  /* -------------------------------------------------- khuôn mặt (biểu cảm) --
+     Mắt chạy theo từng loài (ếch mắt trên bướu, cánh cụt mắt sát nhau),
+     còn mũi & miệng luôn neo quanh mõm (75,68) để loài nào cũng cân đối.     */
+  function face(kind, sp) {
+    const SP = sp.eyeSp || 13, EY = sp.eyeY || 54;
+    const EL = 75 - SP, ER = 75 + SP;
     const pupil = (cx) =>
       `<path d="${ell(cx, EY, 8, 9)}" fill="#3b2f4a"/>` +
       `<circle cx="${cx + 2.6}" cy="${EY - 3.4}" r="3.1" fill="#fff"/>` +
@@ -104,15 +261,17 @@ const ART = (function () {
     const bigEye = (cx) => `<path d="${ell(cx, EY, 9.5, 11)}" fill="#fff" stroke="#3b2f4a" stroke-width="2.4"/>${pupil(cx)}`;
 
     let eyes, brow = '', mouth;
-    if (kind === 'happy' || kind === 'joy') eyes = arcEye(EL) + arcEye(ER);
+    if (sp.bigEyes && kind !== 'wink') eyes = bigEye(EL) + bigEye(ER);
+    else if (kind === 'happy' || kind === 'joy') eyes = arcEye(EL) + arcEye(ER);
     else if (kind === 'wink') eyes = pupil(EL) + arcEye(ER);
     else if (kind === 'wow') eyes = bigEye(EL) + bigEye(ER);
     else if (kind === 'soft') {
       eyes = pupil(EL) + pupil(ER);
-      brow = `<path d="M54 39q8 -4 16 -1" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round" opacity=".75"/>` +
-             `<path d="M96 39q-8 -4 -16 -1" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round" opacity=".75"/>`;
+      brow = `<path d="M${EL - 8} ${EY - 15}q8 -4 16 -1" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round" opacity=".75"/>` +
+             `<path d="M${ER + 8} ${EY - 15}q-8 -4 -16 -1" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round" opacity=".75"/>`;
     } else eyes = `<g class="m-eye">${pupil(EL)}${pupil(ER)}</g>`;
 
+    let nose = `<path d="${ell(75, 62, 5.6, 4.4)}" fill="#3b2f4a"/><circle cx="73" cy="60.6" r="1.5" fill="#fff" opacity=".9"/>`;
     if (kind === 'joy' || kind === 'wow')
       mouth = `<path d="M65 68q10 15 20 0z" fill="#8a3f57" stroke="${INK}" stroke-width="2.6" stroke-linejoin="round"/>` +
               `<path d="M71 75q4 7 8 0z" fill="#ff8fa8"/>`;
@@ -120,55 +279,84 @@ const ART = (function () {
       mouth = `<path d="M75 67q0 7 -7.5 7" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>` +
               `<path d="M75 67q0 7 7.5 7" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>`;
 
+    if (sp.mouth === 'wide')                          /* ếch: miệng toác rất rộng */
+      mouth = `<path d="M55 68q20 17 40 0" fill="none" stroke="#3b2f4a" stroke-width="3.4" stroke-linecap="round"/>` +
+              `<path d="M70 76h10q-1 3 -5 3t-5 -3z" fill="#ff8fa8"/>`;
+    if (sp.nose === 'snout') {                        /* heo: mõm tròn hồng */
+      nose = `<path d="${ell(75, 64, 13, 10)}" fill="#ff8fb0" stroke="${INK}" stroke-width="2.8"/>` +
+             `<path d="${ell(70, 64, 2.6, 3.6)}" fill="#a04a68"/><path d="${ell(80, 64, 2.6, 3.6)}" fill="#a04a68"/>`;
+      mouth = `<path d="M68 79q7 6 14 0" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>`;
+    }
+    if (sp.nose === 'beak') {                         /* cánh cụt: mỏ hình thoi */
+      nose = `<path d="M75 56l12 10-12 10-12-10z" fill="#ffab1f" stroke="${INK}" stroke-width="2.6" stroke-linejoin="round"/>` +
+             `<path d="M63 66h24" fill="none" stroke="${INK}" stroke-width="2.2"/>`;
+      mouth = '';
+    }
+    if (sp.nose === 'trunk') { nose = ''; mouth = ''; }  /* voi: đã có vòi */
+
+    const muz = sp.noMuzzle ? '' : `<path d="${ell(75, 68, sp.muzzle || 17, (sp.muzzle || 17) - 4)}" fill="${sp.belly}"/>`;
+    const whisk = sp.whisk
+      ? `<g stroke="#3b2f4a" stroke-width="2" stroke-linecap="round" opacity=".5">
+           <path d="M58 66h-16"/><path d="M58 71l-15 4"/><path d="M92 66h16"/><path d="M92 71l15 4"/></g>` : '';
+
     return `<g class="m-face">
-      <path d="${ell(75, 68, 17, 13)}" fill="${CREAM}"/>
-      <path d="${ell(55, 66, 7.5, 5)}" fill="#ff9db5" opacity=".8"/>
-      <path d="${ell(95, 66, 7.5, 5)}" fill="#ff9db5" opacity=".8"/>
-      ${brow}${eyes}
-      <path d="${ell(75, 62, 5.6, 4.4)}" fill="#3b2f4a"/>
-      <circle cx="73" cy="60.6" r="1.5" fill="#fff" opacity=".9"/>
-      ${mouth}
+      ${muz}
+      <path d="${ell(55, 66, 7.5, 5)}" fill="#ff9db5" opacity=".7"/>
+      <path d="${ell(95, 66, 7.5, 5)}" fill="#ff9db5" opacity=".7"/>
+      ${whisk}${brow}${eyes}${nose}${mouth}
     </g>`;
   }
 
   /* mặt "ố ồ" đè lên — CSS cho hiện chớp nhoáng lúc bé thấy điểm */
-  function surpriseFace() {
+  function surpriseFace(sp) {
+    const SP = sp.eyeSp || 13, EY = sp.eyeY || 54;
+    const EL = 75 - SP, ER = 75 + SP;
+    const big = (cx) => `<path d="${ell(cx, EY - 2, 10.5, 12)}" fill="#fff" stroke="#3b2f4a" stroke-width="2.4"/>` +
+                        `<path d="${ell(cx, EY - 1, 6, 6.6)}" fill="#3b2f4a"/>`;
+    const plain = sp.nose === 'trunk' || sp.nose === 'beak' || sp.nose === 'snout';
     return `<g class="m-wowface">
-      <path d="${ell(75, 68, 18, 14)}" fill="${CREAM}"/>
-      <path d="${ell(62, 52, 10.5, 12)}" fill="#fff" stroke="#3b2f4a" stroke-width="2.4"/>
-      <path d="${ell(88, 52, 10.5, 12)}" fill="#fff" stroke="#3b2f4a" stroke-width="2.4"/>
-      <path d="${ell(62, 53, 6, 6.6)}" fill="#3b2f4a"/><path d="${ell(88, 53, 6, 6.6)}" fill="#3b2f4a"/>
-      <path d="${ell(75, 63, 5, 4)}" fill="#3b2f4a"/>
-      <path d="${ell(75, 76, 6.5, 8)}" fill="#8a3f57" stroke="${INK}" stroke-width="2.4"/>
-      <path d="M50 37q7 -7 15 -3" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>
-      <path d="M100 37q-7 -7 -15 -3" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>
+      ${sp.noMuzzle ? '' : `<path d="${ell(75, 68, (sp.muzzle || 17) + 1, (sp.muzzle || 17) - 3)}" fill="${sp.belly}"/>`}
+      ${big(EL)}${big(ER)}
+      ${plain ? '' : `<path d="${ell(75, 63, 5, 4)}" fill="#3b2f4a"/><path d="${ell(75, 76, 6.5, 8)}" fill="#8a3f57" stroke="${INK}" stroke-width="2.4"/>`}
+      <path d="M${EL - 12} ${EY - 17}q7 -7 15 -3" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M${ER + 12} ${EY - 17}q-7 -7 -15 -3" fill="none" stroke="#3b2f4a" stroke-width="3" stroke-linecap="round"/>
     </g>`;
+  }
+
+  /* ------------------------------------------------------------ lớp trước --
+     Vòi voi vẽ sau khuôn mặt và đung đưa theo nhịp riêng.                    */
+  function front(sp) {
+    if (sp.nose !== 'trunk') return '';
+    return `<g class="m-trunk">${sticker([{ d: 'M75 58Q77 88 89 97', f: fur(sp), w: 15 }])}
+      <path d="M85 96q6 4 9 0" fill="none" stroke="${INK}" stroke-width="2.6" stroke-linecap="round"/></g>`;
   }
 
   /* --- đồ cầm trên tay ---
      Lưu ý: nhóm nào có transform trong thuộc tính thì KHÔNG gắn class chạy
      animation lên chính nó (CSS transform sẽ ghi đè) — lồng thêm 1 lớp <g>. */
-  function handItem(kind, x, y) {
+  function handItem(kind, x, y, c) {
     if (kind === 'medal') return `<g transform="translate(${x - 20} ${y - 3})">${icon('medal', { size: 40 })}</g>`;
     if (kind === 'palm') return `<g transform="translate(${x} ${y})">
-        <path d="${circ(0, 0, 12)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>
-        <path d="${ell(-6.5, -11, 3.2, 4.6)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>
-        <path d="${ell(0.5, -13, 3.2, 4.8)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>
-        <path d="${ell(7.5, -10, 3.2, 4.4)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>
-        <path d="${ell(0, 2, 6, 5)}" fill="#ffcfa0"/></g>`;
+        <path d="${circ(0, 0, 12)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>
+        <path d="${ell(-6.5, -11, 3.2, 4.6)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>
+        <path d="${ell(0.5, -13, 3.2, 4.8)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>
+        <path d="${ell(7.5, -10, 3.2, 4.4)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>
+        <path d="${ell(0, 2, 6, 5)}" fill="#ffcfa0" opacity=".7"/></g>`;
     if (kind === 'thumb') return `<g transform="translate(${x} ${y}) rotate(-18)">
-        <path d="${circ(0, 0, 9.5)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>
-        <path d="M-2 -8q3 -9 7 -6t-1 8z" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}" stroke-linejoin="round"/></g>`;
+        <path d="${circ(0, 0, 9.5)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>
+        <path d="M-2 -8q3 -9 7 -6t-1 8z" fill="${c}" stroke="${INK}" stroke-width="${SW}" stroke-linejoin="round"/></g>`;
     return '';
   }
 
-  function paw(x, y, r) {
-    return `<path d="${circ(x, y, r || 9)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>`;
+  function paw(x, y, r, c) {
+    return `<path d="${circ(x, y, r || 9)}" fill="${c}" stroke="${INK}" stroke-width="${SW}"/>`;
   }
 
   function mascot(pose, o) {
     o = o || {};
     const p = POSES[pose] || POSES.idle;
+    const sp = who(o.who);
+    const F = fur(sp), LIMB = sp.limb || F, PAW = sp.paw || sp.belly;
     const size = o.size || 150;
     const aL = arm('l', p.arms[0][0], p.arms[0][1]);
     const aR = arm('r', p.arms[1][0], p.arms[1][1]);
@@ -176,41 +364,35 @@ const ART = (function () {
     const lR = leg('r', p.legs[1][0], p.legs[1][1]);
     const hold = p.hold || {};
 
-    const tail = sticker([{ d: 'M106 118C136 116 143 88 127 72', f: FUR, w: 17 }], 'm-tail') +
-      `<path d="${circ(127, 72, 10)}" fill="${CREAM}" stroke="${INK}" stroke-width="${SW}"/>`;
-
     const core = sticker([
-      { d: 'M54 38L42 4 73 28Z', f: FUR },
-      { d: 'M96 38L108 4 77 28Z', f: FUR },
-      { d: 'M75 74c-25 0-36 17-36 33 0 15 15 25 36 25s36-10 36-25c0-16-11-33-36-33z', f: FUR },
-      { d: circ(75, 58, 30), f: FUR }
+      { d: 'M75 74c-25 0-36 17-36 33 0 15 15 25 36 25s36-10 36-25c0-16-11-33-36-33z', f: F },
+      { d: circ(75, 58, 30), f: F }
     ], 'm-core');
-
-    const inner = `<path d="M57 31L49 11 69 26Z" fill="#ffbfae"/><path d="M93 31L101 11 81 26Z" fill="#ffbfae"/>` +
-      `<path d="${ell(75, 110, 20, 17)}" fill="${CREAM}"/>`;
+    const belly = `<path d="${ell(75, 110, sp.noMuzzle ? 23 : 20, sp.noMuzzle ? 20 : 17)}" fill="${sp.belly}"/>`;
 
     const speed = p.speed ? `<g class="m-speed" stroke="${INK}" stroke-width="3.4" stroke-linecap="round" opacity=".3">
         <path d="M6 86h20"/><path d="M2 104h15"/><path d="M8 122h22"/></g>` : '';
     const toss = p.toss ? `<g class="m-toss">${[[14, 26, '#ffc94d'], [30, 8, '#6cf8bb'], [46, 20, '#ff7ab8'], [4, 48, '#8b5cf6']]
         .map((c, i) => `<rect x="${c[0]}" y="${c[1]}" width="8" height="11" rx="2.5" fill="${c[2]}" stroke="${INK}" stroke-width="2.2" transform="rotate(${i * 37 - 40} ${c[0] + 4} ${c[1] + 5})"/>`).join('')}</g>` : '';
-    /* trái tim bay lơ lửng cạnh Bo khi bé cần được động viên */
+    /* trái tim bay lơ lửng bên cạnh khi bé cần được động viên */
     const deco = p.deco === 'heart'
-      ? `<g transform="translate(104 28)"><g class="m-heart">${icon('heart', { size: 30, color: '#ff7ab8', mood: 'smile' })}</g></g>` : '';
+      ? `<g transform="translate(104 24)"><g class="m-heart">${icon('heart', { size: 30, color: '#ff7ab8', mood: 'smile' })}</g></g>` : '';
 
-    return `<svg class="mascot m-${pose} ${o.cls || ''}" width="${size}" height="${r1(size * 168 / 150)}"
-      viewBox="0 0 150 168" role="img" aria-label="Cáo Bo">
+    return `<svg class="mascot m-${pose} s-${sp.k} ${o.cls || ''}" width="${size}" height="${r1(size * 168 / 150)}"
+      viewBox="0 0 150 168" role="img" aria-label="${sp.name}">
       <g class="m-all">
-        ${speed}${toss}${tail}
-        ${sticker([{ d: aL.d, f: FUR, w: 13 }, { d: aR.d, f: FUR, w: 13 },
-                   { d: lL.d, f: FUR, w: 14 }, { d: lR.d, f: FUR, w: 14 }], 'm-limbs')}
-        ${core}${inner}
-        ${paw(lL.tip[0], lL.tip[1])}${paw(lR.tip[0], lR.tip[1])}
-        ${hold.l ? handItem(hold.l, aL.tip[0], aL.tip[1]) : paw(aL.tip[0], aL.tip[1])}
-        ${hold.r && hold.r !== 'openpaw' ? handItem(hold.r, aR.tip[0], aR.tip[1]) : paw(aR.tip[0], aR.tip[1], hold.r === 'openpaw' ? 10.5 : 9)}
-        ${hold.l === 'medal' ? paw(aL.tip[0], aL.tip[1]) : ''}
+        ${speed}${toss}${tailOf(sp)}${ears(sp)}
+        ${sticker([{ d: aL.d, f: LIMB, w: 13 }, { d: aR.d, f: LIMB, w: 13 },
+                   { d: lL.d, f: LIMB, w: 14 }, { d: lR.d, f: LIMB, w: 14 }], 'm-limbs')}
+        ${core}${belly}${marks(sp)}
+        ${paw(lL.tip[0], lL.tip[1], 9, PAW)}${paw(lR.tip[0], lR.tip[1], 9, PAW)}
+        ${hold.l ? handItem(hold.l, aL.tip[0], aL.tip[1], PAW) : paw(aL.tip[0], aL.tip[1], 9, PAW)}
+        ${hold.r && hold.r !== 'openpaw' ? handItem(hold.r, aR.tip[0], aR.tip[1], PAW) : paw(aR.tip[0], aR.tip[1], hold.r === 'openpaw' ? 10.5 : 9, PAW)}
+        ${hold.l === 'medal' ? paw(aL.tip[0], aL.tip[1], 9, PAW) : ''}
         ${hold.c ? `<g transform="translate(49 92)">${icon('medal', { size: 52 })}</g>` : ''}
-        ${deco}${face(p.face)}
-        ${o.surprise ? surpriseFace() : ''}
+        ${deco}${face(p.face, sp)}
+        ${o.surprise ? surpriseFace(sp) : ''}
+        ${front(sp)}
       </g>
     </svg>`;
   }
@@ -376,7 +558,9 @@ const ART = (function () {
   return {
     defs: defs, mascot: mascot, icon: icon, scene: scene,
     confetti: confetti, micro: micro, badge: badge,
-    poses: Object.keys(POSES), icons: Object.keys(SHAPES), badges: Object.keys(BADGES)
+    pick: pick, nameOf: function (k) { return who(k).name; },
+    poses: Object.keys(POSES), icons: Object.keys(SHAPES), badges: Object.keys(BADGES),
+    crew: CREW_KEYS.slice()
   };
 })();
 if (typeof window !== 'undefined') window.ART = ART;
