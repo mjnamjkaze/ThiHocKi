@@ -1,4 +1,4 @@
-/* Ôn Thi Học Kì — SPA (theo design "Academic Precision") */
+/* Ôn Thi Học Kì — SPA (giao diện "Lớp Học Vui") */
 'use strict';
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -168,8 +168,8 @@ function vHome() {
   <div class="topbar">
     <div class="avatar">${esc(store.user.charAt(0).toUpperCase() || 'H')}</div>
     <div style="flex:1">
-      <div class="small muted">Xin chào,</div>
-      <div style="font-weight:800;color:var(--primary);font-size:18px">${esc(store.user)}</div>
+      <div class="hi">Xin chào,</div>
+      <div class="name">${esc(store.user)} 👋</div>
     </div>
     <button class="icon-btn" title="Đổi tên" onclick="nav('login')">⚙</button>
   </div>
@@ -224,7 +224,7 @@ function vSubject() {
   </div>
   <div class="screen">
     <div class="hero">
-      <span class="tag" style="background:var(--secondary-container);color:var(--secondary)">KHỐI ${grade}</span>
+      <span class="tag">🎒 KHỐI ${grade}</span>
       <h2>${sub.heroTitle}</h2>
       <div class="meta">${sub.heroMeta}</div>
     </div>
@@ -383,7 +383,7 @@ function vExam() {
     ${vQcard(exam, state.qIndex)}
     <div class="exam-nav">
       <button class="btn btn-outline" ${state.qIndex === 0 ? 'disabled style="opacity:.4"' : ''} onclick="go(-1)">‹ Câu trước</button>
-      <button class="btn btn-ghost sq" onclick="toggleNav(true)">▦</button>
+      <button class="btn btn-ghost sq" title="Danh sách câu hỏi" onclick="toggleNav(true)">☰</button>
       ${state.qIndex === n - 1
         ? (review
           ? `<button class="btn btn-primary" onclick="nav('result')">Kết quả ›</button>`
