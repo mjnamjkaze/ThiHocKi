@@ -1,11 +1,12 @@
 # Ôn Thi Học Kì — Lớp 2 & Lớp 3
 
-Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **340 đề · 2808 câu — mỗi đề khoảng 10 câu.**
+Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **352 đề · 2928 câu — mỗi đề khoảng 10 câu.**
 
 👉 **Dùng ngay: https://mjnamjkaze.github.io/ThiHocKi/**
 
 ### Lớp 2
 - **Toán 2 — Cuối học kì 2**: 35 đề (321 câu) chuyển thể từ bộ đề gốc + 5 đề Cánh Diều
+- **Toán lớp 2 qua hình ảnh**: 12 chuyên đề × 10 câu (120 câu, 48 câu có hình — 40%) — xem chi tiết bên dưới
 - **Toán tư duy lớp 2**: 24 đề × 10 câu chuyển thể từ "175 bài toán tư duy hàng tuần" + "1001 bài toán tư duy"
 - **HSG Toán lớp 2**: 15 đề chuyên đề × 8 câu (120 câu) bồi dưỡng học sinh giỏi — xem chi tiết bên dưới
 - **Tư duy ASMO/AMO lớp 2**: 6 chuyên đề chia thành 12 đề (90 câu) — Logic · Số học · Hình không gian · Mô hình toán học · Tổ hợp · Tiếng Anh chuyên ngành
@@ -23,6 +24,30 @@ Web app luyện đề trắc nghiệm tĩnh, chạy hoàn toàn offline. **340 �
 - **VioEdu lớp 3 — chuyên đề Đồng hồ · Ngày tháng · Sudoku**: 13 đề × 10 câu (130 câu, 56 câu có hình SVG)
   mức cấp Trường + cấp Quận/Huyện — đọc giờ chính xác đến phút, đồng hồ 24 giờ, cộng trừ thời gian, xem lịch,
   tìm thứ – ngày nâng cao, năm nhuận · quý, sudoku 3×3 và sudoku 4×4 có ô vuông 2×2
+
+### Bộ đề Toán lớp 2 qua hình ảnh (12 đề · 120 câu · 54 hình SVG)
+Bộ đề luyện **đọc – hiểu hình**: 40% số câu có hình minh hoạ, mỗi hình đều mang thông tin cần để giải bài
+(không có hình chỉ để trang trí). Mức độ bám chương trình lớp 2: phạm vi 1000, bảng nhân chia 2–9
+(riêng × 2 và : 2 được vượt ngoài bảng), đo lường, thời gian, hình học phẳng.
+
+| # | Chuyên đề | Dạng hình |
+|---|---|---|
+| 1 | Đếm đồ vật — gộp hai nhóm | rổ đồ vật xếp thành lưới |
+| 2 | Thêm vào — bớt đi | vật bị lấy đi được gạch chéo ngay trên hình |
+| 3 | Nhiều hơn — ít hơn | hai nhóm đặt cạnh nhau để so sánh |
+| 4 | Chia đều — nhóm bằng nhau | nhiều rổ/đĩa/túi có số vật bằng nhau |
+| 5 | Bài toán giải bằng hai bước | hình cho trạng thái ban đầu, đề nêu 2 bước |
+| 6 | Nhận biết và đếm hình | hình vuông · chữ nhật · tam giác · tròn, đếm hình trong hình |
+| 7 | Đo độ dài bằng thước kẻ | thước 0–14 cm, vật có vạch dóng hai đầu |
+| 8 | Tiền Việt Nam | các tờ 1000 → 50000 đồng, tính tổng · tiền còn lại · còn thiếu |
+| 9 | Xem đồng hồ và tính thời gian | mặt đồng hồ kim (dùng lại bộ vẽ của chuyên đề VioEdu) |
+| 10 | Đọc biểu đồ tranh | mỗi biểu tượng ứng với 1 · 2 · 5 đơn vị, có chú thích |
+| 11 | Tìm số còn thiếu | dãy ô số và bảng có ô `?` |
+| 12 | Chọn hình đúng — tổng hợp | 4 phương án đều là hình, chỉ một hình thoả mãn |
+
+Toàn bộ hình vẽ bằng code (`tools/hinh-art.mjs`), **đáp án lấy thẳng từ dữ liệu vẽ ra hình**
+(số vật trong rổ, số đo trên thước, mệnh giá tờ tiền, giờ trên mặt đồng hồ) nên hình và lời giải
+không bao giờ lệch nhau. Sinh lại bằng `node tools/gen-toan2-hinh.mjs`.
 
 ### Bộ đề HSG Toán lớp 2 (15 đề · 120 câu)
 Mức độ **HSG cấp trường / cấp huyện** — nâng cao vừa phải, bám sát chương trình lớp 2
@@ -89,9 +114,13 @@ và mỗi bảng sudoku đều được máy kiểm tra là **chỉ có duy nh�
 ## Cấu trúc
 - `web/` — toàn bộ ứng dụng (HTML/CSS/JS), không cần build. Mỗi ngân hàng đề là một file `data-*.js` tự đăng ký vào `SUBJECTS`:
   - Lớp 2: `data.js` (Toán CK2) · `data-ck2cd.js` (Cánh Diều) · `data-tuduy.js` · `data-hsg2.js` · `data-amo2.js` ·
-    `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-vioedu2-{toan,tviet,tanh}.js`
+    `data-fmo2.js` · `data-mathx.js` · `data-asmo.js` · `data-toan2-hinh.js` · `data-vioedu2-{toan,tviet,tanh}.js`
   - Lớp 3: `data-ck2-l3.js` · `data-hsg3.js` · `data-vioedu3-{toan,tviet,tanh}.js`
 - `web/split-exams.js` — chạy sau các file dữ liệu, chia đề dài thành các phần ~10 câu (đổi `MAX` để chỉnh độ dài đề)
+- `tools/` — bộ sinh đề Toán lớp 2 qua hình ảnh: `hinh-art.mjs` (vẽ rổ đồ vật · hình học · thước kẻ ·
+  tờ tiền · biểu đồ tranh · dãy ô số bằng SVG) và `gen-toan2-hinh.mjs` (sinh `web/data-toan2-hinh.js`
+  + hình trong `web/assets/hinh2/`). Chạy `node tools/gen-toan2-hinh.mjs`; xem nhanh toàn bộ hình
+  bằng trang dev `web/_preview_hinh2.html`
 - `tools/` — bộ sinh đề chuyên đề thời gian: `vio-art.mjs` (vẽ đồng hồ · tờ lịch · bảng sudoku bằng SVG) và
   `gen-vioedu-time.mjs` (sinh `web/data-vioedu{2,3}-tgian.js` + hình trong `web/assets/vioedu/t_*.svg`).
   Sửa nội dung trong script rồi chạy `node tools/gen-vioedu-time.mjs`
@@ -100,7 +129,7 @@ và mỗi bảng sudoku đều được máy kiểm tra là **chỉ có duy nh�
   23 hình trang trí, phông nền, giấy màu, 8 huy hiệu — tất cả là SVG vẽ bằng code, dùng lại được cho
   màn ăn mừng / hoàn thành bài học / mở huy hiệu. Xem thử cả bộ bằng trang dev `web/_preview_art.html`
   (trang `_preview_*` không đẩy lên repo)
-- `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `fmo2/`, `vioedu/`)
+- `web/assets/` — hình minh hoạ (`td/` tư duy, `hsg2/`, `mathx/`, `asmo/`, `fmo2/`, `vioedu/`, `hinh2/`)
 - Tự deploy lên GitHub Pages khi push nhánh `main` (xem `.github/workflows/deploy-pages.yml`)
 
 ## Chạy thử tại máy
