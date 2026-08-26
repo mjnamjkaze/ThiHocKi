@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220">
+  <rect x="0" y="0" width="700" height="220" rx="8" fill="#fff"/>
+  <g font-family="system-ui" font-size="22" fill="#333" text-anchor="middle">
+    <text x="95"  y="38">Mặt trước</text>
+    <text x="225" y="38">Mặt sau</text>
+    <text x="455" y="38">Mặt trước</text>
+    <text x="585" y="38">Mặt sau</text>
+  </g>
+  <g stroke="#333" stroke-width="2.5">
+    <rect x="50"  y="52" width="90" height="130" rx="8" fill="#e6f7d9"/>
+    <rect x="180" y="52" width="90" height="130" rx="8" fill="#e6f7d9"/>
+    <rect x="410" y="52" width="90" height="130" rx="8" fill="#ffe3d3"/>
+    <rect x="540" y="52" width="90" height="130" rx="8" fill="#ffe3d3"/>
+  </g>
+  <g font-family="system-ui" font-size="72" font-weight="bold" fill="#333" text-anchor="middle">
+    <text x="95"  y="142">4</text>
+    <text x="225" y="142">8</text>
+    <text x="455" y="142">8</text>
+    <text x="585" y="142">2</text>
+  </g>
+  <g font-family="system-ui" font-size="20" fill="#666" text-anchor="middle">
+    <text x="160" y="212">Miếng bìa thứ nhất</text>
+    <text x="520" y="212">Miếng bìa thứ hai</text>
+  </g>
+</svg>

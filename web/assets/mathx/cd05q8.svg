@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="250" rx="8" fill="#fff"/>
+  <polyline points="100,210 150,60 380,200 650,90" fill="none" stroke="#333" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#16399f">
+    <circle cx="100" cy="210" r="5"/>
+    <circle cx="150" cy="60" r="5"/>
+    <circle cx="380" cy="200" r="5"/>
+    <circle cx="650" cy="90" r="5"/>
+  </g>
+  <g font-size="24" fill="#333">
+    <text x="80" y="232">A</text>
+    <text x="138" y="46">B</text>
+    <text x="382" y="228">C</text>
+    <text x="662" y="84">D</text>
+  </g>
+  <g font-size="20" fill="#333">
+    <text x="100" y="140" transform="rotate(-72 100 140)">9 cm</text>
+    <text x="248" y="118" transform="rotate(31 248 118)">1 dm</text>
+    <text x="498" y="132" transform="rotate(-22 498 132)">2 m</text>
+  </g>
+  <text x="480" y="242" font-size="20" font-style="italic" fill="#666">(Hình vẽ mang tính tượng trưng)</text>
+</svg>

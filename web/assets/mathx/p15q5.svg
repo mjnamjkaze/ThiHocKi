@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <!-- Quy luat: 4 mui ten giu nguyen huong, doi cho theo chieu kim dong ho. Hinh 4 dung = B -->
+  <rect x="0" y="0" width="800" height="420" fill="#fff" rx="8"/>
+  <polygon points="100.0,50.0 109.0,62.0 103.5,62.0 103.5,86.0 96.5,86.0 96.5,62.0 91.0,62.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="40.0,110.0 52.0,101.0 52.0,106.5 76.0,106.5 76.0,113.5 52.0,113.5 52.0,119.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="124.0,110.0 136.0,101.0 136.0,106.5 160.0,106.5 160.0,113.5 136.0,113.5 136.0,119.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <polygon points="100.0,170.0 109.0,158.0 103.5,158.0 103.5,134.0 96.5,134.0 96.5,158.0 91.0,158.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="252.0,68.0 264.0,59.0 264.0,64.5 288.0,64.5 288.0,71.5 264.0,71.5 264.0,77.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="312.0,92.0 321.0,104.0 315.5,104.0 315.5,128.0 308.5,128.0 308.5,104.0 303.0,104.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="252.0,152.0 264.0,143.0 264.0,148.5 288.0,148.5 288.0,155.5 264.0,155.5 264.0,161.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <polygon points="228.0,128.0 237.0,116.0 231.5,116.0 231.5,92.0 224.5,92.0 224.5,116.0 219.0,116.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="440.0,86.0 449.0,74.0 443.5,74.0 443.5,50.0 436.5,50.0 436.5,74.0 431.0,74.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="464.0,110.0 476.0,101.0 476.0,106.5 500.0,106.5 500.0,113.5 476.0,113.5 476.0,119.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="440.0,134.0 449.0,146.0 443.5,146.0 443.5,170.0 436.5,170.0 436.5,146.0 431.0,146.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380.0,110.0 392.0,101.0 392.0,106.5 416.0,106.5 416.0,113.5 392.0,113.5 392.0,119.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <text x="590" y="135" font-family="system-ui" font-size="70" font-weight="bold" fill="#333" text-anchor="middle">?</text>
+  <polygon points="100.0,240.0 109.0,252.0 103.5,252.0 103.5,276.0 96.5,276.0 96.5,252.0 91.0,252.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="142.0,318.0 151.0,306.0 145.5,306.0 145.5,282.0 138.5,282.0 138.5,306.0 133.0,306.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="82.0,342.0 94.0,333.0 94.0,338.5 118.0,338.5 118.0,345.5 94.0,345.5 94.0,351.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <polygon points="40.0,300.0 52.0,291.0 52.0,296.5 76.0,296.5 76.0,303.5 52.0,303.5 52.0,309.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="252.0,258.0 264.0,249.0 264.0,254.5 288.0,254.5 288.0,261.5 264.0,261.5 264.0,267.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <polygon points="312.0,318.0 321.0,306.0 315.5,306.0 315.5,282.0 308.5,282.0 308.5,306.0 303.0,306.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="252.0,342.0 264.0,333.0 264.0,338.5 288.0,338.5 288.0,345.5 264.0,345.5 264.0,351.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="228.0,282.0 237.0,294.0 231.5,294.0 231.5,318.0 224.5,318.0 224.5,294.0 219.0,294.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="440.0,240.0 449.0,252.0 443.5,252.0 443.5,276.0 436.5,276.0 436.5,252.0 431.0,252.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380.0,300.0 392.0,291.0 392.0,296.5 416.0,296.5 416.0,303.5 392.0,303.5 392.0,309.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="464.0,300.0 476.0,291.0 476.0,296.5 500.0,296.5 500.0,303.5 476.0,303.5 476.0,309.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <polygon points="440.0,360.0 449.0,348.0 443.5,348.0 443.5,324.0 436.5,324.0 436.5,348.0 431.0,348.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="610.0,276.0 619.0,264.0 613.5,264.0 613.5,240.0 606.5,240.0 606.5,264.0 601.0,264.0" fill="#3b3b3b" stroke="#333" stroke-width="1.5"/>
+  <polygon points="634.0,300.0 646.0,291.0 646.0,296.5 670.0,296.5 670.0,303.5 646.0,303.5 646.0,309.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="610.0,324.0 619.0,336.0 613.5,336.0 613.5,360.0 606.5,360.0 606.5,336.0 601.0,336.0" fill="#d9dde0" stroke="#333" stroke-width="1.5"/>
+  <polygon points="550.0,300.0 562.0,291.0 562.0,296.5 586.0,296.5 586.0,303.5 562.0,303.5 562.0,309.0" fill="#8f9aa5" stroke="#333" stroke-width="1.5"/>
+  <g font-family="system-ui" font-size="19" fill="#555" text-anchor="middle">
+    <text x="100" y="185">Hình 1</text><text x="270" y="185">Hình 2</text><text x="440" y="185">Hình 3</text><text x="590" y="185">Hình 4</text>
+    <text x="100" y="378">(A)</text><text x="270" y="378">(B)</text><text x="440" y="378">(C)</text><text x="610" y="378">(D)</text>
+  </g>
+</svg>

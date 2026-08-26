@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 570 130">
+<circle cx="30" cy="30" r="13" fill="#fff" stroke="#334155" stroke-width="2.5"/><circle cx="30" cy="30" r="6.5" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="58" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >+</text>
+<circle cx="86" cy="30" r="13" fill="#fff" stroke="#334155" stroke-width="2.5"/><circle cx="86" cy="30" r="6.5" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="114" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >+</text>
+<circle cx="142" cy="30" r="13" fill="#fff" stroke="#334155" stroke-width="2.5"/><circle cx="142" cy="30" r="6.5" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="170" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >+</text>
+<circle cx="198" cy="30" r="13" fill="#fff" stroke="#334155" stroke-width="2.5"/><circle cx="198" cy="30" r="6.5" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="232" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >=</text>
+<text x="272" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >24</text>
+<text x="330" y="38" font-family="Arial" font-weight="bold" font-size="22" fill="#0f172a" text-anchor="middle" >và</text>
+<rect x="376" y="18" width="24" height="24" rx="0" fill="#fff" stroke="#334155" stroke-width="2.5"/>
+<text x="422" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >×</text>
+<rect x="444" y="18" width="24" height="24" rx="0" fill="#fff" stroke="#334155" stroke-width="2.5"/>
+<text x="490" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >=</text>
+<text x="530" y="38" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >16</text>
+<text x="96" y="100" font-family="Arial" font-weight="bold" font-size="30" fill="#0f172a" text-anchor="middle" >(</text>
+<circle cx="122" cy="92" r="13" fill="#fff" stroke="#334155" stroke-width="2.5"/><circle cx="122" cy="92" r="6.5" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="150" y="100" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >+</text>
+<rect x="172" y="80" width="24" height="24" rx="0" fill="#fff" stroke="#334155" stroke-width="2.5"/>
+<text x="210" y="100" font-family="Arial" font-weight="bold" font-size="30" fill="#0f172a" text-anchor="middle" >)</text>
+<text x="240" y="100" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >×</text>
+<text x="270" y="100" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >3</text>
+<text x="300" y="100" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >=</text>
+<text x="334" y="101" font-family="Arial" font-weight="bold" font-size="30" fill="#e11d48" text-anchor="middle" >?</text>
+</svg>

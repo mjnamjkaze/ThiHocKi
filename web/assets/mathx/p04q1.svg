@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 260" font-family="system-ui">
+  <rect x="0" y="0" width="300" height="260" rx="8" fill="#fff"/>
+  <g stroke="#333" stroke-width="2" fill="#FFCC66">
+    <path d="M130,120 L180,33.4 A100 100 0 0 0 130,20 Z"/>
+    <path d="M130,120 L130,20 A100 100 0 0 0 80,33.4 Z"/>
+    <path d="M130,120 L80,33.4 A100 100 0 0 0 43.4,70 Z"/>
+    <path d="M130,120 L43.4,70 A100 100 0 0 0 30,120 Z"/>
+    <path d="M130,120 L30,120 A100 100 0 0 0 43.4,170 Z"/>
+    <path d="M130,120 L43.4,170 A100 100 0 0 0 80,206.6 Z"/>
+    <path d="M130,120 L80,206.6 A100 100 0 0 0 130,220 Z"/>
+    <path d="M130,120 L130,220 A100 100 0 0 0 180,206.6 Z"/>
+  </g>
+  <g fill="#E53935">
+    <circle cx="145.5" cy="62" r="7"/>
+    <circle cx="114.5" cy="62" r="7"/>
+    <circle cx="87.6" cy="77.6" r="7"/>
+    <circle cx="72" cy="104.5" r="7"/>
+    <circle cx="72" cy="135.5" r="7"/>
+    <circle cx="87.6" cy="162.4" r="7"/>
+    <circle cx="114.5" cy="178" r="7"/>
+    <circle cx="145.5" cy="178" r="7"/>
+  </g>
+  <g stroke="#999" stroke-width="2" stroke-dasharray="6 5" fill="none">
+    <path d="M180,206.6 A100 100 0 0 0 180,33.4"/>
+    <line x1="130" y1="120" x2="180" y2="33.4"/>
+    <line x1="130" y1="120" x2="180" y2="206.6"/>
+    <line x1="130" y1="120" x2="216.6" y2="70"/>
+    <line x1="130" y1="120" x2="230" y2="120"/>
+    <line x1="130" y1="120" x2="216.6" y2="170"/>
+  </g>
+  <text x="196" y="132" font-size="34" font-weight="bold" fill="#333">?</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 422 210">
+<rect x="12" y="12" width="186" height="186" rx="0" fill="#ffffff" stroke="#334155" stroke-width="2.5"/>
+<circle cx="43" cy="43" r="13" fill="#0f172a" stroke="none" stroke-width="0"/>
+<polygon points="105,21 81,61 129,61" fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="167,21 143,61 191,61" fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"/>
+<rect x="160.5" y="42.5" width="13" height="13" rx="0" fill="#0f172a" stroke="none" stroke-width="0"/>
+<rect x="35" y="97" width="16" height="16" rx="0" fill="#0f172a" stroke="none" stroke-width="0"/>
+<circle cx="105" cy="105" r="20" fill="none" stroke="#334155" stroke-width="2.5"/>
+<circle cx="167" cy="105" r="20" fill="none" stroke="#334155" stroke-width="2.5"/>
+<polygon points="167,96 155,116 179,116" fill="#0f172a" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="43,153.8 28.6,177.8 57.4,177.8" fill="#0f172a" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<rect x="87" y="149" width="36" height="36" rx="0" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="167" y="178" font-family="Arial" font-weight="bold" font-size="34" fill="#e11d48" text-anchor="middle" >?</text>
+<rect x="220" y="28" width="36" height="36" rx="0" fill="none" stroke="#334155" stroke-width="2.5"/>
+<text x="238" y="94" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >A</text>
+<circle cx="330" cy="46" r="20" fill="none" stroke="#334155" stroke-width="2.5"/>
+<rect x="323.5" y="39.5" width="13" height="13" rx="0" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="330" y="94" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >B</text>
+<rect x="220" y="124" width="36" height="36" rx="0" fill="none" stroke="#334155" stroke-width="2.5"/>
+<polygon points="238,134.1 227.2,152.1 248.8,152.1" fill="#0f172a" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<text x="238" y="190" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >C</text>
+<rect x="312" y="124" width="36" height="36" rx="0" fill="none" stroke="#334155" stroke-width="2.5"/>
+<circle cx="330" cy="142" r="10" fill="#0f172a" stroke="none" stroke-width="0"/>
+<text x="330" y="190" font-family="Arial" font-weight="bold" font-size="20" fill="#0f172a" text-anchor="middle" >D</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="330" rx="8" fill="#fff"/>
+  <rect x="110" y="20" width="480" height="280" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="350" y="47" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">SỐ ĐỒ CHƠI CỦA BẠN KHÔI</text>
+  <line x1="110" y1="58" x2="590" y2="58" stroke="#333" stroke-width="2"/>
+  <line x1="110" y1="258" x2="590" y2="258" stroke="#333" stroke-width="2"/>
+  <line x1="230" y1="58" x2="230" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="58" x2="350" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="470" y1="58" x2="470" y2="300" stroke="#333" stroke-width="2"/>
+  <g font-size="26" text-anchor="middle">
+    <text x="170" y="250">🚗</text><text x="170" y="218">🚗</text><text x="170" y="186">🚗</text><text x="170" y="154">🚗</text><text x="170" y="122">🚗</text><text x="170" y="90">🚗</text>
+    <text x="290" y="250">🛵</text><text x="290" y="218">🛵</text><text x="290" y="186">🛵</text>
+    <text x="410" y="250">✈️</text><text x="410" y="218">✈️</text><text x="410" y="186">✈️</text><text x="410" y="154">✈️</text>
+    <text x="530" y="250">🤖</text><text x="530" y="218">🤖</text><text x="530" y="186">🤖</text><text x="530" y="154">🤖</text>
+  </g>
+  <g font-size="20" text-anchor="middle" fill="#333">
+    <text x="170" y="285">Ô tô</text>
+    <text x="290" y="285">Xe máy</text>
+    <text x="410" y="285">Máy bay</text>
+    <text x="530" y="285">Rô bốt</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="system-ui">
+  <!-- khoi hop 6 vien gach (ve phong theo hinh trong phieu) -->
+  <!-- mat tren -->
+  <polygon points="170,90 230,50 530,50 470,90" fill="#f3e2c4" stroke="#333" stroke-width="3"/>
+  <!-- mat phai -->
+  <polygon points="470,90 530,50 530,210 470,250" fill="#e3cba1" stroke="#333" stroke-width="3"/>
+  <!-- mat truoc -->
+  <rect x="170" y="90" width="300" height="160" fill="#fdf3dd" stroke="#333" stroke-width="3"/>
+  <!-- cac duong chia gach mat truoc -->
+  <line x1="245" y1="90" x2="245" y2="250" stroke="#333" stroke-width="3"/>
+  <line x1="320" y1="90" x2="320" y2="250" stroke="#333" stroke-width="3"/>
+  <line x1="245" y1="185" x2="320" y2="185" stroke="#333" stroke-width="3"/>
+  <!-- cac duong chia gach mat tren -->
+  <line x1="320" y1="90" x2="380" y2="50" stroke="#333" stroke-width="3"/>
+  <line x1="200" y1="70" x2="500" y2="70" stroke="#333" stroke-width="3"/>
+</svg>

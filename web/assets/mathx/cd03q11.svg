@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="310" rx="8" fill="#fff"/>
+  <rect x="150" y="30" width="400" height="235" fill="none" stroke="#333" stroke-width="2"/>
+  <text x="350" y="56" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">SỐ NGÀY CÓ MƯA TRONG THÁNG</text>
+  <line x1="150" y1="68" x2="550" y2="68" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="225" x2="550" y2="225" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="68" x2="250" y2="265" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="68" x2="350" y2="265" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="68" x2="450" y2="265" stroke="#333" stroke-width="2"/>
+  <g fill="#e53935" stroke="#b71c1c" stroke-width="2">
+    <circle cx="200" cy="205" r="13"/><circle cx="200" cy="173" r="13"/><circle cx="200" cy="141" r="13"/>
+    <circle cx="300" cy="205" r="13"/><circle cx="300" cy="173" r="13"/>
+    <circle cx="400" cy="205" r="13"/><circle cx="400" cy="173" r="13"/><circle cx="400" cy="141" r="13"/><circle cx="400" cy="109" r="13"/>
+    <circle cx="500" cy="205" r="13"/>
+  </g>
+  <g font-size="20" text-anchor="middle" fill="#333">
+    <text x="200" y="251">Tuần 1</text>
+    <text x="300" y="251">Tuần 2</text>
+    <text x="400" y="251">Tuần 3</text>
+    <text x="500" y="251">Tuần 4</text>
+  </g>
+  <text x="350" y="297" font-size="20" font-style="italic" text-anchor="middle" fill="#333">(Mỗi <tspan fill="#e53935">●</tspan> thể hiện một ngày có mưa)</text>
+</svg>

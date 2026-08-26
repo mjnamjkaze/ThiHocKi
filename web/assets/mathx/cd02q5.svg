@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="260" rx="8" fill="#fff"/>
+  <!-- Outer trapezoid TL(150,40) TR(480,40) BR(640,230) BL(60,230);
+       SL(114.5,115) on left slant, SR(543.2,115) on right slant;
+       strip diagonal SL-TR. Regions: yellow tri (TL,TR,SL), green tri (TR,SR,SL), red trapezoid below. -->
+  <g stroke="#333" stroke-width="2.5" stroke-linejoin="round">
+    <polygon points="114.5,115 543.2,115 640,230 60,230" fill="#e53935"/>
+    <polygon points="150,40 480,40 114.5,115" fill="#fdd835"/>
+    <polygon points="480,40 543.2,115 114.5,115" fill="#43a047"/>
+  </g>
+</svg>

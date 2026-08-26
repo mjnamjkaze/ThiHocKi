@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="320" rx="8" fill="#fff"/>
+  <!-- chiec hop mo nap, kien bo quanh vanh tren -->
+  <!-- vanh tren: F1(180,160) F2(480,160) B2(620,80) B1(320,80) -->
+  <!-- mat trong (day hop nhin thay) -->
+  <polygon points="200,195 462,195 570,120 330,120" fill="#fdf3e3" stroke="#333" stroke-width="2"/>
+  <!-- thanh trong cua vanh -->
+  <polygon points="180,160 320,80 330,120 200,195" fill="#f6e2c0" stroke="#333" stroke-width="2"/>
+  <polygon points="320,80 620,80 570,120 330,120" fill="#f0d9b5" stroke="#333" stroke-width="2"/>
+  <polygon points="480,160 620,80 570,120 462,195" fill="#e8cda2" stroke="#333" stroke-width="2"/>
+  <polygon points="180,160 480,160 462,195 200,195" fill="#f6e2c0" stroke="#333" stroke-width="2"/>
+  <!-- mat ngoai truoc va phai -->
+  <polygon points="180,160 480,160 480,230 180,230" fill="#ffe0b2" stroke="#333" stroke-width="3"/>
+  <polygon points="480,160 620,80 620,150 480,230" fill="#e8c38f" stroke="#333" stroke-width="3"/>
+  <!-- vien vanh tren dam -->
+  <polygon points="180,160 480,160 620,80 320,80" fill="none" stroke="#333" stroke-width="3"/>
+  <!-- chu kien -->
+  <text x="300" y="66" font-size="34" text-anchor="middle">🐜</text>
+  <!-- nhan kich thuoc -->
+  <line x1="150" y1="165" x2="290" y2="85" stroke="none"/>
+  <text x="215" y="110" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="end">4 cm</text>
+  <text x="330" y="265" font-size="24" font-weight="bold" fill="#c0392b" text-anchor="middle">6 cm</text>
+  <text x="638" y="125" font-size="24" font-weight="bold" fill="#2980b9">2 cm</text>
+</svg>

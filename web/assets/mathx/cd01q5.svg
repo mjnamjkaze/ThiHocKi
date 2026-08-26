@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="220" rx="8" fill="#fff"/>
+  <polyline points="95,185 245,70 445,165 630,105" fill="none" stroke="#8d6e63" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="40" y="200" font-size="36">🐜</text>
+  <text x="632" y="98" font-size="46">🏠</text>
+  <text x="150" y="118" font-size="20" fill="#333" transform="rotate(-37 150 118)">125 cm</text>
+  <text x="340" y="103" font-size="20" fill="#333" transform="rotate(25 340 103)">245 cm</text>
+  <text x="532" y="122" font-size="20" fill="#333" transform="rotate(-18 532 122)">130 cm</text>
+</svg>

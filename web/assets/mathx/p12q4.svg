@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260">
+  <!-- Khoi gach: lop truoc 4 vien (2 dung 2 ben, giua 1 dung + 1 nam), lop sau 2 vien -->
+  <rect x="0" y="0" width="700" height="260" fill="#fff" rx="8"/>
+  <polygon points="160,100 460,100 550,45 250,45" fill="#fbd9a5" stroke="#333" stroke-width="3"/>
+  <polygon points="460,100 550,45 550,175 460,230" fill="#d99a5b" stroke="#333" stroke-width="3"/>
+  <rect x="160" y="100" width="300" height="130" fill="#f2b978" stroke="#333" stroke-width="3"/>
+  <!-- chia mat truoc: 3 cot, cot giua co vien nam ngang duoi -->
+  <line x1="260" y1="100" x2="260" y2="230" stroke="#333" stroke-width="3"/>
+  <line x1="360" y1="100" x2="360" y2="230" stroke="#333" stroke-width="3"/>
+  <line x1="260" y1="185" x2="360" y2="185" stroke="#333" stroke-width="3"/>
+  <!-- chia mat tren: 2 hang truoc - sau -->
+  <line x1="205" y1="73" x2="505" y2="73" stroke="#333" stroke-width="3"/>
+  <line x1="260" y1="100" x2="305" y2="73" stroke="#333" stroke-width="3"/>
+  <line x1="360" y1="100" x2="405" y2="73" stroke="#333" stroke-width="3"/>
+  <line x1="355" y1="73" x2="400" y2="45" stroke="#333" stroke-width="3"/>
+  <!-- chia mat ben phai theo chieu sau -->
+  <line x1="505" y1="73" x2="505" y2="203" stroke="#333" stroke-width="3"/>
+</svg>

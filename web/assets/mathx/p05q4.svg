@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 300" font-family="system-ui">
+  <rect x="0" y="0" width="620" height="300" rx="8" fill="#fff"/>
+  <!-- Lưới 5x5 -->
+  <g stroke="#999" stroke-width="1" fill="none">
+    <rect x="20" y="20" width="250" height="250"/>
+    <line x1="70" y1="20" x2="70" y2="270"/><line x1="120" y1="20" x2="120" y2="270"/><line x1="170" y1="20" x2="170" y2="270"/><line x1="220" y1="20" x2="220" y2="270"/>
+    <line x1="20" y1="70" x2="270" y2="70"/><line x1="20" y1="120" x2="270" y2="120"/><line x1="20" y1="170" x2="270" y2="170"/><line x1="20" y1="220" x2="270" y2="220"/>
+  </g>
+  <!-- Bông hoa 5 cánh -->
+  <g stroke="#333" stroke-width="2">
+    <circle cx="145" cy="105" r="40" fill="#F48FB1"/>
+    <circle cx="97.4" cy="139.5" r="40" fill="#F48FB1"/>
+    <circle cx="115.6" cy="195.5" r="40" fill="#F48FB1"/>
+    <circle cx="174.4" cy="195.5" r="40" fill="#F48FB1"/>
+    <circle cx="192.6" cy="139.5" r="40" fill="#F48FB1"/>
+    <circle cx="145" cy="155" r="16" fill="#FFF176"/>
+  </g>
+  <!-- Ô bị cắt (tô xám) -->
+  <rect x="20" y="120" width="50" height="50" fill="#9E9E9E" stroke="#333" stroke-width="2"/>
+  <!-- Các ô lựa chọn -->
+  <g font-size="22" text-anchor="middle" fill="#333">
+    <text x="365" y="112">1</text>
+    <text x="435" y="112">2</text>
+    <text x="505" y="112">3</text>
+    <text x="575" y="112">4</text>
+  </g>
+  <g stroke="#333" stroke-width="2" fill="#FFFFFF">
+    <rect x="340" y="125" width="50" height="50"/>
+    <rect x="410" y="125" width="50" height="50"/>
+    <rect x="480" y="125" width="50" height="50"/>
+    <rect x="550" y="125" width="50" height="50"/>
+  </g>
+  <g stroke="#333" stroke-width="2" fill="none">
+    <path d="M 347.5 125 A 40 40 0 0 1 340 173.6"/>
+    <path d="M 452.5 125 A 40 40 0 0 0 460 173.6"/>
+    <path d="M 484 133 Q 505 170 526 133"/>
+    <path d="M 550 150 Q 572 154 578 175"/>
+    <path d="M 578 168 q 10 -6 16 4"/>
+  </g>
+</svg>

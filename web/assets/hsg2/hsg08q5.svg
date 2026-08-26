@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="260" fill="#fff"/>
+  <rect x="45" y="40" width="610" height="180" fill="#F3E5F5" stroke="#333" stroke-width="4"/>
+  <line x1="290" y1="40" x2="290" y2="220" stroke="#333" stroke-width="4"/>
+  <line x1="45" y1="130" x2="655" y2="130" stroke="#333" stroke-width="4"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230">
+  <rect x="0" y="0" width="700" height="230" fill="#fff" rx="8"/>
+  <g stroke="#333" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Thap 1 (mau, day du) -->
+    <polygon points="122,45 141,12 179,12 198,45 179,78 141,78" fill="#d9f2ff"/>
+    <polygon points="82,110 101,77 139,77 158,110 139,143 101,143" fill="#fff3c4"/>
+    <polygon points="162,110 181,77 219,77 238,110 219,143 181,143" fill="#fff3c4"/>
+    <polygon points="42,175 61,142 99,142 118,175 99,208 61,208" fill="#e5f8d8"/>
+    <polygon points="122,175 141,142 179,142 198,175 179,208 141,208" fill="#e5f8d8"/>
+    <polygon points="202,175 221,142 259,142 278,175 259,208 221,208" fill="#e5f8d8"/>
+    <!-- Thap 2 (can dien) -->
+    <polygon points="482,45 501,12 539,12 558,45 539,78 501,78" fill="#ffd9e0"/>
+    <polygon points="442,110 461,77 499,77 518,110 499,143 461,143" fill="#ffd9e0"/>
+    <polygon points="522,110 541,77 579,77 598,110 579,143 541,143" fill="#fff3c4"/>
+    <polygon points="402,175 421,142 459,142 478,175 459,208 421,208" fill="#e5f8d8"/>
+    <polygon points="482,175 501,142 539,142 558,175 539,208 501,208" fill="#e5f8d8"/>
+    <polygon points="562,175 581,142 619,142 638,175 619,208 581,208" fill="#e5f8d8"/>
+  </g>
+  <g font-family="system-ui" font-size="28" font-weight="bold" fill="#222" text-anchor="middle">
+    <text x="160" y="55">21</text>
+    <text x="120" y="120">9</text>
+    <text x="200" y="120">12</text>
+    <text x="80" y="185">2</text>
+    <text x="160" y="185">7</text>
+    <text x="240" y="185">5</text>
+    <text x="520" y="55" fill="#e05a2b">?</text>
+    <text x="480" y="120" fill="#e05a2b">?</text>
+    <text x="560" y="120">6</text>
+    <text x="440" y="185">5</text>
+    <text x="520" y="185">4</text>
+    <text x="600" y="185">2</text>
+  </g>
+</svg>

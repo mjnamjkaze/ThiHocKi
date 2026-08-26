@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230">
+  <rect x="0" y="0" width="700" height="230" fill="#fff" rx="8"/>
+  <!-- 1: hình tròn, gấp theo đường nét đứt dọc -->
+  <circle cx="100" cy="115" r="75" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+  <line x1="100" y1="40" x2="100" y2="190" stroke="#333" stroke-width="2.5" stroke-dasharray="8,6"/>
+  <!-- mũi tên -->
+  <line x1="195" y1="115" x2="245" y2="115" stroke="#333" stroke-width="3"/>
+  <polygon points="245,107 261,115 245,123" fill="#333"/>
+  <!-- 2: nửa hình tròn (mặt phẳng bên phải), gấp theo đường nét đứt ngang -->
+  <path d="M355,40 A75,75 0 0 0 355,190 Z" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+  <line x1="280" y1="115" x2="355" y2="115" stroke="#333" stroke-width="2.5" stroke-dasharray="8,6"/>
+  <!-- mũi tên -->
+  <line x1="380" y1="115" x2="430" y2="115" stroke="#333" stroke-width="3"/>
+  <polygon points="430,107 446,115 430,123" fill="#333"/>
+  <!-- 3: một phần tư hình tròn (góc gấp ở dưới-phải), đường cắt nét đứt qua CẢ HAI cạnh thẳng để cắt rời góc -->
+  <path d="M610,190 L610,80 A110,110 0 0 0 500,190 Z" fill="#cfd8dc" stroke="#333" stroke-width="3"/>
+  <line x1="522" y1="220" x2="643" y2="110" stroke="#333" stroke-width="2.5" stroke-dasharray="8,6"/>
+  <text x="488" y="218" font-family="system-ui" font-size="26">✂️</text>
+</svg>

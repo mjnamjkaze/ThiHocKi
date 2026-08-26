@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="200" rx="8" fill="#fff"/>
+  <!-- Cân 1: hộp 1 (thấp, nặng) - hộp 3 (cao, nhẹ) -->
+  <g>
+    <polygon points="62,168 118,168 90,122" fill="#90A4AE" stroke="#333" stroke-width="2"/>
+    <line x1="25" y1="150" x2="155" y2="94" stroke="#333" stroke-width="4"/>
+    <rect x="11" y="124" width="28" height="26" rx="3" fill="#FFE082" stroke="#333" stroke-width="2"/>
+    <text x="25" y="143" font-size="20" text-anchor="middle" fill="#333">1</text>
+    <rect x="141" y="68" width="28" height="26" rx="3" fill="#FFE082" stroke="#333" stroke-width="2"/>
+    <text x="155" y="87" font-size="20" text-anchor="middle" fill="#333">3</text>
+  </g>
+  <!-- Cân 2: hộp 4 (thấp, nặng) - hộp 5 (cao, nhẹ) -->
+  <g>
+    <polygon points="235,168 291,168 263,122" fill="#90A4AE" stroke="#333" stroke-width="2"/>
+    <line x1="198" y1="150" x2="328" y2="94" stroke="#333" stroke-width="4"/>
+    <rect x="184" y="124" width="28" height="26" rx="3" fill="#A5D6A7" stroke="#333" stroke-width="2"/>
+    <text x="198" y="143" font-size="20" text-anchor="middle" fill="#333">4</text>
+    <rect x="314" y="68" width="28" height="26" rx="3" fill="#A5D6A7" stroke="#333" stroke-width="2"/>
+    <text x="328" y="87" font-size="20" text-anchor="middle" fill="#333">5</text>
+  </g>
+  <!-- Cân 3: hộp 4 (cao, nhẹ) - hộp 3 (thấp, nặng) -->
+  <g>
+    <polygon points="408,168 464,168 436,122" fill="#90A4AE" stroke="#333" stroke-width="2"/>
+    <line x1="371" y1="94" x2="501" y2="150" stroke="#333" stroke-width="4"/>
+    <rect x="357" y="68" width="28" height="26" rx="3" fill="#90CAF9" stroke="#333" stroke-width="2"/>
+    <text x="371" y="87" font-size="20" text-anchor="middle" fill="#333">4</text>
+    <rect x="487" y="124" width="28" height="26" rx="3" fill="#90CAF9" stroke="#333" stroke-width="2"/>
+    <text x="501" y="143" font-size="20" text-anchor="middle" fill="#333">3</text>
+  </g>
+  <!-- Cân 4: hộp 2 (cao, nhẹ) - hộp 5 (thấp, nặng) -->
+  <g>
+    <polygon points="581,168 637,168 609,122" fill="#90A4AE" stroke="#333" stroke-width="2"/>
+    <line x1="544" y1="94" x2="674" y2="150" stroke="#333" stroke-width="4"/>
+    <rect x="530" y="68" width="28" height="26" rx="3" fill="#F8BBD0" stroke="#333" stroke-width="2"/>
+    <text x="544" y="87" font-size="20" text-anchor="middle" fill="#333">2</text>
+    <rect x="660" y="124" width="28" height="26" rx="3" fill="#F8BBD0" stroke="#333" stroke-width="2"/>
+    <text x="674" y="143" font-size="20" text-anchor="middle" fill="#333">5</text>
+  </g>
+</svg>

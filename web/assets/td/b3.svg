@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 60">
+<g stroke-width="2">
+<circle cx="27" cy="30" r="22" fill="#16a34a" stroke="#14532d"/>
+<rect x="61" y="9" width="42" height="42" fill="#fbbf24" stroke="#b45309"/>
+<polygon points="137,9 160,51 114,51" fill="#ef4444" stroke="#991b1b"/>
+<circle cx="196" cy="30" r="22" fill="#facc15" stroke="#a16207"/>
+<circle cx="249" cy="30" r="22" fill="#16a34a" stroke="#14532d"/>
+<rect x="283" y="9" width="42" height="42" fill="#fbbf24" stroke="#b45309"/>
+<polygon points="359,9 382,51 336,51" fill="#ef4444" stroke="#991b1b"/>
+<circle cx="418" cy="30" r="22" fill="#facc15" stroke="#a16207"/>
+<circle cx="474" cy="30" r="20" fill="#fff" stroke="#334155" stroke-dasharray="5 4"/>
+<text x="474" y="39" font-family="Arial" font-size="24" font-weight="bold" fill="#334155" text-anchor="middle">?</text>
+<circle cx="524" cy="30" r="20" fill="#fff" stroke="#334155" stroke-dasharray="5 4"/>
+<text x="524" y="39" font-family="Arial" font-size="24" font-weight="bold" fill="#334155" text-anchor="middle">?</text>
+</g>
+</svg>

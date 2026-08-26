@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 210" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="210" rx="8" fill="#fff"/>
+  <g stroke="#333" stroke-width="2" fill="#E0A96D">
+    <!-- Hình 1: 1+2+3 = 6 viên -->
+    <rect x="40" y="150" width="40" height="20"/><rect x="80" y="150" width="40" height="20"/><rect x="120" y="150" width="40" height="20"/>
+    <rect x="60" y="130" width="40" height="20"/><rect x="100" y="130" width="40" height="20"/>
+    <rect x="80" y="110" width="40" height="20"/>
+    <!-- Hình 2: 1+2+3+4 = 10 viên -->
+    <rect x="230" y="150" width="40" height="20"/><rect x="270" y="150" width="40" height="20"/><rect x="310" y="150" width="40" height="20"/><rect x="350" y="150" width="40" height="20"/>
+    <rect x="250" y="130" width="40" height="20"/><rect x="290" y="130" width="40" height="20"/><rect x="330" y="130" width="40" height="20"/>
+    <rect x="270" y="110" width="40" height="20"/><rect x="310" y="110" width="40" height="20"/>
+    <rect x="290" y="90" width="40" height="20"/>
+    <!-- Hình 3: 1+2+3+4+5 = 15 viên -->
+    <rect x="460" y="150" width="40" height="20"/><rect x="500" y="150" width="40" height="20"/><rect x="540" y="150" width="40" height="20"/><rect x="580" y="150" width="40" height="20"/><rect x="620" y="150" width="40" height="20"/>
+    <rect x="480" y="130" width="40" height="20"/><rect x="520" y="130" width="40" height="20"/><rect x="560" y="130" width="40" height="20"/><rect x="600" y="130" width="40" height="20"/>
+    <rect x="500" y="110" width="40" height="20"/><rect x="540" y="110" width="40" height="20"/><rect x="580" y="110" width="40" height="20"/>
+    <rect x="520" y="90" width="40" height="20"/><rect x="560" y="90" width="40" height="20"/>
+    <rect x="540" y="70" width="40" height="20"/>
+  </g>
+  <text x="100" y="195" font-size="22" text-anchor="middle" fill="#333">Hình 1</text>
+  <text x="310" y="195" font-size="22" text-anchor="middle" fill="#333">Hình 2</text>
+  <text x="560" y="195" font-size="22" text-anchor="middle" fill="#333">Hình 3</text>
+</svg>

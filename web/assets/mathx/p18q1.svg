@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="260" rx="8" fill="#fff"/>
+  <!-- so 4 bang que diem: f, g, b, c -->
+  <g stroke="#d9a05b" stroke-width="12" stroke-linecap="round">
+    <line x1="150" y1="40" x2="150" y2="118"/>
+    <line x1="152" y1="122" x2="228" y2="122"/>
+    <line x1="230" y1="40" x2="230" y2="118"/>
+    <line x1="230" y1="126" x2="230" y2="204"/>
+  </g>
+  <!-- so 5 bang que diem: a, f, g, c, d -->
+  <g stroke="#d9a05b" stroke-width="12" stroke-linecap="round">
+    <line x1="452" y1="38" x2="528" y2="38"/>
+    <line x1="450" y1="42" x2="450" y2="118"/>
+    <line x1="452" y1="122" x2="528" y2="122"/>
+    <line x1="530" y1="126" x2="530" y2="202"/>
+    <line x1="452" y1="206" x2="528" y2="206"/>
+  </g>
+  <!-- dau do o dau que diem -->
+  <g fill="#e74c3c">
+    <circle cx="150" cy="40" r="7"/>
+    <circle cx="228" cy="122" r="7"/>
+    <circle cx="230" cy="40" r="7"/>
+    <circle cx="230" cy="204" r="7"/>
+    <circle cx="452" cy="38" r="7"/>
+    <circle cx="528" cy="38" r="7"/>
+    <circle cx="450" cy="118" r="7"/>
+    <circle cx="528" cy="122" r="7"/>
+    <circle cx="530" cy="202" r="7"/>
+    <circle cx="452" cy="206" r="7"/>
+  </g>
+  <text x="340" y="145" font-size="64" font-weight="bold" fill="#e74c3c" text-anchor="middle">&gt;</text>
+</svg>

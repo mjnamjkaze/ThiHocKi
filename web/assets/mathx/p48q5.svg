@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="280" rx="8" fill="#fff"/>
+  <!-- 3 mảnh ghép của Minh -->
+  <text x="30" y="55" font-size="20" fill="#333">Mảnh ghép:</text>
+  <g fill="#ffcc80" stroke="#333" stroke-width="3">
+    <rect x="180" y="15" width="55" height="55"/>
+    <polygon points="270,70 370,70 320,15"/>
+    <path d="M410,70 L410,20 L510,20 L510,70 L485,70 A25,25 0 0 0 435,70 Z"/>
+  </g>
+  <!-- 5 mô hình -->
+  <g transform="translate(10,135)">
+    <g fill="#b3d4f5" stroke="#333" stroke-width="2.5">
+      <polygon points="10,70 120,70 65,105"/>
+      <path d="M30,70 L30,40 L100,40 L100,70 L82,70 A17,17 0 0 0 48,70 Z"/>
+      <rect x="47" y="4" width="36" height="36"/>
+    </g>
+    <text x="65" y="132" font-size="24" text-anchor="middle" fill="#333">①</text>
+  </g>
+  <g transform="translate(148,135)">
+    <g fill="#b3d4f5" stroke="#333" stroke-width="2.5">
+      <path d="M30,105 L30,70 L100,70 L100,105 L82,105 A17,17 0 0 0 48,105 Z"/>
+      <rect x="47" y="34" width="36" height="36"/>
+      <polygon points="30,34 100,34 65,4"/>
+    </g>
+    <text x="65" y="132" font-size="24" text-anchor="middle" fill="#333">②</text>
+  </g>
+  <g transform="translate(286,135)">
+    <g fill="#b3d4f5" stroke="#333" stroke-width="2.5">
+      <polygon points="10,70 120,70 65,105"/>
+      <path d="M30,70 L30,40 L100,40 L100,70 L82,70 A17,17 0 0 0 48,70 Z"/>
+    </g>
+    <text x="65" y="132" font-size="24" text-anchor="middle" fill="#333">③</text>
+  </g>
+  <g transform="translate(424,135)">
+    <g fill="#b3d4f5" stroke="#333" stroke-width="2.5">
+      <path d="M25,105 L25,70 L95,70 L95,105 L77,105 A17,17 0 0 0 43,105 Z"/>
+      <polygon points="25,70 95,70 60,38"/>
+      <rect x="96" y="70" width="34" height="35"/>
+    </g>
+    <text x="65" y="132" font-size="24" text-anchor="middle" fill="#333">④</text>
+  </g>
+  <g transform="translate(562,135)">
+    <g fill="#b3d4f5" stroke="#333" stroke-width="2.5">
+      <path d="M20,105 L20,70 L38,70 A17,17 0 0 0 72,70 L90,70 L90,105 Z"/>
+      <rect x="37" y="34" width="36" height="36"/>
+      <polygon points="37,34 73,34 55,6"/>
+    </g>
+    <text x="55" y="132" font-size="24" text-anchor="middle" fill="#333">⑤</text>
+  </g>
+</svg>

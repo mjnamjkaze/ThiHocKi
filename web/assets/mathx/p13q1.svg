@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200">
+  <!-- 3 bap benh: bo > lon; lon > de; ngua > bo -->
+  <rect x="0" y="0" width="720" height="200" fill="#fff" rx="8"/>
+  <g stroke="#333" stroke-width="5" stroke-linecap="round">
+    <line x1="30" y1="105" x2="225" y2="55"/>
+    <line x1="270" y1="55" x2="465" y2="105"/>
+    <line x1="510" y1="105" x2="700" y2="55"/>
+  </g>
+  <g fill="#555">
+    <polygon points="112,135 143,135 127,82"/>
+    <polygon points="352,135 383,135 367,82"/>
+    <polygon points="590,135 621,135 605,82"/>
+  </g>
+  <g font-family="system-ui" font-size="36" text-anchor="middle">
+    <text x="55" y="95">🐄</text>
+    <text x="205" y="48">🐷</text>
+    <text x="292" y="48">🐐</text>
+    <text x="440" y="95">🐷</text>
+    <text x="535" y="95">🐴</text>
+    <text x="678" y="48">🐄</text>
+  </g>
+  <g font-family="system-ui" font-size="19" text-anchor="middle" fill="#555">
+    <text x="127" y="170">Cân 1</text>
+    <text x="367" y="170">Cân 2</text>
+    <text x="605" y="170">Cân 3</text>
+  </g>
+</svg>

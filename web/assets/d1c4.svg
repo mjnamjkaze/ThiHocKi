@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 190">
+<path d="M95 60 C82 30 40 30 35 65 C31 92 60 115 95 145 C130 115 159 92 155 65 C150 30 108 30 95 60 Z" fill="none" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="95" y="105" text-anchor="middle" font-size="34" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">5</text>
+<line x1="175" y1="95" x2="360" y2="95" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M360 95 l-16 -9 v18 Z" fill="#2b2b2b"/>
+<text x="268" y="72" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">Nhân 3</text>
+<path d="M415 120 C390 120 380 95 400 82 C395 58 425 45 445 58 C455 38 495 38 505 58 C530 48 555 65 545 88 C562 100 552 120 530 120 Z" fill="none" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="580" y1="95" x2="765" y2="95" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M765 95 l-16 -9 v18 Z" fill="#2b2b2b"/>
+<text x="672" y="72" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">Thêm 35</text>
+<path d="M850 25 L868 65 L912 65 L880 95 L912 128 L868 128 L850 168 L832 128 L788 128 L820 95 L788 65 L832 65 Z" fill="none" stroke="#2b2b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

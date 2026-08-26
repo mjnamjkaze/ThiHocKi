@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250">
+  <rect x="0" y="0" width="700" height="250" fill="#fff" rx="8"/>
+  <!-- Sợi dây ngoằn ngoèo -->
+  <path d="M80,170 C95,100 115,60 130,60 S175,180 190,180 S235,55 250,55 S295,185 310,185 S355,60 380,60 S425,180 450,180 S495,55 520,55 S575,170 600,170"
+        fill="none" stroke="#a0522d" stroke-width="7" stroke-linecap="round"/>
+  <!-- Đường cắt của kéo (nét đứt) -->
+  <line x1="52" y1="120" x2="670" y2="120" stroke="#333" stroke-width="3" stroke-dasharray="12 9"/>
+  <text x="8" y="133" font-family="system-ui" font-size="36" fill="#333">✂</text>
+</svg>

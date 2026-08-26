@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <g stroke="#333" stroke-width="4" fill="none" stroke-linecap="round">
+    <!-- Vòng ngoài cùng kín -->
+    <circle cx="180" cy="180" r="145"/>
+    <!-- Vòng r=110, khe hở phía trên bên trái (125°–150°) -->
+    <path d="M 84.7 125 A 110 110 0 1 0 116.9 89.9"/>
+    <!-- Vòng r=75, khe hở phía trên bên phải (30°–55°) -->
+    <path d="M 223.0 118.6 A 75 75 0 1 0 245.0 142.5"/>
+    <!-- Vòng r=40, khe hở phía trên (75°–105°) -->
+    <path d="M 169.6 141.4 A 40 40 0 1 0 190.4 141.4"/>
+    <!-- Tường chắn hướng tâm -->
+    <line x1="71.7" y1="199.1" x2="37.2" y2="205.2"/>
+    <line x1="288.3" y1="199.1" x2="322.8" y2="205.2"/>
+    <line x1="131.8" y1="237.5" x2="109.3" y2="264.3"/>
+    <line x1="193.0" y1="253.9" x2="199.1" y2="288.3"/>
+    <line x1="190.4" y1="218.6" x2="199.4" y2="252.4"/>
+    <line x1="210.6" y1="205.7" x2="237.5" y2="228.2"/>
+  </g>
+  <g font-family="system-ui" font-size="24" font-weight="bold" fill="#1a56b0">
+    <circle cx="180" cy="180" r="5" fill="#1a56b0"/>
+    <text x="190" y="174">O</text>
+    <circle cx="180" cy="53" r="5" fill="#e0492e"/>
+    <text x="196" y="66" fill="#e0492e">C</text>
+    <circle cx="70" cy="243" r="5" fill="#333"/>
+    <text x="48" y="234" fill="#333">A</text>
+    <circle cx="295" cy="234" r="5" fill="#333"/>
+    <text x="302" y="224" fill="#333">B</text>
+    <circle cx="148" cy="266" r="5" fill="#333"/>
+    <text x="158" y="284" fill="#333">D</text>
+    <circle cx="206" cy="221" r="5" fill="#333"/>
+    <text x="211" y="239" font-size="18" fill="#333">E</text>
+  </g>
+</svg>

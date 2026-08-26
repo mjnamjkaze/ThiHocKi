@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="340" height="230" fill="#fff"/>
+<rect x="14" y="14" width="312" height="202" rx="14"
+    fill="#fdfbf6" stroke="#2b2b2b" stroke-width="3"/><path d="M15.5 184 H324.5 V202 a14 14 0 0 1 -14 14 H29.5 a14 14 0 0 1 -14 -14 Z"
+    fill="#f0e6d6" stroke="#2b2b2b" stroke-width="2.5"/><rect x="38" y="34" width="60" height="50" rx="5" fill="#e8f4ff" stroke="#2b2b2b" stroke-width="2.5"/>
+<line x1="68" y1="34" x2="68" y2="84" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="38" y1="59" x2="98" y2="59" stroke="#2b2b2b" stroke-width="2"/><rect x="173.6" y="40" width="88" height="35" rx="11.7"
+    fill="#fff8e1" stroke="#2b2b2b" stroke-width="2.5"/>
+<text x="217.6" y="64.5" font-size="20" font-weight="700" text-anchor="middle" fill="#2b2b2b">Laura</text><text x="138.3" y="176.9" font-size="52" text-anchor="middle">🛏️</text><text x="201.7" y="176.9" font-size="52" text-anchor="middle">🧸</text>
+</svg>

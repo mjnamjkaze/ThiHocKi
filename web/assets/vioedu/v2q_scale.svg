@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 250" font-family="Arial, Helvetica, sans-serif">
+  <rect width="620" height="250" fill="#fff"/>
+  <g stroke="#2b2b2b" stroke-width="4" fill="none" stroke-linecap="round">
+    <line x1="120" y1="70" x2="500" y2="70"/>
+    <line x1="310" y1="70" x2="310" y2="200"/>
+    <line x1="255" y1="215" x2="365" y2="215"/>
+    <path d="M310 200 L265 215 M310 200 L355 215"/>
+    <path d="M120 70 L95 120 L145 120 Z"/>
+    <path d="M500 70 L475 120 L525 120 Z"/>
+  </g>
+  <g text-anchor="middle" font-size="30" font-weight="bold">
+    <text x="120" y="52" fill="#1a56db">🍎🍎🍎</text>
+    <text x="500" y="52" fill="#b3261e">🍐🍐</text>
+  </g>
+  <text x="310" y="245" font-size="20" fill="#555" text-anchor="middle">Cân thăng bằng</text>
+</svg>

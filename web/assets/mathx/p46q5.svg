@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="360" rx="8" fill="#fff"/>
+  <text x="350" y="34" font-size="34" text-anchor="middle">🐵</text>
+  <!-- tường mê cung -->
+  <g stroke="#333" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M330,55 L150,55 L150,320 L550,320 L550,55 L370,55"/>
+    <path d="M300,140 L440,140 L440,240 L300,240 L300,205"/>
+    <path d="M300,170 L300,140"/>
+    <path d="M150,120 L210,120"/>
+    <path d="M470,220 L500,220"/>
+    <path d="M200,55 L200,90"/>
+    <path d="M490,55 L490,90"/>
+  </g>
+  <text x="370" y="200" font-size="34" text-anchor="middle">🍌</text>
+  <!-- các đường đi -->
+  <g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="346,60 346,99 250,99 250,185 355,185" stroke="#43a047"/>
+    <polyline points="354,60 354,91 460,91 460,156 520,156 520,300" stroke="#e53935"/>
+    <polyline points="342,64 342,103 246,103 246,300 410,300" stroke="#fbc02d"/>
+    <polyline points="358,64 358,87 464,87 464,164 448,164" stroke="#fb8c00"/>
+  </g>
+  <g font-size="20" font-weight="bold">
+    <text x="308" y="168" fill="#43a047">xanh lá</text>
+    <text x="527" y="300" fill="#e53935">đỏ</text>
+    <text x="418" y="306" fill="#c79a00">vàng</text>
+    <text x="462" y="185" fill="#fb8c00">cam</text>
+  </g>
+</svg>

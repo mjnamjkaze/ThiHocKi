@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 350">
+  <rect x="0" y="0" width="700" height="350" fill="#fff" rx="8"/>
+  <g font-family="system-ui" font-size="30">
+    <!-- Cân 1: 2 bí ngô = 6 nhện -->
+    <line x1="130" y1="90" x2="570" y2="90" stroke="#333" stroke-width="4"/>
+    <polygon points="350,90 330,118 370,118" fill="none" stroke="#333" stroke-width="3"/>
+    <text x="165" y="80">🎃🎃</text>
+    <text x="430" y="50">🕷️🕷️🕷️</text>
+    <text x="430" y="82">🕷️🕷️🕷️</text>
+    <!-- Cân 2: 2 con ma = 3 bí ngô -->
+    <line x1="130" y1="205" x2="570" y2="205" stroke="#333" stroke-width="4"/>
+    <polygon points="350,205 330,233 370,233" fill="none" stroke="#333" stroke-width="3"/>
+    <text x="165" y="195">👻👻</text>
+    <text x="455" y="165">🎃</text>
+    <text x="435" y="197">🎃🎃</text>
+    <!-- Cân 3: 2 con ma = ? nhện -->
+    <line x1="130" y1="320" x2="570" y2="320" stroke="#333" stroke-width="4"/>
+    <polygon points="350,320 330,348 370,348" fill="none" stroke="#333" stroke-width="3"/>
+    <text x="165" y="310">👻👻</text>
+    <text x="440" y="310" font-weight="bold">?🕷️</text>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 175">
+<defs>
+<pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse">
+<path d="M30 0H0V30" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+</pattern>
+</defs>
+<g font-family="Arial" font-size="17" font-weight="bold" fill="#334155" text-anchor="middle">
+<rect x="10" y="10" width="120" height="120" fill="url(#g)" stroke="#94a3b8"/>
+<polygon points="70,10 130,70 70,130 10,70" fill="#475569"/>
+<text x="70" y="158">(A)</text>
+<rect x="150" y="10" width="120" height="120" fill="url(#g)" stroke="#94a3b8"/>
+<polygon points="210,10 270,10 270,100 150,100 150,70"  fill="#475569"/>
+<text x="210" y="158">(B)</text>
+<rect x="290" y="10" width="120" height="120" fill="url(#g)" stroke="#94a3b8"/>
+<rect x="290" y="10" width="60" height="120" fill="#475569"/>
+<text x="350" y="158">(C)</text>
+<rect x="430" y="10" width="120" height="120" fill="url(#g)" stroke="#94a3b8"/>
+<polygon points="430,10 490,10 490,130 460,130 460,70 430,70" fill="#475569"/>
+<text x="490" y="158">(D)</text>
+<rect x="570" y="10" width="120" height="120" fill="url(#g)" stroke="#94a3b8"/>
+<polygon points="570,10 570,100 660,100" fill="#475569"/>
+<text x="630" y="158">(E)</text>
+</g>
+</svg>

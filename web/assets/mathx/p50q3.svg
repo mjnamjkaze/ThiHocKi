@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" font-family="system-ui">
+  <rect x="0" y="0" width="640" height="330" rx="8" fill="#fff"/>
+  <polygon points="90,180 270,260 530,240 555,180 190,80" fill="#f1f8e9" stroke="#8d8d8d" stroke-width="12"/>
+  <polygon points="90,180 270,260 530,240 555,180 190,80" fill="none" stroke="#333" stroke-width="3"/>
+  <!-- nhãn các điểm -->
+  <g font-size="26" font-weight="bold" fill="#333">
+    <text x="60" y="188">A</text>
+    <text x="262" y="295">B</text>
+    <text x="548" y="268">C</text>
+    <text x="572" y="176">D</text>
+    <text x="178" y="62">E</text>
+  </g>
+  <!-- độ dài các cạnh -->
+  <g font-size="22" fill="#1565c0" font-weight="bold">
+    <text x="140" y="238">3 m</text>
+    <text x="390" y="280">4 m</text>
+    <text x="558" y="222">1 m</text>
+    <text x="350" y="115">5 m</text>
+    <text x="105" y="125">2 m</text>
+  </g>
+  <!-- mèo và hướng đi -->
+  <text x="268" y="245" font-size="30" text-anchor="middle">🐱</text>
+  <g stroke="#d32f2f" stroke-width="4" fill="#d32f2f">
+    <line x1="300" y1="252" x2="380" y2="246"/>
+    <polygon points="380,246 362,240 364,254"/>
+  </g>
+</svg>

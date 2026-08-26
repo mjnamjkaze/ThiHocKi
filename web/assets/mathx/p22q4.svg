@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460">
+  <rect x="0" y="0" width="700" height="460" fill="#fff" rx="8"/>
+  <!-- đường xe đạp: hình vuông giữa + 4 vòng bán nguyệt -->
+  <g stroke="#b0bec5" stroke-width="18" fill="none" stroke-linecap="round">
+    <rect x="250" y="150" width="200" height="200"/>
+    <path d="M250,150 A100,100 0 0 1 450,150"/>
+    <path d="M450,150 A100,100 0 0 1 450,350"/>
+    <path d="M450,350 A100,100 0 0 1 250,350"/>
+    <path d="M250,350 A100,100 0 0 1 250,150"/>
+  </g>
+  <g stroke="#333" stroke-width="2" font-family="system-ui" font-size="24" text-anchor="middle" font-weight="bold">
+    <rect x="332" y="14" width="36" height="34" fill="#fff"/>
+    <text x="350" y="39" stroke="none" fill="#333">E</text>
+    <rect x="464" y="112" width="36" height="34" fill="#fff"/>
+    <text x="482" y="137" stroke="none" fill="#333">B</text>
+    <rect x="200" y="112" width="36" height="34" fill="#fff"/>
+    <text x="218" y="137" stroke="none" fill="#333">C</text>
+    <rect x="200" y="354" width="36" height="34" fill="#fff"/>
+    <text x="218" y="379" stroke="none" fill="#333">D</text>
+    <rect x="464" y="354" width="36" height="34" fill="#fff"/>
+    <text x="482" y="379" stroke="none" fill="#333">A</text>
+  </g>
+  <!-- Start + mũi tên đi lên -->
+  <g stroke="#333" stroke-width="3" fill="none">
+    <line x1="550" y1="250" x2="590" y2="250"/>
+    <path d="M568,300 Q580,270 568,240"/>
+    <polygon points="568,240 560,254 576,252" fill="#333" stroke="none"/>
+  </g>
+  <text x="598" y="258" font-family="system-ui" font-size="26" fill="#333">Start</text>
+</svg>

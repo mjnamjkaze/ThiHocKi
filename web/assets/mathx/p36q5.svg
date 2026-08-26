@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="230" fill="#fff" rx="8"/>
+  <defs>
+    <g id="ar">
+      <path d="M0,7 h13 v-7 l13,11 -13,11 v-7 h-13 z" fill="#4a90d9" stroke="#333" stroke-width="1.5"/>
+    </g>
+  </defs>
+  <!-- Hinh 1: 3 mui ten (1+2) -->
+  <g>
+    <use href="#ar" x="72" y="126"/>
+    <use href="#ar" x="57" y="152"/><use href="#ar" x="87" y="152"/>
+    <text x="85" y="205" font-size="20" fill="#333" text-anchor="middle" font-weight="bold">Hình 1</text>
+  </g>
+  <!-- Hinh 2: 6 mui ten (1+2+3) -->
+  <g>
+    <use href="#ar" x="222" y="100"/>
+    <use href="#ar" x="207" y="126"/><use href="#ar" x="237" y="126"/>
+    <use href="#ar" x="192" y="152"/><use href="#ar" x="222" y="152"/><use href="#ar" x="252" y="152"/>
+    <text x="235" y="205" font-size="20" fill="#333" text-anchor="middle" font-weight="bold">Hình 2</text>
+  </g>
+  <!-- Hinh 3: 10 mui ten (1+2+3+4) -->
+  <g>
+    <use href="#ar" x="392" y="74"/>
+    <use href="#ar" x="377" y="100"/><use href="#ar" x="407" y="100"/>
+    <use href="#ar" x="362" y="126"/><use href="#ar" x="392" y="126"/><use href="#ar" x="422" y="126"/>
+    <use href="#ar" x="347" y="152"/><use href="#ar" x="377" y="152"/><use href="#ar" x="407" y="152"/><use href="#ar" x="437" y="152"/>
+    <text x="405" y="205" font-size="20" fill="#333" text-anchor="middle" font-weight="bold">Hình 3</text>
+  </g>
+  <!-- Hinh 4: 15 mui ten (1+2+3+4+5) -->
+  <g>
+    <use href="#ar" x="577" y="48"/>
+    <use href="#ar" x="562" y="74"/><use href="#ar" x="592" y="74"/>
+    <use href="#ar" x="547" y="100"/><use href="#ar" x="577" y="100"/><use href="#ar" x="607" y="100"/>
+    <use href="#ar" x="532" y="126"/><use href="#ar" x="562" y="126"/><use href="#ar" x="592" y="126"/><use href="#ar" x="622" y="126"/>
+    <use href="#ar" x="517" y="152"/><use href="#ar" x="547" y="152"/><use href="#ar" x="577" y="152"/><use href="#ar" x="607" y="152"/><use href="#ar" x="637" y="152"/>
+    <text x="590" y="205" font-size="20" fill="#333" text-anchor="middle" font-weight="bold">Hình 4</text>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -210 288 222">
+<g stroke="#334155" stroke-width="1.6" stroke-linejoin="round">
+<polygon points="66,-110 110,-110 132,-132 88,-132" fill="#f8fafc"/><polygon points="110,-110 132,-132 132,-88 110,-66" fill="#94a3b8"/><rect x="66" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="110,-110 154,-110 176,-132 132,-132" fill="#f8fafc"/><polygon points="154,-110 176,-132 176,-88 154,-66" fill="#94a3b8"/><rect x="110" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="154,-110 198,-110 220,-132 176,-132" fill="#f8fafc"/><polygon points="198,-110 220,-132 220,-88 198,-66" fill="#94a3b8"/><rect x="154" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="198,-110 242,-110 264,-132 220,-132" fill="#f8fafc"/><polygon points="242,-110 264,-132 264,-88 242,-66" fill="#94a3b8"/><rect x="198" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="66,-154 110,-154 132,-176 88,-176" fill="#f8fafc"/><polygon points="110,-154 132,-176 132,-132 110,-110" fill="#94a3b8"/><rect x="66" y="-154" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="110,-154 154,-154 176,-176 132,-176" fill="#f8fafc"/><polygon points="154,-154 176,-176 176,-132 154,-110" fill="#94a3b8"/><rect x="110" y="-154" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="154,-154 198,-154 220,-176 176,-176" fill="#f8fafc"/><polygon points="198,-154 220,-176 220,-132 198,-110" fill="#94a3b8"/><rect x="154" y="-154" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="44,-88 88,-88 110,-110 66,-110" fill="#f8fafc"/><polygon points="88,-88 110,-110 110,-66 88,-44" fill="#94a3b8"/><rect x="44" y="-88" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="88,-88 132,-88 154,-110 110,-110" fill="#f8fafc"/><polygon points="132,-88 154,-110 154,-66 132,-44" fill="#94a3b8"/><rect x="88" y="-88" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="132,-88 176,-88 198,-110 154,-110" fill="#f8fafc"/><polygon points="176,-88 198,-110 198,-66 176,-44" fill="#94a3b8"/><rect x="132" y="-88" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="176,-88 220,-88 242,-110 198,-110" fill="#f8fafc"/><polygon points="220,-88 242,-110 242,-66 220,-44" fill="#94a3b8"/><rect x="176" y="-88" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="44,-132 88,-132 110,-154 66,-154" fill="#f8fafc"/><polygon points="88,-132 110,-154 110,-110 88,-88" fill="#94a3b8"/><rect x="44" y="-132" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="88,-132 132,-132 154,-154 110,-154" fill="#f8fafc"/><polygon points="132,-132 154,-154 154,-110 132,-88" fill="#94a3b8"/><rect x="88" y="-132" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="132,-132 176,-132 198,-154 154,-154" fill="#f8fafc"/><polygon points="176,-132 198,-154 198,-110 176,-88" fill="#94a3b8"/><rect x="132" y="-132" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="88,-176 132,-176 154,-198 110,-198" fill="#f8fafc"/><polygon points="132,-176 154,-198 154,-154 132,-132" fill="#94a3b8"/><rect x="88" y="-176" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="22,-66 66,-66 88,-88 44,-88" fill="#f8fafc"/><polygon points="66,-66 88,-88 88,-44 66,-22" fill="#94a3b8"/><rect x="22" y="-66" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="66,-66 110,-66 132,-88 88,-88" fill="#f8fafc"/><polygon points="110,-66 132,-88 132,-44 110,-22" fill="#94a3b8"/><rect x="66" y="-66" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="110,-66 154,-66 176,-88 132,-88" fill="#f8fafc"/><polygon points="154,-66 176,-88 176,-44 154,-22" fill="#94a3b8"/><rect x="110" y="-66" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="154,-66 198,-66 220,-88 176,-88" fill="#f8fafc"/><polygon points="198,-66 220,-88 220,-44 198,-22" fill="#94a3b8"/><rect x="154" y="-66" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="22,-110 66,-110 88,-132 44,-132" fill="#f8fafc"/><polygon points="66,-110 88,-132 88,-88 66,-66" fill="#94a3b8"/><rect x="22" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="66,-110 110,-110 132,-132 88,-132" fill="#f8fafc"/><polygon points="110,-110 132,-132 132,-88 110,-66" fill="#94a3b8"/><rect x="66" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="110,-110 154,-110 176,-132 132,-132" fill="#f8fafc"/><polygon points="154,-110 176,-132 176,-88 154,-66" fill="#94a3b8"/><rect x="110" y="-110" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="0,-44 44,-44 66,-66 22,-66" fill="#f8fafc"/><polygon points="44,-44 66,-66 66,-22 44,0" fill="#94a3b8"/><rect x="0" y="-44" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="44,-44 88,-44 110,-66 66,-66" fill="#f8fafc"/><polygon points="88,-44 110,-66 110,-22 88,0" fill="#94a3b8"/><rect x="44" y="-44" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="88,-44 132,-44 154,-66 110,-66" fill="#f8fafc"/><polygon points="132,-44 154,-66 154,-22 132,0" fill="#94a3b8"/><rect x="88" y="-44" width="44" height="44" fill="#e2e8f0"/>
+<polygon points="132,-44 176,-44 198,-66 154,-66" fill="#f8fafc"/><polygon points="176,-44 198,-66 198,-22 176,0" fill="#94a3b8"/><rect x="132" y="-44" width="44" height="44" fill="#e2e8f0"/>
+</g>
+</svg>
