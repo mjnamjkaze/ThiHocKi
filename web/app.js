@@ -158,21 +158,33 @@ function vHome() {
   }).join('');
 
   const opened = readyGrades();
-  const vioExams = subjectsOfGrade(state.grade).filter(s => s.ready && s.id.startsWith('vio'))
-    .reduce((t, s) => t + s.exams.length, 0);
-  const hero = state.grade === 2
-    ? `<div class="hero">
+  const gradeReady = subjectsOfGrade(state.grade).filter(s => s.ready);
+  const vioExams = gradeReady.filter(s => s.id.startsWith('vio')).reduce((t, s) => t + s.exams.length, 0);
+  const gradeQs = gradeReady.reduce((t, s) => t + s.exams.reduce((u, e) => u + e.questions.length, 0), 0);
+  const firstSubj = gradeReady[0];
+  let hero;
+  if (state.grade === 2) {
+    hero = `<div class="hero">
       <span class="tag">KỲ THI SẮP TỚI</span>
       <h2>Toán 2 — Cuối học kì 2</h2>
       <div class="meta">⏱ ~${Math.round(EXAMS.reduce((t, e) => t + e.time, 0) / EXAMS.length)} phút/đề &nbsp;•&nbsp; 📚 ${EXAMS.length} đề &nbsp;•&nbsp; hoàn thành ${done}/${EXAMS.length}</div>
       <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
-    </div>`
-    : `<div class="hero">
+    </div>`;
+  } else if (vioExams > 0) {
+    hero = `<div class="hero">
       <span class="tag">ĐẤU TRƯỜNG VIOEDU</span>
       <h2>VioEdu Lớp ${state.grade} — Toán · Tiếng Việt · Toán Tiếng Anh</h2>
       <div class="meta">📚 ${vioExams} đề &nbsp;•&nbsp; 2024–2025 &amp; 2025–2026 &nbsp;•&nbsp; Sơ loại → Cấp Trường → Cấp Quận</div>
       <button class="btn" onclick="nav('subject', {subj:'vio${state.grade}-toan'})">Ôn tập ngay ▶</button>
     </div>`;
+  } else {
+    hero = `<div class="hero">
+      <span class="tag">ÔN TẬP LỚP ${state.grade}</span>
+      <h2>Lớp ${state.grade} — ${gradeReady.length} môn ôn tập</h2>
+      <div class="meta">📚 ${gradeReady.reduce((t, s) => t + s.exams.length, 0)} đề &nbsp;•&nbsp; ${gradeQs} câu &nbsp;•&nbsp; bám chương trình GDPT 2018</div>
+      ${firstSubj ? `<button class="btn" onclick="nav('subject', {subj:'${firstSubj.id}'})">Ôn tập ngay ▶</button>` : ''}
+    </div>`;
+  }
 
   return `
   <div class="topbar">
