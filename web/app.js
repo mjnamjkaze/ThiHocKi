@@ -165,8 +165,8 @@ function vHome() {
   let hero;
   if (state.grade === 2) {
     hero = `<div class="hero">
-      <span class="tag">KỲ THI SẮP TỚI</span>
-      <h2>Toán 2 — Cuối học kì 2</h2>
+      <span class="tag">ÔN TẬP CẢ NĂM</span>
+      <h2>Toán 2 — Ôn tập cả năm</h2>
       <div class="meta">⏱ ~${Math.round(EXAMS.reduce((t, e) => t + e.time, 0) / EXAMS.length)} phút/đề &nbsp;•&nbsp; 📚 ${EXAMS.length} đề &nbsp;•&nbsp; hoàn thành ${done}/${EXAMS.length}</div>
       <button class="btn" onclick="nav('subject', {subj:'toan'})">Ôn tập ngay ▶</button>
     </div>`;
@@ -206,13 +206,6 @@ function vHome() {
         return `<button class="pick ${cur ? 'active' : open ? '' : 'locked'}" ${open ? `onclick="setGrade(${g})"` : 'disabled'}>Lớp ${g}${open ? '' : ' 🔒'}</button>`;
       }).join('')}
     </div>
-
-    ${state.grade === 2 ? `
-    <div class="sect-title">Học kì</div>
-    <div class="chips">
-      <button class="pick locked" disabled>Giữa học kì 2 🔒</button>
-      <button class="pick active">Cuối học kì 2</button>
-    </div>` : ''}
 
     <div class="sect-title">Môn học — Lớp ${state.grade}</div>
     <div class="subj-grid">
