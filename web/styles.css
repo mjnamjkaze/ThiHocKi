@@ -266,6 +266,7 @@ img { max-width: 100%; }
 .badge-score .t { font-size: 10px; font-weight: 700; color: var(--secondary); opacity: .8; }
 .exam-item .btn { padding: 12px; font-size: 16px; }
 .exam-item .row .btn { flex: 1; }
+.exam-item .row .btn.sq { flex: none; width: 56px; font-size: 20px; padding: 12px 0; }
 
 /* ===== exam taking ===== */
 .exam-top {

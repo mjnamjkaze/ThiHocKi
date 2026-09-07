@@ -264,6 +264,7 @@ function vSubject() {
         <div class="row">
           <button class="btn btn-primary" onclick="startExam(${e.id})">${r ? 'Làm lại ↻' : 'Bắt đầu làm bài ▶'}</button>
           ${r ? `<button class="btn btn-outline" onclick="reviewExam(${e.id})">Xem lại</button>` : ''}
+          <button class="btn btn-ghost sq" title="In đề ra giấy A4 (PDF)" onclick="printExam(${e.id})">🖨</button>
         </div>
       </div>`;
     }).join('')}
@@ -530,8 +531,7 @@ function vExamAll(exam) {
     ${review
       ? `<button class="btn btn-primary" onclick="nav('result')">Kết quả ›</button>`
       : `<button class="btn btn-primary" onclick="askSubmit()">Nộp bài ✓</button>`}
-  </div>
-  ${state.modal || ''}`;
+  </div>`;
 }
 
 function vExam() {
@@ -554,8 +554,7 @@ function vExam() {
         : `<button class="btn btn-primary" onclick="go(1)">Câu sau ›</button>`}
     </div>
   </div>
-  ${state.showNav ? vQnav(exam) : ''}
-  ${state.modal || ''}`;
+  ${state.showNav ? vQnav(exam) : ''}`;
 }
 
 function vQnav(exam) {
@@ -910,6 +909,7 @@ function vResult() {
 
     <button class="btn btn-primary" onclick="reviewExam(${exam.id})">📖 Xem lời giải chi tiết</button>
     <button class="btn btn-tonal" id="btn-share" onclick="shareResult()">📤 Chia sẻ kết quả</button>
+    <button class="btn btn-tonal" onclick="printExam(${exam.id})">🖨 In đề ra giấy A4 (PDF)</button>
     <div class="row">
       <button class="btn btn-tonal" style="flex:1" onclick="startExam(${exam.id})">↻ Làm lại</button>
       <button class="btn btn-ghost" style="flex:1" onclick="nav('home')">🏠 Trang chủ</button>
@@ -1009,7 +1009,8 @@ function render() {
     case 'exam': html = vExam(); break;
     case 'result': html = vResult(); break;
   }
-  app.innerHTML = html;
+  // hộp thoại (thoát · nộp bài · in đề) nổi trên mọi màn hình, không riêng màn làm bài
+  app.innerHTML = html + (state.modal || '');
   if (state.celebrate) animCelebrate();
 }
 window.nav = nav;

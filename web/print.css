@@ -1,0 +1,114 @@
+/* ═══════════════ IN ĐỀ RA GIẤY A4 (để làm offline) ═══════════════
+   Bản in được dựng vào #printroot (xem web/print.js). Trên màn hình
+   khối này luôn ẩn; khi in thì ngược lại — giấu #app, chỉ in #printroot.
+   Cỡ chữ dùng pt để đúng như trên giấy, không phụ thuộc zoom trình duyệt. */
+
+#printroot { display: none; }
+
+@media print {
+  @page { size: A4 portrait; margin: 12mm 12mm 14mm; }
+  html, body { background: #fff !important; }
+  body > *:not(#printroot) { display: none !important; }
+  #printroot { display: block !important; }
+  /* nền/viền của hình vẽ phải in ra, đừng để trình duyệt lược bỏ */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ── khung trang ──────────────────────────────────────────────────── */
+.p-doc {
+  font-family: 'Nunito', Arial, 'Segoe UI', sans-serif;
+  font-size: 12pt; line-height: 1.45; color: #000; background: #fff;
+}
+.p-doc b, .p-doc strong { font-weight: 800; }
+
+/* ── đầu đề ───────────────────────────────────────────────────────── */
+.p-head { border-bottom: 1.2pt solid #000; padding-bottom: 2.5mm; margin-bottom: 3.5mm; }
+.p-head .p-brand { font-size: 9pt; letter-spacing: .8pt; text-transform: uppercase; color: #444; }
+.p-head .p-title { font-size: 15pt; font-weight: 800; text-align: center; margin: 1mm 0 .8mm; }
+.p-head .p-sub { font-size: 10.5pt; text-align: center; color: #222; }
+.p-idbox { display: flex; align-items: stretch; gap: 4mm; margin-top: 3mm; }
+.p-idbox .p-fields { flex: 1; font-size: 11pt; line-height: 1.9; }
+.p-idbox .p-score {
+  width: 34mm; border: 1pt solid #000; border-radius: 1.5mm;
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  padding-top: 1.2mm; font-size: 10pt; font-weight: 800;
+}
+.p-idbox .p-score span { display: block; }
+.p-dot { border-bottom: .8pt dotted #333; display: inline-block; min-width: 30mm; }
+
+/* ── phiếu tô đáp án ──────────────────────────────────────────────── */
+.p-as { border: 1pt dashed #333; border-radius: 2mm; padding: 2.5mm 3mm; margin-bottom: 4mm; break-inside: avoid; }
+.p-as h3 { font-size: 10.5pt; margin-bottom: 1.5mm; }
+.p-as .p-as-note { font-size: 9pt; color: #444; font-weight: 600; }
+.p-as-grid { display: flex; flex-wrap: wrap; gap: 1.6mm 4mm; margin-top: 2mm; }
+.p-as-item { display: flex; align-items: center; gap: 1.2mm; font-size: 9.5pt; }
+.p-as-item .n { font-weight: 800; min-width: 6mm; text-align: right; }
+.p-as-item .c {
+  width: 5mm; height: 5mm; border: .7pt solid #000; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center; font-size: 7.5pt; font-weight: 700;
+}
+.p-as-item .w { width: 26mm; border-bottom: .7pt solid #000; height: 4.6mm; }
+
+/* ── câu hỏi ──────────────────────────────────────────────────────── */
+.p-sec {
+  font-size: 10.5pt; font-weight: 800; text-transform: uppercase; letter-spacing: .4pt;
+  border-left: 1.6mm solid #000; padding-left: 2mm; margin: 4mm 0 2.2mm; break-after: avoid;
+}
+.p-q { break-inside: avoid; margin-bottom: 3.4mm; }
+.p-q .p-qt { text-align: left; }
+.p-q .p-qt .p-name { font-weight: 800; }
+.p-q .p-qt .p-pts { font-size: 9.5pt; color: #444; font-weight: 700; }
+.p-read {
+  border: .8pt solid #666; border-radius: 1.5mm; padding: 2mm 2.5mm;
+  margin-bottom: 1.5mm; font-size: 11pt; line-height: 1.5; background: #f7f7f7;
+}
+.p-img { display: block; margin: 1.5mm auto; max-width: 100%; max-height: 62mm; object-fit: contain; }
+
+.p-opts { margin: 1.2mm 0 0 6mm; }
+.p-opts.two { display: grid; grid-template-columns: 1fr 1fr; gap: .6mm 5mm; }
+.p-opts .p-o { display: flex; gap: 1.5mm; break-inside: avoid; }
+.p-opts .p-k { font-weight: 800; flex: none; }
+.p-opts.imgs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; margin-left: 0; }
+.p-opts.imgs .p-o { flex-direction: column; align-items: center; border: .7pt solid #999; border-radius: 1.5mm; padding: 1mm; }
+.p-opts.imgs img { max-width: 100%; max-height: 26mm; object-fit: contain; }
+
+/* gõ từ · ghép câu · nối ảnh */
+.p-fill { margin: 1.5mm 0 0 6mm; display: flex; align-items: flex-end; gap: 2mm; font-size: 11pt; }
+.p-fill .p-lbl { font-weight: 700; flex: none; }
+.p-fill .p-line { flex: 1; border-bottom: .8pt dotted #333; height: 5.5mm; }
+.p-tip { margin-left: 6mm; font-size: 9.5pt; color: #444; font-weight: 600; }
+.p-toks { display: flex; flex-wrap: wrap; gap: 1.5mm; margin: 1.5mm 0 0 6mm; }
+.p-tok { border: .8pt solid #333; border-radius: 1.2mm; padding: .4mm 1.8mm; font-size: 10.5pt; }
+.p-mgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm; margin: 1.5mm 0; }
+.p-mcell { border: .7pt solid #999; border-radius: 1.5mm; padding: 1mm; text-align: center; }
+.p-mcell img { max-width: 100%; max-height: 24mm; object-fit: contain; }
+.p-mcell .n { font-size: 9pt; font-weight: 800; }
+.p-mwords { margin-left: 6mm; font-size: 11pt; }
+.p-mans { display: flex; flex-wrap: wrap; gap: 1.5mm 5mm; margin: 1.5mm 0 0 6mm; font-size: 11pt; }
+.p-mans span i { font-style: normal; border-bottom: .8pt dotted #333; display: inline-block; min-width: 18mm; }
+
+/* chỗ trống cho bé trình bày bài giải */
+.p-work { margin: 1.5mm 0 0 6mm; }
+.p-work .l { border-bottom: .7pt dotted #999; height: 7mm; }
+
+/* ── trang đáp án ─────────────────────────────────────────────────── */
+.p-key { break-before: page; padding-top: 2mm; }
+.p-key h2 { font-size: 14pt; text-align: center; margin-bottom: 1mm; }
+.p-key .p-keysub { text-align: center; font-size: 10pt; color: #444; margin-bottom: 3mm; }
+.p-keyrow { display: flex; flex-wrap: wrap; gap: 1.5mm 4mm; border: 1pt solid #000; border-radius: 2mm; padding: 2.5mm 3mm; margin-bottom: 4mm; }
+.p-keyrow span { font-size: 11pt; }
+.p-keyrow b { font-weight: 800; }
+.p-why { margin-bottom: 2.6mm; font-size: 10.5pt; line-height: 1.45; break-inside: avoid; }
+.p-why .n { font-weight: 800; }
+
+.p-foot { margin-top: 5mm; border-top: .8pt solid #999; padding-top: 1.5mm; font-size: 8.5pt; color: #555; text-align: center; }
+
+/* ── hộp chọn tuỳ chọn in (hiện trên màn hình, trong modal) ───────── */
+.print-opts { display: flex; flex-direction: column; gap: 10px; text-align: left; margin: 6px 0 14px; }
+.print-opts label {
+  display: flex; align-items: flex-start; gap: 10px; cursor: pointer;
+  background: var(--surface-low); border-radius: var(--r-md); padding: 11px 13px;
+}
+.print-opts input { width: 22px; height: 22px; flex: none; accent-color: var(--blue); margin-top: 1px; }
+.print-opts .t { font-size: 15px; font-weight: 800; color: var(--on-surface); line-height: 1.3; }
+.print-opts .d { font-size: 12.5px; font-weight: 600; color: var(--on-surface-variant); margin-top: 2px; }
