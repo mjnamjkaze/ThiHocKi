@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 205" width="230" height="205" font-family="system-ui,'Segoe UI','Segoe UI Emoji','Noto Color Emoji',Arial,sans-serif">
+<rect width="230" height="205" fill="#fff"/>
+<circle cx="110" cy="100" r="78" fill="#f8fafc" stroke="#2b2b2b" stroke-width="2.5"/><circle cx="110" cy="100" r="4" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="2"/><text x="102" y="120" font-size="15" text-anchor="end" fill="#2b2b2b" font-weight="700">O</text><line x1="110" y1="100" x2="173.9" y2="55.3" stroke="#5b8def" stroke-width="2.5" stroke-linecap="round" /><text x="145.1" y="65.4" font-size="13" text-anchor="middle" fill="#1d4ed8" font-weight="700">r = 3 cm</text>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211 148" width="211" height="148" font-family="system-ui,'Segoe UI','Segoe UI Emoji','Noto Color Emoji',Arial,sans-serif">
+<rect width="211" height="148" fill="#fff"/>
+<polygon points="50,30 50,108 141,108" fill="#fde8ee" stroke="#2b2b2b" stroke-width="2.5" stroke-linejoin="round"/><polyline points="62,108 62,96 50,96" fill="none" stroke="#e05b7e" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><text x="95.5" y="128" font-size="14" text-anchor="middle" fill="#1d4ed8" font-weight="700">7 cm</text><text x="42" y="74" font-size="14" text-anchor="end" fill="#1d4ed8" font-weight="700">6 cm</text><text x="44" y="26" font-size="14" text-anchor="middle" fill="#2b2b2b" font-weight="700">A</text><text x="44" y="126" font-size="14" text-anchor="middle" fill="#2b2b2b" font-weight="700">B</text><text x="153" y="126" font-size="14" text-anchor="middle" fill="#2b2b2b" font-weight="700">C</text>
+</svg>

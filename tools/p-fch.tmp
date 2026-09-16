@@ -1,0 +1,72 @@
+
+// ---- Chia hết, ƯCLN – BCNN ----
+F('ch', 0, () => { // điền chữ số để chia hết cho 3 / 9
+  const h = ri(1, 9), t = ri(0, 9), u = pick([0, 2, 4, 5, 6, 8]), m = pick([3, 9]);
+  const sols = []; for (let s = 0; s <= 9; s++) if ((h + s + t + u) % m === 0) sols.push(s);
+  if (sols.length !== 1 && m === 9 || sols.length === 0) return null;
+  if (m === 3) { // hỏi số lượng
+    return { sec: 'Dấu hiệu chia hết', text: `Có bao nhiêu chữ số * để số ${h}*${t}${u} chia hết cho 3?`, ok: String(sols.length),
+      wr: numD(sols.length, [sols.length + 1, sols.length - 1, 10]), why: `Tổng chữ số ${h} + * + ${t} + ${u} = ${h + t + u} + * chia hết cho 3 → * ∈ {${sols.join('; ')}}: ${sols.length} chữ số.` };
+  }
+  return { sec: 'Dấu hiệu chia hết', text: `Điền chữ số vào dấu * để số ${h}*${t}${u} chia hết cho 9:`, ok: String(sols[0]),
+    wr: numD(sols[0], [(sols[0] + 3) % 10, (sols[0] + 9) % 10, (sols[0] + 6) % 10]), why: `Tổng chữ số ${h + t + u} + * chia hết cho 9 → * = ${sols[0]}.` };
+});
+F('ch', 1, () => { // chia hết cho 2, 5 và 9 với hai chữ số ẩn
+  const p = ri(1, 9), q = ri(0, 9); // số dạng p a q b
+  let a = (9 - (p + q) % 9) % 9; // a sao cho p+a+q chia hết 9 (b = 0)
+  return { sec: 'Dấu hiệu chia hết', text: `Số tự nhiên có dạng ${p}a${q}b (a, b là chữ số) chia hết cho cả 2, 5 và 9. Giá trị của a + b là:`, ok: String(a),
+    wr: numD(a, [a + 5, a + 9, 9 - a]), why: `Chia hết cho 2 và 5 → b = 0. Tổng chữ số ${p} + a + ${q} + 0 = ${p + q} + a chia hết cho 9 → a = ${a}. Vậy a + b = ${a}.` };
+});
+F('ch', 0, () => { // ƯCLN
+  const g = pick([4, 6, 8, 9, 12, 14, 15, 18]), m = ri(2, 7); let n = ri(2, 9); while (gcd(m, n) !== 1 || n === m) n = ri(2, 9);
+  const a = g * m, b = g * n;
+  return { sec: 'ƯCLN', text: `ƯCLN(${a}, ${b}) bằng:`, ok: String(g), wr: numD(g, [lcm(a, b), g * 2, Math.min(a, b)]),
+    why: `${a} = ${factorStr(a)}; ${b} = ${factorStr(b)} → ƯCLN = ${g}.` };
+});
+F('ch', 0, () => { // BCNN
+  const g = pick([2, 3, 4, 5, 6]), m = ri(2, 6); let n = ri(2, 7); while (gcd(m, n) !== 1) n = ri(2, 7);
+  const a = g * m, b = g * n, L = lcm(a, b);
+  return { sec: 'BCNN', text: `BCNN(${a}, ${b}) bằng:`, ok: String(L), wr: numD(L, [a * b, gcd(a, b), L * 2]),
+    why: `${a} = ${factorStr(a)}; ${b} = ${factorStr(b)} → BCNN = ${L}.` };
+});
+F('ch', 1, () => { // bài toán ƯCLN chia phần thưởng
+  const g = pick([6, 8, 9, 12, 15, 18]), m = ri(2, 6); let n = ri(2, 7); while (gcd(m, n) !== 1) n = ri(2, 7);
+  const a = g * m, b = g * n, items = pick([['bút', 'vở'], ['bánh', 'kẹo'], ['quả cam', 'quả táo']]);
+  return { sec: 'Bài toán ƯCLN', text: `Có ${a} ${items[0]} và ${b} ${items[1]} được chia đều vào các túi (mỗi túi cùng số ${items[0]}, cùng số ${items[1]}, không thừa). Số túi nhiều nhất có thể là:`, ok: String(g),
+    wr: numD(g, [lcm(a, b), m + n, g * 2]), why: `Số túi là ƯCLN(${a}, ${b}) = ${g}. Mỗi túi có ${m} ${items[0]} và ${n} ${items[1]}.` };
+});
+F('ch', 1, () => { // bài toán BCNN xếp hàng trong khoảng
+  const ks = pick([[6, 8, 10], [4, 6, 9], [8, 10, 12], [6, 9, 12], [10, 12, 15], [9, 12, 15]]);
+  const L = ks.reduce(lcm, 1); const k = ri(2, 5); const N = L * k; const lo = N - ri(10, L - 5), hi = lo + L - 1;
+  if (lo <= 0) return null;
+  return { sec: 'Bài toán BCNN', text: `Số học sinh khối 6 của một trường khi xếp thành hàng ${ks[0]}, hàng ${ks[1]} hay hàng ${ks[2]} đều vừa đủ. Biết số học sinh trong khoảng từ ${fmt(lo)} đến ${fmt(hi)}. Trường có bao nhiêu học sinh khối 6?`, ok: fmt(N),
+    wr: numD(N, [L, N + ks[0], N - ks[1]]), why: `Số học sinh là bội chung của ${ks.join(', ')}. BCNN = ${L}; bội của ${L} trong khoảng ${fmt(lo)}–${fmt(hi)} là ${fmt(N)}.` };
+});
+F('ch', 0, () => { // số ước
+  const p = pick([2, 3, 5]), e1 = ri(1, 4); let q = pick([2, 3, 5, 7]); while (q === p) q = pick([2, 3, 5, 7]); const e2 = ri(1, 3);
+  const n = p ** e1 * q ** e2, cnt = (e1 + 1) * (e2 + 1);
+  return { sec: 'Ước và bội', text: `Số ${fmt(n)} = ${factorStr(n)} có tất cả bao nhiêu ước tự nhiên?`, ok: String(cnt),
+    wr: numD(cnt, [e1 + e2, e1 * e2, cnt - 1]), why: `Số ước = (${e1} + 1)(${e2} + 1) = ${cnt}.` };
+});
+F('ch', 0, () => { // phân tích thừa số nguyên tố
+  const n = pick([72, 84, 90, 96, 108, 120, 126, 132, 140, 150, 168, 180, 198, 200, 216, 225, 240, 250, 252, 270, 280, 300, 315, 324, 350, 360, 378, 400, 420, 432, 450, 480, 500, 504, 540, 600]);
+  const f = factorize(n); const ps = Object.keys(f).map(Number);
+  const ok = factorStr(n);
+  // nhiễu: đổi số mũ, thay thừa số bằng hợp số
+  const w1 = Object.entries(f).map(([p, e]) => `${p}<sup>${e + 1}</sup>`).join(' · ');
+  const w2 = factorStr(n * ps[0]);
+  const w3 = factorStr(n / ps[0]);
+  return { sec: 'Số nguyên tố', text: `Phân tích số ${n} ra thừa số nguyên tố ta được:`, ok, wr: distinct(ok, [w1, w2, w3], k => factorStr(n + k)), why: `${n} = ${ok}.` };
+});
+F('ch', 1, () => { // đếm số chia hết trong khoảng
+  const k = pick([3, 4, 6, 7, 8, 9, 11, 12]), N = ri(150, 999);
+  const cnt = Math.floor(N / k);
+  return { sec: 'Bài toán', text: `Từ 1 đến ${N} có bao nhiêu số tự nhiên chia hết cho ${k}?`, ok: String(cnt),
+    wr: numD(cnt, [cnt + 1, cnt - 1, Math.floor(N / k) + 2]), why: `Các số đó là ${k}; ${2 * k}; …; ${cnt * k}. Số số hạng = (${cnt * k} − ${k}) : ${k} + 1 = ${cnt}.` };
+});
+F('ch', 1, () => { // số nhỏ nhất chia dư
+  const pr = pick([[3, 4], [4, 5], [3, 5], [5, 6], [4, 7], [5, 7], [6, 7]]); const r = ri(1, pr[0] - 1);
+  const L = lcm(pr[0], pr[1]); const N = L + r;
+  return { sec: 'Bài toán BCNN', text: `Số tự nhiên nhỏ nhất lớn hơn ${r} mà chia cho ${pr[0]} và chia cho ${pr[1]} đều dư ${r} là:`, ok: String(N),
+    wr: numD(N, [L, L - r, pr[0] * pr[1] + r + (L === pr[0] * pr[1] ? L : 0)]), why: `Số đó trừ ${r} chia hết cho ${pr[0]} và ${pr[1]} → là bội của BCNN = ${L}. Số nhỏ nhất: ${L} + ${r} = ${N}.` };
+});
