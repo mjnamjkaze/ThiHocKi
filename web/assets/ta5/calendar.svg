@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 160" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="340" height="160" fill="#fff"/>
+<rect x="6" y="6" width="328" height="148" rx="16"
+    fill="#fff" stroke="#2b2b2b" stroke-width="3"/><rect x="20" y="20" width="150" height="40" fill="#f0e6d6" stroke="#2b2b2b" stroke-width="2"/>
+<text x="95" y="46.4" font-size="20" font-weight="700"
+  text-anchor="middle" fill="#2b2b2b">Plan</text><rect x="170" y="20" width="150" height="40" fill="#f0e6d6" stroke="#2b2b2b" stroke-width="2"/>
+<text x="245" y="46.4" font-size="20" font-weight="700"
+  text-anchor="middle" fill="#2b2b2b">When</text><rect x="20" y="60" width="150" height="40" fill="#fff" stroke="#2b2b2b" stroke-width="2"/>
+<text x="95" y="86.4" font-size="20" 
+  text-anchor="middle" fill="#2b2b2b">visit Hue</text><rect x="170" y="60" width="150" height="40" fill="#fff" stroke="#2b2b2b" stroke-width="2"/>
+<text x="245" y="86.4" font-size="20" 
+  text-anchor="middle" fill="#2b2b2b">Saturday</text><rect x="20" y="100" width="150" height="40" fill="#fff" stroke="#2b2b2b" stroke-width="2"/>
+<text x="95" y="126.4" font-size="20" 
+  text-anchor="middle" fill="#2b2b2b">swim</text><rect x="170" y="100" width="150" height="40" fill="#fff" stroke="#2b2b2b" stroke-width="2"/>
+<text x="245" y="126.4" font-size="20" 
+  text-anchor="middle" fill="#2b2b2b">Sunday</text>
+</svg>

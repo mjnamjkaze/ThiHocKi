@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="220" height="220" fill="#fff"/>
+<rect x="6" y="6" width="208" height="208" rx="16"
+    fill="#fdfbf6" stroke="#2b2b2b" stroke-width="3"/><circle cx="110" cy="110" r="84" fill="#fff" stroke="#2b2b2b" stroke-width="4"/><text x="143" y="59.8"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">1</text><text x="167.2" y="84"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">2</text><text x="176" y="117"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">3</text><text x="167.2" y="150"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">4</text><text x="143" y="174.2"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">5</text><text x="110" y="183"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">6</text><text x="77" y="174.2"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">7</text><text x="52.8" y="150"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">8</text><text x="44" y="117"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">9</text><text x="52.8" y="84"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">10</text><text x="77" y="59.8"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">11</text><text x="110" y="51"
+      font-size="19" font-weight="700" text-anchor="middle" fill="#2b2b2b">12</text><path d="M110 110 L80.3 139.7" stroke="#2b2b2b" stroke-width="7" stroke-linecap="round"/><path d="M110 110 L110 172" stroke="#2b2b2b" stroke-width="4.5" stroke-linecap="round"/><circle cx="110" cy="110" r="5.5" fill="#2b2b2b"/>
+</svg>

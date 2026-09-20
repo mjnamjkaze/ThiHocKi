@@ -137,7 +137,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.9.0 • ${readyGrades().map(footLine).join('<br>')}</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.10.0 • ${readyGrades().map(footLine).join('<br>')}</div>
     </div>
   </div>`;
 }

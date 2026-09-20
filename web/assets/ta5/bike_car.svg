@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="360" height="210" fill="#fff"/>
+<rect x="6" y="6" width="348" height="198" rx="16"
+    fill="#fdfbf6" stroke="#2b2b2b" stroke-width="3"/><path d="M180 22 V188" stroke="#2b2b2b" stroke-width="2.5" stroke-dasharray="7 6"/><text x="94" y="126" font-size="74" text-anchor="middle">🚲</text><text x="266" y="126" font-size="74" text-anchor="middle">🚗</text><text x="94" y="172" font-size="20" font-weight="700"
+    text-anchor="middle" fill="#2b2b2b">a bicycle</text><text x="266" y="172" font-size="20" font-weight="700"
+    text-anchor="middle" fill="#2b2b2b">a car</text>
+</svg>

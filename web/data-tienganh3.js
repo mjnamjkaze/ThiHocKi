@@ -1,5 +1,5 @@
 // TIẾNG ANH — LỚP 3 (GDPT 2018)
-// 30 đề × 10 câu = 300 câu. Mỗi câu 1 điểm — thang 10 — 25 phút mỗi đề.
+// 32 đề × 10 câu = 320 câu. Mỗi câu 1 điểm — thang 10 — 25 phút mỗi đề.
 //
 // QUY TẮC: môn Tiếng Anh KHÔNG kèm bản dịch tiếng Việt. Mọi phần text · opts · why · sec ·
 // name · title viết bằng tiếng Anh; dùng emoji làm hình gợi nghĩa để học sinh tự hiểu.
@@ -25,9 +25,9 @@ const R3B = '📖 <i><b>Bees</b><br>Bees are small insects with six legs and two
 
 const TA3_EXAMS = [
 
-/* ═══════════ TEST 1 — SPELLING: SILENT LETTERS AND TRICKY WORDS ═══════════ */
+/* ═══════════ TEST 1 — PHONICS AND SPELLING: SILENT LETTERS ═══════════ */
 {
-  id: 9701, title: 'Test 1 · Spelling: silent letters and tricky words', time: 25,
+  id: 9701, title: 'Test 1 · Phonics and spelling: silent letters', time: 25,
   questions: [
     { sec: 'Silent letters', name: 'Question 1', pts: 1, img: A + 'ta3/knee.svg', text: 'Which letter is SILENT in <b>knee</b>? 🦵', opts: o4('k', 'n', 'e', 'none'), ans: 'A', why: 'In <b>knee</b> we do not say the <b>k</b>.' },
     { sec: 'Silent letters', name: 'Question 2', pts: 1, img: A + 'ta3/write.svg', text: 'Which letter is SILENT in <b>write</b>? ✍️', opts: o4('t', 'w', 'r', 'i'), ans: 'B', why: 'In <b>write</b> we do not say the <b>w</b>.' },
@@ -535,11 +535,46 @@ const TA3_EXAMS = [
   ],
 },
 
+
+/* ═══════════ TEST 31 — READING: GENRES AND TYPES OF TEXT ═══════════ */
+{
+  id: 9731, title: 'Test 31 · Reading genres and types of text', time: 25,
+  questions: [
+    { sec: 'Genres', name: 'Question 1', pts: 1, text: 'A story about a talking rabbit that teaches a lesson is ______. 🐰', opts: o4('a fable', 'a report', 'a recipe', 'a letter'), ans: 'A', why: 'A <b>fable</b> uses animals and teaches a lesson.' },
+    { sec: 'Genres', name: 'Question 2', pts: 1, text: 'A text with a list of ingredients and steps is ______. 🍳', opts: o4('a poem', 'a recipe', 'a fable', 'a diary'), ans: 'B', why: 'Ingredients plus steps make it <b>a recipe</b>.' },
+    { sec: 'Genres', name: 'Question 3', pts: 1, text: 'A text with short lines that often rhyme is ______.', opts: o4('a report', 'a letter', 'a poem', 'a recipe'), ans: 'C', why: 'Short rhyming lines make <b>a poem</b>.' },
+    { sec: 'Genres', name: 'Question 4', pts: 1, text: 'A book that gives real facts about volcanoes is ______. 🌋', opts: o4('a fairy tale', 'a fable', 'a poem', 'non-fiction'), ans: 'D', why: 'Real facts mean it is <b>non-fiction</b>.' },
+    { sec: 'Genres', name: 'Question 5', pts: 1, text: 'A story that begins "Once upon a time" with a princess and a magic ring is ______.', opts: o4('a fairy tale', 'a news report', 'a recipe', 'an atlas'), ans: 'A', why: 'Magic and "Once upon a time" mean <b>a fairy tale</b> 🏰.' },
+    { sec: 'Genres', name: 'Question 6', pts: 1, text: 'Which text tells you what happened in your town yesterday?', opts: o4('a fable', 'a news report', 'a poem', 'a fairy tale'), ans: 'B', why: 'A <b>news report</b> tells real, recent events.' },
+    { sec: 'Genres', name: 'Question 7', pts: 1, text: 'Where would you write about your own day and how you felt?', opts: o4('in a recipe', 'in an atlas', 'in a diary', 'in a dictionary'), ans: 'C', why: 'We write our own days in <b>a diary</b> 📔.' },
+    { sec: 'Genres', name: 'Question 8', pts: 1, text: 'Which one is FICTION?', opts: o4('a science book', 'a map', 'a dictionary', 'a story about a flying elephant'), ans: 'D', why: 'A made-up story is <b>fiction</b> 🐘.' },
+    { sec: 'Genres', name: 'Question 9', pts: 1, text: 'Which text would tell you HOW to build a paper boat?', opts: o4('a set of instructions', 'a fairy tale', 'a poem', 'a diary'), ans: 'A', why: 'Step-by-step help comes from <b>instructions</b>.' },
+    { sec: 'Genres', name: 'Question 10', pts: 1, text: 'What do ALL fiction texts have?', opts: o4('real facts only', 'made-up characters or events', 'a list of ingredients', 'page numbers in ABC order'), ans: 'B', why: 'Fiction has <b>made-up characters or events</b>.' },
+  ],
+},
+
+/* ═══════════ TEST 32 — WRITING: KINDS OF WRITING AND TAKING NOTES ═══════════ */
+{
+  id: 9732, title: 'Test 32 · Kinds of writing and taking notes', time: 25,
+  questions: [
+    { sec: 'Kinds of writing', name: 'Question 1', pts: 1, text: 'You write about what you did on your holiday, in order. This is ______ writing.', opts: o4('narrative', 'opinion', 'instruction', 'persuasive'), ans: 'A', why: '<b>Narrative</b> writing tells what happened, in order.' },
+    { sec: 'Kinds of writing', name: 'Question 2', pts: 1, text: 'You write facts to teach the reader about tigers. This is ______ writing. 🐯', opts: o4('narrative', 'informational', 'opinion', 'poetry'), ans: 'B', why: '<b>Informational</b> writing gives facts to teach.' },
+    { sec: 'Kinds of writing', name: 'Question 3', pts: 1, text: 'You write why your school should have a garden. This is ______ writing.', opts: o4('narrative', 'informational', 'opinion', 'instruction'), ans: 'C', why: '<b>Opinion</b> writing says what you think and why 🌱.' },
+    { sec: 'Kinds of writing', name: 'Question 4', pts: 1, text: 'Which words belong in OPINION writing?', opts: o4('First, then, finally', 'Mix, stir, bake', 'Once upon a time', 'I believe, in my view, because'), ans: 'D', why: 'Opinion writing uses <b>I believe… because…</b>' },
+    { sec: 'Kinds of writing', name: 'Question 5', pts: 1, text: 'Which words belong in a set of INSTRUCTIONS?', opts: o4('First, next, then, finally', 'I think, I feel', 'Once upon a time', 'The best thing ever'), ans: 'A', why: 'Instructions use order words: <b>First, next, then, finally</b>.' },
+    { sec: 'Note taking', name: 'Question 6', pts: 1, text: 'What makes GOOD notes?', opts: o4('copying whole paragraphs word for word', 'short key words in your own words', 'only the page number', 'only drawings with no words'), ans: 'B', why: 'Good notes are <b>short key words in your own words</b>.' },
+    { sec: 'Note taking', name: 'Question 7', pts: 1, text: 'You read: "The blue whale is the largest animal on Earth. It can grow to 30 metres." Which is the BEST note? 🐋', opts: o4('The blue whale is the largest animal on Earth and it can grow to 30 metres long.', 'Whales live in water.', 'blue whale — largest animal — up to 30 m', 'I like whales.'), ans: 'C', why: 'A note keeps only the <b>key facts</b>, short.' },
+    { sec: 'Note taking', name: 'Question 8', pts: 1, text: 'Why do we take notes?', opts: o4('to use up paper', 'to make the book longer', 'to copy the author exactly', 'to remember the important points'), ans: 'D', why: 'Notes help us <b>remember the important points</b>.' },
+    { sec: 'Kinds of writing', name: 'Question 9', pts: 1, text: 'Which sentence would START a good narrative?', opts: o4('The old gate creaked open, and Mai stepped inside.', 'There are three kinds of gate.', 'Gates are useful.', 'Mix the flour and the water.'), ans: 'A', why: 'A narrative opens with a scene that pulls the reader in.' },
+    { sec: 'Kinds of writing', name: 'Question 10', pts: 1, text: 'Before you write, what should you do FIRST?', opts: o4('write the last sentence', 'plan your ideas', 'check the spelling', 'copy it out neatly'), ans: 'B', why: 'We always <b>plan our ideas</b> before writing.' },
+  ],
+},
+
 ];
 
 SUBJECTS.push({
   id: 'tienganh3', name: 'Tiếng Anh', short: 'Tiếng Anh 3', icon: '🔤', grade: 3,
   exams: TA3_EXAMS, ready: true,
   heroTitle: 'Tiếng Anh lớp 3 — chính tả, từ vựng, ngữ pháp, dấu câu, đọc hiểu, viết đoạn và kĩ năng thư viện',
-  heroMeta: '📚 30 đề &nbsp;•&nbsp; 300 câu &nbsp;•&nbsp; ⏱ 25 phút mỗi đề &nbsp;•&nbsp; đủ 5 phần, không kèm bản dịch',
+  heroMeta: '📚 32 đề &nbsp;•&nbsp; 320 câu &nbsp;•&nbsp; ⏱ 25 phút mỗi đề &nbsp;•&nbsp; đủ 6 phần, không kèm bản dịch',
 });

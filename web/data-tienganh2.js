@@ -1,5 +1,5 @@
 // TIẾNG ANH — LỚP 2 (GDPT 2018)
-// 30 đề × 10 câu = 300 câu. Mỗi câu 1 điểm — thang 10 — 20 phút mỗi đề.
+// 32 đề × 10 câu = 320 câu. Mỗi câu 1 điểm — thang 10 — 20 phút mỗi đề.
 //
 // QUY TẮC: môn Tiếng Anh KHÔNG kèm bản dịch tiếng Việt. Mọi phần text · opts · why · sec ·
 // name · title viết bằng tiếng Anh; dùng emoji làm hình gợi nghĩa để học sinh tự hiểu.
@@ -528,8 +528,43 @@ const TA2_EXAMS = [
     { sec: 'ABC order', name: 'Question 6', pts: 1, text: 'Which word comes LAST in ABC order?', opts: o4('milk', 'zebra', 'fish', 'apple'), ans: 'B', why: '<b>zebra</b> begins with <b>z</b>, the last letter.' },
     { sec: 'ABC order', name: 'Question 7', pts: 1, img: A + 'ta2/abc_smr.svg', text: 'Put in ABC order: <b>sun · rain · moon</b>', opts: o4('sun, rain, moon', 'rain, moon, sun', 'moon, rain, sun', 'moon, sun, rain'), ans: 'C', why: 'm before r before s: <b>moon, rain, sun</b>.' },
     { sec: 'ABC order', name: 'Question 8', pts: 1, text: 'Which word comes first: <b>cat</b> or <b>car</b>?', opts: o4('cat', 'they are the same', 'neither', 'car'), ans: 'D', why: 'Both start with <b>ca</b>; then <b>r</b> comes before <b>t</b>, so <b>car</b> is first.' },
-    { sec: 'Library skills', name: 'Question 9', pts: 1, img: A + 'ta2/elephant.svg', text: 'A book with a true story about real animals is ______.', opts: o4('non-fiction', 'fiction', 'a poem', 'a song'), ans: 'A', why: 'True information books are <b>non-fiction</b>.' },
-    { sec: 'Library skills', name: 'Question 10', pts: 1, img: A + 'ta2/dragon.svg', text: 'A book about a talking dragon who saves a castle is ______. 🐉', opts: o4('non-fiction', 'fiction', 'a dictionary', 'a map'), ans: 'B', why: 'A made-up story is <b>fiction</b>.' },
+    { sec: 'Genres', name: 'Question 9', pts: 1, img: A + 'ta2/elephant.svg', text: 'A book with a true story about real animals is ______.', opts: o4('non-fiction', 'fiction', 'a poem', 'a song'), ans: 'A', why: 'True information books are <b>non-fiction</b>.' },
+    { sec: 'Genres', name: 'Question 10', pts: 1, img: A + 'ta2/dragon.svg', text: 'A book about a talking dragon who saves a castle is ______. 🐉', opts: o4('non-fiction', 'fiction', 'a dictionary', 'a map'), ans: 'B', why: 'A made-up story is <b>fiction</b>.' },
+  ],
+},
+
+
+/* ═══════════ TEST 31 — VOCABULARY: SAME AND OPPOSITE ═══════════ */
+{
+  id: 9631, title: 'Test 31 · Words that mean the same and the opposite', time: 20,
+  questions: [
+    { sec: 'Synonyms', name: 'Question 1', pts: 1, text: 'Which word means the SAME as <b>big</b>?', opts: o4('large', 'small', 'thin', 'short'), ans: 'A', why: '<b>large</b> means the same as big.' },
+    { sec: 'Synonyms', name: 'Question 2', pts: 1, text: 'Which word means the SAME as <b>happy</b>? 😀', opts: o4('sad', 'glad', 'angry', 'tired'), ans: 'B', why: '<b>glad</b> means the same as happy.' },
+    { sec: 'Synonyms', name: 'Question 3', pts: 1, text: 'Which word means the SAME as <b>little</b>?', opts: o4('tall', 'long', 'small', 'wide'), ans: 'C', why: '<b>small</b> means the same as little.' },
+    { sec: 'Synonyms', name: 'Question 4', pts: 1, text: 'Which word means the SAME as <b>fast</b>? 🏃', opts: o4('slow', 'late', 'heavy', 'quick'), ans: 'D', why: '<b>quick</b> means the same as fast.' },
+    { sec: 'Antonyms', name: 'Question 5', pts: 1, text: 'What is the OPPOSITE of <b>hot</b>? 🔥', opts: o4('cold', 'warm', 'dry', 'sunny'), ans: 'A', why: 'The opposite of hot is <b>cold</b>.' },
+    { sec: 'Antonyms', name: 'Question 6', pts: 1, text: 'What is the OPPOSITE of <b>day</b>? ☀️', opts: o4('morning', 'night', 'noon', 'week'), ans: 'B', why: 'The opposite of day is <b>night</b> 🌙.' },
+    { sec: 'Antonyms', name: 'Question 7', pts: 1, text: 'What is the OPPOSITE of <b>open</b>?', opts: o4('push', 'pull', 'shut', 'turn'), ans: 'C', why: 'The opposite of open is <b>shut</b> (close).' },
+    { sec: 'Antonyms', name: 'Question 8', pts: 1, text: 'What is the OPPOSITE of <b>old</b>? 👴', opts: o4('tall', 'kind', 'big', 'young'), ans: 'D', why: 'The opposite of old is <b>young</b> 👶.' },
+    { sec: 'Antonyms', name: 'Question 9', pts: 1, text: 'What is the OPPOSITE of <b>up</b>? ⬆️', opts: o4('down', 'over', 'near', 'out'), ans: 'A', why: 'The opposite of up is <b>down</b> ⬇️.' },
+    { sec: 'Synonyms', name: 'Question 10', pts: 1, text: 'Which two words mean the SAME?', opts: o4('big and small', 'nice and kind', 'hot and cold', 'up and down'), ans: 'B', why: '<b>nice</b> and <b>kind</b> mean the same; the others are opposites.' },
+  ],
+},
+
+/* ═══════════ TEST 32 — GRAMMAR: JOINING WORDS ═══════════ */
+{
+  id: 9632, title: 'Test 32 · Joining words (and, but, or, because)', time: 20,
+  questions: [
+    { sec: 'Conjunctions', name: 'Question 1', pts: 1, text: '"I like cats ______ dogs." (I like both) 🐱🐶', opts: o4('and', 'but', 'or', 'because'), ans: 'A', why: 'We add two things with <b>and</b>.' },
+    { sec: 'Conjunctions', name: 'Question 2', pts: 1, text: '"The bag is small ______ heavy." (a surprise)', opts: o4('and', 'but', 'or', 'so'), ans: 'B', why: 'We show a surprise with <b>but</b>.' },
+    { sec: 'Conjunctions', name: 'Question 3', pts: 1, text: '"Do you want milk ______ juice?" (choose one) 🥛', opts: o4('and', 'but', 'or', 'because'), ans: 'C', why: 'We give a choice with <b>or</b>.' },
+    { sec: 'Conjunctions', name: 'Question 4', pts: 1, text: '"I am happy ______ it is my birthday." (the reason) 🎂', opts: o4('and', 'but', 'or', 'because'), ans: 'D', why: '<b>because</b> tells us why.' },
+    { sec: 'Conjunctions', name: 'Question 5', pts: 1, text: '"It was raining, ______ we stayed inside." (what happened next) 🌧️', opts: o4('so', 'or', 'but', 'because'), ans: 'A', why: '<b>so</b> tells us the result.' },
+    { sec: 'Conjunctions', name: 'Question 6', pts: 1, text: 'Join them: "I have a pen. I have a ruler."', opts: o4('I have a pen but a ruler.', 'I have a pen and a ruler.', 'I have a pen or a ruler.', 'I have a pen because a ruler.'), ans: 'B', why: 'Two things we have → <b>and</b>.' },
+    { sec: 'Conjunctions', name: 'Question 7', pts: 1, text: 'Join them: "Nam is tired. Nam keeps playing."', opts: o4('Nam is tired and keeps playing.', 'Nam is tired or keeps playing.', 'Nam is tired but keeps playing.', 'Nam is tired because keeps playing.'), ans: 'C', why: 'It is a surprise, so we use <b>but</b>.' },
+    { sec: 'Conjunctions', name: 'Question 8', pts: 1, text: '"I put on my coat ______ it was cold." 🧥', opts: o4('and', 'or', 'but', 'because'), ans: 'D', why: 'The cold is the reason → <b>because</b>.' },
+    { sec: 'Conjunctions', name: 'Question 9', pts: 1, text: 'Which word is a joining word?', opts: o4('and', 'blue', 'run', 'table'), ans: 'A', why: '<b>and</b> joins two parts of a sentence.' },
+    { sec: 'Conjunctions', name: 'Question 10', pts: 1, text: '"We can go to the park ______ to the zoo, not both." 🦁', opts: o4('and', 'or', 'because', 'so'), ans: 'B', why: 'Only one of the two → <b>or</b>.' },
   ],
 },
 
@@ -539,5 +574,5 @@ SUBJECTS.push({
   id: 'tienganh2', name: 'Tiếng Anh', short: 'Tiếng Anh 2', icon: '🔤', grade: 2,
   exams: TA2_EXAMS, ready: true,
   heroTitle: 'Tiếng Anh lớp 2 — phonics, từ vựng, ngữ pháp, đọc hiểu, viết câu và kĩ năng thư viện',
-  heroMeta: '📚 30 đề &nbsp;•&nbsp; 300 câu &nbsp;•&nbsp; ⏱ 20 phút mỗi đề &nbsp;•&nbsp; đủ 7 phần, không kèm bản dịch',
+  heroMeta: '📚 32 đề &nbsp;•&nbsp; 320 câu &nbsp;•&nbsp; ⏱ 20 phút mỗi đề &nbsp;•&nbsp; đủ 8 phần, không kèm bản dịch',
 });
