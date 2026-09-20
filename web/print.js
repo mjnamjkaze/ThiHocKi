@@ -164,7 +164,7 @@
   }
 
   window.printExam = (id) => {
-    const exam = getExam(id);
+    const exam = trimExam(getExam(id), state.qCount);
     if (!exam) return;
     const o = readOpts();
     const ck = (k, t, d) => `<label><input type="checkbox" id="pk-${k}" ${o[k] ? 'checked' : ''}>
@@ -191,7 +191,7 @@
   };
 
   window.doPrint = (id) => {
-    const exam = getExam(id);
+    const exam = trimExam(getExam(id), state.qCount);
     if (!exam) return;
     const o = {};
     for (const k of Object.keys(DEF)) {

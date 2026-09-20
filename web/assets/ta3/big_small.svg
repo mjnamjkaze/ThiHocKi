@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 190" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="340" height="190" fill="#fff"/>
+<rect x="6" y="6" width="328" height="178" rx="16"
+    fill="#fdfbf6" stroke="#2b2b2b" stroke-width="3"/><text x="92" y="128" font-size="104" text-anchor="middle">🐘</text><text x="248" y="128" font-size="54" text-anchor="middle">🐭</text><path d="M170 44 V150" stroke="#2b2b2b" stroke-width="2.5" stroke-dasharray="7 6"/>
+</svg>

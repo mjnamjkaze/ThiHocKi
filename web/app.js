@@ -35,8 +35,10 @@ const store = {
 const state = {
   screen: 'login',
   grade: Number(localStorage.getItem('otk.grade')) || 2,   // khối lớp đang chọn
+  qCount: Number(localStorage.getItem('otk.qcount')) || 0, // số câu mỗi đề: 0 = cả đề
   subj: 'toan',        // môn đang xem (id trong SUBJECTS)
   examId: null,
+  examQn: 0,           // số câu của lượt làm bài hiện tại (xem lại thì lấy theo lúc nộp)
   qIndex: 0,
   answers: {},
   mode: 'take',        // take | review
@@ -71,6 +73,22 @@ const getExam = (id) => {
   return null;
 };
 const subjectOfExam = (id) => SUBJECTS.find(s => s.exams && s.exams.some(e => e.id === id));
+
+/* ══════════════ SỐ CÂU MỖI ĐỀ — 5 · 10 · 15 · 20 · 25 hoặc cả đề ══════════════
+   Bé (hoặc bố mẹ) chọn ở màn hình chính. Đề nào ít câu hơn mức đã chọn thì giữ
+   nguyên cả đề. Các câu được lấy TRẢI ĐỀU nên vẫn đủ các phần của đề gốc, và
+   luôn ra cùng một bộ câu với cùng (tổng số câu, số câu muốn làm) — nhờ vậy bấm
+   "Xem lại" sau khi nộp vẫn đúng những câu bé đã làm. Thời gian rút theo tỉ lệ. */
+const QCOUNTS = [5, 10, 15, 20, 25];
+
+function trimExam(exam, n) {
+  if (!exam || !n || exam.questions.length <= n) return exam;
+  const total = exam.questions.length;
+  const qs = Array.from({ length: n }, (_, i) => exam.questions[Math.round(i * (total - 1) / (n - 1))]);
+  return { ...exam, questions: qs, time: Math.max(1, Math.round(exam.time * n / total)) };
+}
+
+const curExam = () => trimExam(getExam(state.examId), state.examQn);
 const fmtScore = (s) => (Math.round(s * 100) / 100).toLocaleString('vi-VN', { maximumFractionDigits: 2 });
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 /* Đề bài được viết bằng HTML (<br>, <b>, &lt;, …). Khi cần chữ thuần (danh sách tóm tắt,
@@ -119,7 +137,7 @@ function vLogin() {
         <input id="inp-name" type="text" placeholder="Ví dụ: Minh Anh" value="${esc(store.user)}" maxlength="30">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="doLogin()">Bắt đầu học →</button>
-      <div class="login-foot">Ôn Thi Học Kì v1.8.0 • ${readyGrades().map(footLine).join('<br>')}</div>
+      <div class="login-foot">Ôn Thi Học Kì v1.9.0 • ${readyGrades().map(footLine).join('<br>')}</div>
     </div>
   </div>`;
 }
@@ -207,6 +225,13 @@ function vHome() {
       }).join('')}
     </div>
 
+    <div class="sect-title">Số câu mỗi đề</div>
+    <div class="chips">
+      ${[0, ...QCOUNTS].map(n => `<button class="pick ${n === state.qCount ? 'active' : ''}"
+        onclick="setQCount(${n})">${n ? n + ' câu' : 'Cả đề'}</button>`).join('')}
+    </div>
+    <div class="small muted" style="margin:-4px 0 14px">Đề dài hơn sẽ lấy ${state.qCount ? `<b>${state.qCount}</b> câu trải đều khắp đề` : 'toàn bộ số câu'}, thời gian rút theo tỉ lệ và điểm vẫn quy về thang 10.</div>
+
     <div class="sect-title">Môn học — Lớp ${state.grade}</div>
     <div class="subj-grid">
       ${subjectsOfGrade(state.grade).map(s => s.ready
@@ -217,6 +242,12 @@ function vHome() {
     ${progCards}
   </div>`;
 }
+
+window.setQCount = (n) => {
+  state.qCount = n;
+  localStorage.setItem('otk.qcount', String(n));
+  render();
+};
 
 window.setGrade = (g) => {
   state.grade = g;
@@ -248,7 +279,8 @@ function vSubject() {
       <div class="card" style="flex:1"><div class="small muted">Điểm trung bình</div><div class="v green" style="font-size:22px;font-weight:800">${done ? fmtScore(avg) : '—'}</div></div>
     </div>
     <div class="sect-title">Danh sách đề thi</div>
-    ${exams.map((e, i) => {
+    ${exams.map((e0, i) => {
+      const e = trimExam(e0, state.qCount);      // hiện đúng số câu · số phút bé sắp làm
       const r = res[e.id];
       const n = i + 1;
       return `
@@ -273,10 +305,11 @@ function vSubject() {
 
 /* ================= EXAM ================= */
 window.startExam = (id) => {
-  const exam = getExam(id);
+  const exam = trimExam(getExam(id), state.qCount);
   const sub = subjectOfExam(id);
   if (sub) { state.subj = sub.id; state.grade = gradeOf(sub); }
   state.examId = id;
+  state.examQn = state.qCount;
   state.qIndex = 0;
   state.answers = {};
   state.matchSel = null;
@@ -296,6 +329,7 @@ window.reviewExam = (id) => {
   const sub = subjectOfExam(id);
   if (sub) { state.subj = sub.id; state.grade = gradeOf(sub); }
   state.examId = id;
+  state.examQn = r.last.qn || 0;          // xem lại đúng những câu bé đã làm hôm đó
   state.qIndex = 0;
   state.answers = r.last.answers;
   state.hintOpen = {};
@@ -457,7 +491,7 @@ function vHint(q, i, review) {
 
 window.showHint = (i) => {
   if (state.mode === 'review' || state.hintOpen[i]) return;
-  const exam = getExam(state.examId);
+  const exam = curExam();
   const q = exam.questions[i];
   state.hintOpen[i] = true;
   state.hintTxt[i] = AIHINT.ready(q);         // đã hỏi lần trước thì hiện ngay, khỏi chờ
@@ -535,7 +569,7 @@ function vExamAll(exam) {
 }
 
 function vExam() {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   if (isWide()) return vExamAll(exam);
   const q = exam.questions[state.qIndex];
   const n = exam.questions.length;
@@ -608,7 +642,7 @@ window.typeAt = (i, el) => {
 };
 
 function syncProgress() {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   if (!exam) return;
   const n = exam.questions.length;
   const answered = Object.keys(state.answers).length;
@@ -643,7 +677,7 @@ function matchCur(q, i) {
 }
 window.matchPickLeft = (i, li) => {
   if (state.mode === 'review') return;
-  const q = getExam(state.examId).questions[i];
+  const q = curExam().questions[i];
   const cur = matchCur(q, i);
   if (cur[li] !== '-') {            // ảnh đã nối: bấm lại để bỏ nối
     cur[li] = '-';
@@ -657,7 +691,7 @@ window.matchPickLeft = (i, li) => {
 };
 window.matchPickRight = (i, ri) => {
   if (state.mode === 'review') return;
-  const q = getExam(state.examId).questions[i];
+  const q = curExam().questions[i];
   const cur = matchCur(q, i);
   if (cur.includes(String(ri))) return;                 // từ này đã nối cho ảnh khác
   let li = state.matchSel;
@@ -669,7 +703,7 @@ window.matchPickRight = (i, ri) => {
   reRender();
 };
 window.go = (d) => {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   state.qIndex = Math.min(exam.questions.length - 1, Math.max(0, state.qIndex + d));
   state.matchSel = null;
   render(); window.scrollTo(0, 0);
@@ -698,7 +732,7 @@ window.askExit = () => {
   render();
 };
 window.askSubmit = () => {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   const n = exam.questions.length;
   const answered = Object.keys(state.answers).length;
   const unanswered = n - answered;
@@ -763,7 +797,7 @@ window.doSubmit = (auto = false) => {
 };
 
 function finishSubmit(auto) {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   let score = 0, correct = 0, wrong = 0, skip = 0;
   exam.questions.forEach((q, i) => {
     const a = state.answers[i];
@@ -771,12 +805,19 @@ function finishSubmit(auto) {
     else if (isCorrect(q, a)) { correct++; score += q.pts; }
     else wrong++;
   });
+  // làm ít câu hơn thì quy điểm về đúng thang của đề gốc (thường là thang 10)
+  const full = getExam(state.examId);
+  if (exam.questions.length < full.questions.length) {
+    const part = exam.questions.reduce((t, q) => t + q.pts, 0);
+    const whole = full.questions.reduce((t, q) => t + q.pts, 0);
+    if (part > 0) score = score / part * whole;
+  }
   score = Math.round(score * 100) / 100;
   const prevRec = store.results[exam.id];
   const prevBest = (prevRec || {}).best || 0;
   const hints = { ...state.hintTxt };                               // để xem lại vẫn thấy gợi ý đã xin
   const hinted = Object.keys(state.hintOpen).map(Number).sort((a, b) => a - b);
-  const res = { score, correct, wrong, skip, hinted, hints, answers: { ...state.answers }, date: new Date().toISOString(), auto };
+  const res = { score, correct, wrong, skip, hinted, hints, qn: state.examQn, answers: { ...state.answers }, date: new Date().toISOString(), auto };
   store.saveResult(exam.id, res);
   sendResult(exam, res);
   state.lastResult = res;
@@ -871,7 +912,7 @@ function animCelebrate() {
 
 /* ================= RESULT ================= */
 function vResult() {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   const r = (state.lastResult && state.lastResultExam === state.examId)
     ? state.lastResult : (store.results[state.examId] || {}).last;
   if (!r) return vSubject();
@@ -933,7 +974,7 @@ function vResult() {
   ${state.celebrate ? vCelebrate(exam, r) : ''}`;
 }
 window.shareResult = async () => {
-  const exam = getExam(state.examId);
+  const exam = curExam();
   const r = (state.lastResult && state.lastResultExam === state.examId)
     ? state.lastResult : (store.results[state.examId] || {}).last;
   if (!r) return;
