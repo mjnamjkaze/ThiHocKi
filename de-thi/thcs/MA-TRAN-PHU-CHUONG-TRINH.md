@@ -26,19 +26,19 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 
 | Bank | File dữ liệu | Đề đã có | Còn lại |
 |------|--------------|---------:|--------:|
-| Toán 6 | `web/data-toan6.js` | **11** | 39 |
+| Toán 6 | `web/data-toan6.js` | **13** | 37 |
 | Toán 7 | `web/data-toan7.js` | 0 | 50 |
 | Toán 8 | `web/data-toan8.js` | 0 | 50 |
 | Toán 9 | `web/data-toan9.js` | 0 | 50 |
-| KHTN 6 | `web/data-khtn6.js` | **8** | 42 |
+| KHTN 6 | `web/data-khtn6.js` | **10** | 40 |
 | KHTN 7 | `web/data-khtn7.js` | 0 | 50 |
 | KHTN 8 | `web/data-khtn8.js` | 0 | 50 |
 | KHTN 9 | `web/data-khtn9.js` | 0 | 50 |
-| Tiếng Anh 6 | `web/data-tienganh6.js` | **4** | 46 |
+| Tiếng Anh 6 | `web/data-tienganh6.js` | **6** | 44 |
 | Tiếng Anh 7 | `web/data-tienganh7.js` | 0 | 50 |
 | Tiếng Anh 8 | `web/data-tienganh8.js` | 0 | 50 |
 | Tiếng Anh 9 | `web/data-tienganh9.js` | 0 | 50 |
-| | **TỔNG** | **23** | **577** |
+| | **TỔNG** | **29** | **571** |
 
 *(12 đề `.md` hiện có sẽ được tính vào cột "đã có" sau khi chuyển sang `.js`.)*
 
@@ -60,12 +60,12 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 | 8 | Tập hợp số nguyên. Thứ tự trong ℤ | Số đối, giá trị tuyệt đối, so sánh |
 | 9 | Cộng, trừ số nguyên | Quy tắc dấu, quy tắc dấu ngoặc |
 | 10 | Nhân, chia số nguyên. Ước và bội trong ℤ | Dấu của tích/thương; tìm x |
-| 11 | Bài toán thực tế với số nguyên | Nhiệt độ, độ cao, thu – chi |
-| 12 | Phân số. Phân số bằng nhau. Rút gọn | Tính chất cơ bản, phân số tối giản |
-| 13 | So sánh – quy đồng phân số | Quy đồng, so sánh gián tiếp qua phần bù |
-| 14 | Cộng, trừ phân số | Hỗn số, tính nhanh |
-| 15 | Nhân, chia phân số | Số nghịch đảo, tính giá trị biểu thức |
-| 16 | Hai bài toán về phân số | Tìm giá trị phân số của một số và ngược lại |
+| 11 | Phân số. Phân số bằng nhau. Rút gọn | Tính chất cơ bản, phân số tối giản |
+| 12 | Cộng, trừ phân số | Quy đồng, tính nhanh, tìm x |
+| 13 | Nhân, chia phân số | Số nghịch đảo, giá trị phân số của một số |
+| 14 | So sánh – quy đồng phân số. Hỗn số | Quy đồng, so sánh gián tiếp qua phần bù |
+| 15 | Hai bài toán về phân số | Tìm giá trị phân số của một số và ngược lại |
+| 16 | Bài toán thực tế với số nguyên | Nhiệt độ, độ cao, thu – chi |
 | 17 | Số thập phân. So sánh. Làm tròn | Làm tròn đến hàng, ước lượng |
 | 18 | Các phép tính với số thập phân | Tính nhanh, bài toán mua bán |
 | 19 | Tỉ số. Tỉ số phần trăm | Đổi tỉ số ↔ phần trăm |
