@@ -21,6 +21,30 @@ if (at < 0) { console.error(`Không tìm thấy dấu kết thúc mảng trong $
 
 const eol = src.includes('\r\n') ? '\r\n' : '\n';
 const body = piece.split(/\r?\n/).join(eol);
-src = src.slice(0, at) + eol + eol + body + eol + src.slice(at);
+
+// Chèn ĐÚNG VỊ TRÍ theo id, không phải cứ nối vào cuối. Nhiều agent chạy song
+// song nên các mảnh đề có thể về không đúng thứ tự; checker lại lấy vị trí
+// trong mảng làm số đề, nên sai thứ tự là sai hết số đề.
+const firstId = Number((piece.match(/\bid:\s*(\d+)/) || [])[1]);
+if (!Number.isFinite(firstId)) { console.error(`${frag}: không đọc được id của đề đầu tiên`); process.exit(1); }
+
+let insertAt = at;                       // mặc định: cuối mảng
+let insertBefore = null;
+const examStart = /(\r?\n)\{\r?\n\s*id:\s*(\d+)/g;
+let e;
+while ((e = examStart.exec(src)) !== null) {
+  if (e.index >= at) break;              // đã qua khỏi mảng
+  if (Number(e[2]) > firstId) { insertAt = e.index; insertBefore = Number(e[2]); break; }
+}
+
+// Chèn trước một đề khác thì phải kèm dòng comment tiêu đề ngay phía trên nó.
+if (insertBefore !== null) {
+  const head = src.slice(0, insertAt);
+  const cmt = head.lastIndexOf('/* ═');
+  if (cmt > 0 && head.slice(cmt).split(/\r?\n/).length <= 2) insertAt = cmt - eol.length;
+}
+
+src = src.slice(0, insertAt) + eol + eol + body + src.slice(insertAt);
 fs.writeFileSync(target, src);
-console.log(`✓ đã chèn ${frag} vào ${path.relative(ROOT, target)}`);
+const where = insertBefore === null ? 'cuối mảng' : `trước đề id ${insertBefore}`;
+console.log(`✓ đã chèn ${path.basename(frag)} (id đầu ${firstId}) vào ${path.relative(ROOT, target)} — ${where}`);
