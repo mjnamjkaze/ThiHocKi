@@ -12,10 +12,15 @@ const target = path.join(ROOT, 'web', `data-${bank}.js`);
 let src = fs.readFileSync(target, 'utf8');
 const piece = fs.readFileSync(frag, 'utf8').trim();
 
-const marker = '\n];\n';
-const at = src.lastIndexOf(marker);
+// Dấu kết thúc mảng, chấp nhận cả xuống dòng kiểu LF lẫn CRLF (git trên Windows
+// hay đổi qua lại nên không thể tìm chuỗi cứng '\n];\n').
+const marker = /\r?\n\];\r?\n/g;
+let at = -1, m;
+while ((m = marker.exec(src)) !== null) at = m.index;
 if (at < 0) { console.error(`Không tìm thấy dấu kết thúc mảng trong ${target}`); process.exit(1); }
 
-src = src.slice(0, at + 1) + '\n' + piece + '\n' + src.slice(at + 1);
+const eol = src.includes('\r\n') ? '\r\n' : '\n';
+const body = piece.split(/\r?\n/).join(eol);
+src = src.slice(0, at) + eol + eol + body + eol + src.slice(at);
 fs.writeFileSync(target, src);
 console.log(`✓ đã chèn ${frag} vào ${path.relative(ROOT, target)}`);
