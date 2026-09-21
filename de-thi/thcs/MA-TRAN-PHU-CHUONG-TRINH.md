@@ -30,15 +30,15 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 | Toán 7 | `web/data-toan7.js` | 0 | 50 |
 | Toán 8 | `web/data-toan8.js` | 0 | 50 |
 | Toán 9 | `web/data-toan9.js` | 0 | 50 |
-| KHTN 6 | `web/data-khtn6.js` | **10** | 40 |
+| KHTN 6 | `web/data-khtn6.js` | **16** | 34 |
 | KHTN 7 | `web/data-khtn7.js` | 0 | 50 |
 | KHTN 8 | `web/data-khtn8.js` | 0 | 50 |
 | KHTN 9 | `web/data-khtn9.js` | 0 | 50 |
-| Tiếng Anh 6 | `web/data-tienganh6.js` | **6** | 44 |
+| Tiếng Anh 6 | `web/data-tienganh6.js` | **12** | 38 |
 | Tiếng Anh 7 | `web/data-tienganh7.js` | 0 | 50 |
 | Tiếng Anh 8 | `web/data-tienganh8.js` | 0 | 50 |
 | Tiếng Anh 9 | `web/data-tienganh9.js` | 0 | 50 |
-| | **TỔNG** | **39** | **561** |
+| | **TỔNG** | **51** | **549** |
 
 *(12 đề `.md` hiện có sẽ được tính vào cột "đã có" sau khi chuyển sang `.js`.)*
 
@@ -213,24 +213,24 @@ MathJax/KaTeX (GitHub hiển thị sẵn).
 | 4 | Sự đa dạng của chất. Ba thể của chất | Hóa |
 | 5 | Tính chất của chất. Sự chuyển thể | Hóa |
 | 6 | Oxygen và không khí | Hóa |
-| 7 | Ô nhiễm không khí và bảo vệ môi trường không khí | Hóa |
-| 8 | Một số vật liệu thông dụng | Hóa |
-| 9 | Nhiên liệu và an toàn khi sử dụng nhiên liệu | Hóa |
-| 10 | Nguyên liệu. Lương thực – thực phẩm | Hóa |
-| 11 | Hỗn hợp. Dung dịch, huyền phù, nhũ tương | Hóa |
-| 12 | Tách chất ra khỏi hỗn hợp | Hóa |
-| 13 | Tế bào — đơn vị cơ bản của sự sống | Sinh |
-| 14 | Cấu tạo và chức năng các thành phần của tế bào | Sinh |
-| 15 | Sự lớn lên và sinh sản của tế bào | Sinh |
-| 16 | Cơ thể đơn bào và cơ thể đa bào | Sinh |
-| 17 | Tổ chức cơ thể đa bào: mô – cơ quan – hệ cơ quan | Sinh |
-| 18 | Phân loại thế giới sống. Khóa lưỡng phân | Sinh |
-| 19 | Virus và vi khuẩn | Sinh |
-| 20 | Nguyên sinh vật và nấm | Sinh |
-| 21 | Thực vật | Sinh |
-| 22 | Động vật không xương sống | Sinh |
-| 23 | Động vật có xương sống | Sinh |
-| 24 | Đa dạng sinh học và bảo vệ đa dạng sinh học | Sinh |
+| 7 | Chất tinh khiết, hỗn hợp, dung dịch | Hóa |
+| 8 | Tách chất ra khỏi hỗn hợp | Hóa |
+| 9 | Tế bào — đơn vị cơ sở của sự sống | Sinh |
+| 10 | Từ tế bào đến cơ thể: mô – cơ quan – hệ cơ quan | Sinh |
+| 11 | Phân loại thế giới sống. Khóa lưỡng phân | Sinh |
+| 12 | Virus và vi khuẩn | Sinh |
+| 13 | Nguyên sinh vật và nấm | Sinh |
+| 14 | Thực vật: rêu, dương xỉ, hạt trần, hạt kín | Sinh |
+| 15 | Động vật không xương sống | Sinh |
+| 16 | Động vật có xương sống | Sinh |
+| 17 | Đa dạng sinh học và bảo vệ đa dạng sinh học | Sinh |
+| 18 | Ô nhiễm không khí và bảo vệ môi trường không khí | Hóa |
+| 19 | Nguyên liệu. Lương thực – thực phẩm | Hóa |
+| 20 | Nhiên liệu và an toàn khi sử dụng nhiên liệu | Hóa |
+| 21 | Thực hành: quan sát bằng kính lúp và kính hiển vi | Sinh |
+| 22 | Thực hành: đo và xử lí số liệu trong KHTN | Lí |
+| 23 | Sự chuyển thể và tính chất của chất — tổng hợp | Hóa |
+| 24 | Vai trò của thực vật và động vật trong tự nhiên | Sinh |
 | 25 | Lực. Biểu diễn lực. Lực tiếp xúc – không tiếp xúc | Lí |
 | 26 | Lực hấp dẫn. Trọng lượng và khối lượng | Lí |
 | 27 | Lực ma sát | Lí |

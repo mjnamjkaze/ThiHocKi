@@ -147,9 +147,9 @@ const TTD4_EXAMS = [
 {
   id: 5819, title: 'Đề 9 · Toán đố thực tế', time: 20,
   questions: [
-    { sec: 'Giá tiền', name: 'Câu 1', pts: 1, text: 'Một cái bút giá 3 000 đồng. 4 cái bút giá bao nhiêu?', opts: o4('12 000 đồng', '7 000 đồng', '9 000 đồng', '34 000 đồng'), ans: 'A', why: '3 000 × 4 = 12 000 (đồng).' },
-    { sec: 'Giá tiền', name: 'Câu 2', pts: 1, text: '5 quyển vở giá 20 000 đồng. 1 quyển giá bao nhiêu?', opts: o4('4 000 đồng', '5 000 đồng', '100 000 đồng', '15 000 đồng'), ans: 'A', why: '20 000 : 5 = 4 000 (đồng).' },
-    { sec: 'Tiền thừa', name: 'Câu 3', pts: 1, text: 'Mua 2 cái bánh, mỗi cái 5 000 đồng, đưa 20 000 đồng. Được thối lại bao nhiêu?', opts: o4('10 000 đồng', '5 000 đồng', '15 000 đồng', '2 000 đồng'), ans: 'A', why: 'Phải trả 5 000 × 2 = 10 000; thối lại 20 000 − 10 000 = 10 000 (đồng).' },
+    { sec: 'Giá tiền', name: 'Câu 1', pts: 1, text: 'Một cái bút giá 3000 đồng. 4 cái bút giá bao nhiêu?', opts: o4('12000 đồng', '7000 đồng', '9000 đồng', '34000 đồng'), ans: 'A', why: '3000 × 4 = 12000 (đồng).' },
+    { sec: 'Giá tiền', name: 'Câu 2', pts: 1, text: '5 quyển vở giá 20000 đồng. 1 quyển giá bao nhiêu?', opts: o4('4000 đồng', '5000 đồng', '100000 đồng', '15000 đồng'), ans: 'A', why: '20000 : 5 = 4000 (đồng).' },
+    { sec: 'Tiền thừa', name: 'Câu 3', pts: 1, text: 'Mua 2 cái bánh, mỗi cái 5000 đồng, đưa 20000 đồng. Được thối lại bao nhiêu?', opts: o4('10000 đồng', '5000 đồng', '15000 đồng', '2000 đồng'), ans: 'A', why: 'Phải trả 5000 × 2 = 10000; thối lại 20000 − 10000 = 10000 (đồng).' },
     { sec: 'Tá', name: 'Câu 4', pts: 1, text: 'Một tá có 12 cái. 2 tá bút có bao nhiêu cái?', opts: o4('24', '12', '14', '20'), ans: 'A', why: '12 × 2 = 24 cái.' },
     { sec: 'Thời gian', name: 'Câu 5', pts: 1, text: 'Nửa giờ có bao nhiêu phút?', opts: o4('30', '60', '15', '45'), ans: 'A', why: '1 giờ = 60 phút, nửa giờ = 30 phút.' },
     { sec: 'Đố mẹo', name: 'Câu 6', pts: 1, text: '3 con gà đẻ 3 quả trứng trong 3 ngày. Vậy 1 con gà đẻ mấy quả trứng trong 3 ngày?', opts: o4('1', '3', '9', '2'), ans: 'A', why: '3 con đẻ 3 quả trong 3 ngày, nghĩa là mỗi con đẻ 1 quả trong 3 ngày.' },
@@ -385,15 +385,15 @@ const TTD4_EXAMS = [
 {
   id: 7713, title: 'Đề 23 · Giả thiết tạm biến thể', time: 20,
   questions: [
-    { sec: 'Tiền xu', name: 'Câu 1', pts: 1, text: 'Có các đồng xu loại 2000 đồng và 5000 đồng, tất cả 10 đồng, tổng 41 000 đồng. Có mấy đồng loại 5000?', opts: o4('7', '3', '5', '8'), ans: 'A', why: 'Giả sử toàn xu 2000: 20 000 đồng, thiếu 21 000; mỗi xu 5000 hơn 3000 nên 21 000 : 3000 = 7 đồng.' },
-    { sec: 'Vé', name: 'Câu 2', pts: 1, text: 'Vé người lớn 10 000 đồng, vé trẻ em 5000 đồng. 8 vé tốn 55 000 đồng. Có mấy vé trẻ em?', opts: o4('3', '5', '4', '6'), ans: 'B', why: 'Giả sử toàn vé người lớn: 80 000 đồng, thừa 25 000; mỗi vé trẻ em ít hơn 5000 nên 25 000 : 5000 = 5 vé.' },
+    { sec: 'Tiền xu', name: 'Câu 1', pts: 1, text: 'Có các đồng xu loại 2000 đồng và 5000 đồng, tất cả 10 đồng, tổng 41000 đồng. Có mấy đồng loại 5000?', opts: o4('7', '3', '5', '8'), ans: 'A', why: 'Giả sử toàn xu 2000: 20000 đồng, thiếu 21000; mỗi xu 5000 hơn 3000 nên 21000 : 3000 = 7 đồng.' },
+    { sec: 'Vé', name: 'Câu 2', pts: 1, text: 'Vé người lớn 10000 đồng, vé trẻ em 5000 đồng. 8 vé tốn 55000 đồng. Có mấy vé trẻ em?', opts: o4('3', '5', '4', '6'), ans: 'B', why: 'Giả sử toàn vé người lớn: 80000 đồng, thừa 25000; mỗi vé trẻ em ít hơn 5000 nên 25000 : 5000 = 5 vé.' },
     { sec: 'Chấm điểm', name: 'Câu 3', pts: 1, text: 'Bài thi 10 câu, mỗi câu đúng được 10 điểm, mỗi câu sai bị trừ 2 điểm (làm hết cả 10 câu). Bạn Nam được 76 điểm. Nam làm đúng mấy câu?', opts: o4('7', '9', '8', '6'), ans: 'C', why: 'Nếu đúng hết: 100 điểm; mỗi câu sai làm mất 12 điểm (10 + 2). (100 − 76) : 12 = 2 câu sai → đúng 8 câu.' },
     { sec: 'Xe cộ', name: 'Câu 4', pts: 1, text: 'Bãi có xe 4 bánh và xe 2 bánh, tất cả 12 xe, 38 bánh. Có mấy xe 4 bánh?', opts: o4('5', '6', '8', '7'), ans: 'D', why: 'Giả sử toàn xe 2 bánh: 24 bánh, thiếu 14; mỗi xe 4 bánh hơn 2 bánh nên 14 : 2 = 7 xe.' },
     { sec: 'Côn trùng', name: 'Câu 5', pts: 1, text: 'Nhện có 8 chân, chuồn chuồn có 6 chân. Có 10 con, tổng 68 chân. Có mấy con nhện?', opts: o4('4', '6', '5', '3'), ans: 'A', why: 'Giả sử toàn chuồn chuồn: 60 chân, thiếu 8; mỗi con nhện hơn 2 chân nên 8 : 2 = 4 con.' },
     { sec: 'Đóng gói', name: 'Câu 6', pts: 1, text: 'Gói to có 5 cái bánh, gói nhỏ có 2 cái. Có 8 gói, tổng 25 cái bánh. Có mấy gói to?', opts: o4('5', '3', '4', '2'), ans: 'B', why: 'Giả sử toàn gói nhỏ: 16 cái, thiếu 9; mỗi gói to hơn 3 cái nên 9 : 3 = 3 gói.' },
     { sec: 'Xe cộ', name: 'Câu 7', pts: 1, text: 'Bãi có xe lam 3 bánh và xe máy 2 bánh, tất cả 9 xe, 24 bánh. Có mấy xe lam?', opts: o4('3', '5', '6', '4'), ans: 'C', why: 'Giả sử toàn xe máy: 18 bánh, thiếu 6; mỗi xe lam hơn 1 bánh nên 6 : 1 = 6 xe.' },
     { sec: 'Gia súc', name: 'Câu 8', pts: 1, text: 'Đàn có trâu (4 chân) và ngỗng (2 chân), tất cả 12 con, 34 chân. Có mấy con trâu?', opts: o4('7', '6', '4', '5'), ans: 'D', why: 'Giả sử toàn ngỗng: 24 chân, thiếu 10; mỗi con trâu hơn 2 chân nên 10 : 2 = 5 con.' },
-    { sec: 'Tiền xu', name: 'Câu 9', pts: 1, text: 'Có các đồng xu loại 1000 đồng và 2000 đồng, tất cả 15 đồng, tổng 22 000 đồng. Có mấy đồng loại 2000?', opts: o4('7', '8', '6', '9'), ans: 'A', why: 'Giả sử toàn xu 1000: 15 000 đồng, thiếu 7000; mỗi xu 2000 hơn 1000 nên 7000 : 1000 = 7 đồng.' },
+    { sec: 'Tiền xu', name: 'Câu 9', pts: 1, text: 'Có các đồng xu loại 1000 đồng và 2000 đồng, tất cả 15 đồng, tổng 22000 đồng. Có mấy đồng loại 2000?', opts: o4('7', '8', '6', '9'), ans: 'A', why: 'Giả sử toàn xu 1000: 15000 đồng, thiếu 7000; mỗi xu 2000 hơn 1000 nên 7000 : 1000 = 7 đồng.' },
     { sec: 'Bi điểm', name: 'Câu 10', pts: 1, text: 'Hộp có bi 3 điểm và bi 5 điểm, tất cả 10 viên, tổng 38 điểm. Có mấy viên bi 5 điểm?', opts: o4('6', '4', '5', '3'), ans: 'B', why: 'Giả sử toàn bi 3 điểm: 30 điểm, thiếu 8; mỗi bi 5 điểm hơn 2 điểm nên 8 : 2 = 4 viên.' },
   ],
 },
