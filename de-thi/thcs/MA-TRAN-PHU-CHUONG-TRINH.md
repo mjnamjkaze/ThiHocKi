@@ -46,6 +46,19 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 
 ## 3. TOÁN
 
+### Quy ước viết công thức (môn Toán)
+
+Công thức viết bằng LaTeX trong cặp `$...$` — phân số, căn, lũy thừa. Trang web
+dùng KaTeX nên kí hiệu nét ở mọi cỡ chữ; file `.md` xem bằng trình đọc có
+MathJax/KaTeX (GitHub hiển thị sẵn).
+
+> Trong file `.js` phải gõ **hai** dấu gạch chéo ngược thì khi chạy mới còn một.
+> Gõ một dấu thì JavaScript hiểu đó là kí tự điều khiển và công thức hỏng.
+>
+> Khi viết script sửa hàng loạt: không dùng heredoc của shell cho nội dung có
+> dấu gạch chéo ngược (shell nuốt bớt), và không dùng `String.replace` với
+> chuỗi thay thế chứa `$` (ký hiệu `$'` sẽ nhân đôi nội dung file).
+
 ### 3.1. TOÁN 6 — đề 1–30 (theo chương)
 
 | Đề | Chủ đề | Trọng tâm |
