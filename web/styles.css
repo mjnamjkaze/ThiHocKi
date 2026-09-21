@@ -676,3 +676,85 @@ table.cal td.q { color: var(--error); font-weight: 800; }
   .tbox { font-size: 23px; }
   .chip { font-size: 18px; padding: 10px 16px; }
 }
+
+/* ═══════════════ CỔNG MẬT KHẨU (trang cá nhân) ═══════════════ */
+.gate{
+  position:fixed; inset:0; z-index:9999; display:grid; place-items:center;
+  padding:24px; overflow:hidden;
+  background:radial-gradient(120% 90% at 50% 0%,#1b2352 0%,#0d1230 55%,#080b1e 100%);
+}
+.gate-orbs{ position:absolute; inset:0; pointer-events:none; filter:blur(70px); opacity:.75; }
+.gate-orbs i{ position:absolute; display:block; border-radius:50%; }
+.gate-orbs i:nth-child(1){ width:46vmin; height:46vmin; left:-10vmin; top:-8vmin;
+  background:#3d6ef7; animation:gorb 15s ease-in-out infinite; }
+.gate-orbs i:nth-child(2){ width:38vmin; height:38vmin; right:-8vmin; top:18vmin;
+  background:#a855f7; animation:gorb 19s ease-in-out infinite reverse; }
+.gate-orbs i:nth-child(3){ width:42vmin; height:42vmin; left:28vmin; bottom:-16vmin;
+  background:#06b6d4; animation:gorb 17s ease-in-out infinite 2s; }
+@keyframes gorb{ 0%,100%{ transform:translate3d(0,0,0) scale(1); } 50%{ transform:translate3d(4vmin,-3vmin,0) scale(1.15); } }
+
+.gate-card{
+  position:relative; width:min(380px,100%); padding:38px 30px 30px; text-align:center;
+  border-radius:26px; border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.07); backdrop-filter:blur(22px) saturate(140%);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);
+  box-shadow:0 30px 70px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.22);
+  animation:gin .5s cubic-bezier(.2,.9,.25,1.05) both;
+}
+@keyframes gin{ from{ opacity:0; transform:translateY(20px) scale(.96); } to{ opacity:1; transform:none; } }
+
+.gate-lock{
+  width:62px; height:62px; margin:0 auto 16px; display:grid; place-items:center;
+  border-radius:20px; color:#fff;
+  background:linear-gradient(145deg,#4f7dff,#8b5cf6);
+  box-shadow:0 12px 28px rgba(79,125,255,.45), inset 0 1px 0 rgba(255,255,255,.4);
+  animation:gfloat 3.6s ease-in-out infinite;
+}
+.gate-lock svg{ width:29px; height:29px; }
+@keyframes gfloat{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-5px); } }
+
+.gate-card h2{ margin:0 0 6px; font-size:23px; font-weight:800; color:#fff; letter-spacing:.2px; }
+.gate-sub{ margin:0 0 24px; font-size:14px; color:rgba(255,255,255,.62); }
+
+.gate-pin{ display:flex; gap:10px; justify-content:center; margin-bottom:16px; }
+.gdot{
+  width:52px; height:62px; text-align:center; font-size:26px; font-weight:800;
+  color:#fff; caret-color:#8ab4ff; border-radius:15px; outline:none;
+  border:1.6px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06);
+  transition:border-color .18s, box-shadow .18s, transform .18s, background .18s;
+}
+.gdot::placeholder{ color:transparent; }
+.gdot.filled{ border-color:rgba(139,146,255,.75); background:rgba(139,146,255,.16); }
+.gdot:focus{
+  border-color:#7aa2ff; background:rgba(122,162,255,.18); transform:translateY(-3px);
+  box-shadow:0 0 0 4px rgba(122,162,255,.22), 0 10px 22px rgba(0,0,0,.3);
+}
+.gate-msg{ min-height:20px; font-size:13px; color:rgba(255,255,255,.55); transition:color .2s; }
+
+.gate-card.bad{ animation:gshake .5s cubic-bezier(.36,.07,.19,.97) both; }
+.gate-card.bad .gdot{ border-color:#ff6b7a; background:rgba(255,107,122,.16); }
+.gate-card.bad .gate-msg{ color:#ff9aa5; }
+@keyframes gshake{ 10%,90%{ transform:translateX(-2px); } 20%,80%{ transform:translateX(4px); }
+  30%,50%,70%{ transform:translateX(-8px); } 40%,60%{ transform:translateX(8px); } }
+
+.gate-card.ok{ animation:gpop .5s cubic-bezier(.2,.9,.25,1.2) both; }
+.gate-card.ok .gate-lock{ background:linear-gradient(145deg,#22c55e,#10b981);
+  box-shadow:0 12px 28px rgba(34,197,94,.45), inset 0 1px 0 rgba(255,255,255,.4); animation:none; }
+.gate-card.ok .gdot{ border-color:rgba(34,197,94,.8); background:rgba(34,197,94,.18); }
+.gate-card.ok .gate-msg{ color:#86efac; }
+@keyframes gpop{ 0%{ transform:scale(1); } 45%{ transform:scale(1.035); } 100%{ transform:scale(1); } }
+
+@media (max-width:400px){
+  .gate-card{ padding:32px 20px 24px; }
+  .gate-pin{ gap:7px; }
+  .gdot{ width:44px; height:55px; font-size:22px; border-radius:13px; }
+}
+@media (prefers-reduced-motion:reduce){
+  .gate-orbs i, .gate-lock, .gate-card{ animation:none !important; }
+}
+@media print{ .gate{ display:none !important; } }
+
+/* Công thức KaTeX: giữ cỡ chữ hài hòa với đề, không tràn dòng trên điện thoại */
+.katex{ font-size:1.06em; }
+.qtext .katex, .opt .katex{ font-size:1.05em; }
+.katex-display{ margin:.5em 0; overflow-x:auto; overflow-y:hidden; }

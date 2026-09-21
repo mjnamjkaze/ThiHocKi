@@ -62,6 +62,9 @@ const state = {
 
 const gradeOf = (s) => s.grade || 2;
 const subjectsOfGrade = (g) => SUBJECTS.filter(s => gradeOf(s) === g);
+/* Danh sách khối lấy thẳng từ dữ liệu — thêm bank lớp mới là chip tự hiện ra,
+   không phải sửa tay ở chỗ vẽ nút chọn lớp nữa. */
+const allGrades = () => [...new Set(SUBJECTS.map(gradeOf))].sort((a, b) => a - b);
 const readyGrades = () => [...new Set(SUBJECTS.filter(s => s.ready).map(gradeOf))].sort();
 const getSubject = (id) => SUBJECTS.find(s => s.id === id);
 const getExam = (id) => {
@@ -109,6 +112,81 @@ function nav(screen, extra = {}) {
   Object.assign(state, { screen }, extra);
   render();
   window.scrollTo(0, 0);
+}
+
+/* ================= CỔNG MẬT KHẨU =================
+   Trang cá nhân: lần đầu vào máy nào thì máy đó phải nhập mã. Mở khóa xong ghi
+   vào localStorage nên các lần sau không hỏi lại. Đây là lớp chắn riêng tư cho
+   trang cá nhân, không phải cơ chế bảo mật dữ liệu. */
+const GATE_PASS = '12345';
+const gate = {
+  get ok() { return localStorage.getItem('otk.gate') === '1'; },
+  set ok(v) { v ? localStorage.setItem('otk.gate', '1') : localStorage.removeItem('otk.gate'); },
+};
+
+function vGate() {
+  const dots = [0, 1, 2, 3, 4].map(i =>
+    `<input class="gdot" data-i="${i}" type="password" inputmode="numeric" pattern="[0-9]*"
+       maxlength="1" autocomplete="off" aria-label="Ký tự thứ ${i + 1}">`).join('');
+  return `
+  <div class="gate">
+    <div class="gate-orbs"><i></i><i></i><i></i></div>
+    <div class="gate-card" id="gcard">
+      <div class="gate-lock" id="glock">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10.5" width="16" height="10.5" rx="2.6"/><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/><circle cx="12" cy="15.7" r="1.35"/>
+        </svg>
+      </div>
+      <h2>Trang cá nhân</h2>
+      <p class="gate-sub">Nhập mã truy cập để mở kho đề</p>
+      <div class="gate-pin" id="gpin">${dots}</div>
+      <div class="gate-msg" id="gmsg">Mã gồm 5 chữ số</div>
+    </div>
+  </div>`;
+}
+
+function bindGate() {
+  const pin = $('#gpin'), card = $('#gcard'), msg = $('#gmsg');
+  if (!pin) return;
+  const boxes = [...pin.querySelectorAll('.gdot')];
+  const value = () => boxes.map(b => b.value).join('');
+  const reset = () => { boxes.forEach(b => { b.value = ''; b.classList.remove('filled'); }); boxes[0].focus(); };
+
+  const submit = () => {
+    if (value() === GATE_PASS) {
+      card.classList.add('ok');
+      msg.textContent = 'Đã mở khóa — chào mừng bạn!';
+      setTimeout(() => { gate.ok = true; render(); if (store.user) nav('home'); }, 620);
+    } else {
+      card.classList.add('bad');
+      msg.textContent = 'Mã chưa đúng, thử lại nhé';
+      setTimeout(() => { card.classList.remove('bad'); reset(); msg.textContent = 'Mã gồm 5 chữ số'; }, 620);
+    }
+  };
+
+  boxes.forEach((box, i) => {
+    box.addEventListener('input', () => {
+      box.value = box.value.replace(/\D/g, '').slice(0, 1);
+      box.classList.toggle('filled', !!box.value);
+      if (box.value && i < boxes.length - 1) boxes[i + 1].focus();
+      if (value().length === boxes.length) submit();
+    });
+    box.addEventListener('keydown', e => {
+      if (e.key === 'Backspace' && !box.value && i > 0) { boxes[i - 1].focus(); boxes[i - 1].value = ''; boxes[i - 1].classList.remove('filled'); e.preventDefault(); }
+      if (e.key === 'ArrowLeft' && i > 0) boxes[i - 1].focus();
+      if (e.key === 'ArrowRight' && i < boxes.length - 1) boxes[i + 1].focus();
+      if (e.key === 'Enter') submit();
+    });
+    box.addEventListener('paste', e => {
+      const txt = (e.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '');
+      if (!txt) return;
+      e.preventDefault();
+      boxes.forEach((b, k) => { b.value = txt[k] || ''; b.classList.toggle('filled', !!b.value); });
+      boxes[Math.min(txt.length, boxes.length - 1)].focus();
+      if (value().length === boxes.length) submit();
+    });
+  });
+  setTimeout(() => boxes[0].focus(), 60);
 }
 
 /* ================= LOGIN ================= */
@@ -218,7 +296,7 @@ function vHome() {
 
     <div class="sect-title">Chọn lớp</div>
     <div class="chips">
-      ${[1, 2, 3, 4, 5].map(g => {
+      ${allGrades().map(g => {
         const open = opened.includes(g);
         const cur = g === state.grade;
         return `<button class="pick ${cur ? 'active' : open ? '' : 'locked'}" ${open ? `onclick="setGrade(${g})"` : 'disabled'}>Lớp ${g}${open ? '' : ' 🔒'}</button>`;
@@ -1041,7 +1119,25 @@ window.androidBack = () => {
 };
 
 /* ================= render ================= */
+/* Công thức toán viết trong $...$ được KaTeX vẽ lại thành kí hiệu thật (phân số
+   có gạch ngang, căn có dấu căn, mũ đúng cỡ) — nét ở mọi mức phóng to vì là
+   văn bản + SVG chứ không phải ảnh. Thiếu mạng thì chữ gốc vẫn đọc được. */
+function typesetMath(el) {
+  if (typeof renderMathInElement !== 'function') return;
+  try {
+    renderMathInElement(el, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      throwOnError: false,
+      ignoredTags: ['script', 'noscript', 'style', 'textarea', 'option'],
+    });
+  } catch { /* có lỗi cú pháp thì giữ nguyên chữ gốc, không chặn giao diện */ }
+}
+
 function render() {
+  if (!gate.ok) { app.innerHTML = vGate(); bindGate(); return; }
   let html = '';
   switch (state.screen) {
     case 'login': html = vLogin(); break;
@@ -1052,6 +1148,7 @@ function render() {
   }
   // hộp thoại (thoát · nộp bài · in đề) nổi trên mọi màn hình, không riêng màn làm bài
   app.innerHTML = html + (state.modal || '');
+  typesetMath(app);
   if (state.celebrate) animCelebrate();
 }
 window.nav = nav;
@@ -1060,5 +1157,8 @@ window.state = state;
 /* đổi kích thước cửa sổ qua ngưỡng desktop/mobile -> vẽ lại layout bài thi */
 window.matchMedia('(min-width: 900px)').addEventListener('change', () => render());
 
+/* KaTeX nạp kiểu defer nên chạy sau lần vẽ đầu — nạp xong thì vẽ lại công thức. */
+window.__katexReady = () => typesetMath(app);
+
 render();
-if (store.user) nav('home');
+if (gate.ok && store.user) nav('home');
