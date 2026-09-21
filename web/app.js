@@ -50,6 +50,7 @@ const state = {
   celebrate: null,     // dữ liệu popup ăn mừng sau khi nộp
   who: null,           // bạn con vật ra ăn mừng lần này (bốc ngẫu nhiên lúc nộp)
   lastWho: null,       // bạn của lần trước — để lần này chắc chắn ra bạn khác
+  srcFilter: '',       // môn gộp: chỉ xem đề của một bộ gốc ('' = xem tất cả)
   matchSel: null,      // ảnh đang chọn trong câu "nối ảnh với từ"
   hintOpen: {},        // những câu bé đã bấm xin gợi ý
   hintTxt: {},         // gợi ý đã lấy được cho từng câu (null = đang hỏi)
@@ -77,12 +78,79 @@ const getExam = (id) => {
 };
 const subjectOfExam = (id) => SUBJECTS.find(s => s.exams && s.exams.some(e => e.id === id));
 
+/* ═══════════ GỘP CÁC BANK TOÁN CỦA KHỐI 2–5 THÀNH 3 MÔN ═══════════
+   Trước đây mỗi bộ đề toán là một ô riêng: khối 2 có tới 11 ô (Tư duy, MathX,
+   FMO, AMO, ASMO, HSG, nâng cao, qua hình…) nên màn hình chọn môn rối và khó
+   biết nên vào ô nào. Nay chỉ còn ba ô theo mục đích luyện tập. Dữ liệu gốc
+   KHÔNG bị sửa: mỗi đề vẫn giữ nguyên id (nên điểm đã lưu không mất) và được
+   dán nhãn bộ đề gốc để vẫn biết đề đến từ đâu. */
+const MATH_MERGE = [
+  {
+    id: 'tu-duy', name: 'Toán tư duy', icon: '💡',
+    desc: 'suy luận, tìm quy luật, toán qua hình và các bộ đề thi tư duy',
+    ids: ['tuduy', 'ttd2', 'mathx', 'fmo2', 'amo2', 'asmo', 'hinh2', 'hinhb2', 'vio2-toan', 'vio2-tanh',
+      'ttd3', 'ttw3', 'hinh3', 'hinhb3', 'vio3-toan', 'vio3-tanh',
+      'ttd4', 'hinh4', 'hinhb4',
+      'ttd5', 'hinh5', 'hinhb5'],
+  },
+  {
+    id: 'nang-cao', name: 'Toán nâng cao', icon: '🥇',
+    desc: 'bồi dưỡng học sinh giỏi: tính nhanh, suy luận và toán có lời văn khó',
+    ids: ['hsg2', 'nc2', 'hsg3', 'nc4', 'nc5'],
+  },
+  {
+    id: 'cuoi-ki', name: 'Toán cuối kì', icon: '📘',
+    desc: 'bám sát chương trình trên lớp, luyện đúng dạng đề kiểm tra cuối kì',
+    ids: ['toan', 'ck2-l3', 'toan4', 'toan5'],
+  },
+];
+const MATH_MERGE_GRADES = [2, 3, 4, 5];
+
+function mergeMathBanks() {
+  const out = [];
+  const made = new Set();                       // 'nhóm|khối' đã dựng rồi thì thôi
+  for (const s of SUBJECTS) {
+    const g = gradeOf(s);
+    const grp = MATH_MERGE_GRADES.includes(g) ? MATH_MERGE.find(m => m.ids.includes(s.id)) : null;
+    if (!grp) { out.push(s); continue; }
+
+    const key = grp.id + '|' + g;
+    if (made.has(key)) continue;                // các bank sau của cùng nhóm đã gộp vào ô đầu
+    made.add(key);
+
+    // Lấy đúng thứ tự đã liệt kê trong `ids` để đề của cùng một bộ nằm liền nhau.
+    const parts = grp.ids.map(id => SUBJECTS.find(x => x.id === id && gradeOf(x) === g)).filter(Boolean);
+    const exams = parts.flatMap(p => (p.exams || []).map(e => ({ ...e, _src: p.short || p.name })));
+    const nQ = exams.reduce((t, e) => t + e.questions.length, 0);
+    out.push({
+      id: `${grp.id}${g}`, name: grp.name, short: `${grp.name} ${g}`, icon: grp.icon, grade: g,
+      ready: parts.some(p => p.ready), exams,
+      heroTitle: `${grp.name} lớp ${g} — ${grp.desc}`,
+      heroMeta: `📚 ${exams.length} đề &nbsp;•&nbsp; ${nQ} câu &nbsp;•&nbsp; gộp từ ${parts.length} bộ đề: ${parts.map(p => p.short || p.name).join(', ')}`,
+    });
+  }
+  SUBJECTS.length = 0;
+  SUBJECTS.push(...out);
+}
+
 /* ══════════════ SỐ CÂU MỖI ĐỀ — 5 · 10 · 15 · 20 · 25 hoặc cả đề ══════════════
    Bé (hoặc bố mẹ) chọn ở màn hình chính. Đề nào ít câu hơn mức đã chọn thì giữ
    nguyên cả đề. Các câu được lấy TRẢI ĐỀU nên vẫn đủ các phần của đề gốc, và
    luôn ra cùng một bộ câu với cùng (tổng số câu, số câu muốn làm) — nhờ vậy bấm
    "Xem lại" sau khi nộp vẫn đúng những câu bé đã làm. Thời gian rút theo tỉ lệ. */
 const QCOUNTS = [5, 10, 15, 20, 25];
+
+/* Đề THCS (khối 6 trở lên) viết theo ma trận 9 nhận biết · 9 thông hiểu · 3 vận
+   dụng · 9 nâng cao. Cắt bớt câu là hỏng ma trận và hỏng luôn cách đề phân loại
+   học sinh, nên từ khối 6 luôn làm TRỌN đề — ô "số câu mỗi đề" không áp dụng. */
+const FULL_EXAM_FROM_GRADE = 6;
+const alwaysFull = (g) => g >= FULL_EXAM_FROM_GRADE;
+/* Số câu thật sự sẽ làm cho một môn: khối 6+ thì trọn đề, còn lại theo lựa chọn. */
+const qCountFor = (sub) => (sub && alwaysFull(gradeOf(sub)) ? 0 : state.qCount);
+/* Đề dài nhất của một khối — dùng để không mời chọn mức câu mà khối đó không có. */
+const maxQOfGrade = (g) => subjectsOfGrade(g)
+  .filter(s => s.ready && s.exams)
+  .reduce((m, s) => s.exams.reduce((u, e) => Math.max(u, e.questions.length), m), 0);
 
 function trimExam(exam, n) {
   if (!exam || !n || exam.questions.length <= n) return exam;
@@ -109,6 +177,7 @@ const plain = (s) => String(s == null ? '' : s)
 const cut = (s, n) => (s.length > n ? s.slice(0, n).trimEnd() + '…' : s);
 
 function nav(screen, extra = {}) {
+  if (extra.subj && extra.subj !== state.subj) state.srcFilter = '';  // đổi môn thì bỏ bộ lọc cũ
   Object.assign(state, { screen }, extra);
   render();
   window.scrollTo(0, 0);
@@ -304,11 +373,25 @@ function vHome() {
     </div>
 
     <div class="sect-title">Số câu mỗi đề</div>
+    ${(() => {
+      /* Nói thẳng số câu khối này thật sự có. Trước đây chọn "25 câu" ở lớp 4 mà
+         vào đề vẫn 10 câu — vì đề lớp 4 chỉ có 10 câu — dễ tưởng là lỗi. */
+      const maxQ = maxQOfGrade(state.grade);
+      if (alwaysFull(state.grade)) return `
+    <div class="small muted" style="margin:-4px 0 14px">Đề khối ${state.grade} luôn làm <b>trọn ${maxQ} câu</b>: đề THCS viết theo ma trận nhận biết – thông hiểu – vận dụng – nâng cao, cắt bớt câu là hỏng cách đề phân loại học sinh.</div>`;
+      /* Mức đã chọn lớn hơn đề dài nhất của khối thì thực tế là làm cả đề —
+         tô sáng đúng cái đang có tác dụng, đừng tô một nút không dùng được. */
+      const eff = state.qCount > maxQ ? 0 : state.qCount;
+      return `
     <div class="chips">
-      ${[0, ...QCOUNTS].map(n => `<button class="pick ${n === state.qCount ? 'active' : ''}"
-        onclick="setQCount(${n})">${n ? n + ' câu' : 'Cả đề'}</button>`).join('')}
+      ${[0, ...QCOUNTS].map(n => {
+        const over = n > maxQ;                 // khối này không có đề nào dài tới mức đó
+        return `<button class="pick ${n === eff ? 'active' : ''} ${over ? 'locked' : ''}"
+          ${over ? 'disabled' : `onclick="setQCount(${n})"`}>${n ? n + ' câu' : 'Cả đề'}</button>`;
+      }).join('')}
     </div>
-    <div class="small muted" style="margin:-4px 0 14px">Đề dài hơn sẽ lấy ${state.qCount ? `<b>${state.qCount}</b> câu trải đều khắp đề` : 'toàn bộ số câu'}, thời gian rút theo tỉ lệ và điểm vẫn quy về thang 10.</div>
+    <div class="small muted" style="margin:-4px 0 14px">Đề lớp ${state.grade} dài nhất <b>${maxQ} câu</b> nên các mức lớn hơn bị mờ đi. Chọn mức nhỏ hơn thì lấy đúng số câu đó trải đều khắp đề, thời gian rút theo tỉ lệ và điểm vẫn quy về thang 10; đề ngắn hơn mức đã chọn thì giữ nguyên cả đề.</div>`;
+    })()}
 
     <div class="sect-title">Môn học — Lớp ${state.grade}</div>
     <div class="subj-grid">
@@ -333,12 +416,18 @@ window.setGrade = (g) => {
   render();
 };
 
+window.setSrc = (s) => { state.srcFilter = s; render(); window.scrollTo(0, 0); };
+
 /* ================= SUBJECT (exam list) ================= */
 function vSubject() {
   const sub = getSubject(state.subj) || SUBJECTS[0];
   const res = store.results;
   const grade = gradeOf(sub);
-  const exams = sub.exams;
+  const all = sub.exams;
+  /* Môn Toán gộp có thể tới vài trăm đề. Cho lọc theo bộ đề gốc để danh sách
+     ngắn lại và vẫn biết đề đến từ bộ nào. */
+  const srcs = [...new Set(all.map(e => e._src).filter(Boolean))];
+  const exams = state.srcFilter ? all.filter(e => e._src === state.srcFilter) : all;
   const done = exams.filter(e => res[e.id]).length;
   const avg = done ? exams.reduce((s, e) => s + (res[e.id] ? res[e.id].best : 0), 0) / done : 0;
   return `
@@ -356,9 +445,16 @@ function vSubject() {
       <div class="card" style="flex:1"><div class="small muted">Tiến độ</div><div class="v blue" style="font-size:22px;font-weight:800">${done}/${exams.length}</div></div>
       <div class="card" style="flex:1"><div class="small muted">Điểm trung bình</div><div class="v green" style="font-size:22px;font-weight:800">${done ? fmtScore(avg) : '—'}</div></div>
     </div>
-    <div class="sect-title">Danh sách đề thi</div>
+    ${srcs.length > 1 ? `
+    <div class="sect-title">Bộ đề</div>
+    <div class="chips">
+      <button class="pick ${state.srcFilter ? '' : 'active'}" onclick="setSrc('')">Tất cả (${all.length})</button>
+      ${srcs.map(s => `<button class="pick ${state.srcFilter === s ? 'active' : ''}"
+        onclick="setSrc('${esc(s).replace(/'/g, "\\'")}')">${esc(s)} (${all.filter(e => e._src === s).length})</button>`).join('')}
+    </div>` : ''}
+    <div class="sect-title">Danh sách đề thi${state.srcFilter ? ` — ${esc(state.srcFilter)}` : ''}</div>
     ${exams.map((e0, i) => {
-      const e = trimExam(e0, state.qCount);      // hiện đúng số câu · số phút bé sắp làm
+      const e = trimExam(e0, qCountFor(sub));    // hiện đúng số câu · số phút bé sắp làm
       const r = res[e.id];
       const n = i + 1;
       return `
@@ -366,7 +462,7 @@ function vSubject() {
         <div class="head">
           <div class="ic">${n < 10 ? '0' + n : n}</div>
           <div>
-            <div class="ttl">${e.title} — ${sub.short}</div>
+            <div class="ttl">${e.title} — ${e0._src || sub.short}</div>
             <div class="meta">⏱ ${e.time} phút · ${e.questions.length} câu hỏi · thang điểm 10</div>
           </div>
           ${r ? `<div class="badge-score"><div class="s">${fmtScore(r.best)}</div><div class="t">điểm cao nhất</div></div>` : ''}
@@ -383,11 +479,12 @@ function vSubject() {
 
 /* ================= EXAM ================= */
 window.startExam = (id) => {
-  const exam = trimExam(getExam(id), state.qCount);
   const sub = subjectOfExam(id);
+  const qn = qCountFor(sub);                 // khối 6+ luôn trọn đề, không cắt theo ô đã chọn
+  const exam = trimExam(getExam(id), qn);
   if (sub) { state.subj = sub.id; state.grade = gradeOf(sub); }
   state.examId = id;
-  state.examQn = state.qCount;
+  state.examQn = qn;
   state.qIndex = 0;
   state.answers = {};
   state.matchSel = null;
@@ -1160,5 +1257,6 @@ window.matchMedia('(min-width: 900px)').addEventListener('change', () => render(
 /* KaTeX nạp kiểu defer nên chạy sau lần vẽ đầu — nạp xong thì vẽ lại công thức. */
 window.__katexReady = () => typesetMath(app);
 
+mergeMathBanks();   // phải chạy trước lần vẽ đầu, sau khi mọi data-*.js đã nạp xong
 render();
 if (gate.ok && store.user) nav('home');

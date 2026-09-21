@@ -273,25 +273,34 @@ img { max-width: 100%; }
   position: sticky; top: 0; z-index: 30; background: rgba(247, 250, 255, .95);
   backdrop-filter: blur(10px); border-bottom: 2px solid var(--outline-variant);
 }
-.exam-top .r1 { display: flex; align-items: center; gap: 10px; padding: 10px 16px 4px; }
-.exam-top .ttl { font-family: var(--f-display); font-weight: 800; font-size: 18px; color: var(--primary); flex: 1; }
+/* Trên điện thoại thanh này dính ở đỉnh màn hình, nên phải GỌN: tên đề dài
+   (đề THCS kiểu "Đề 42 · Tổng hợp cuối năm — đề 2") mà xuống dòng là thanh cao
+   gấp đôi và che mất câu hỏi. Giữ tên đề đúng một dòng, cắt bằng dấu "…" —
+   tên đầy đủ vẫn đọc được ở danh sách đề và ở màn hình kết quả. */
+.exam-top .r1 { display: flex; align-items: center; gap: 8px; padding: 7px 12px 2px; }
+.exam-top .ttl {
+  font-family: var(--f-display); font-weight: 800; font-size: 15.5px; color: var(--primary);
+  flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.exam-top .icon-btn { width: 36px; height: 36px; font-size: 17px; }
 .timer {
-  font-family: var(--f-display); font-variant-numeric: tabular-nums; font-weight: 800; font-size: 17px;
+  font-family: var(--f-display); font-variant-numeric: tabular-nums; font-weight: 800; font-size: 15px;
   background: var(--blue-l); color: var(--primary); border: 2px solid #c9d8ff;
-  border-radius: 999px; padding: 5px 14px; min-width: 78px; text-align: center;
+  border-radius: 999px; padding: 4px 11px; min-width: 64px; text-align: center;
 }
 .timer.low { background: var(--coral-l); color: var(--coral-d); border-color: #ffc4c4; animation: pulse 1s infinite; }
 @keyframes pulse { 50% { transform: scale(1.07); } }
 .btn-submit {
-  background: var(--green); color: #fff; border-radius: 999px; padding: 9px 18px;
-  font-family: var(--f-display); font-weight: 800; font-size: 15px;
+  background: var(--green); color: #fff; border-radius: 999px; padding: 8px 13px;
+  font-family: var(--f-display); font-weight: 800; font-size: 13.5px;
   box-shadow: 0 3px 0 var(--green-d); transition: transform .1s, box-shadow .1s;
+  flex: none; white-space: nowrap;
 }
 .btn-submit:active { transform: translateY(3px); box-shadow: none; }
-.exam-top .r2 { display: flex; align-items: center; gap: 10px; padding: 6px 16px 12px; }
-.exam-top .prog-txt { font-size: 13.5px; font-weight: 700; color: var(--on-surface-variant); white-space: nowrap; }
+.exam-top .r2 { display: flex; align-items: center; gap: 8px; padding: 3px 12px 8px; }
+.exam-top .prog-txt { font-size: 12px; font-weight: 700; color: var(--on-surface-variant); white-space: nowrap; }
 .exam-top .prog-txt b { color: var(--primary); font-family: var(--f-display); }
-.track { flex: 1; height: 12px; background: var(--surface-high); border-radius: 999px; overflow: hidden; }
+.track { flex: 1; height: 8px; background: var(--surface-high); border-radius: 999px; overflow: hidden; }
 .track .fill {
   height: 100%; border-radius: 999px; transition: width .3s cubic-bezier(.3, 1, .4, 1);
   background: linear-gradient(90deg, #34d68e, var(--green));
@@ -548,6 +557,29 @@ table.cal td.q { color: var(--error); font-weight: 800; }
   #app { max-width: 720px; }
   .subj-grid { grid-template-columns: repeat(4, 1fr); }
   .qnav .grid { grid-template-columns: repeat(10, 1fr); }
+  /* màn hình rộng thì không còn phải tiết kiệm chiều cao: trả lại cỡ chữ dễ đọc */
+  .exam-top .r1 { gap: 10px; padding: 10px 16px 4px; }
+  .exam-top .ttl { font-size: 18px; white-space: normal; }
+  .exam-top .icon-btn { width: 42px; height: 42px; font-size: 19px; }
+  .timer { font-size: 17px; padding: 5px 14px; min-width: 78px; }
+  .btn-submit { font-size: 15px; padding: 9px 18px; }
+  .exam-top .r2 { gap: 10px; padding: 6px 16px 12px; }
+  .exam-top .prog-txt { font-size: 13.5px; }
+  .track { height: 12px; }
+}
+
+/* Điện thoại nhỏ: tiêu đề màn hình và hero cũng phải nhường chỗ cho nội dung. */
+@media (max-width: 480px) {
+  .topbar { padding: 9px 12px; gap: 10px; }
+  .topbar h1 { font-size: 18px; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .topbar .icon-btn { width: 36px; height: 36px; font-size: 17px; }
+  .screen { padding: 12px; gap: 13px; }
+  .hero { padding: 18px 16px; }
+  .hero h2 { font-size: 21px; margin: 10px 0 5px; }
+  .hero .meta { font-size: 12.5px; margin-bottom: 13px; }
+  .qcard { padding: 15px 13px; }
+  .qtext { font-size: 17px; }
+  .opt { font-size: 16px; padding: 12px 12px; }
 }
 
 /* ===== desktop: trải hết câu hỏi 1 trang + chữ/hình to hơn ===== */

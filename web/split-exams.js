@@ -70,8 +70,15 @@
     return out;
   }
 
+  /* Đề THCS (khối 6 trở lên) được viết trọn 30 câu theo ma trận 9 nhận biết ·
+     9 thông hiểu · 3 vận dụng · 9 nâng cao, và các câu nâng cao được rải sao cho
+     học sinh không đoán được độ khó theo vị trí. Cắt đôi cắt ba là mất hết cấu
+     trúc đó, nên từ khối 6 giữ nguyên đề. */
+  const KEEP_WHOLE_FROM_GRADE = 6;
+
   for (const sub of SUBJECTS) {
     if (!sub.exams || !sub.exams.length) continue;
+    if ((sub.grade || 2) >= KEEP_WHOLE_FROM_GRADE) continue;
     const list = sub.exams.flatMap(splitExam);
     if (list.length !== sub.exams.length) {
       sub.exams.splice(0, sub.exams.length, ...list);  // sửa tại chỗ để giữ các tham chiếu cũ (EXAMS…)
