@@ -26,19 +26,19 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 
 | Bank | File dữ liệu | Đề đã có | Còn lại |
 |------|--------------|---------:|--------:|
-| Toán 6 | `web/data-toan6.js` | **6** | 44 |
+| Toán 6 | `web/data-toan6.js` | **9** | 41 |
 | Toán 7 | `web/data-toan7.js` | 0 | 50 |
 | Toán 8 | `web/data-toan8.js` | 0 | 50 |
 | Toán 9 | `web/data-toan9.js` | 0 | 50 |
-| KHTN 6 | `web/data-khtn6.js` | **3** | 47 |
+| KHTN 6 | `web/data-khtn6.js` | **6** | 44 |
 | KHTN 7 | `web/data-khtn7.js` | 0 | 50 |
 | KHTN 8 | `web/data-khtn8.js` | 0 | 50 |
 | KHTN 9 | `web/data-khtn9.js` | 0 | 50 |
-| Tiếng Anh 6 | `web/data-tienganh6.js` | 0 | 50 |
+| Tiếng Anh 6 | `web/data-tienganh6.js` | **2** | 48 |
 | Tiếng Anh 7 | `web/data-tienganh7.js` | 0 | 50 |
 | Tiếng Anh 8 | `web/data-tienganh8.js` | 0 | 50 |
 | Tiếng Anh 9 | `web/data-tienganh9.js` | 0 | 50 |
-| | **TỔNG** | **9** | **591** |
+| | **TỔNG** | **17** | **583** |
 
 *(12 đề `.md` hiện có sẽ được tính vào cột "đã có" sau khi chuyển sang `.js`.)*
 
