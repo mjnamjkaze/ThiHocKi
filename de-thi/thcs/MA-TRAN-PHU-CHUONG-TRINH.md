@@ -34,11 +34,11 @@ Tài liệu này là **hợp đồng phủ chương trình**: duyệt ma trận 
 | KHTN 7 | `web/data-khtn7.js` | 0 | 50 |
 | KHTN 8 | `web/data-khtn8.js` | 0 | 50 |
 | KHTN 9 | `web/data-khtn9.js` | 0 | 50 |
-| Tiếng Anh 6 | `web/data-tienganh6.js` | **12** | 38 |
+| Tiếng Anh 6 | `web/data-tienganh6.js` | **20** | 30 |
 | Tiếng Anh 7 | `web/data-tienganh7.js` | 0 | 50 |
 | Tiếng Anh 8 | `web/data-tienganh8.js` | 0 | 50 |
 | Tiếng Anh 9 | `web/data-tienganh9.js` | 0 | 50 |
-| | **TỔNG** | **61** | **539** |
+| | **TỔNG** | **69** | **531** |
 
 *(12 đề `.md` hiện có sẽ được tính vào cột "đã có" sau khi chuyển sang `.js`.)*
 
