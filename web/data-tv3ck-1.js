@@ -39,6 +39,19 @@
 //  3904: đáp án in kèm thuộc một mã đề khác (câu 3 ghi “D” trong khi đề chỉ có A–C, câu 7 nối các câu khác
 //        với đề) → giải lại: 1B (Đúng), 2A, 3C, 4A, 5B, câu 7: 1–kể, 2–cảm, 3–khiến, 4–hỏi.
 //  3905: đề không kèm đáp án → tự giải toàn bộ.
+//
+// KIỂM ĐỊNH LẦN 2 (soát độc lập, đối chiếu lại 5 trang nguồn + văn bản SGK KNTT trên loigiaihay/vietjack):
+//  - Đã giải lại độc lập mọi câu trắc nghiệm của 3901–3905 (kể cả 3902 câu 1–4, 3903/3905 không có đáp án,
+//    3904 đáp án thuộc mã đề khác): kết quả trùng với `ans` hiện có. Tổng điểm mỗi đề = 10, tỉ lệ đúng đề gốc.
+//  - Đã khớp nguyên văn SGK: đoạn chính tả Đi tìm mặt trời (tr.117), Tôi yêu em tôi (tr.106, 4 khổ), Kho sách
+//    của ông bà (tr.99), Những bậc đá chạm mây (tr.113), Tia nắng bé nhỏ (tr.97) và 5 đoạn đọc thành tiếng.
+//  - 3901 câu 8a/8b: thêm alts viết liền gạch nối “lở-bồi”, “bồi-lở”, “đục-trong”, “trong-đục”.
+//  - 3903 câu 11: thêm alts HS viết cả từ “quạt nan, hoa lan, gian nan, nguy nan, lan toả/tỏa”.
+//  - 3903 câu 2 phương án D: đề gốc in “chỗ đầy thoáng mát và đầy nắng” — người nhập đã bỏ chữ “đầy” thừa
+//    (ghi lại cho đủ).
+//  - Biểu điểm chính tả viết lại theo hướng dẫn chấm gốc của từng trường (chia đôi): 3901 Liên Hồng (4 ý × 0,5;
+//    mỗi lỗi −0,125; chữ xấu/bẩn −0,5 toàn bài), 3902 Ba Vì (mỗi lỗi −0,25; −0,5 toàn bài), 3904 Hưng Đạo (kiểu/cỡ chữ
+//    0,25 – chính tả 1,5 – trình bày 0,25). 3903, 3905 đề gốc không có biểu điểm → giữ mức thông dụng, có ghi chú.
 
 /* ── Bài đọc dùng chung ─────────────────────────────────────────────────────── */
 
@@ -67,8 +80,9 @@ const TV3CK1_R5 = '<b>Con Lừa khôn ngoan</b><br>Một con Lừa đang vui v�
 /* Tiêu chí chấm đọc thành tiếng (4 điểm gốc → 2 điểm) — dùng chung */
 const TV3CK1_TT_CHAM = '<b>Chấm (2 điểm — quy đổi từ 4 điểm của đề gốc):</b><br>• Đọc vừa đủ nghe, rõ ràng; tốc độ đạt yêu cầu (khoảng 70–80 tiếng/phút): 0,5 điểm.<br>• Đọc đúng tiếng, từ (không đọc sai quá 5 tiếng): 0,5 điểm.<br>• Ngắt nghỉ hơi đúng ở các dấu câu, các cụm từ rõ nghĩa: 0,5 điểm.<br>• Trả lời đúng câu hỏi về nội dung đoạn đọc: 0,5 điểm.';
 
-/* Tiêu chí chấm chính tả / viết đoạn văn (đã chia đôi) */
-const TV3CK1_CT_CHAM = '<b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> tốc độ đạt yêu cầu 0,5; chữ viết rõ ràng, đúng kiểu chữ, cỡ chữ 0,5; viết đúng chính tả (không mắc quá 5 lỗi) 0,5; trình bày đúng quy định, viết sạch, đẹp 0,5. Từ lỗi thứ 6 trở đi, mỗi lỗi (sai – lẫn phụ âm đầu, vần, thanh, không viết hoa đúng quy định) trừ 0,125 điểm; các lỗi giống nhau chỉ trừ một lần.';
+/* Tiêu chí chấm chính tả dùng cho 3903, 3905 (đề gốc không có biểu điểm); 3901, 3902, 3904 có biểu điểm riêng theo trường.
+   Tiêu chí viết đoạn văn (đã chia đôi) */
+const TV3CK1_CT_CHAM = '<b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> <i>(đề gốc không kèm biểu điểm; chấm theo mức thông dụng)</i> tốc độ đạt yêu cầu 0,5; chữ viết rõ ràng, đúng kiểu chữ, cỡ chữ 0,5; viết đúng chính tả (không mắc quá 5 lỗi) 0,5; trình bày đúng quy định, viết sạch, đẹp 0,5. Từ lỗi thứ 6 trở đi, mỗi lỗi (sai – lẫn phụ âm đầu, vần, thanh, không viết hoa đúng quy định) trừ 0,125 điểm; các lỗi giống nhau chỉ trừ một lần.';
 const TV3CK1_TLV_CHAM = '<b>Chấm (3 điểm — quy đổi từ 6 điểm):</b> Nội dung đủ các ý theo yêu cầu, có câu mở đoạn và câu kết đoạn: 1,5 điểm. Kĩ năng: chữ viết, chính tả 0,5 điểm; dùng từ, đặt câu đúng 0,5 điểm; có sáng tạo, câu văn có cảm xúc, có hình ảnh so sánh 0,5 điểm. Viết lạc đề hoặc quá ít câu thì tuỳ mức độ trừ điểm.';
 
 TV3CK.push(
@@ -124,16 +138,16 @@ TV3CK.push(
       why: 'Dòng C chỉ toàn từ chỉ đặc điểm (màu sắc, mùi, kích thước). Dòng A có “ngôi nhà” (sự vật), “chăm sóc” (hoạt động); dòng B có “giáo viên”, “vui chơi”; dòng D có “chạy nhảy” (hoạt động).' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 8a', pts: 0.25, type: 'type', read: TV3CK1_R1,
       text: 'Tìm và viết lại các cặp từ có nghĩa trái ngược nhau trong câu ca dao sau:<br><i>Dòng sông bên lở, bên bồi<br>Bên lở thì đục, bên bồi thì trong.</i><br>Cặp thứ nhất (viết hai từ, cách nhau dấu gạch ngang):',
-      ans: 'lở - bồi', alts: ['lở bồi', 'lở – bồi', 'bồi - lở', 'bồi lở', 'lở và bồi'],
+      ans: 'lở - bồi', alts: ['lở bồi', 'lở – bồi', 'lở-bồi', 'bồi - lở', 'bồi-lở', 'bồi lở', 'lở và bồi'],
       why: '“Lở” (đất bờ sông sụt xuống) trái nghĩa với “bồi” (đất phù sa đắp thêm vào).' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 8b', pts: 0.25, type: 'type', read: TV3CK1_R1,
       text: 'Câu ca dao: <i>Dòng sông bên lở, bên bồi / Bên lở thì đục, bên bồi thì trong.</i><br>Cặp từ trái nghĩa thứ hai:',
-      ans: 'đục - trong', alts: ['đục trong', 'đục – trong', 'trong - đục', 'trong đục', 'đục và trong'],
+      ans: 'đục - trong', alts: ['đục trong', 'đục – trong', 'đục-trong', 'trong - đục', 'trong-đục', 'trong đục', 'đục và trong'],
       why: 'Nước “đục” trái nghĩa với nước “trong”.' },
 
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 1', pts: 2, type: 'write', lines: 6,
       text: 'Nghe – viết: <b>Đi tìm mặt trời</b> (đoạn từ “Kì lạ thay” đến “một cụm lửa hồng” — SGK Tiếng Việt 3 tập 1, trang 117).',
-      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Đi tìm mặt trời</b><br>Kì lạ thay, gà trống vừa dứt tiếng kêu đầu thì sương tan. Dứt tiếng kêu thứ hai, sao lặn. Dứt tiếng kêu thứ ba, đằng đông ửng sáng, mặt trời hiện ra. Mặt trời vươn những cánh tay ánh sáng đính lên đầu gà trống một cụm lửa hồng.<br>' + TV3CK1_CT_CHAM },
+      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Đi tìm mặt trời</b><br>Kì lạ thay, gà trống vừa dứt tiếng kêu đầu thì sương tan. Dứt tiếng kêu thứ hai, sao lặn. Dứt tiếng kêu thứ ba, đằng đông ửng sáng, mặt trời hiện ra. Mặt trời vươn những cánh tay ánh sáng đính lên đầu gà trống một cụm lửa hồng.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm, theo hướng dẫn chấm của trường):</b> tốc độ đạt yêu cầu 0,5; chữ viết rõ ràng, viết đúng chữ, cỡ chữ 0,5; viết đúng chính tả (không mắc quá 5 lỗi) 0,5; trình bày đúng quy định, viết sạch, đẹp 0,5. Mỗi lỗi chính tả (sai, lẫn phụ âm đầu hoặc vần, thanh; không viết hoa đúng quy định) trừ 0,125 điểm. Chữ viết không rõ ràng, sai độ cao – khoảng cách – kiểu chữ hoặc trình bày bẩn: trừ 0,5 điểm toàn bài.' },
 
     { sec: 'B. Kiểm tra viết — II. Tập làm văn', name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Đề bài:</b> Em hãy viết đoạn văn tả ngôi nhà của mình (từ 5 đến 6 câu).<br>Gợi ý:<br>– Giới thiệu về ngôi nhà: Nhà của em ở đâu?<br>– Tả bao quát về ngôi nhà: hình dáng, cảnh vật xung quanh.<br>– Tả đặc điểm ngôi nhà: bên ngoài, bên trong.<br>– Nêu tình cảm của em đối với ngôi nhà.',
@@ -172,7 +186,7 @@ TV3CK.push(
       model: 'Câu chuyện khuyên em hãy biết làm việc tốt, giúp đỡ mọi người. Tấm lòng tốt bụng luôn được mọi người yêu quý và trân trọng.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 6', pts: 0.5, type: 'write', lines: 3, read: TV3CK1_R2,
       text: 'Xếp các từ in đậm trong đoạn văn dưới đây vào nhóm thích hợp:<br><i>Na không hiểu mình có <b>nghe</b> nhầm không. <b>Đỏ bừng</b> mặt, <b>cô bé</b> đứng dậy <b>bước</b> lên <b>bục</b>. Tiếng vỗ tay <b>vang dậy</b>. Mẹ của Na <b>lặng lẽ</b> chấm <b>khăn</b> lên <b>đôi mắt</b> đỏ hoe.</i><br>– Từ ngữ chỉ sự vật: ……<br>– Từ ngữ chỉ hoạt động: ……<br>– Từ ngữ chỉ đặc điểm: ……',
-      model: '– Từ ngữ chỉ sự vật: <b>cô bé, bục, khăn, đôi mắt</b>.<br>– Từ ngữ chỉ hoạt động: <b>nghe, bước</b>.<br>– Từ ngữ chỉ đặc điểm: <b>đỏ bừng, vang dậy, lặng lẽ</b>.<br>(Theo hướng dẫn chấm của trường. Trang nguồn làm mất chữ in đậm của đề; các từ in đậm ở đây được khôi phục theo đáp án.)' },
+      model: '– Từ ngữ chỉ sự vật: <b>cô bé, bục, khăn, đôi mắt</b>.<br>– Từ ngữ chỉ hoạt động: <b>nghe, bước</b>.<br>– Từ ngữ chỉ đặc điểm: <b>đỏ bừng, vang dậy, lặng lẽ</b>.<br>(Theo hướng dẫn chấm của trường. Trang nguồn làm mất chữ in đậm của đề; các từ in đậm ở đây được khôi phục theo đáp án.)<br><i>Lưu ý khi chấm:</i> “vang dậy” (tiếng vỗ tay vang dậy) được trường xếp vào từ chỉ đặc điểm; nếu con xếp vào từ chỉ hoạt động thì vẫn chấp nhận, vì từ này có thể hiểu theo cả hai cách.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 7', pts: 0.5, read: TV3CK1_R2,
       text: 'Câu nào sau đây là câu hỏi?',
       opts: o4('Na là một cô bé tốt bụng.', 'Mẹ của Na lặng lẽ chấm khăn lên đôi mắt đỏ hoe.', 'Vì sao Na được các bạn trong lớp yêu quý?', 'Từng học sinh giỏi bước lên bục nhận phần thưởng.'), ans: 'C',
@@ -196,7 +210,7 @@ TV3CK.push(
 
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 1', pts: 2, type: 'write', lines: 8,
       text: 'Nghe – viết: <b>Tôi yêu em tôi</b> (SGK Tiếng Việt 3 tập 1, trang 106).',
-      model: 'Bố mẹ đọc chậm từng dòng thơ cho con viết (viết cả tên bài; hết mỗi khổ thơ để cách một dòng):<br><b>Tôi yêu em tôi</b><br>Tôi yêu em tôi<br>Nó cười rúc rích<br>Mỗi khi tôi đùa<br>Nó vui, nó thích.<br><br>Mắt nó đen ngời<br>Trong veo như nước<br>Miệng nó tươi hồng<br>Nói như khướu hót.<br><br>Hoa lan, hoa lí<br>Nó nhặt cài đầu<br>Hương thơm theo nó<br>Sân trước vườn sau.<br><br>Tôi đi đâu lâu<br>Nó mong, nó nhắc<br>Nó nấp sau cây<br>Òa ra ôm chặt.<br><i>(Phạm Hổ)</i><br>' + TV3CK1_CT_CHAM },
+      model: 'Bố mẹ đọc chậm từng dòng thơ cho con viết (viết cả tên bài; hết mỗi khổ thơ để cách một dòng):<br><b>Tôi yêu em tôi</b><br>Tôi yêu em tôi<br>Nó cười rúc rích<br>Mỗi khi tôi đùa<br>Nó vui, nó thích.<br><br>Mắt nó đen ngời<br>Trong veo như nước<br>Miệng nó tươi hồng<br>Nói như khướu hót.<br><br>Hoa lan, hoa lí<br>Nó nhặt cài đầu<br>Hương thơm theo nó<br>Sân trước vườn sau.<br><br>Tôi đi đâu lâu<br>Nó mong, nó nhắc<br>Nó nấp sau cây<br>Òa ra ôm chặt.<br><i>(Phạm Hổ)</i><br><b>Chấm (2 điểm — quy đổi từ 4 điểm, theo hướng dẫn chấm của trường):</b> bài viết không mắc lỗi chính tả, chữ viết rõ ràng, trình bày đúng: 2 điểm. Mỗi lỗi chính tả (sai âm đầu, vần, thanh; không viết hoa đúng quy định) trừ 0,25 điểm. Chữ viết không rõ ràng, sai độ cao, khoảng cách, kiểu chữ hoặc trình bày bẩn: trừ 0,5 điểm toàn bài.' },
 
     { sec: 'B. Kiểm tra viết — II. Tập làm văn', name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Đề bài:</b> Viết đoạn văn tả một đồ dùng học tập của em.',
@@ -256,7 +270,7 @@ TV3CK.push(
       why: 'Câu khuyên bảo, đề nghị (có “đừng… nhé”) là câu khiến, cuối câu đặt dấu chấm than.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 11', pts: 0.25, type: 'type', read: TV3CK1_R3,
       text: 'Chọn tiếng trong ngoặc đơn điền vào từng chỗ trống: <b>(lan, nan)</b><br>quạt …… , hoa …… , gian …… , nguy …… , …… toả.<br>Viết 5 tiếng cần điền theo đúng thứ tự, cách nhau dấu phẩy.',
-      ans: 'nan, lan, nan, nan, lan', alts: ['nan,lan,nan,nan,lan', 'nan lan nan nan lan'],
+      ans: 'nan, lan, nan, nan, lan', alts: ['nan,lan,nan,nan,lan', 'nan lan nan nan lan', 'quạt nan, hoa lan, gian nan, nguy nan, lan toả', 'quạt nan, hoa lan, gian nan, nguy nan, lan tỏa'],
       why: 'quạt <b>nan</b> (quạt đan bằng nan tre), hoa <b>lan</b>, gian <b>nan</b>, nguy <b>nan</b>, <b>lan</b> toả.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 12', pts: 0.25, type: 'write', lines: 1, read: TV3CK1_R3,
       text: 'Tìm 2 cặp từ chỉ đặc điểm có nghĩa trái ngược nhau.',
@@ -330,7 +344,7 @@ TV3CK.push(
 
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 1', pts: 2, type: 'write', lines: 6,
       text: 'Nghe – viết: <b>Những bậc đá chạm mây</b> (SGK Tiếng Việt 3 tập 1, trang 113 — từ “Sau năm lần sim ra quả” đến hết).',
-      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Những bậc đá chạm mây</b><br>Sau năm lần sim ra quả, con đường lên núi đã hoàn thành. Nhờ đó, mọi người có thể lên xuống núi dễ dàng. Cả xóm biết ơn cố Đương, tặng thêm cho ông một tên mới là cố Ghép. Ngày nay, con đường vượt núi gọi là Truông Ghép vẫn còn ở phía nam dãy núi Hồng Lĩnh.<br><i>(Theo Nguyễn Đổng Chi)</i><br>Lưu ý viết hoa tên riêng: cố Đương, cố Ghép, Truông Ghép, Hồng Lĩnh.<br>' + TV3CK1_CT_CHAM },
+      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Những bậc đá chạm mây</b><br>Sau năm lần sim ra quả, con đường lên núi đã hoàn thành. Nhờ đó, mọi người có thể lên xuống núi dễ dàng. Cả xóm biết ơn cố Đương, tặng thêm cho ông một tên mới là cố Ghép. Ngày nay, con đường vượt núi gọi là Truông Ghép vẫn còn ở phía nam dãy núi Hồng Lĩnh.<br><i>(Theo Nguyễn Đổng Chi)</i><br>Lưu ý viết hoa tên riêng: cố Đương, cố Ghép, Truông Ghép, Hồng Lĩnh.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm, theo hướng dẫn chấm của trường):</b><br>• Viết đúng kiểu chữ thường, cỡ nhỏ: 0,25 điểm (viết chưa đúng kiểu chữ hoặc cỡ chữ: 0,125).<br>• Viết đúng chính tả các từ ngữ, dấu câu: 1,5 điểm — viết đúng, đủ, đúng dấu: 1,5; có lỗi (đề gốc ghi “0 – 4 lỗi”): 1 điểm; sai nhiều hơn thì tuỳ mức độ trừ dần.<br>• Trình bày: 0,25 điểm (trình bày đúng mẫu, chữ sạch, rõ ràng); trình bày không theo mẫu hoặc chữ không rõ nét, tẩy xoá vài chỗ: 0,125.' },
 
     { sec: 'B. Kiểm tra viết — II. Tập làm văn', name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Đề bài:</b> Viết đoạn văn (7 – 10 câu) tả đồ vật mà em yêu thích.<br>Gợi ý:<br>– Đồ vật em muốn giới thiệu là gì?<br>– Đồ vật đó có đặc điểm gì?<br>– Em dùng đồ vật đó như thế nào?<br>– Đồ vật đó đã giúp ích cho em (gia đình em) như thế nào?',

@@ -33,6 +33,18 @@
 //   3918: đề gốc gõ nhầm “không một phượng mây”, “im đậm”, “thưa thớt phải căn nhà” → sửa “gợn mây”,
 //         “in đậm”, “vài căn nhà”; chính tả “ngọt mào mật ong” → “ngọt màu mật ong”.
 //   3916, 3919, 3920: đáp án trắc nghiệm của trường đúng; câu tự luận viết lại gợi ý trả lời.
+//
+// Kiểm định lần 2 (2026-09, đối chiếu lại cả 5 nguồn, gồm bản PDF mẫu cdn.tailieu.vn của 3916/3918/3919):
+//   3917 bộ sách: giữ CTST — đề Viết đoạn “nêu tình cảm, cảm xúc trước một cảnh đẹp ở quê hương hoặc nơi em ở”
+//        (7–9 câu) trùng bài Viết trang 84 SGK TV3 tập 2 CTST; các phiếu đọc thành tiếng là văn bản của KNTT tập 1
+//        (Ngày gặp lại, Mùa hè lấp lánh, Thư viện, Bạn nhỏ trong nhà) được trường đổi tên, dùng như văn bản ngoài SGK.
+//   3917 Câu 5: giữ C theo HD chấm, `why` ghi rõ B “trên sông” cũng gần đúng (cần người quyết). Câu 7a: thêm alts
+//        có “già” (cáo già). Câu 7b: đáp án đủ “trông (thấy), buông, chạy” + cách chấm; bỏ câu “theo một trường khác”
+//        (không kiểm chứng được).
+//   3918: bản PDF mẫu có HD chấm đọc hiểu của trường: 1A 2C 3D 4B, 5a lời nói trực tiếp, 5b phần giải thích,
+//        7 “Tàu (cau) – vươn, xòe rộng – như – tay”, 8 “…bằng gì?”, 9C — khớp hết đáp án trong file; ghi thêm cách
+//        chấp nhận ở câu 7.
+//   3919: bản mẫu không có đáp án đọc hiểu; đã giải lại độc lập, khớp. Điểm câu 7 (0,5 gốc) / 8, 9 (1 gốc) đúng ma trận.
 
 /* ── Bài đọc dùng chung ─────────────────────────────────────────────────── */
 
@@ -160,18 +172,18 @@ TV3CK.push(
       why: 'Bài viết: “…đỏ au au của chùm chôm chôm”. (Hướng dẫn chấm của trường in nhầm đáp án B — đã sửa thành C.)' },
     { sec: TV3CK4_S2, name: 'Câu 5', pts: 0.25, read: TV3CK4_B_R1,
       text: 'Chợ nổi được họp ở đâu?',
-      opts: o3('Trên đất liền.', 'Trên sông.', 'Trên thuyền.'), ans: 'C',
-      why: 'Chợ nổi là chợ họp ngay trên những chiếc ghe (thuyền) đậu dập dờn giữa sông: người bán, người mua “trùng trình trên sóng nước”, hàng hoá bày trên ghe. Đáp án của trường là C (trên thuyền).' },
+      opts: o3('Trên đất liền.', 'Trên sông.', 'Trên thuyền.'), ans: 'C', also: ['B'],
+      why: 'Chợ nổi là chợ họp ngay trên những chiếc ghe (thuyền) đậu dập dờn giữa sông: người bán, người mua “trùng trình trên sóng nước”, hàng hoá bày bán trên ghe. Đáp án của trường là C (trên thuyền). Ý B “Trên sông” cũng đúng (chợ nổi họp trên mặt sông, hàng bày bán trên thuyền) nên chọn B cũng được tính điểm.' },
     { sec: TV3CK4_S2, name: 'Câu 6', pts: 0.5, type: 'write', lines: 2, read: TV3CK4_B_R1,
       text: 'Chợ nổi gợi cho tác giả cảm giác điều gì?',
       model: 'Chợ nổi gợi cho tác giả cảm giác như gặp được những khu vườn của miệt sông Tiền, sông Hậu, như nhìn thấy những rẫy khóm, rẫy mía miên man dọc triền sông Trẹm quê mình.' },
     { sec: TV3CK4_S2, name: 'Câu 7a', pts: 0.25, type: 'type',
       text: 'Tìm và viết lại <b>từ chỉ đặc điểm</b> trong câu văn sau:<br><i>Cáo già trông thấy hoảng quá, buông ngay Gà con để chạy thoát thân.</i>',
-      ans: 'hoảng', alts: ['hoảng quá'],
-      why: '“Hoảng” cho biết cáo già <i>như thế nào</i> (trạng thái, đặc điểm) → từ chỉ đặc điểm.' },
+      ans: 'hoảng', alts: ['hoảng quá', 'già, hoảng', 'hoảng, già', 'già hoảng', 'hoảng già', 'già và hoảng', 'hoảng và già'],
+      why: '“Hoảng” cho biết cáo già <i>như thế nào</i> (trạng thái, đặc điểm) → từ chỉ đặc điểm (đáp án của trường). Nếu con ghi thêm “già” (cáo <i>già</i> — tả tuổi của cáo) cũng chấp nhận.' },
     { sec: TV3CK4_S2, name: 'Câu 7b', pts: 0.25, type: 'write', lines: 1,
       text: 'Tìm và viết lại các <b>từ chỉ hoạt động</b> trong câu văn: <i>Cáo già trông thấy hoảng quá, buông ngay Gà con để chạy thoát thân.</i>',
-      model: 'Từ chỉ hoạt động: <b>buông, chạy</b> (chấp nhận thêm “trông thấy”). (Hướng dẫn chấm của trường bỏ trống ý này; đáp án theo một trường khác dùng cùng câu hỏi: buông, chạy.)' },
+      model: 'Từ chỉ hoạt động: <b>trông (thấy), buông, chạy</b> (ghi “chạy thoát” cũng được).<br>Viết đúng từ 2 từ trở lên trong số này và không lẫn từ chỉ sự vật (cáo, Gà con) hay từ chỉ đặc điểm (hoảng): đủ điểm. (Hướng dẫn chấm của trường bỏ trống ý này — đáp án tự giải.)' },
     { sec: TV3CK4_S2, name: 'Câu 8', pts: 0.25, type: 'type',
       text: 'Viết lại những từ ngữ chỉ <b>sự vật được so sánh</b> trong câu thơ dưới đây (đề gốc: gạch dưới):<br><i>Trẻ em như búp trên cành<br>Biết ăn, biết ngủ, biết học hành là ngoan.</i> (Hồ Chí Minh)',
       ans: 'trẻ em, búp trên cành', alts: ['trẻ em búp trên cành', 'trẻ em và búp trên cành', 'trẻ em, búp', 'trẻ em và búp', 'trẻ em - búp trên cành'],
@@ -227,7 +239,7 @@ TV3CK.push(
       model: 'Gợi ý: Câu văn nói lên tình cảm sâu nặng của bạn nhỏ dành cho bà: kí ức về bà và quê hương luôn in đậm trong tâm trí bạn, chính tình yêu thương của bà đã nuôi dưỡng ước mơ, giúp bạn viết nên bài văn cảm động.' },
     { sec: TV3CK4_S2, name: 'Câu 7', pts: 0.25, type: 'write', lines: 2,
       text: 'Cho đoạn thơ sau, em hãy điền từ thích hợp vào bảng:<br><i>Cây cau cao mãi<br>Tàu vươn giữa trời<br>Như tay xòe rộng<br>Hứng làn mưa rơi.</i><br><table><tr><th>Sự vật 1</th><th>Đặc điểm</th><th>Từ so sánh</th><th>Sự vật 2</th></tr><tr><td>…………</td><td>…………</td><td>…………</td><td>…………</td></tr></table>',
-      model: '<table><tr><th>Sự vật 1</th><th>Đặc điểm</th><th>Từ so sánh</th><th>Sự vật 2</th></tr><tr><td>tàu (lá) cau</td><td>vươn, xòe rộng</td><td>như</td><td>tay</td></tr></table>Mỗi ô đúng được 1/4 số điểm của câu.' },
+      model: '<table><tr><th>Sự vật 1</th><th>Đặc điểm</th><th>Từ so sánh</th><th>Sự vật 2</th></tr><tr><td>tàu (lá) cau</td><td>vươn, xòe rộng</td><td>như</td><td>tay</td></tr></table>(Theo HD chấm của trường: Tàu (cau) – vươn, xòe rộng – như – tay. Chấp nhận ghi “vươn giữa trời” ở cột đặc điểm, “tay xòe rộng” ở cột sự vật 2.) Mỗi ô đúng được 1/4 số điểm của câu.' },
     { sec: TV3CK4_S2, name: 'Câu 8', pts: 0.25, type: 'write', lines: 2,
       text: 'Đặt câu hỏi cho bộ phận in đậm trong câu sau:<br><i><b>Bằng tình cảm với quê hương</b>, bạn nhỏ đã viết bài tập làm văn tả phong cảnh quê hương vô cùng xúc động.</i>',
       model: '<i>Bạn nhỏ đã viết bài tập làm văn tả phong cảnh quê hương vô cùng xúc động bằng gì?</i> (hoặc: <i>Bằng gì, bạn nhỏ đã viết bài tập làm văn tả phong cảnh quê hương vô cùng xúc động?</i>) — cuối câu phải có dấu chấm hỏi.' },

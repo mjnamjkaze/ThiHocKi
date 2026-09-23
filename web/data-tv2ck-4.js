@@ -1,4 +1,4 @@
-// TIẾNG VIỆT 2 — ĐỀ KIỂM TRA CUỐI HỌC KÌ II (CUỐI NĂM) — BỘ CHÂN TRỜI SÁNG TẠO / CÁNH DIỀU — TRỌN ĐỀ
+// TIẾNG VIỆT 2 — ĐỀ KIỂM TRA CUỐI HỌC KÌ II (CUỐI NĂM) — CTST (3716, 3717) + 3 đề không rõ bộ sách — TRỌN ĐỀ
 // 5 đề thật của 5 trường tiểu học, chép từ trang tổng hợp có ghi tên trường ở tiêu đề đề:
 //   3716 · TH An Khang — mã đề 02 — Chân trời sáng tạo
 //        https://dethitiengviet.com/bo-18-de-thi-tieng-viet-2-cuoi-hoc-ki-2-sach-chan-troi-sang-tao-co-dap-an-88/  (Đề số 2)
@@ -13,12 +13,12 @@
 //        Bộ sách: phiếu đọc thành tiếng dùng bài SGK TV2 CTST tập 2 (Ai ngoan sẽ được thưởng tr.82, Thư Trung
 //        thu tr.85, Cây và hoa bên lăng Bác tr.93, Sóng và cát ở Trường Sa tr.101, Tôi yêu Sài Gòn tr.109, Cây
 //        nhút nhát tr.114); nghe – viết “Chim rừng Tây Nguyên (TV2 tập 2 trang 102)” = bài nghe – viết CTST.
-//   3718 · TH Thanh Lương — Chân trời sáng tạo (theo phân loại của nguồn)
+//   3718 · TH Thanh Lương — không rõ bộ sách (nguồn xếp vào tuyển tập “CTST”; xem Kiểm định lần 2)
 //        https://dethi.edu.vn/tuyen-tap-17-de-thi-cuoi-hoc-ki-2-mon-tieng-viet-lop-2-chan-troi-sang-tao-kem-dap-an-30542/  (Đề số 4)
-//   3719 · TH Trần Quốc Toản — Cánh diều
+//   3719 · TH Trần Quốc Toản — không rõ bộ sách (nguồn xếp vào bộ “Cánh diều”; xem Kiểm định lần 2)
 //        https://dethitiengviet.com/bo-25-de-thi-hoc-ki-2-tieng-viet-lop-2-canh-dieu-co-dap-an-113/  (Đề số 2)
 //        Bài đọc hiểu là bài “Cây xanh với con người” của SGK TV2 Cánh diều tập 2 (bản mở rộng).
-//   3720 · TH Nam Hà — Cánh diều (theo phân loại của nguồn)
+//   3720 · TH Nam Hà — không rõ bộ sách (nguồn xếp vào tuyển tập “Cánh diều”; xem Kiểm định lần 2)
 //        https://dethi.edu.vn/tong-hop-24-de-thi-tieng-viet-2-hoc-ki-2-sach-canh-dieu-kem-dap-an-31461/  (Đề số 4)
 //
 // Không tìm được trên mạng đề CK2 Tiếng Việt 2 CTST/Cánh diều của trường “chất lượng cao” có đủ đề + đáp án;
@@ -33,6 +33,20 @@
 // (đúng SGK); 3716 câu 4 đáp án nguồn “trăng sáng” không phải một từ chỉ đặc điểm → chấm theo từ đặc điểm
 // có trong bài; 3719 khôi phục dấu “…” trong bài đọc, sửa dấu ngoặc kép thiếu ở câu 8; 3720 câu 7 nguồn không
 // ghi đáp án → “tươi tốt”.
+//
+// Kiểm định lần 2 (soát độc lập, đối chiếu nguồn):
+//   · Bỏ `book` ở 3718, 3719, 3720 — nhãn bộ sách chỉ là phân loại của trang tổng hợp, không chứng minh được
+//     (trang tổng hợp xếp tuỳ tiện: đề An Khang có mặt cả trong bộ “CTST” lẫn bộ “Cánh diều”; bài “Món quà hạnh
+//     phúc” cũng nằm trong bộ “Cánh diều” với đề trường khác):
+//       3718: bài đọc, nghe – viết không phải bài SGK; đề TLV “kể về việc em đã làm để bảo vệ môi trường” là đề
+//             luyện viết của SGK TV2 Kết nối tri thức → không đủ căn cứ ghi CTST.
+//       3719: bài đọc “Cây xanh với con người” là bài SGK TV2 Cánh diều tập 2 (Bài 21), nhưng nghe – viết “Hồ Gươm”
+//             là bài đọc SGK TV2 Kết nối tri thức (Bài 29) và đề TLV là đề của KNTT → lệch bộ sách, bỏ book.
+//       3720: bài đọc, nghe – viết, TLV đều không phải bài SGK → không rõ bộ sách.
+//   · 3716, 3717 giữ 'Chân trời sáng tạo' (phiếu đọc ghi rõ bộ CTST / bài SGK CTST tập 2 có số trang).
+//   · 3717 Tập làm văn: bản xem công khai của nguồn (dekiemtra.edu.vn, dethitiengviet.com bộ 11 đề — Đề số 3)
+//     KHÔNG hiện đề TLV; đề “tình cảm của em với anh (chị hoặc em)” trùng đề TLV của Đề số 1 (trường khác) trong
+//     cùng bộ → chưa kiểm chứng được, giữ nguyên, cần người quyết.
 
 /* ── Bài đọc dùng chung ─────────────────────────────────────────────────── */
 const TVCK4_A_R1 = '<b>Sông Hương</b><br>Sông Hương là một bức tranh phong cảnh gồm nhiều đoạn mà mỗi đoạn đều có vẻ đẹp riêng của nó. Bao trùm lên cả bức tranh là một màu xanh có nhiều sắc độ đậm nhạt khác nhau: màu xanh thẳm của da trời, màu xanh biếc của lá cây, màu xanh non của những bãi ngô, thảm cỏ in trên mặt nước.<br>Mỗi mùa hè tới, hoa phượng vĩ nở đỏ rực hai bên bờ. Hương Giang bỗng thay chiếc áo xanh hằng ngày thành dải lụa đào ửng hồng cả phố phường.<br>Những đêm trăng sáng, dòng sông là một đường trăng lung linh dát vàng. Sông Hương là một đặc ân của thiên nhiên dành cho Huế, làm cho không khí thành phố trở nên trong lành, làm tan biến những tiếng ồn ào của chợ búa, tạo cho thành phố một vẻ đẹp êm đềm.<br><i>(Theo Đất nước ngàn năm — Nguyễn Xuân Thuỷ)</i>';
@@ -231,10 +245,10 @@ TV2CK.push(
   ],
 },
 
-/* ═══════════ 3718 — TH THANH LƯƠNG — CHÂN TRỜI SÁNG TẠO ═══════════ */
+/* ═══════════ 3718 — TH THANH LƯƠNG ═══════════ */
 {
   id: 3718, title: 'CK2 · TH Thanh Lương', time: 70,
-  sem: 2, book: 'Chân trời sáng tạo',
+  sem: 2,
   src: 'https://dethi.edu.vn/tuyen-tap-17-de-thi-cuoi-hoc-ki-2-mon-tieng-viet-lop-2-chan-troi-sang-tao-kem-dap-an-30542/',
   questions: [
     { sec: TVCK4_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK4_C_R1,
@@ -309,10 +323,10 @@ TV2CK.push(
   ],
 },
 
-/* ═══════════ 3719 — TH TRẦN QUỐC TOẢN — CÁNH DIỀU ═══════════ */
+/* ═══════════ 3719 — TH TRẦN QUỐC TOẢN ═══════════ */
 {
   id: 3719, title: 'CK2 · TH Trần Quốc Toản', time: 75,
-  sem: 2, book: 'Cánh diều',
+  sem: 2,
   src: 'https://dethitiengviet.com/bo-25-de-thi-hoc-ki-2-tieng-viet-lop-2-canh-dieu-co-dap-an-113/',
   questions: [
     { sec: TVCK4_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK4_D_R1,
@@ -381,7 +395,7 @@ TV2CK.push(
 
     { sec: TVCK4_S3, name: 'Nghe – viết', pts: 2, type: 'write', lines: 6,
       text: 'Nghe – viết: <b>Hồ Gươm</b> (từ đầu đến “xum xuê”). Bố mẹ đọc chậm từng cụm từ cho con viết cả tên bài.',
-      model: '<b>Hồ Gươm</b><br>Nhà tôi ở Hà Nội, cách Hồ Gươm không xa. Từ trên cao nhìn xuống, mặt hồ như một chiếc gương bầu dục lớn, sáng long lanh. Cầu Thê Húc màu son, cong cong như con tôm, dẫn vào đền Ngọc Sơn. Mái đền lấp ló bên gốc đa già, rễ lá xum xuê.<br><i>(Theo Ngô Quân Miện)</i><br><b>Chấm (2 điểm):</b> tốc độ đạt yêu cầu, chữ viết rõ ràng, đúng kiểu và cỡ chữ, trình bày sạch đẹp; cứ mắc khoảng 5 lỗi chính tả (sai âm, vần, thanh, không viết hoa tên riêng Hà Nội, Hồ Gươm, Thê Húc, Ngọc Sơn) thì trừ 0,5 điểm; lỗi giống nhau chỉ trừ một lần.<br><i>Ghi chú:</i> đề gốc chỉ ghi tên đoạn; đoạn trên là đoạn đầu bài “Hồ Gươm” quen thuộc.' },
+      model: '<b>Hồ Gươm</b><br>Nhà tôi ở Hà Nội, cách Hồ Gươm không xa. Từ trên cao nhìn xuống, mặt hồ như một chiếc gương bầu dục lớn, sáng long lanh. Cầu Thê Húc màu son, cong cong như con tôm, dẫn vào đền Ngọc Sơn. Mái đền lấp ló bên gốc đa già, rễ lá xum xuê.<br><i>(Theo Ngô Quân Miện)</i><br><b>Chấm (2 điểm):</b> tốc độ đạt yêu cầu, chữ viết rõ ràng, đúng kiểu và cỡ chữ, trình bày sạch đẹp; cứ mắc khoảng 5 lỗi chính tả (sai âm, vần, thanh, không viết hoa tên riêng Hà Nội, Hồ Gươm, Thê Húc, Ngọc Sơn) thì trừ 0,5 điểm; lỗi giống nhau chỉ trừ một lần.<br><i>Ghi chú:</i> đề gốc chỉ ghi “Hồ Gươm (từ đầu đến xum xuê)”; đoạn trên là đoạn đầu bài đọc “Hồ Gươm” (SGK Tiếng Việt 2 Kết nối tri thức, tập hai, Bài 29).' },
 
     { sec: TVCK4_S4, name: 'Viết đoạn văn', pts: 3, type: 'write', lines: 10,
       text: 'Viết 4–5 câu kể về việc em đã làm để bảo vệ môi trường.<br>Gợi ý: + Em đã làm việc gì để bảo vệ môi trường? + Em đã làm việc đó lúc nào? Ở đâu? Em làm như thế nào? + Lợi ích của việc làm đó là gì? + Em cảm thấy thế nào khi làm việc đó?',
@@ -389,10 +403,10 @@ TV2CK.push(
   ],
 },
 
-/* ═══════════ 3720 — TH NAM HÀ — CÁNH DIỀU ═══════════ */
+/* ═══════════ 3720 — TH NAM HÀ ═══════════ */
 {
   id: 3720, title: 'CK2 · TH Nam Hà', time: 70,
-  sem: 2, book: 'Cánh diều',
+  sem: 2,
   src: 'https://dethi.edu.vn/tong-hop-24-de-thi-tieng-viet-2-hoc-ki-2-sach-canh-dieu-kem-dap-an-31461/',
   questions: [
     { sec: TVCK4_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK4_E_R1,

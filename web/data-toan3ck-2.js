@@ -19,6 +19,15 @@
 //   3808 Câu 10b: vẽ lại ba cân thăng bằng bằng SVG, đúng số hình của đề gốc.
 //   3810 Câu 7: phân số bị mất khi xuất file ("chiều rộng bằng … chiều dài"); đáp án của trường là 80 m
 //         ⇒ chiều rộng = 10 m = 1/3 chiều dài — ghi lại "1/3".
+// Kiểm định lần 2 (đối chiếu lại file gốc của trường; giải lại toàn bộ 86 câu):
+//   3810 Câu 7: mở lại file Word gốc — phân số là công thức Word (OMML) <m:f> tử 1, mẫu 3 ⇒ đúng "1/3"
+//         theo đề gốc (không phải suy ngược).
+//   3806 Bài 4: đếm lại ảnh trong PDF gốc — dòng 1: 2 hộp màu + 1 kéo; dòng 2: 1 hộp bút + 2 kéo;
+//         dòng 3: kéo + hộp màu + hộp bút ⇒ 20 000 / 30 000 / 15 000 đồng, khớp.
+//   3808 Câu 3a: đo lại góc kim trên ảnh gốc — ĐH1: kim giờ ≈ 100°, kim phút ≈ 123° ⇒ 3 giờ 20 phút;
+//         ĐH2: kim giờ ≈ 239°, kim phút ≈ 322° (ngay sát số 11) ⇒ 7 giờ 55 phút; SVG vẽ đúng 3:20 và 7:55.
+//         Thêm alt "8 giờ kém 5".
+//   3808 Câu 10b: đếm lại hình trên ảnh gốc (2 vuông + 2 tròn = 3 tam giác; 1 tam giác = 4 tròn) — khớp SVG.
 
 (() => {
 const I = 'assets/ck3/';
@@ -201,7 +210,7 @@ TOAN3CK.push(
       why: 'Kim ngắn (kim giờ) đã qua số 3 một chút; kim dài (kim phút) chỉ số 4, tức 4 × 5 = 20 phút. Đồng hồ chỉ 3 giờ 20 phút.' },
     { sec: 'Bài kiểm tra (10 câu, mỗi câu 1 điểm)', name: 'Câu 3a-2', pts: 0.25, type: 'type', img: I + 't3808-dh2.svg',
       text: 'Đồng hồ chỉ mấy giờ?<br><i>(Ghi dạng: … giờ … phút)</i>',
-      ans: '7 giờ 55 phút', alts: ['8 giờ kém 5 phút', '7 giờ 55', '19 giờ 55 phút', '7:55', '19:55'],
+      ans: '7 giờ 55 phút', alts: ['8 giờ kém 5 phút', '8 giờ kém 5', '7 giờ 55', '19 giờ 55 phút', '7:55', '19:55'],
       why: 'Kim ngắn gần tới số 8 (chưa tới); kim dài chỉ số 11, tức 11 × 5 = 55 phút. Đồng hồ chỉ 7 giờ 55 phút, hay 8 giờ kém 5 phút.' },
     { sec: 'Bài kiểm tra (10 câu, mỗi câu 1 điểm)', name: 'Câu 3b', pts: 0.5,
       text: 'Mai đi từ nhà lúc 6 giờ 50 phút, tới trường lúc 7 giờ 13 phút. Thời gian Mai đi từ nhà đến trường là:',

@@ -26,10 +26,20 @@
 //   3912: câu 3 & câu 5 đề gốc không ghi điểm riêng lẻ khác đáp án — giữ nguyên biểu điểm HD chấm.
 //   3914: câu 5 — đáp án trường là “biết ơn”; từ chỉ hoạt động thật sự trong câu là “nhắc (đến)” nhưng không có
 //         trong các lựa chọn, nên giữ C (từ duy nhất trong các lựa chọn không phải từ chỉ sự vật/thời gian) và ghi chú.
-//         Câu 8 đề gốc không ghi điểm — lấy 0,5 điểm theo ma trận của trường (tổng đọc hiểu = 6).
+//         Câu 8 đề bài không ghi điểm — HD chấm và ma trận của trường cho 0,5 điểm (tổng đọc hiểu = 6).
 //   3915: đề gốc ghi Chính tả 5 đ + Viết đoạn 5 đ, nhưng hướng dẫn chấm của trường cho 3 đ + 7 đ (đọc thành
 //         tiếng 3 đ + đọc hiểu 7 đ) — theo hướng dẫn chấm; câu 9 (gạch dưới từ chỉ đặc điểm) đáp án gốc mất định
 //         dạng gạch chân — đáp án: xanh lơ, xanh lục.
+//         (Trên phiếu đọc hiểu của trường còn sót một dòng “Luyện viết đoạn (6 điểm): kể lại một việc làm góp phần
+//         bảo vệ môi trường” — phần B chính thức là đề “cảnh đẹp của đất nước”, dùng đề này.)
+//
+// Kiểm định lần 2 (2026-09, đối chiếu lại cả 5 nguồn):
+//   3913 Nghe – viết: “Đoàn quân rùng rùng lên đường; giáo lao…” → “…lên đường. Giáo lao…” (đúng SGK KNTT tr.103
+//        và đúng đoạn trong đề 3914). Câu 7: câu trích “đáp án trường” sửa đúng nguyên văn (“trong mọi việc”).
+//   3914 Câu 4: giữ A theo HD chấm (chi tiết cụ thể cho thấy tài năng; C chỉ nhắc lại điều đề đã nêu).
+//        Câu 5: giữ C (“biết ơn”) — trong 4 lựa chọn chỉ “biết ơn” là từ chỉ hoạt động (hoạt động tình cảm); viết
+//        lại `why` nói rõ từ chỉ hoạt động rõ nhất “nhắc (đến)” không có trong lựa chọn.
+//   3915 Câu 8c: đề bài hiện sẵn “Chao ôi!” làm lộ đáp án câu 8b → đổi thành “Chao ôi [2]”.
 
 /* ── Tên phần ────────────────────────────────────────────────────────────── */
 const TV3CK3_S1 = 'A. Kiểm tra đọc — I. Đọc thành tiếng';
@@ -210,7 +220,7 @@ TV3CK.push(
       why: 'Câu bộc lộ cảm xúc thán phục (có từ “quá” và dấu chấm than) nên là câu cảm.' },
     { sec: TV3CK3_S2, name: 'Câu 7', pts: 0.5, type: 'write', lines: 2, read: TV3CK3_R3,
       text: 'Vì sao rô-bốt được sử dụng rộng rãi trong đời sống?',
-      model: 'Ví dụ: <i>Vì rô-bốt làm việc chẳng biết mệt mỏi, chẳng sợ nguy hiểm, có thể thay con người làm những việc nặng nhọc, nguy hiểm và cả những việc thường ngày như rửa bát, quét nhà, bán hàng.</i><br>(Đáp án trường: Vì rô-bốt có khả năng thay thế con người trong nhiều việc, nhất là những việc thường ngày.)' },
+      model: 'Ví dụ: <i>Vì rô-bốt làm việc chẳng biết mệt mỏi, chẳng sợ nguy hiểm, có thể thay con người làm những việc nặng nhọc, nguy hiểm và cả những việc thường ngày như rửa bát, quét nhà, bán hàng.</i><br>(Đáp án trường ghi: “Vì rô-bốt có khả năng thay thế con người trong mọi việc, nhất là những việc thường ngày.”)' },
     { sec: TV3CK3_S2, name: 'Câu 8', pts: 0.5, type: 'write', lines: 2, read: TV3CK3_R3,
       text: 'Sau khi xem về rô-bốt con người đã nghĩ gì?',
       model: 'Ai xem kịch cũng nghĩ: <i>“Tuyệt quá! Nếu giao hết việc nặng nhọc, nguy hiểm cho rô-bốt thì chúng ta nhàn nhã bao nhiêu!”</i>' },
@@ -223,7 +233,7 @@ TV3CK.push(
 
     { sec: TV3CK3_S3, name: 'Nghe – viết', pts: 2, type: 'write', lines: 7,
       text: 'Nghe – viết: <b>Hai Bà Trưng</b> (SGK Tiếng Việt 3 tập 2 – Kết nối tri thức, trang 103; từ “Hai Bà Trưng bước lên bành voi…” đến “…lịch sử nước nhà.”), khoảng 15 phút.',
-      model: '<b>Hai Bà Trưng</b><br>Hai Bà Trưng bước lên bành voi. Đoàn quân rùng rùng lên đường; giáo lao, cung nỏ, rìu búa, khiên mộc cuồn cuộn tràn theo bóng voi ẩn hiện của Hai Bà. Tiếng trống đồng dội lên vòm cây, đập vào sườn đồi, theo suốt đường hành quân.<br>Thành trì quân giặc lần lượt sụp đổ dưới chân của đoàn quân khởi nghĩa. Tô Định ôm đầu chạy về nước. Đất nước ta sạch bóng quân thù. Hai Bà Trưng trở thành hai vị anh hùng chống giặc ngoại xâm đầu tiên trong lịch sử nước nhà.<br><b>Chấm (2 điểm, theo HD của trường):</b> tốc độ đạt 0,5 · chữ viết rõ ràng, đúng chữ, cỡ chữ 0,5 · viết đúng chính tả (không mắc quá 5 lỗi) 0,5 · trình bày đúng quy định, viết đẹp, sạch 0,5. Sai 3 lỗi chính tả trừ 0,25 điểm; sai 6 dấu thanh hoặc không viết hoa trừ 0,25 điểm.' },
+      model: '<b>Hai Bà Trưng</b><br>Hai Bà Trưng bước lên bành voi. Đoàn quân rùng rùng lên đường. Giáo lao, cung nỏ, rìu búa, khiên mộc cuồn cuộn tràn theo bóng voi ẩn hiện của Hai Bà. Tiếng trống đồng dội lên vòm cây, đập vào sườn đồi, theo suốt đường hành quân.<br>Thành trì quân giặc lần lượt sụp đổ dưới chân của đoàn quân khởi nghĩa. Tô Định ôm đầu chạy về nước. Đất nước ta sạch bóng quân thù. Hai Bà Trưng trở thành hai vị anh hùng chống giặc ngoại xâm đầu tiên trong lịch sử nước nhà.<br><b>Chấm (2 điểm, theo HD của trường):</b> tốc độ đạt 0,5 · chữ viết rõ ràng, đúng chữ, cỡ chữ 0,5 · viết đúng chính tả (không mắc quá 5 lỗi) 0,5 · trình bày đúng quy định, viết đẹp, sạch 0,5. Sai 3 lỗi chính tả trừ 0,25 điểm; sai 6 dấu thanh hoặc không viết hoa trừ 0,25 điểm.' },
 
     { sec: TV3CK3_S4, name: 'Viết đoạn văn', pts: 3, type: 'write', lines: 10,
       text: 'Viết đoạn văn về một nhân vật em yêu thích trong câu chuyện đã đọc, đã nghe.<br><i>Gợi ý:</i><br>- Tên nhân vật là gì?<br>- Nhân vật trong câu chuyện nào?<br>- Những điều em yêu thích ở nhân vật?<br>- Lí do em yêu thích nhân vật?',
@@ -260,7 +270,7 @@ TV3CK.push(
     { sec: TV3CK3_S2, name: 'Câu 5', pts: 0.25,
       text: 'Tìm trong câu sau từ chỉ hoạt động:<br><i>Sau này, nhạc sĩ Mô-da thường nhắc đến chú dế với tấm lòng biết ơn.</i>',
       opts: o4('Chú dế', 'Nhạc sĩ', 'Biết ơn', 'Sau này'), ans: 'C',
-      why: '“Chú dế”, “nhạc sĩ” là từ chỉ sự vật; “sau này” chỉ thời gian. Trong các lựa chọn, chỉ “biết ơn” là từ chỉ hoạt động, trạng thái (đáp án của trường). <i>Lưu ý:</i> trong câu còn một từ chỉ hoạt động nữa là “nhắc (đến)”, nhưng từ này không có trong các lựa chọn.' },
+      why: '“Chú dế”, “nhạc sĩ” là từ chỉ sự vật; “sau này” chỉ thời gian. Trong bốn lựa chọn, chỉ có “biết ơn” thuộc nhóm từ chỉ hoạt động — đây là hoạt động của tình cảm, tấm lòng (biết ơn ai, nhớ ơn ai; giống như yêu thương, kính trọng), không phải người hay vật, cũng không chỉ thời gian → chọn C (đáp án của trường). <i>Lưu ý cho bố mẹ:</i> từ chỉ hoạt động rõ nhất trong câu là “nhắc (đến)” (việc Mô-da làm) nhưng từ này không có trong các lựa chọn; nếu con hỏi, bố mẹ giải thích câu có hai từ chỉ hoạt động: <b>nhắc</b> và <b>biết ơn</b>.' },
     { sec: TV3CK3_S2, name: 'Câu 6', pts: 0.25, type: 'write', lines: 2,
       text: 'Tìm từ có nghĩa giống với từ <b>biết ơn</b>, đặt câu với từ em vừa tìm được.',
       model: 'Từ có nghĩa giống: <b>nhớ ơn, ghi ơn, tri ân</b>… (0,125 điểm)<br>Đặt câu, ví dụ: <i>Chúng em luôn nhớ ơn thầy cô đã dạy dỗ mình.</i> (0,125 điểm)' },
@@ -334,7 +344,7 @@ TV3CK.push(
       opts: o4('Dấu hai chấm (:)', 'Dấu chấm than (!)', 'Dấu chấm hỏi (?)', 'Dấu chấm (.)'), ans: 'B',
       why: '“Chao ôi” là lời than, bộc lộ cảm xúc sợ hãi → dấu chấm than.' },
     { sec: TV3CK3_S2, name: 'Câu 8c', pts: 0.125,
-      text: 'Điền dấu thích hợp: <i>- Chao ôi! Nước sông chảy siết quá <b>[3]</b></i><br>Ô <b>[3]</b> điền dấu gì?',
+      text: 'Điền dấu thích hợp: <i>- Chao ôi <b>[2]</b> Nước sông chảy siết quá <b>[3]</b></i><br>Ô <b>[3]</b> điền dấu gì?',
       opts: o4('Dấu hai chấm (:)', 'Dấu chấm than (!)', 'Dấu chấm hỏi (?)', 'Dấu chấm (.)'), ans: 'B',
       why: 'Câu có từ “quá”, bộc lộ cảm xúc (câu cảm) → dấu chấm than.' },
     { sec: TV3CK3_S2, name: 'Câu 8d', pts: 0.125,

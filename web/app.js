@@ -566,12 +566,14 @@ function isCorrect(q, a) {
   if (q.type === 'write') return writeFrac(a) === 1;
   if (q.type === 'type') return [q.ans, ...(q.alts || [])].some(t => normText(t) === normText(a));
   if (q.type === 'order') return normText(orderWords(q, a)) === normText(q.ans);
-  return a === q.ans;
+  // q.also: phương án khác cũng được chấp nhận (đề gốc có hai cách hiểu đều hợp lí)
+  return a === q.ans || (Array.isArray(q.also) && q.also.includes(a));
 }
 
 /* đáp án đúng, viết ra cho học sinh đọc lúc xem lại */
 function ansText(q) {
   if (q.type === 'write') return 'bố mẹ chấm theo bài mẫu';
+  if (Array.isArray(q.also) && q.also.length) return `${q.ans} (chấp nhận cả ${q.also.join(', ')})`;
   if (q.type === 'match') {
     return q.ans.split(',').map((k, i) => `${i + 1} → ${q.right[Number(k)]}`).join(' · ');
   }
@@ -595,7 +597,7 @@ function vOpts(q, i, picked, review) {
     ${q.opts.map(o => {
       let cls = 'opt';
       if (review) {
-        if (o.k === q.ans) cls += ' correct';
+        if (o.k === q.ans || (q.also || []).includes(o.k)) cls += ' correct';
         else if (picked === o.k) cls += ' wrong';
       } else if (picked === o.k) cls += ' sel';
       return `<button class="${cls}" onclick="pickAt(${i}, '${o.k}')">
@@ -1041,7 +1043,9 @@ function regradeSaved() {
   const rec = all[exam.id];
   if (!rec || !rec.last) return;
   const last = Object.assign({}, rec.last, { answers: { ...state.answers } }, scoreOf(exam, state.answers));
-  all[exam.id] = { best: Math.max(rec.best || 0, last.score), last };
+  // điểm cao nhất = max(các lượt TRƯỚC lượt này, lượt này sau khi chấm lại) — chấm thấp đi thì cũng hạ theo
+  const before = rec.last.prevBest != null ? rec.last.prevBest : (rec.best || 0);
+  all[exam.id] = { best: Math.max(before, last.score), last };
   localStorage.setItem('otk.results', JSON.stringify(all));
   if (state.lastResultExam === exam.id) state.lastResult = last;
 }
@@ -1053,7 +1057,7 @@ function finishSubmit(auto) {
   const prevBest = (prevRec || {}).best || 0;
   const hints = { ...state.hintTxt };                               // để xem lại vẫn thấy gợi ý đã xin
   const hinted = Object.keys(state.hintOpen).map(Number).sort((a, b) => a - b);
-  const res = { score, correct, wrong, skip, hinted, hints, qn: state.examQn, answers: { ...state.answers }, date: new Date().toISOString(), auto };
+  const res = { score, correct, wrong, skip, prevBest, hinted, hints, qn: state.examQn, answers: { ...state.answers }, date: new Date().toISOString(), auto };
   store.saveResult(exam.id, res);
   sendResult(exam, res);
   state.lastResult = res;

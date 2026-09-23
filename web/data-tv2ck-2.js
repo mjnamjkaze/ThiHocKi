@@ -9,12 +9,15 @@
 //       (Võ Thu Hương — Bài 4 CTST tập 1).
 //  3707 TH Trần Phú — CK1 (trang nguồn không ghi tỉnh/thành, năm học)
 //       https://dethihay.net/16-de-thi-va-dap-an-tieng-viet-lop-2-cuoi-ki-1-sach-chan-troi-sang-tao-1320/  (Đề số 6;
-//       cùng đề có trong tuyển tập CTST của dethi.edu.vn ở trên, Đề số 6). Bộ sách: theo nhãn
-//       “Chân trời sáng tạo” của tuyển tập nguồn; nghe – viết “Ngày mai lên sao Kim” (TV2 tập 1, tr. 78).
+//       cùng đề có trong tuyển tập CTST của dethi.edu.vn ở trên, Đề số 6). Tuyển tập nguồn dán
+//       nhãn CTST nhưng nội dung chứng minh là CÁNH DIỀU: nghe – viết “Ngày mai lên sao Kim”
+//       (Phùng Ngọc Hùng) đúng là bài viết ở TV2 tập 1 tr. 78 SGK Cánh diều (Bài 9, tiết 9–10);
+//       câu hỏi mẫu câu “Ai là gì? / Ai làm gì?” cũng theo cách gọi của Cánh diều.
 //  3708 TH Đồng Hòa — CK1 (trang nguồn không ghi tỉnh/thành, năm học)
 //       https://dethi.edu.vn/tuyen-tap-15-de-thi-cuoi-hoc-ki-1-mon-tieng-viet-lop-2-chan-troi-sang-tao-kem-dap-an-30525/  (Đề số 5)
-//       Bộ sách: theo nhãn “Chân trời sáng tạo” của tuyển tập nguồn (đọc to: bài ngoài SGK; nghe –
-//       viết “Hoa mai vàng” — bài đọc của SGK CTST).
+//       Bộ sách CTST — nội dung xác nhận: đọc hiểu “Chuyện của thước kẻ” là bài đọc CTST tập 1
+//       (Tuần 14), câu 2 của đề chép nguyên câu hỏi SGK CTST; nghe – viết “Hoa mai vàng” là bài viết
+//       SGK CTST tập 2 (Tuần 24). Đọc to: bài ngoài SGK. Đáp án đề (dethihay.net) cho HS.
 //  3709 TH Vân Thê — xã Thủy Thanh, thị xã Hương Thủy, Thừa Thiên Huế — CK1 năm học 2023–2024
 //       https://tailieu.vn/doc/de-thi-hoc-ki-1-tieng-viet-lop-2-co-dap-an-2745917.html
 //       Sách Cánh diều: đọc thành tiếng “Ươm mầm” (tr. 90), “Sáng kiến của bé Hà” (tr. 99),
@@ -29,8 +32,8 @@
 //
 // ĐỌC THÀNH TIẾNG: 3706 và 3708 chép nguyên các phiếu đọc của đề. 3709, 3710: đề cho bốc thăm bài
 // trong SGK Cánh diều — `read` chép nguyên văn các đoạn SGK tương ứng (riêng “Những cây sen đá”
-// chỉ ghi tên bài). 3707: đề cho đọc một đoạn SGK không chỉ định — `read` là bài “Cánh đồng của bố”
-// (SGK CTST tập 1) để bố mẹ luyện cho con; có thể thay bằng đoạn khác dài tương đương.
+// chỉ ghi tên bài). 3707: đề cho đọc một đoạn SGK không chỉ định — `read` là đoạn 1, 2 bài “Con nuôi”
+// (SGK Cánh diều tập 1, tr. 115) để bố mẹ luyện cho con; có thể thay bằng đoạn khác dài tương đương.
 //
 // SỬA SO VỚI NGUỒN:
 //  3708 câu 6 — gợi ý đáp án nguồn viết “Bút chì rất kiêu ngạo… Bút chì biết sửa lỗi” (nhầm nhân
@@ -41,6 +44,18 @@
 //       đáp án D của trường, giải thích rõ trong `why`. Đề bài viết 2 (món quà bố mẹ tặng) khác đề
 //       ghi trong hướng dẫn chấm (tả đồ vật em yêu thích) → theo ĐỀ phát cho học sinh.
 //  3707 câu 7: nguồn không ghi đáp án cụ thể → nêu các từ chỉ hoạt động có trong câu.
+//
+// KIỂM ĐỊNH LẦN 2 (đối chiếu lại trang nguồn + SGK qua loigiaihay/vietjack):
+//  - 3707 `book`: “Chân trời sáng tạo” → “Cánh diều” (xem mục nguồn ở trên). Phiếu đọc thành tiếng
+//    đổi từ “Cánh đồng của bố” (CTST) sang “Con nuôi” đoạn 1, 2 (SGK Cánh diều, chép nguyên văn),
+//    đổi câu hỏi + gợi ý trả lời tương ứng. Nghe – viết “Ngày mai lên sao Kim”: đã đối chiếu nguyên
+//    văn SGK Cánh diều, thêm tên tác giả Phùng Ngọc Hùng.
+//  - 3708 `book` CTST: giữ, đã có căn cứ nội dung (xem mục nguồn). Nghe – viết “Hoa mai vàng”: đáp án
+//    đề chép sai lệch đoạn SGK (“không phải màu hồng mà xanh ngời màu ngọc bích”, “cánh mai xòe ra”)
+//    → dùng nguyên văn đoạn nghe – viết của SGK CTST tập 2 (“không phô hồng mà ngời xanh màu ngọc bích”,
+//    “cánh hoa mai xoè ra”), đúng phạm vi “Hoa mai cũng có … mịn màng như lụa”.
+//  - 3706 (CTST: “Bé Mai đã lớn”, “Góc nhỏ yêu thương” là bài đọc CTST tập 1), 3709, 3710 (các bài
+//    đọc thành tiếng đúng số trang SGK Cánh diều; “Cho con” khớp nguyên văn SGK): bộ sách đúng.
 
 /* Hai lựa chọn (điền dấu câu) — không đụng tới o3/o4 dùng chung */
 const TVCK2_O2 = (a, b) => [{ k: 'A', t: a }, { k: 'B', t: b }];
@@ -59,7 +74,7 @@ const TVCK2_A_TT = '<b>Phiếu 1 — Soi đèn tìm bạn</b><br>Một tối mù
 const TVCK2_A_R = '<b>Bé Mai đã lớn</b><br>Bé Mai rất thích làm người lớn. Bé thử đủ mọi cách. Lúc đầu, bé đi giày của mẹ, buộc tóc theo kiểu của cô. Bé lại còn đeo túi xách và đồng hồ nữa. Nhưng mọi người chỉ nhìn bé và cười. Sau đó, Mai thử quét nhà như mẹ. Bé quét sạch đến nỗi bố phải ngạc nhiên:<br>- Ô, con gái của bố quét nhà sạch quá! Y như mẹ quét vậy.<br>Khi mẹ chuẩn bị nấu cơm, Mai giúp mẹ nhặt rau. Trong khi mẹ làm thức ăn, Mai dọn bát đũa, xếp thật ngay ngắn trên bàn. Cả bố và mẹ đều vui. Lúc ngồi ăn cơm, mẹ nói:<br>- Bé Mai nhà ta đã lớn thật rồi.<br>Mai cảm thấy lạ. Bé không đi giày của mẹ, không buộc tóc giống cô, không đeo đồng hồ. Nhưng bố mẹ đều nói rằng em đã lớn.<br><i>(Theo Tiếng Việt 2, tập 1, 1988)</i>';
 
 /* ── 3707 · TH Trần Phú ─────────────────────────────────────────────────────── */
-const TVCK2_B_TT = '<b>Cánh đồng của bố</b><br>Bố tôi vẫn nhớ mãi cái ngày tôi khóc, tức cái ngày tôi chào đời. Khi nghe tiếng tôi khóc, bố thốt lên sung sướng: “Trời ơi, con tôi!”. Nói rồi ông áp tai vào cạnh cái miệng đang khóc của tôi. Bố tôi nói chưa bao giờ thấy tôi xinh đẹp như vậy. Bố còn bảo ẵm một đứa bé mệt hơn cày một đám ruộng.<br>Buổi tối, bố phải đi nhẹ chân. Đó là một nỗi khổ của bố. Bố tôi to khoẻ lắm. Với bố, đi nhẹ là một việc cực kì khó khăn. Nhưng vì tôi, bố đã tập dần. Bố nói, giấc ngủ của đứa bé đẹp hơn một cánh đồng. Đêm, bố thức để được nhìn thấy tôi ngủ – cánh đồng của bố.<br><i>(Theo Nguyễn Ngọc Thuần — bài đọc SGK Tiếng Việt 2 tập 1, Chân trời sáng tạo)</i>';
+const TVCK2_B_TT = '<b>Con nuôi</b> <i>(đoạn 1, 2 — tr. 115)</i><br>1. Một hôm, cô giáo cho cả lớp xem một bức tranh rồi hỏi:<br>– Các em có nhận xét gì về bức tranh này?<br>Đó là bức tranh vẽ một gia đình. Trong tranh, một cậu bé có màu tóc và khuôn mặt khác hẳn mọi người. Hầu như cả lớp đều nhận ra điều này. Hoàng nhanh nhảu giơ tay:<br>– Thưa cô, bạn này là con nuôi ạ.<br>2. Cô giáo mỉm cười:<br>– Em nói đúng rồi. Nhưng ai có thể nói về tình cảm giữa mọi người trong gia đình này?<br>Cô giáo vừa dứt lời thì Ngọc lên tiếng:<br>– Thưa cô, em nhận thấy mọi người trong gia đình này rất yêu quý nhau. Em biết vì em cũng là con nuôi ạ.<br><i>(Theo sách Hạt giống tâm hồn — bài đọc SGK Tiếng Việt 2 tập 1, Cánh diều)</i>';
 
 const TVCK2_B_R = '<b>Bông hoa đẹp nhất</b><br>Ngày mai là sinh nhật mẹ, Thu muốn tặng mẹ một món quà. Nhưng quà gì nhỉ? Thu nhớ rồi: Mẹ thích hoa.<br>Thu bèn gieo hạt vào một cái cốc đựng đầy đất, tưới nước như ông nội vẫn làm vì muốn tặng mẹ bông hoa tự trồng. Đêm ấy, Thu mơ những hạt giống đã thành cây, nở thành những đóa hoa tuyệt đẹp.<br>Sáng hôm sau, Thu dậy sớm, đến bên mẹ:<br>- Chúc mừng sinh nhật mẹ! Con có quà tặng mẹ.<br>Nói rồi, Thu chạy đi lấy cái cốc đã gieo hạt. Nhưng cô bé ỉu xìu vì chẳng có bông hoa nào. Hạt giống vẫn nằm im lìm dưới lớp đất nâu.<br>Khi hiểu ra mọi chuyện, mẹ ôm và thơm Thu rồi nói:<br>- Con là bông hoa đẹp nhất, là món quà quý nhất của mẹ.<br><i>(Theo Thu Hằng)</i>';
 
@@ -148,15 +163,15 @@ TV2CK.push(
   ],
 },
 
-/* ═══════════ 3707 — TH TRẦN PHÚ · CTST (theo nhãn tuyển tập nguồn) ═══════════ */
+/* ═══════════ 3707 — TH TRẦN PHÚ · CÁNH DIỀU (nghe – viết “Ngày mai lên sao Kim”, TV2 tập 1 tr. 78 = SGK Cánh diều) ═══════════ */
 {
   id: 3707, title: 'CK1 · TH Trần Phú (đề sưu tầm — không rõ tỉnh, năm học)', time: 70,
-  sem: 1, book: 'Chân trời sáng tạo',
+  sem: 1, book: 'Cánh diều',
   src: 'https://dethihay.net/16-de-thi-va-dap-an-tieng-viet-lop-2-cuoi-ki-1-sach-chan-troi-sang-tao-1320/',
   questions: [
     { sec: TVCK2_SEC_TT, name: 'Câu 1', pts: 2, type: 'write', lines: 0, read: TVCK2_B_TT,
-      text: 'Đề gốc: học sinh đọc một đoạn văn trong các bài tập đọc đã học ở SGK (GV ghi tên bài, đoạn cần đọc và số trang vào phiếu cho học sinh bốc thăm) và trả lời một câu hỏi về nội dung đoạn đọc.<br>Con đọc to bài bên (bài đọc SGK Tiếng Việt 2 tập 1 — Chân trời sáng tạo) rồi trả lời: <b>Vì sao buổi tối bố phải đi nhẹ chân?</b>',
-      model: 'Gợi ý trả lời: Vì bố sợ làm bạn nhỏ thức giấc — bố muốn con ngủ ngon, nên dù to khoẻ bố vẫn tập đi nhẹ chân.<br>' + TVCK2_TT_CHAM + '<br><i>(Hướng dẫn chấm gốc ghi 0,5 + 0,5 + 1 + 1 = 3 điểm cho phần 4 điểm — đã quy đổi đều 4 mục × 0,5.)</i>' },
+      text: 'Đề gốc: học sinh đọc một đoạn văn trong các bài tập đọc đã học ở SGK (GV ghi tên bài, đoạn cần đọc và số trang vào phiếu cho học sinh bốc thăm) và trả lời một câu hỏi về nội dung đoạn đọc.<br>Con đọc to đoạn bên (bài đọc SGK Tiếng Việt 2 tập 1 — Cánh diều) rồi trả lời: <b>Vì sao Hoàng nhận ra bạn trai trong bức tranh là con nuôi?</b>',
+      model: 'Gợi ý trả lời: Vì trong tranh, cậu bé có màu tóc và khuôn mặt khác hẳn mọi người trong gia đình.<br>' + TVCK2_TT_CHAM + '<br><i>(Hướng dẫn chấm gốc ghi 0,5 + 0,5 + 1 + 1 = 3 điểm cho phần 4 điểm — đã quy đổi đều 4 mục × 0,5.)</i>' },
 
     { sec: TVCK2_SEC_DH, name: 'Câu 1', pts: 0.25, read: TVCK2_B_R,
       text: 'Thu định tặng quà cho mẹ nhân dịp nào?',
@@ -197,8 +212,8 @@ TV2CK.push(
       model: 'Ví dụ: “Con chúc mừng sinh nhật mẹ! Con chúc mẹ luôn mạnh khoẻ và vui vẻ. Con yêu mẹ nhiều lắm!”' },
 
     { sec: TVCK2_SEC_CT, name: 'Câu 1', pts: 2, type: 'write', lines: 8,
-      text: 'Nghe – viết: <b>Ngày mai lên sao Kim</b> (sách Tiếng Việt 2, tập 1, trang 78) — thời gian 15 phút.',
-      model: 'Bố mẹ đọc từng dòng thơ cho con viết (viết cả tên bài, chữ đầu mỗi dòng viết hoa):<br><b>Ngày mai lên sao Kim</b><br>Ngày mai lên sao Kim<br>Xem có gì trên đó<br>Có nắng và có gió?<br>Có ngày và có đêm?<br>Ngày mai lên sao Kim<br>Xem có gì trong đó<br>Nếu những gì chưa có<br>Thì chúng mình mang thêm.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> bài viết đúng tốc độ, chữ rõ ràng, đúng mẫu, cỡ chữ, trình bày sạch sẽ đúng quy định 1,5 điểm; viết đúng chính tả (không quá 5 lỗi) 0,5 điểm. Mỗi lỗi chính tả trừ 0,1 điểm; chữ viết không rõ ràng, trình bày bẩn trừ 0,25 điểm toàn bài; sót chữ mỗi chữ trừ 0,1 điểm.' },
+      text: 'Nghe – viết: <b>Ngày mai lên sao Kim</b> (sách Tiếng Việt 2, tập 1, trang 78 — Cánh diều) — thời gian 15 phút.',
+      model: 'Bố mẹ đọc từng dòng thơ cho con viết (viết cả tên bài, chữ đầu mỗi dòng viết hoa):<br><b>Ngày mai lên sao Kim</b><br>Ngày mai lên sao Kim<br>Xem có gì trên đó<br>Có nắng và có gió?<br>Có ngày và có đêm?<br>Ngày mai lên sao Kim<br>Xem có gì trong đó<br>Nếu những gì chưa có<br>Thì chúng mình mang thêm.<br><i>Phùng Ngọc Hùng</i><br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> bài viết đúng tốc độ, chữ rõ ràng, đúng mẫu, cỡ chữ, trình bày sạch sẽ đúng quy định 1,5 điểm; viết đúng chính tả (không quá 5 lỗi) 0,5 điểm. Mỗi lỗi chính tả trừ 0,1 điểm; chữ viết không rõ ràng, trình bày bẩn trừ 0,25 điểm toàn bài; sót chữ mỗi chữ trừ 0,1 điểm.' },
 
     { sec: TVCK2_SEC_TLV, name: 'Câu 2', pts: 3, type: 'write', lines: 9,
       text: 'Em hãy viết một đoạn văn ngắn (5 – 6 câu) kể về một người mà em yêu quý nhất.',
@@ -206,7 +221,7 @@ TV2CK.push(
   ],
 },
 
-/* ═══════════ 3708 — TH ĐỒNG HÒA · CTST (theo nhãn tuyển tập nguồn) ═══════════ */
+/* ═══════════ 3708 — TH ĐỒNG HÒA · CTST (đọc hiểu “Chuyện của thước kẻ” CTST tập 1 + nghe – viết “Hoa mai vàng” CTST tập 2) ═══════════ */
 {
   id: 3708, title: 'CK1 · TH Đồng Hòa (đề sưu tầm — không rõ tỉnh, năm học)', time: 70,
   sem: 1, book: 'Chân trời sáng tạo',
@@ -257,7 +272,7 @@ TV2CK.push(
 
     { sec: TVCK2_SEC_CT, name: 'Câu 1', pts: 2, type: 'write', lines: 6,
       text: 'Nghe – viết: <b>Hoa mai vàng</b> (đoạn “Hoa mai cũng có năm cánh… mịn màng như lụa.”).',
-      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Hoa mai vàng</b><br>Hoa mai cũng có năm cánh như hoa đào, nhưng cánh hoa mai to hơn cánh hoa đào một chút. Những nụ mai không phải màu hồng mà xanh ngời màu ngọc bích. Sắp nở, nụ mai mới phô vàng. Khi nở, cánh mai xòe ra mịn màng như lụa.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> tốc độ đạt yêu cầu; chữ viết rõ ràng, đúng cỡ chữ; viết đúng chính tả; trình bày đúng quy định, sạch đẹp. Sai 4 lỗi trừ 0,5 điểm.' },
+      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Hoa mai vàng</b><br>Hoa mai cũng có năm cánh như hoa đào, nhưng cánh hoa mai to hơn cánh hoa đào một chút. Những nụ mai không phô hồng mà ngời xanh màu ngọc bích. Sắp nở, nụ mai mới phô vàng. Khi nở, cánh hoa mai xoè ra mịn màng như lụa.<br><i>(Đoạn nghe – viết của SGK Tiếng Việt 2 tập 2, Chân trời sáng tạo, bài “Hoa mai vàng”.)</i><br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> tốc độ đạt yêu cầu; chữ viết rõ ràng, đúng cỡ chữ; viết đúng chính tả; trình bày đúng quy định, sạch đẹp. Sai 4 lỗi trừ 0,5 điểm.' },
 
     { sec: TVCK2_SEC_TLV, name: 'Câu 2', pts: 3, type: 'write', lines: 8,
       text: 'Viết đoạn văn từ 3 – 5 câu kể về giờ ra chơi ở trường em.',
@@ -281,7 +296,7 @@ TV2CK.push(
       why: 'Câu đầu bài: “thước kẻ làm bạn với bút mực và bút chì”.' },
     { sec: TVCK2_SEC_DH, name: 'Câu 2', pts: 0.25, read: TVCK2_D_R,
       text: 'Mỗi đường kẻ thẳng tắp là niềm vui của ………',
-      opts: o4('Thước kẻ.', 'Bút mực và bút chì.', 'Bác thợ mộc.', 'Cả 3.'), ans: 'D',
+      opts: o4('Thước kẻ.', 'Bút mực và bút chì.', 'Bác thợ mộc.', 'Cả 3 bạn: thước kẻ, bút mực, bút chì.'), ans: 'D',  // đề gốc ghi “Cả 3.” — viết rõ để khỏi hiểu nhầm gồm cả bác thợ mộc
       why: 'Bài viết: “Mỗi hình vẽ đẹp, mỗi đường kẻ thẳng tắp là niềm vui chung của <b>cả ba</b>” — cả ba bạn thước kẻ, bút mực và bút chì (đáp án D của trường). Bác thợ mộc chỉ xuất hiện ở cuối truyện.' },
     { sec: TVCK2_SEC_DH, name: 'Câu 3', pts: 0.25, read: TVCK2_D_R,
       text: 'Vì sao thước kẻ bị cong?',

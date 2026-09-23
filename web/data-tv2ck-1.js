@@ -33,17 +33,29 @@
 // 3702: đáp án ô trống/gạch chân mất định dạng khi đăng — đã khôi phục theo hướng dẫn chấm.
 // 3703 câu 8 phương án B in “song” → sửa “sông”. 3705: sửa viết hoa đầu câu trong bài đọc
 // (“sẻ hốt hoảng”, “chuồn chuồn gọi”).
+//
+// KIỂM ĐỊNH LẦN 2 (đối chiếu lại 5 trang nguồn + SGK KNTT qua loigiaihay/vietjack):
+//  - Bộ sách KNTT xác nhận: “Tớ nhớ cậu” (Bài 18, nghe – viết tr. 83) và “Đồ chơi yêu thích”
+//    (Bài 22, nghe – viết tr. 99) là bài viết của SGK KNTT tập 1; hai đoạn trong `model` khớp nguyên
+//    văn SGK. 3702: đề năm trước cùng trường cho nghe – viết đoạn “Nhím nâu kết bạn” (Bài 20 KNTT).
+//  - TVCK1_TT2 (Chơi chong chóng): “phùng mỏ” → “phùng má” (đúng SGK, sửa cả gợi ý trả lời 3702);
+//    bổ sung câu cuối đoạn 2 “Bây giờ cũng giống như anh, Mai cũng rất mê những chiếc chong chóng.”
+//    và tác giả (Theo Tuệ Nhi).
+//  - TVCK1_TT4 (Sự tích hoa tỉ muội): “Bụt liền phẩy chiếc quạt thần.” → “Ông giơ gậy thần lên.”;
+//    “Nết đi qua mọc lên” → “Nết đi qua, mọc lên” (đúng SGK).
+//  - 3701 chính tả 2a thêm alt “nắn”, 2d thêm alt “n”.
+//  - 3702: các đáp án khôi phục (4a ngồi, bán; 5a dấu phẩy; 5b hiền hậu; câu 3) khớp hướng dẫn chấm.
 
 /* ── Bài đọc dùng chung ─────────────────────────────────────────────────────── */
 
 // Đọc thành tiếng — bài SGK Tiếng Việt 2 tập 1, Kết nối tri thức (chép nguyên văn)
 const TVCK1_TT1 = '<b>Thương ông</b> <i>(trích)</i><br>Ông bị đau chân<br>Nó sưng nó tấy<br>Đi phải chống gậy<br>Khập khiễng, khập khà,<br>Bước lên thềm nhà<br>Nhấc chân quá khó<br>Thấy ông nhăn nhó,<br>Việt chơi ngoài sân<br>Lon ton lại gần,<br>Âu yếm, nhanh nhảu:<br>- Ông vịn vai cháu,<br>Cháu đỡ ông lên.<br><i>(Tú Mỡ — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 30)</i>';
 
-const TVCK1_TT2 = '<b>Chơi chong chóng</b> <i>(đoạn 2)</i><br>An thường rủ bé Mai chơi chong chóng và thi xem ai thắng. Hai anh em chạy quanh sân cho chong chóng quay, rồi đột ngột dừng lại. Chong chóng của ai dừng quay trước thì người đó thua. An chạy nhanh hơn nên chong chóng quay lâu hơn. Thua mãi, Mai buồn thiu. An liền cho em giơ chong chóng ra trước quạt máy, còn mình thì phùng mỏ thổi phù phù cho chong chóng quay. Mai cười toe vì thắng.<br><i>(SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 32)</i>';
+const TVCK1_TT2 = '<b>Chơi chong chóng</b> <i>(đoạn 2)</i><br>An thường rủ bé Mai chơi chong chóng và thi xem ai thắng. Hai anh em chạy quanh sân cho chong chóng quay, rồi đột ngột dừng lại. Chong chóng của ai dừng quay trước thì người đó thua. An chạy nhanh hơn nên chong chóng quay lâu hơn. Thua mãi, Mai buồn thiu. An liền cho em giơ chong chóng ra trước quạt máy, còn mình thì phùng má thổi phù phù cho chong chóng quay. Mai cười toe vì thắng. Bây giờ cũng giống như anh, Mai cũng rất mê những chiếc chong chóng.<br><i>(Theo Tuệ Nhi — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 32)</i>';
 
 const TVCK1_TT3 = '<b>Cánh cửa nhớ bà</b><br>Ngày cháu còn thấp bé<br>Cánh cửa có hai then<br>Cháu chỉ cài then dưới<br>Nhờ bà cài then trên.<br><br>Mỗi năm cháu lớn lên<br>Bà lưng còng cắm cúi<br>Cháu cài được then trên<br>Bà chỉ cài then dưới...<br><br>Nay cháu về nhà mới<br>Bao cánh cửa - ô trời<br>Mỗi lần tay đẩy cửa<br>Lại nhớ bà khôn nguôi.<br><i>(Đoàn Thị Lam Luyến — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 29)</i>';
 
-const TVCK1_TT4 = '<b>Sự tích hoa tỉ muội</b> <i>(đoạn cuối)</i><br>Năm ấy, nước lũ dâng cao, Nết cõng em chạy theo dân làng đến nơi an toàn. Hai bàn chân Nết rớm máu. Thấy vậy, Bụt thương lắm. Bụt liền phẩy chiếc quạt thần. Kì lạ thay, bàn chân Nết bỗng lành hẳn. Nơi bàn chân Nết đi qua mọc lên những khóm hoa đỏ thắm. Hoa kết thành chùm, bông hoa lớn che chở cho nụ hoa bé nhỏ. Chúng cũng đẹp như tình chị em của Nết và Na.<br>Dân làng đặt tên cho loài hoa ấy là hoa tỉ muội.<br><i>(Theo Trần Mạnh Hùng — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 25)</i>';
+const TVCK1_TT4 = '<b>Sự tích hoa tỉ muội</b> <i>(đoạn cuối)</i><br>Năm ấy, nước lũ dâng cao, Nết cõng em chạy theo dân làng đến nơi an toàn. Hai bàn chân Nết rớm máu. Thấy vậy, Bụt thương lắm. Ông giơ gậy thần lên. Kì lạ thay, bàn chân Nết bỗng lành hẳn. Nơi bàn chân Nết đi qua, mọc lên những khóm hoa đỏ thắm. Hoa kết thành chùm, bông hoa lớn che chở cho nụ hoa bé nhỏ. Chúng cũng đẹp như tình chị em của Nết và Na.<br>Dân làng đặt tên cho loài hoa ấy là hoa tỉ muội.<br><i>(Theo Trần Mạnh Hùng — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 25)</i>';
 
 const TVCK1_TT5 = '<b>Trò chơi của bố</b> <i>(đoạn đầu)</i><br>Bố luôn dành cho Hường những điều ngạc nhiên. Lúc rảnh rỗi, hai bố con ngồi chơi với nhau như đôi bạn cùng tuổi.<br>Có lần, hai bố con chơi trò chơi “ăn cỗ”. Hường đưa cái bát nhựa cho bố:<br>- Mời bác xơi!<br>Bố đỡ bằng hai tay hẳn hoi và nói:<br>- Xin bác. Mời bác xơi!<br>- Bác xơi nữa không ạ?<br>- Cảm ơn bác! Tôi đủ rồi.<br>Hai bố con cùng phá lên cười.<br><i>(Theo Phong Thu — SGK Tiếng Việt 2 tập 1, Kết nối tri thức, Bài 28)</i>';
 
@@ -103,7 +115,7 @@ TV2CK.push(
       model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Tớ nhớ cậu</b><br>Kiến là bạn thân của sóc. Hằng ngày, hai bạn rủ nhau đi học. Một ngày nọ, nhà kiến chuyển sang cánh rừng khác. Sóc và kiến rất buồn. Hai bạn tìm cách gửi thư cho nhau để bày tỏ nỗi nhớ.<br><b>Chấm (1,5 điểm — quy đổi từ 3 điểm):</b> bài viết sạch, rõ ràng, đúng tốc độ, đúng cỡ chữ, không mắc quá 2 lỗi thì được điểm tối đa; mỗi lỗi chính tả trừ theo lỗi cụ thể (mắc cùng một lỗi nhiều lần chỉ trừ một lần).' },
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 2a', pts: 0.125, type: 'type',
       text: 'Điền <b>n</b> hoặc <b>l</b> thích hợp vào chỗ chấm, rồi viết lại cả từ: <b>…ắn nót</b>',
-      ans: 'nắn nót', alts: ['n'],
+      ans: 'nắn nót', alts: ['n', 'nắn'],
       why: '“Nắn nót” (viết cẩn thận từng nét) viết bằng <b>n</b>.' },
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 2b', pts: 0.125, type: 'type',
       text: 'Điền <b>n</b> hoặc <b>l</b> thích hợp vào chỗ chấm, rồi viết lại cả từ: <b>lưỡi …iềm</b>',
@@ -115,7 +127,7 @@ TV2CK.push(
       why: '“Reo lên” viết bằng <b>l</b>.' },
     { sec: 'B. Kiểm tra viết — I. Chính tả', name: 'Câu 2d', pts: 0.125, type: 'type',
       text: 'Điền <b>n</b> hoặc <b>l</b> thích hợp vào chỗ chấm, rồi viết lại cả từ: <b>…úi …on</b>',
-      ans: 'núi non', alts: ['n n', 'n, n'],
+      ans: 'núi non', alts: ['n n', 'n, n', 'n'],
       why: '“Núi non” — cả hai tiếng đều viết bằng <b>n</b>.' },
 
     { sec: 'B. Kiểm tra viết — II. Tập làm văn', name: 'Câu 1', pts: 3, type: 'write', lines: 9,
@@ -132,7 +144,7 @@ TV2CK.push(
   questions: [
     { sec: 'A. Kiểm tra đọc — I. Đọc thành tiếng', name: 'Câu 1', pts: 2, type: 'write', lines: 0, read: TVCK1_TT2,
       text: 'Đề gốc: kiểm tra học sinh đọc một đoạn văn (không có trong SGK) và trả lời 1 câu hỏi về nội dung. Đoạn bên là bài SGK để luyện; bố mẹ có thể thay bằng một đoạn văn khác dài tương đương mà con chưa đọc.<br>Con đọc to đoạn văn rồi trả lời: <b>Để bé Mai vui, An đã làm gì?</b>',
-      model: 'Gợi ý trả lời: An cho em giơ chong chóng ra trước quạt máy, còn mình thì phùng mỏ thổi phù phù cho chong chóng quay, nên Mai thắng và cười toe.<br>' + TVCK1_TT_CHAM },
+      model: 'Gợi ý trả lời: An cho em giơ chong chóng ra trước quạt máy, còn mình thì phùng má thổi phù phù cho chong chóng quay, nên Mai thắng và cười toe.<br>' + TVCK1_TT_CHAM },
 
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 1a', pts: 0.25, read: TVCK1_R2,
       text: 'Ngày sinh nhật Thủy, mẹ đưa Thủy đi đâu?',
@@ -229,7 +241,7 @@ TV2CK.push(
       model: 'Ví dụ: quan tâm, chăm sóc, yêu thương (hoặc: thương yêu, kính yêu, quý mến, chiều chuộng, săn sóc…). Đúng 3 từ được điểm tối đa.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 10a', pts: 0.125, type: 'type', read: TVCK1_R3,
       text: 'Điền <b>d</b>, <b>r</b> hoặc <b>gi</b> vào chỗ chấm, rồi viết lại cả từ: <b>…ang tay</b>',
-      ans: 'dang tay', alts: ['d'],
+      ans: 'dang tay', alts: ['d', 'giang tay', 'gi'],
       why: '“Dang tay” (giơ rộng hai tay ra) viết bằng <b>d</b>.' },
     { sec: 'A. Kiểm tra đọc — II. Đọc hiểu và luyện từ và câu', name: 'Câu 10b', pts: 0.125, type: 'type', read: TVCK1_R3,
       text: 'Điền <b>d</b>, <b>r</b> hoặc <b>gi</b> vào chỗ chấm, rồi viết lại cả từ: <b>…ó bão</b>',

@@ -35,7 +35,7 @@
 //  3906: sửa chữ “khuyên góp” → “quyên góp”, “tối bụng” → “tốt bụng”, thêm dấu chấm “đồ dùng. Đứng nhìn”;
 //        đáp án ghi Câu 7 “0,5 điểm” nhưng đề và biểu điểm ghi câu 7–9 mỗi câu 1 điểm → dùng 1 điểm gốc.
 //        Bài chính tả “Trong đêm bé ngủ” trong đáp án bị đảo dòng (dàn 2 cột) → chép lại đúng thứ tự
-//        SGK; “Nhắc hoa” → “Nhấc hoa”.
+//        SGK (giữ “Nhắc hoa mở cánh” như đề gốc — xem Kiểm định lần 2).
 //  3907: đáp án đánh số “Câu 9” cho câu đặt câu so sánh → thực ra là Câu 8; sửa “có có” → “có”,
 //        “mùi lòng” → “mủi lòng”, “giừo” → “giờ”.
 //  3908: đề bị mất chữ in đậm ở Câu 8 → khôi phục theo đáp án (bộ phận “trên cành cây”); sửa “ở đây Rồi”
@@ -45,6 +45,23 @@
 //  3910: Câu 5 hỏi “đánh dấu X trước câu trả lời SAI” nhưng đáp án nguồn lại đánh dấu ý đúng (“khoe chiếc
 //        nhãn vở do chính tay bạn nhỏ viết”) → câu trả lời sai là ý “khoe viết đẹp hơn chị” (B).
 //        Sửa chữ “đên” → “đến”, “Chân Trơid” → “Chân trời”.
+//
+// KIỂM ĐỊNH LẦN 2 (soát độc lập, đối chiếu lại 6 trang nguồn + văn bản SGK trên loigiaihay/vietjack/thivien):
+//  - Đã giải lại mọi câu trắc nghiệm 3906–3910: trùng `ans` hiện có. Tổng điểm mỗi đề = 10, tỉ lệ đúng đề gốc.
+//  - 3906 chính tả: người nhập đã đổi “Nhắc hoa mở cánh” → “Nhấc” — SAI: đề gốc, VietJack (chép SGK Cánh diều
+//    tr.53) và thivien.net đều in “Nhắc hoa mở cánh” (chỉ loigiaihay in “Nhấc”) → khôi phục “Nhắc”.
+//  - 3908 câu 9a/9b: thêm alts có “và” (“dòng sông, cây đa và con đò”, “xanh tươi, vàng óng và rực rỡ”).
+//  - 3909: đoạn đọc thành tiếng Chú sẻ và bông hoa bằng lăng gồm 2 đoạn SGK → nhãn “(đoạn 1)” sửa “(đoạn 1, 2)”.
+//    Tỉnh/quận của TH Chu Văn An: cả hai trang nguồn (đọc, viết) chỉ ghi “TRƯỜNG TH CHU VĂN AN … Lớp 3.1”, tìm
+//    thêm trên mạng không ra → giữ “(chưa rõ tỉnh)”.
+//  - 3910 bộ sách: đã kiểm chứng — Chiếc nhãn vở đặc biệt là Bài 1 SGK TV3 tập 1 CTST (tr.10–11); Ông ngoại,
+//    Vườn dừa của ngoại, Hoa cỏ sân trường, Gió sông Hương, Phần thưởng đều là bài CTST TV3 tập 1 → CTST đúng
+//    (chỉ bài đọc Cha sẽ luôn ở bên con là của Cánh diều, đề gốc cũng ghi vậy).
+//    Hướng dẫn chấm TLV: tách riêng biểu điểm nội dung của đề 2 (đồ vật) cho đúng hướng dẫn chấm gốc.
+//  - Đã khớp nguyên văn SGK: Nhà rông (CD tr.77), Trong đêm bé ngủ (CD tr.53), Ông Mạc Đĩnh Chi (CD tr.127),
+//    Chú sẻ và bông hoa bằng lăng (CTST tr.104).
+//  - Soát biểu điểm chính tả theo hướng dẫn chấm gốc (chia đôi): 3906, 3908, 3909, 3910 khớp; 3907 bỏ con số
+//    “mỗi lỗi khoảng 0,125 điểm” do người nhập tự thêm (hướng dẫn chấm gốc chỉ ghi “trừ điểm theo từng lỗi cụ thể”).
 
 /* ── Tiêu chí chấm dùng chung ──────────────────────────────────────────────── */
 const TV3CK2_TT_CHAM = '<b>Chấm (2 điểm — quy đổi từ 4 điểm của đề gốc):</b><br>• Đọc vừa đủ nghe, rõ ràng; tốc độ khoảng 70–80 tiếng/phút: 0,5 điểm.<br>• Đọc đúng tiếng, từ (không đọc sai quá 5 tiếng): 0,5 điểm.<br>• Ngắt nghỉ hơi đúng ở các dấu câu, các cụm từ rõ nghĩa: 0,5 điểm.<br>• Trả lời đúng câu hỏi về nội dung đoạn đọc: 0,5 điểm.';
@@ -56,7 +73,7 @@ const TV3CK2_TT2 = '<b>Bạn mới</b> <i>(đoạn đầu)</i><br>Giờ ra chơi
 
 const TV3CK2_TT3 = '<b>Cha sẽ luôn ở bên con</b> <i>(đoạn đầu)</i><br>Một trận động đất lớn xảy ra. Chỉ trong vòng 4 phút, nó đã san bằng thành phố. Giữa cơn hỗn loạn đó, một người cha chạy vội đến trường học của con. Ông bàng hoàng, lặng đi vì ngôi trường chỉ còn là một đống gạch vụn. Rồi ông nhớ lại lời hứa với con: “Dù có chuyện gì xảy ra, cha cũng sẽ luôn ở bên con.”<br><i>(Theo báo Tuổi trẻ, Thanh Giang dịch — SGK Tiếng Việt 3 tập 1, Cánh diều, tr. 49)</i>';
 
-const TV3CK2_TT4 = '<b>Chú sẻ và bông hoa bằng lăng</b> <i>(đoạn 1)</i><br>Ở gần tổ của một chú sẻ non đang tập bay có một cây bằng lăng. Mùa hoa này, bằng lăng nở hoa mà không vui vì bé Thơ, bạn của cây, phải nằm viện. Sẻ non biết bằng lăng đã giữ lại một bông hoa cuối cùng để đợi bé Thơ.<br>Sáng hôm ấy, bé Thơ về, bông bằng lăng cuối cùng đã nở. Nhưng bông hoa lại nở cao hơn cửa sổ nên bé không nhìn thấy nó. Bé cứ ngỡ là mùa hoa đã qua.<br><i>(Theo Phạm Hổ — SGK Tiếng Việt 3 tập 1, Chân trời sáng tạo, tr. 104)</i>';
+const TV3CK2_TT4 = '<b>Chú sẻ và bông hoa bằng lăng</b> <i>(đoạn 1, 2)</i><br>Ở gần tổ của một chú sẻ non đang tập bay có một cây bằng lăng. Mùa hoa này, bằng lăng nở hoa mà không vui vì bé Thơ, bạn của cây, phải nằm viện. Sẻ non biết bằng lăng đã giữ lại một bông hoa cuối cùng để đợi bé Thơ.<br>Sáng hôm ấy, bé Thơ về, bông bằng lăng cuối cùng đã nở. Nhưng bông hoa lại nở cao hơn cửa sổ nên bé không nhìn thấy nó. Bé cứ ngỡ là mùa hoa đã qua.<br><i>(Theo Phạm Hổ — SGK Tiếng Việt 3 tập 1, Chân trời sáng tạo, tr. 104)</i>';
 
 const TV3CK2_TT5 = '<b>Phần thưởng</b> <i>(trích)</i><br>Thấm thoắt, Nhi đã lên lớp Ba. Hôm ấy là giờ sinh hoạt lớp. Cô giáo tổ chức cho các bạn giới thiệu mười thành viên tiêu biểu trong lớp được kết nạp Đội. Mặt Nhi đỏ bừng khi nghe bạn lớp trưởng nhắc đến tên mình: “Thưa cô, em xin giới thiệu Nhi vì bạn ấy luôn chăm chỉ, lại hay giúp đỡ mọi người.”<br><i>(Theo Nguyễn Thị Bích Ngọc — SGK Tiếng Việt 3 tập 1, Chân trời sáng tạo)</i>';
 
@@ -124,7 +141,7 @@ TV3CK.push(
 
     { sec: TV3CK2_S_CT, name: 'Câu 1', pts: 2, type: 'write', lines: 8,
       text: 'Nghe – viết: <b>Trong đêm bé ngủ</b> (SGK Tiếng Việt 3 tập 1, trang 53).',
-      model: 'Bố mẹ đọc chậm từng dòng thơ cho con viết (viết cả tên bài, chữ đầu mỗi dòng viết hoa):<br><b>Trong đêm bé ngủ</b><br>Trong đêm bé ngủ<br>Cây dâu ngoài bãi<br>Nảy những búp non<br>Con gà trong ổ<br>Đẻ trứng ấp con<br>Cây chuối cuối vườn<br>Nhấc hoa mở cánh<br>Ngôi sao lấp lánh<br>Sáng hạt sương rơi<br>Con cá quả mẹ<br>Ao khuya đớp mồi…<br><i>PHẠM HỔ</i><br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> tốc độ đạt yêu cầu 0,5; chữ viết rõ ràng, đúng kiểu, cỡ chữ 0,5; viết đúng chính tả (không mắc quá 5 lỗi) 0,5; trình bày đúng quy định, sạch đẹp 0,5. Từ lỗi thứ 6 trở đi mỗi lỗi trừ 0,125 điểm.' },
+      model: 'Bố mẹ đọc chậm từng dòng thơ cho con viết (viết cả tên bài, chữ đầu mỗi dòng viết hoa):<br><b>Trong đêm bé ngủ</b><br>Trong đêm bé ngủ<br>Cây dâu ngoài bãi<br>Nảy những búp non<br>Con gà trong ổ<br>Đẻ trứng ấp con<br>Cây chuối cuối vườn<br>Nhắc hoa mở cánh<br>Ngôi sao lấp lánh<br>Sáng hạt sương rơi<br>Con cá quả mẹ<br>Ao khuya đớp mồi…<br><i>PHẠM HỔ</i><br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> tốc độ đạt yêu cầu 0,5; chữ viết rõ ràng, đúng kiểu, cỡ chữ 0,5; viết đúng chính tả (không mắc quá 5 lỗi) 0,5; trình bày đúng quy định, sạch đẹp 0,5. Từ lỗi thứ 6 trở đi mỗi lỗi trừ 0,125 điểm.' },
 
     { sec: TV3CK2_S_TLV, name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Đề bài:</b> Em hãy viết một đoạn văn kể về việc em giữ lời hứa với cha mẹ (người thân) khuyên bảo em những điều hay lẽ phải.<br>Gợi ý:<br>– Câu chuyện xảy ra khi nào?<br>– Cha mẹ (người thân) đã khuyên em điều gì?<br>– Em đã nghe lời khuyên bảo của cha mẹ (người thân) thế nào?<br>– Em đã hứa với cha mẹ (người thân) điều gì?<br>– Qua việc làm của em, thái độ của cha mẹ (người thân) thế nào?',
@@ -179,7 +196,7 @@ TV3CK.push(
 
     { sec: TV3CK2_S_CT, name: 'Câu 1', pts: 2, type: 'write', lines: 7,
       text: 'Nghe – viết: <b>Hành trình của hạt mầm</b>.',
-      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Hành trình của hạt mầm</b><br>Mảnh đất ẩm ướt bao phủ tôi. Nơi đây tối om. Tôi thức dậy khi những hạt mưa rơi xuống mặt đất chật chội. Lúc ấy, tôi bắt đầu tò mò. Tôi tò mò về độ lớn của bầu trời, tò mò về mọi thứ ngoài kia. Trời lại đổ nhiều mưa hơn. Những giọt mưa mát lạnh dội vào người tôi, thật thoải mái! Sau cơn mưa ấy, tôi đã cố gắng vươn lên được một chút.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> bài viết sạch sẽ, rõ ràng, trình bày đúng quy định, đúng tốc độ, đúng cỡ chữ, kiểu chữ, không mắc lỗi: 2 điểm. Trừ điểm theo từng lỗi cụ thể (mỗi lỗi khoảng 0,125 điểm; mắc cùng một lỗi nhiều lần chỉ trừ một lần).' },
+      model: 'Bố mẹ đọc chậm từng cụm từ cho con viết (viết cả tên bài):<br><b>Hành trình của hạt mầm</b><br>Mảnh đất ẩm ướt bao phủ tôi. Nơi đây tối om. Tôi thức dậy khi những hạt mưa rơi xuống mặt đất chật chội. Lúc ấy, tôi bắt đầu tò mò. Tôi tò mò về độ lớn của bầu trời, tò mò về mọi thứ ngoài kia. Trời lại đổ nhiều mưa hơn. Những giọt mưa mát lạnh dội vào người tôi, thật thoải mái! Sau cơn mưa ấy, tôi đã cố gắng vươn lên được một chút.<br><b>Chấm (2 điểm — quy đổi từ 4 điểm):</b> bài viết sạch sẽ, rõ ràng, trình bày đúng quy định, đúng tốc độ, đúng cỡ chữ, kiểu chữ, không mắc lỗi: 2 điểm. Trừ điểm theo từng lỗi cụ thể (kể cả chữ viết không đều); mắc cùng một lỗi nhiều lần chỉ trừ một lần. <i>(Hướng dẫn chấm gốc không ghi mức trừ cho mỗi lỗi.)</i>' },
 
     { sec: TV3CK2_S_TLV, name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Đề bài:</b> Viết một đoạn văn giới thiệu về ngôi nhà thân thương của gia đình em.',
@@ -242,11 +259,11 @@ TV3CK.push(
       why: '“Trên cành cây” chỉ nơi chốn → trả lời câu hỏi Ở đâu?' },
     { sec: TV3CK2_S_DH, name: 'Câu 9a', pts: 0.125, type: 'type', read: TV3CK2_R3,
       text: 'Xếp các từ: <i>dòng sông, xanh tươi, cây đa, vàng óng, rực rỡ, con đò</i> vào nhóm thích hợp.<br>Viết các <b>từ ngữ chỉ sự vật</b> (cách nhau bằng dấu phẩy).',
-      ans: 'dòng sông, cây đa, con đò', alts: ['dòng sông cây đa con đò', 'cây đa, dòng sông, con đò', 'con đò, dòng sông, cây đa', 'dòng sông, con đò, cây đa', 'cây đa, con đò, dòng sông', 'con đò, cây đa, dòng sông'],
+      ans: 'dòng sông, cây đa, con đò', alts: ['dòng sông cây đa con đò', 'cây đa, dòng sông, con đò', 'con đò, dòng sông, cây đa', 'dòng sông, con đò, cây đa', 'cây đa, con đò, dòng sông', 'con đò, cây đa, dòng sông', 'dòng sông, cây đa và con đò'],
       why: 'Từ chỉ sự vật là tên gọi người, vật, cảnh: dòng sông, cây đa, con đò.' },
     { sec: TV3CK2_S_DH, name: 'Câu 9b', pts: 0.125, type: 'type', read: TV3CK2_R3,
       text: 'Cũng các từ trên, viết các <b>từ ngữ chỉ đặc điểm</b> (cách nhau bằng dấu phẩy).',
-      ans: 'xanh tươi, vàng óng, rực rỡ', alts: ['xanh tươi vàng óng rực rỡ', 'xanh tươi, rực rỡ, vàng óng', 'vàng óng, xanh tươi, rực rỡ', 'vàng óng, rực rỡ, xanh tươi', 'rực rỡ, xanh tươi, vàng óng', 'rực rỡ, vàng óng, xanh tươi'],
+      ans: 'xanh tươi, vàng óng, rực rỡ', alts: ['xanh tươi vàng óng rực rỡ', 'xanh tươi, rực rỡ, vàng óng', 'vàng óng, xanh tươi, rực rỡ', 'vàng óng, rực rỡ, xanh tươi', 'rực rỡ, xanh tươi, vàng óng', 'rực rỡ, vàng óng, xanh tươi', 'xanh tươi, vàng óng và rực rỡ'],
       why: 'Từ chỉ đặc điểm (màu sắc, vẻ đẹp): xanh tươi, vàng óng, rực rỡ.' },
     { sec: TV3CK2_S_DH, name: 'Câu 10', pts: 0.5, type: 'write', lines: 2, read: TV3CK2_R3,
       text: 'Đặt 1 câu theo mẫu <b>Ai thế nào?</b> để nói về một bạn trong lớp.',
@@ -366,7 +383,7 @@ TV3CK.push(
 
     { sec: TV3CK2_S_TLV, name: 'Câu 1', pts: 3, type: 'write', lines: 10,
       text: '<b>Viết đoạn văn</b> (khoảng 7 – 10 câu, 120 – 150 chữ). Lựa chọn một trong hai đề bài sau:<br><b>Đề 1:</b> Viết đoạn văn ngắn khoảng 7 – 10 câu nêu tình cảm, cảm xúc về một người mà em yêu quý.<br><b>Đề 2:</b> Hãy viết một đoạn văn ngắn khoảng 7 – 10 câu tả về một đồ vật mà em thích.',
-      model: '<b>Bài mẫu đề 1:</b> Người mà em yêu quý nhất là bà ngoại của em. Năm nay bà đã gần bảy mươi tuổi nhưng vẫn còn nhanh nhẹn. Mái tóc bà bạc trắng như mây, đôi mắt hiền hậu luôn nhìn em trìu mến. Sáng nào bà cũng dậy sớm quét sân, cho gà ăn rồi nấu bữa sáng cho cả nhà. Mỗi khi em học bài xong, bà lại kể cho em nghe những câu chuyện cổ tích thật hay. Có lần em bị ốm, bà thức gần suốt đêm chườm khăn và quạt cho em ngủ. Em thương bà lắm và luôn mong bà sống thật lâu với con cháu. Em sẽ chăm ngoan, học giỏi để bà luôn vui lòng.<br><b>Bài mẫu đề 2:</b> Đồ vật em thích nhất là chiếc đồng hồ báo thức bố tặng em. Đồng hồ hình tròn, vỏ nhựa màu đỏ tươi, đứng trên hai chân nhỏ xíu. Mặt đồng hồ trắng tinh, có mười hai con số và ba chiếc kim: kim giờ ngắn, kim phút dài, kim giây mảnh như sợi chỉ. Trên đỉnh có hai quả chuông nhỏ trông như đôi tai. Sáng sáng, chuông reo “reng reng” gọi em dậy đi học. Nhờ có đồng hồ, em không bao giờ đến lớp muộn. Em luôn lau chùi và đặt đồng hồ ngay ngắn trên bàn học. Em quý chiếc đồng hồ như một người bạn nhỏ chăm chỉ.<br><b>Chấm (3 điểm — quy đổi từ 6 điểm):</b> hình thức, kĩ năng 1,25 (bố cục đủ giới thiệu – đặc điểm – tình cảm 0,5; diễn đạt 0,25; quan sát, miêu tả 0,25; biết dùng so sánh, nhân hoá 0,25); nội dung 1,5 (đúng đối tượng 0,5; chi tiết nổi bật 0,25; quan sát 0,25 / tác dụng của đồ vật; câu nêu tình cảm, cảm xúc 0,5); sáng tạo 0,25.' },
+      model: '<b>Bài mẫu đề 1:</b> Người mà em yêu quý nhất là bà ngoại của em. Năm nay bà đã gần bảy mươi tuổi nhưng vẫn còn nhanh nhẹn. Mái tóc bà bạc trắng như mây, đôi mắt hiền hậu luôn nhìn em trìu mến. Sáng nào bà cũng dậy sớm quét sân, cho gà ăn rồi nấu bữa sáng cho cả nhà. Mỗi khi em học bài xong, bà lại kể cho em nghe những câu chuyện cổ tích thật hay. Có lần em bị ốm, bà thức gần suốt đêm chườm khăn và quạt cho em ngủ. Em thương bà lắm và luôn mong bà sống thật lâu với con cháu. Em sẽ chăm ngoan, học giỏi để bà luôn vui lòng.<br><b>Bài mẫu đề 2:</b> Đồ vật em thích nhất là chiếc đồng hồ báo thức bố tặng em. Đồng hồ hình tròn, vỏ nhựa màu đỏ tươi, đứng trên hai chân nhỏ xíu. Mặt đồng hồ trắng tinh, có mười hai con số và ba chiếc kim: kim giờ ngắn, kim phút dài, kim giây mảnh như sợi chỉ. Trên đỉnh có hai quả chuông nhỏ trông như đôi tai. Sáng sáng, chuông reo “reng reng” gọi em dậy đi học. Nhờ có đồng hồ, em không bao giờ đến lớp muộn. Em luôn lau chùi và đặt đồng hồ ngay ngắn trên bàn học. Em quý chiếc đồng hồ như một người bạn nhỏ chăm chỉ.<br><b>Chấm (3 điểm — quy đổi từ 6 điểm):</b> hình thức, kĩ năng 1,25 (bố cục đủ giới thiệu – đặc điểm – tình cảm 0,5; diễn đạt 0,25; quan sát, miêu tả 0,25; biết dùng so sánh, nhân hoá 0,25); nội dung 1,5 (đề 1: nói đúng tình cảm với người em yêu quý 0,5; chi tiết nổi bật 0,25; quan sát, miêu tả 0,25; câu nêu tình cảm, cảm xúc 0,5 — đề 2: tả đúng đồ vật 0,5; chi tiết nổi bật (kích thước, hình dáng, màu sắc) 0,5; câu nêu tình cảm với đồ vật 0,25; tác dụng của đồ vật 0,25); sáng tạo 0,25.' },
   ],
 },
 

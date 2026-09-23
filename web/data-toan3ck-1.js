@@ -19,6 +19,16 @@
 //   3805 Câu 3A: đáp án trường ghi Đ — với đề in "3m 4mm = 34mm" thì SAI (3m 4mm = 3004mm) → S.
 //   3805 Câu 3C/3D: đáp án trường ghi C Đ, D S — ngược với hình trong đề: đoạn HN KHÔNG đi qua tâm O
 //         (không phải đường kính), còn A, B nằm trên đường tròn nên OA, OB là bán kính → C S, D Đ.
+// Kiểm định lần 2 (đối chiếu lại file gốc của trường + ảnh đề gốc; giải lại toàn bộ 93 câu):
+//   3805 Câu 3C/3D: mở lại ảnh gốc trong file Word của trường (Picture1): chấm O nằm đúng tâm đường
+//         tròn, hai đầu H, N nằm đúng trên đường tròn, dây HN cắt AB cách O khoảng 1/4 bán kính — hình
+//         vẽ cẩn thận, HN là một dây KHÔNG qua tâm (không phải vẽ ẩu). Đáp án trường "D S" (OA, OB không
+//         phải bán kính) sai với mọi cách đọc hình, nên nhiều khả năng hai dòng C/D của đáp án bị đảo.
+//         Giữ C S, D Đ; SVG giữ nguyên (khớp hình gốc).
+//   3805 Câu 3A: trong file gốc các số 3, 4, 34 được sửa sau (khác phiên soạn) nhưng bản in cuối là
+//         "3m 4mm = 34mm" → giữ S. Câu 1d: phương án được thiết kế theo cặp có/không đơn vị → giữ A (135 mm).
+//   3802: đã xem lại ảnh đồng hồ gốc (kim giờ chỉ số 10, kim phút chỉ số 2) và đáp án trường — 3 chỗ sửa ở trên đúng.
+//   Không phát hiện lỗi mới cần sửa trong 3801–3805.
 // Chuyển thể: hình vẽ lại bằng SVG trong assets/ck3/ (tiền tố t38xx-), đúng số liệu đề gốc.
 //   Câu "Nối cột A với cột B" (3801 Bài 6) → 4 câu trắc nghiệm nhỏ; điền dấu (3801 Bài 10) → trắc nghiệm;
 //   Tính nhẩm 6 phép (3802 Bài 2.1, 1 điểm) → 2 ý, mỗi ý 3 phép, 0,5 điểm; sơ đồ nhiều đáp án (3805 Bài 4b) → tự luận bố mẹ chấm.

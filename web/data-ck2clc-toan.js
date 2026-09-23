@@ -16,6 +16,10 @@
 //   3603: file của trường không kèm đáp án — tự giải từng câu.
 // Hình vẽ lại bằng SVG trong assets/ck2clc/ (tiền tố t36xx-), đúng số liệu đề gốc.
 // Câu "vẽ thêm kim giờ" (3602 Bài 2) chuyển thành điền số kim giờ chỉ vào để chấm tự động.
+// Kiểm định lần 2 (đối chiếu từng trang file gốc của trường, giải lại 90 câu, soát 21 SVG): không có lỗi
+//   đáp án/đề/điểm. Xác nhận 3602 Câu 1 = A, 3604 PII Bài 4b = 26 cm, 3602 Bài 2a/2b = 3 / 8; mọi hình
+//   (đồng hồ, cân, can, đường gấp khúc, tia số, bức tường) khớp đề gốc. Chỉ bổ sung alts: 3602 Bài 2a
+//   '3 giờ', Bài 2b '8 giờ'; 3604 PII Bài 4b '26 xăng ti mét', '26 xentimet'.
 
 (() => {
 const I = 'assets/ck2clc/';
@@ -138,19 +142,24 @@ TOAN2CK.push(
       why: '1 không trừ được 7, lấy 11 – 7 = 4, viết 4 nhớ 1. Hàng chục: 2 thêm 1 bằng 3; 6 – 3 = 3. Kết quả 34.' },
     { sec: 'II. Tự luận (6 điểm)', name: 'Bài 2a', pts: 0.5, type: 'type',
       text: 'Hãy vẽ thêm kim giờ để đồng hồ chỉ <b>3 giờ</b>.<br><i>(Làm trên máy: kim giờ em vẽ phải chỉ vào số mấy? Ghi số đó.)</i>', img: I + 't3602-b2a.svg',
-      ans: '3', alts: ['số 3'],
+      ans: '3', alts: ['số 3', '3 giờ'],
       why: 'Kim phút đã chỉ số 12. Lúc 3 giờ, kim giờ (kim ngắn) chỉ vào số 3.' },
     { sec: 'II. Tự luận (6 điểm)', name: 'Bài 2b', pts: 0.5, type: 'type',
       text: 'Hãy vẽ thêm kim giờ để đồng hồ chỉ <b>20 giờ</b>.<br><i>(Làm trên máy: kim giờ em vẽ phải chỉ vào số mấy? Ghi số đó.)</i>', img: I + 't3602-b2b.svg',
-      ans: '8', alts: ['số 8'],
+      ans: '8', alts: ['số 8', '8 giờ'],
       why: '20 giờ là 8 giờ tối (20 – 12 = 8). Kim giờ chỉ vào số 8, kim phút chỉ số 12.' },
     { sec: 'II. Tự luận (6 điểm)', name: 'Bài 3', pts: 2, type: 'type', lines: 4,
       text: 'Trong vườn trường có 40 chậu hoa hồng và hoa cúc. An đếm được 18 chậu hoa hồng. Hỏi trong vườn trường có bao nhiêu chậu hoa cúc?<br><i>(Trình bày bài giải; ô trả lời ghi đáp số.)</i>',
       ans: '22', alts: ['22 chậu', '22 chậu hoa cúc'],
       why: '<b>Bài giải</b><br>Trong vườn trường có số chậu hoa cúc là:<br>40 – 18 = 22 (chậu)<br>Đáp số: 22 chậu hoa cúc.' },
-    { sec: 'II. Tự luận (6 điểm)', name: 'Bài 4a', pts: 0.5, type: 'type',
-      text: 'Điền số thích hợp vào chỗ chấm:<br>2, 5, 6, 7, 11, ...... , .......<br><i>(Ghi hai số, cách nhau bởi dấu phẩy.)</i>',
-      ans: '13, 18', alts: ['13,18', '13 và 18'],
+    // Hướng dẫn chấm của trường: 0,25 điểm mỗi số → tách hai ý để đúng một số vẫn được nửa điểm.
+    { sec: 'II. Tự luận (6 điểm)', name: 'Bài 4a (1)', pts: 0.25, type: 'type',
+      text: 'Điền số thích hợp vào chỗ chấm:<br>2, 5, 6, 7, 11, <b>......</b> , .......<br><i>(Ghi số ở chỗ chấm THỨ NHẤT.)</i>',
+      ans: '13',
+      why: 'Quy luật: mỗi số (từ số thứ tư) bằng tổng của số đứng trước nó 3 vị trí và số đứng trước nó 2 vị trí: 2 + 5 = 7; 5 + 6 = 11; 6 + 7 = 13; 7 + 11 = 18. Vậy điền 13 và 18.' },
+    { sec: 'II. Tự luận (6 điểm)', name: 'Bài 4a (2)', pts: 0.25, type: 'type',
+      text: 'Điền số thích hợp vào chỗ chấm:<br>2, 5, 6, 7, 11, ...... , <b>.......</b><br><i>(Ghi số ở chỗ chấm THỨ HAI.)</i>',
+      ans: '18',
       why: 'Quy luật: mỗi số (từ số thứ tư) bằng tổng của số đứng trước nó 3 vị trí và số đứng trước nó 2 vị trí: 2 + 5 = 7; 5 + 6 = 11; 6 + 7 = 13; 7 + 11 = 18. Vậy điền 13 và 18.' },
     { sec: 'II. Tự luận (6 điểm)', name: 'Bài 4b', pts: 0.5, type: 'type',
       text: 'Có .... viên gạch còn thiếu trong bức tường dưới đây.', img: I + 't3602-b4.svg',
@@ -321,7 +330,7 @@ TOAN2CK.push(
       model: 'Hình có 6 cạnh (6 đỉnh). Kẻ một đoạn thẳng nối hai đỉnh đối diện nhau (ví dụ đỉnh bên trái với đỉnh bên phải): hình được chia thành 2 phần, mỗi phần có 4 cạnh — 2 hình tứ giác. Kẻ đúng như vậy được 0,5 điểm.' },
     { sec: 'Phần II. Tự luận (4,5 điểm)', name: 'Bài 4b', pts: 0.5, type: 'type',
       text: 'Có con đường nhỏ<br>Đến nhà ốc sên<br>Ba khúc quanh co<br>Khúc đầu tám (8) xăng-ti-mét<br>Khúc sau bằng khúc đầu<br>Khúc cuối một chục xăng-ti-mét<br>Con đường dài bao nhiêu?<br>Trả lời: Con đường dài …………',
-      ans: '26', alts: ['26 cm', '26cm', '26 xăng-ti-mét'],
+      ans: '26', alts: ['26 cm', '26cm', '26 xăng-ti-mét', '26 xăng ti mét', '26 xentimet'],
       why: 'Khúc đầu 8 cm, khúc sau bằng khúc đầu nên cũng 8 cm, khúc cuối 1 chục = 10 cm. Con đường dài: 8 + 8 + 10 = 26 (cm). (Hướng dẫn chấm của trường ghi "14 m" là nhầm.)' },
   ],
 },

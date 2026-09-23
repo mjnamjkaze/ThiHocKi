@@ -1,4 +1,4 @@
-// TIẾNG VIỆT 2 — ĐỀ KIỂM TRA CUỐI HỌC KÌ II (CUỐI NĂM) — BỘ KẾT NỐI TRI THỨC — TRỌN ĐỀ
+// TIẾNG VIỆT 2 — ĐỀ KIỂM TRA CUỐI HỌC KÌ II (CUỐI NĂM) — TRƯỜNG QUẬN LONG BIÊN (KNTT / CTST — xem ghi chú bộ sách) — TRỌN ĐỀ
 // 5 đề thật của 5 trường tiểu học công lập quận Long Biên (Hà Nội), lấy từ cổng thông tin của
 // trường (bản .doc/.pdf đính kèm) hoặc trang tổng hợp có ghi đủ tên trường:
 //   3711 · TH Ái Mộ B 2022–2023
@@ -17,9 +17,20 @@
 //        https://thlongbien.longbien.edu.vn/de-kiem-tra-dinh-ki/de-kiem-tra-mon-tieng-viet-lop-2-cuoi-hoc-ki-2-nam-hoc-2023-2024/ct/17257/895746
 //        (tệp: tv-2-ckii-23-24_1712202415.pdf — KHÔNG kèm đáp án; tự giải)
 //
-// Bộ sách: các đề dùng bài đọc của SGK Tiếng Việt 2 Kết nối tri thức (Hoạ mi hót, Cuộc giải cứu
-// bên bờ biển…) và đúng thuật ngữ KNTT (câu giới thiệu · câu nêu hoạt động · câu nêu đặc điểm).
+// Bộ sách (đã soát lại — Kiểm định lần 2): chỉ ghi `book` khi bài đọc / bài nghe – viết của đề là bài SGK:
+//   3711 “Hoạ mi hót” = SGK TV2 KNTT tập 2 (Bài 3) → Kết nối tri thức.
+//   3712 “Cuộc giải cứu bên bờ biển” (TV2 CTST tập 2, Bài 6 tuần 34) + nghe – viết “Chim rừng Tây Nguyên”
+//        (bài nghe – viết CTST) → Chân trời sáng tạo.
+//   3713 nghe – viết “Hoa mai vàng” = bài nghe – viết TV2 CTST tập 2 (Bài 4) → Chân trời sáng tạo.
+//   3714, 3715: bài đọc / nghe – viết không phải bài SGK lớp 2 nào → không xác định được bộ sách, bỏ `book`.
 // Các trường này không mang danh "chất lượng cao"; là trường công lập của quận Long Biên.
+//
+// Kiểm định lần 2 (soát độc lập, đối chiếu tệp gốc của trường):
+//   · 3712 book 'Kết nối tri thức' → 'Chân trời sáng tạo'; 3713 → 'Chân trời sáng tạo'; 3714, 3715 bỏ book (xem trên).
+//   · 3711 Câu 6: hướng dẫn chấm gốc trừ 0,25/1 điểm cho mỗi lỗi (không hoa đầu câu / thiếu dấu chấm) →
+//     sửa “trừ một nửa số điểm” thành “trừ 1/4 số điểm của câu (0,125 điểm)”.
+//   · 3711 Câu 5: lời giải “cao (hình dáng)” → “cao (tả độ cao của bầu trời)”.
+//   · 3715 Câu 7: thêm alts cách ghi “câu A, D”, “câu A và D”, “câu A, câu D”.
 //
 // Thang điểm: đề gốc Đọc 10 + Viết 10 → mọi điểm CHIA ĐÔI để tổng = 10.
 // Đọc thành tiếng: đề gốc để GV cho HS bốc thăm bài trong SGK; ở đây dùng chính bài đọc của đề
@@ -88,10 +99,10 @@ TV2CK.push(
     { sec: TVCK3_S2, name: 'Câu 5', pts: 0.5, read: TVCK3_A_R1,
       text: 'Trong câu “Da trời bỗng xanh cao.” có mấy từ chỉ đặc điểm?',
       opts: o4('Có 1 từ.', 'Có 2 từ.', 'Có 3 từ.', 'Không có từ nào chỉ đặc điểm.'), ans: 'B',
-      why: 'Có 2 từ chỉ đặc điểm là <b>xanh</b> (màu sắc) và <b>cao</b> (hình dáng). “Da trời” là từ chỉ sự vật, “bỗng” không chỉ đặc điểm.' },
+      why: 'Có 2 từ chỉ đặc điểm là <b>xanh</b> (màu sắc) và <b>cao</b> (tả độ cao của bầu trời). “Da trời” là từ chỉ sự vật, “bỗng” không chỉ đặc điểm.' },
     { sec: TVCK3_S2, name: 'Câu 6', pts: 0.5, type: 'write', lines: 2, read: TVCK3_A_R1,
       text: 'Qua bài đọc, em có nhận xét gì về chim hoạ mi? Hãy viết câu trả lời của em.',
-      model: 'Ví dụ: <i>Hoạ mi là loài chim hót rất hay.</i> / <i>Chim hoạ mi có tiếng hót hay nhất trong các loài chim.</i> / <i>Hoạ mi là loài chim quý.</i><br>Đầu câu không viết hoa hoặc cuối câu thiếu dấu chấm: mỗi lỗi trừ một nửa số điểm của ý đó.' },
+      model: 'Ví dụ: <i>Hoạ mi là loài chim hót rất hay.</i> / <i>Chim hoạ mi có tiếng hót hay nhất trong các loài chim.</i> / <i>Hoạ mi là loài chim quý.</i><br>Đầu câu không viết hoa hoặc cuối câu thiếu dấu chấm: mỗi lỗi trừ 1/4 số điểm của câu (0,125 điểm).' },
     { sec: TVCK3_S2, name: 'Câu 7', pts: 0.25, read: TVCK3_A_R1,
       text: 'Dòng nào chỉ gồm các từ chỉ đặc điểm?',
       opts: o4('Rực rỡ, xanh tươi, kì diệu, hay.', 'Rực rỡ, xanh tươi, trôi, hót.', 'Xanh tươi, kì diệu, mây, bừng giấc.', 'Xanh tươi, núi sông, rực rỡ, bừng giấc.'), ans: 'A',
@@ -113,7 +124,7 @@ TV2CK.push(
 /* ═══════════ 3712 — TH NGỌC LÂM (LONG BIÊN, HÀ NỘI) 2022–2023 ═══════════ */
 {
   id: 3712, title: 'CK2 · TH Ngọc Lâm (Hà Nội) 2022–2023', time: 80,
-  sem: 2, book: 'Kết nối tri thức',
+  sem: 2, book: 'Chân trời sáng tạo',
   src: 'https://thngoclam.longbien.edu.vn/hoc-ki-ii/de-kiem-tra-cuoi-hoc-ki-ii-nam-hoc-2022-2023-mon-tieng-viet-lop-2/ct/10746/654479',
   questions: [
     { sec: TVCK3_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK3_B_R1,
@@ -175,7 +186,7 @@ TV2CK.push(
 /* ═══════════ 3713 — TH PHÚC LỢI (LONG BIÊN, HÀ NỘI) 2022–2023 ═══════════ */
 {
   id: 3713, title: 'CK2 · TH Phúc Lợi (Hà Nội) 2022–2023', time: 80,
-  sem: 2, book: 'Kết nối tri thức',
+  sem: 2, book: 'Chân trời sáng tạo',
   src: 'https://thphucloi.longbien.edu.vn/cuoi-ki-ii/de-kiem-tra-dinh-ki-cuoi-ki-ii-khoi-2/ct/12967/665614',
   questions: [
     { sec: TVCK3_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK3_C_R1,
@@ -226,8 +237,8 @@ TV2CK.push(
       why: 'Lời kêu cứu gấp gáp, tha thiết — dùng dấu chấm than.' },
     { sec: TVCK3_S2, name: 'Câu 9 (4)', pts: 0.125, read: TVCK3_C_R2,
       text: 'Ô trống <b>(4)</b>: “Hãy trở về với mẹ Đất đi ☐”',
-      opts: TVCK3_O_DAU, ans: 'C',
-      why: 'Câu có “Hãy… đi” là lời khuyên bảo, đề nghị — cuối câu dùng dấu chấm than.' },
+      opts: TVCK3_O_DAU, ans: 'C', also: ['A'],
+      why: 'Câu có “Hãy… đi” là lời khuyên bảo, đề nghị — đáp án của trường là dấu chấm than. Câu đề nghị (câu khiến) kết thúc bằng dấu chấm cũng đúng, nên chọn “Dấu chấm” cũng được tính điểm.' },
 
     { sec: TVCK3_S3, name: 'Nghe – viết', pts: 2, type: 'write', lines: 7,
       text: 'Nghe – viết: <b>Hoa mai vàng</b> (cả đoạn, khoảng 15 phút).',
@@ -242,7 +253,7 @@ TV2CK.push(
 /* ═══════════ 3714 — TH GIA THƯỢNG (LONG BIÊN, HÀ NỘI) 2022–2023 ═══════════ */
 {
   id: 3714, title: 'CK2 · TH Gia Thượng (Hà Nội) 2022–2023', time: 80,
-  sem: 2, book: 'Kết nối tri thức',
+  sem: 2,
   src: 'https://dethilop2.com/bai-kiem-tra-dinh-ki-hoc-ki-ii-mon-tieng-viet-lop-2-nam-hoc-2022-2023-truong-tieu-hoc-gia-thuong-de-1-co-dap-an-1367/',
   questions: [
     { sec: TVCK3_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK3_D_R1,
@@ -305,7 +316,7 @@ TV2CK.push(
 /* ═══════════ 3715 — TH LONG BIÊN (LONG BIÊN, HÀ NỘI) 2023–2024 ═══════════ */
 {
   id: 3715, title: 'CK2 · TH Long Biên (Hà Nội) 2023–2024', time: 70,
-  sem: 2, book: 'Kết nối tri thức',
+  sem: 2,
   src: 'https://thlongbien.longbien.edu.vn/de-kiem-tra-dinh-ki/de-kiem-tra-mon-tieng-viet-lop-2-cuoi-hoc-ki-2-nam-hoc-2023-2024/ct/17257/895746',
   questions: [
     { sec: TVCK3_S1, name: 'Đọc thành tiếng', pts: 2, type: 'write', lines: 0, read: TVCK3_E_R1,
@@ -335,7 +346,7 @@ TV2CK.push(
       text: 'Câu “Mùa đông đến, cả gia đình én bay đi tránh rét.” thuộc mẫu câu nào?',
       opts: o3('Câu nêu hoạt động.', 'Câu nêu đặc điểm.', 'Câu giới thiệu.'), ans: 'A',
       why: 'Câu cho biết gia đình én <i>làm gì</i> (bay đi tránh rét) — “bay” là từ chỉ hoạt động, nên đây là câu nêu hoạt động.' },
-    { sec: TVCK3_S2, name: 'Câu 7', pts: 0.5, type: 'type', ans: 'A, D', alts: ['A và D', 'D, A', 'D và A', 'AD', 'DA', 'A D', 'câu A và câu D'],
+    { sec: TVCK3_S2, name: 'Câu 7', pts: 0.5, type: 'type', ans: 'A, D', alts: ['A và D', 'D, A', 'D và A', 'AD', 'DA', 'A D', 'câu A và câu D', 'câu A và D', 'câu A, D', 'câu A, câu D'],
       text: 'Những câu nào dưới đây sử dụng <b>sai</b> dấu câu? <i>(Ghi các chữ cái, ví dụ: A, B)</i><br>A. Én Con cố gắng bay qua dòng sông!<br>B. Én Con bay qua sông có mệt không?<br>C. Gia đình én gồm có: Én Bố, Én Mẹ và Én Con.<br>D. Bạn Én Con giỏi quá?',
       why: 'A là câu kể bình thường (kể việc Én Con làm) nên phải dùng dấu chấm, không dùng dấu chấm than. D là câu bộc lộ cảm xúc khen ngợi (“giỏi quá”) nên phải dùng dấu chấm than, không phải dấu chấm hỏi. B là câu hỏi (có “có… không”) dùng dấu chấm hỏi là đúng; C dùng dấu hai chấm, dấu phẩy và dấu chấm đều đúng.' },
     { sec: TVCK3_S2, name: 'Câu 8a', pts: 0.125,
