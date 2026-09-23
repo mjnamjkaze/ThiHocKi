@@ -790,3 +790,13 @@ table.cal td.q { color: var(--error); font-weight: 800; }
 .katex{ font-size:1.06em; }
 .qtext .katex, .opt .katex{ font-size:1.05em; }
 .katex-display{ margin:.5em 0; overflow-x:auto; overflow-y:hidden; }
+
+/* ── câu tự luận chấm tay (type: 'write') — chính tả, tập làm văn, đọc thành tiếng ── */
+.wbox { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+.wnote { font-size: 15px; line-height: 1.55; padding: 10px 14px; border-radius: 14px;
+  background: var(--surface-high); color: var(--on-surface); }
+.wmodel { border: 1.5px dashed var(--outline-variant, #c9cfe0); border-radius: 14px; padding: 8px 14px; }
+.wmodel summary { cursor: pointer; font-weight: 800; color: var(--primary); font-size: 14px; }
+.wmodel > div { margin-top: 8px; font-size: 15px; line-height: 1.6; }
+.wlv { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.wlv .pick { font-size: 14px; }

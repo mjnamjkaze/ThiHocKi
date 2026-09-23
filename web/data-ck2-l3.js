@@ -782,7 +782,7 @@ const CK2L3_EXAMS = [
 
 SUBJECTS.push({
   id: 'ck2-l3', name: 'Toán CK2', short: 'Toán 3 CK2', icon: '∑', grade: 3, sem: 2,
-  exams: CK2L3_EXAMS, ready: true,
+  exams: CK2L3_EXAMS, ready: true, full: true,
   heroTitle: 'Đề kiểm tra cuối học kì 2 — Toán lớp 3',
   heroMeta: '📚 12 đề &nbsp;•&nbsp; ⏱ 40 phút mỗi đề &nbsp;•&nbsp; Kết nối tri thức · Chân trời sáng tạo · Cánh Diều',
 });

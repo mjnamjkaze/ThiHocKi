@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 200" width="370" height="200">
+<rect width="370" height="200" fill="#fff"/>
+<line x1="40" y1="150" x2="200" y2="40" stroke="#d62828" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="191" y1="30" x2="335" y2="190" stroke="#1f5fbf" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="40" y1="150" x2="345" y2="138" stroke="#2a9d3a" stroke-width="3.5" stroke-linecap="round"/>
+<circle cx="40" cy="150" r="4" fill="#222"/>
+<circle cx="200" cy="40" r="4" fill="#222"/>
+<circle cx="290" cy="140" r="4" fill="#222"/>
+<text x="22" y="150" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-style="italic" fill="#222">M</text>
+<text x="214" y="34" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-style="italic" fill="#222">B</text>
+<text x="292" y="164" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-style="italic" fill="#222">T</text>
+</svg>

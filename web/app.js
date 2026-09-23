@@ -101,7 +101,7 @@ const MATH_MERGE = [
   {
     id: 'cuoi-ki', name: 'Toán cuối kì', icon: '📘',
     desc: 'bám sát chương trình trên lớp, luyện đúng dạng đề kiểm tra cuối kì',
-    ids: ['toan', 'ck2-l3', 'toan4', 'toan5'],
+    ids: ['toan', 'toan2-clc', 'ck2-l3', 'toan3-ck', 'toan4', 'toan5'],
   },
 ];
 const MATH_MERGE_GRADES = [2, 3, 4, 5];
@@ -120,13 +120,14 @@ function mergeMathBanks() {
 
     // Lấy đúng thứ tự đã liệt kê trong `ids` để đề của cùng một bộ nằm liền nhau.
     const parts = grp.ids.map(id => SUBJECTS.find(x => x.id === id && gradeOf(x) === g)).filter(Boolean);
-    const exams = parts.flatMap(p => (p.exams || []).map(e => ({ ...e, _src: p.short || p.name })));
+    const exams = parts.flatMap(p => (p.exams || []).map(e => ({ ...e, _src: p.short || p.name, sem: e.sem || p.sem })));
     const nQ = exams.reduce((t, e) => t + e.questions.length, 0);
+    const full = parts.length > 0 && parts.every(p => p.full);   // mọi bộ đều trọn đề thì ô gộp cũng trọn đề
     out.push({
       id: `${grp.id}${g}`, name: grp.name, short: `${grp.name} ${g}`, icon: grp.icon, grade: g,
-      ready: parts.some(p => p.ready), exams,
+      ready: parts.some(p => p.ready), exams, full,
       heroTitle: `${grp.name} lớp ${g} — ${grp.desc}`,
-      heroMeta: `📚 ${exams.length} đề &nbsp;•&nbsp; ${nQ} câu &nbsp;•&nbsp; gộp từ ${parts.length} bộ đề: ${parts.map(p => p.short || p.name).join(', ')}`,
+      heroMeta: `📚 ${exams.length} đề &nbsp;•&nbsp; ${nQ} câu &nbsp;•&nbsp; gộp từ ${parts.length} bộ đề: ${parts.map(p => p.short || p.name).join(', ')}${full ? ' &nbsp;•&nbsp; trọn đề như đề giấy' : ''}`,
     });
   }
   SUBJECTS.length = 0;
@@ -145,11 +146,15 @@ const QCOUNTS = [5, 10, 15, 20, 25];
    học sinh, nên từ khối 6 luôn làm TRỌN đề — ô "số câu mỗi đề" không áp dụng. */
 const FULL_EXAM_FROM_GRADE = 6;
 const alwaysFull = (g) => g >= FULL_EXAM_FROM_GRADE;
-/* Số câu thật sự sẽ làm cho một môn: khối 6+ thì trọn đề, còn lại theo lựa chọn. */
-const qCountFor = (sub) => (sub && alwaysFull(gradeOf(sub)) ? 0 : state.qCount);
-/* Đề dài nhất của một khối — dùng để không mời chọn mức câu mà khối đó không có. */
+/* Bank đề cuối kì (`full: true`) cũng luôn làm trọn đề: đề kiểm tra thật của trường
+   phải đủ mọi câu, đúng cấu trúc và in ra y như đề giấy. */
+const isFullSub = (sub) => !!sub && (sub.full || alwaysFull(gradeOf(sub)));
+/* Số câu thật sự sẽ làm cho một môn: khối 6+ và bank cuối kì thì trọn đề, còn lại theo lựa chọn. */
+const qCountFor = (sub) => (isFullSub(sub) ? 0 : state.qCount);
+/* Đề dài nhất của một khối — dùng để không mời chọn mức câu mà khối đó không có.
+   Bỏ qua bank trọn đề vì ô "số câu" không áp dụng cho chúng. */
 const maxQOfGrade = (g) => subjectsOfGrade(g)
-  .filter(s => s.ready && s.exams)
+  .filter(s => s.ready && s.exams && (alwaysFull(g) || !s.full))
   .reduce((m, s) => s.exams.reduce((u, e) => Math.max(u, e.questions.length), m), 0);
 
 function trimExam(exam, n) {
@@ -390,7 +395,8 @@ function vHome() {
           ${over ? 'disabled' : `onclick="setQCount(${n})"`}>${n ? n + ' câu' : 'Cả đề'}</button>`;
       }).join('')}
     </div>
-    <div class="small muted" style="margin:-4px 0 14px">Đề lớp ${state.grade} dài nhất <b>${maxQ} câu</b> nên các mức lớn hơn bị mờ đi. Chọn mức nhỏ hơn thì lấy đúng số câu đó trải đều khắp đề, thời gian rút theo tỉ lệ và điểm vẫn quy về thang 10; đề ngắn hơn mức đã chọn thì giữ nguyên cả đề.</div>`;
+    <div class="small muted" style="margin:-4px 0 14px">Đề lớp ${state.grade} dài nhất <b>${maxQ} câu</b> nên các mức lớn hơn bị mờ đi. Chọn mức nhỏ hơn thì lấy đúng số câu đó trải đều khắp đề, thời gian rút theo tỉ lệ và điểm vẫn quy về thang 10; đề ngắn hơn mức đã chọn thì giữ nguyên cả đề.${subjectsOfGrade(state.grade).some(s => s.ready && s.full)
+      ? ' Riêng <b>đề cuối kì</b> luôn làm và in <b>trọn đề</b> như đề giấy của trường.' : ''}</div>`;
     })()}
 
     <div class="sect-title">Môn học — Lớp ${state.grade}</div>
@@ -539,6 +545,9 @@ const isWide = () => window.matchMedia('(min-width: 900px)').matches;
      'order'     ghép câu         → chỉ số thẻ từ theo thứ tự đã xếp, vd '2,0,1'
      'match'     nối ảnh với từ   → với mỗi ảnh là chỉ số từ đã nối, vd '2,0,3,1'
                                     ('-' = ảnh đó chưa nối)
+     'write'     tự luận chấm tay → mức bố mẹ chấm: '1' đạt trọn · '0.5' một nửa · '0' chưa đạt
+                 (chính tả, tập làm văn, đọc thành tiếng, trình bày bài giải — làm ra giấy,
+                  so với bài mẫu q.model; điểm cộng = q.pts × mức)
    Mọi câu trả lời đều là CHUỖI nên phần lưu điểm, ô câu hỏi và màn kết quả
    không phải biết gì về kiểu bài.                                           */
 const normText = (s) => String(s == null ? '' : s)
@@ -548,8 +557,13 @@ const normText = (s) => String(s == null ? '' : s)
 const orderWords = (q, a) => String(a).split(',')
   .filter(k => k !== '' && k !== '-').map(k => q.tokens[Number(k)]).join(' ');
 
+/* Mức đạt của câu tự luận chấm tay (0 · 0.5 · 1) */
+const WRITE_LV = [{ v: '0', t: 'Chưa đạt' }, { v: '0.5', t: 'Đạt một nửa' }, { v: '1', t: 'Đạt trọn điểm' }];
+const writeFrac = (a) => Math.min(1, Math.max(0, Number(a) || 0));
+
 function isCorrect(q, a) {
   if (a == null || a === '') return false;
+  if (q.type === 'write') return writeFrac(a) === 1;
   if (q.type === 'type') return [q.ans, ...(q.alts || [])].some(t => normText(t) === normText(a));
   if (q.type === 'order') return normText(orderWords(q, a)) === normText(q.ans);
   return a === q.ans;
@@ -557,6 +571,7 @@ function isCorrect(q, a) {
 
 /* đáp án đúng, viết ra cho học sinh đọc lúc xem lại */
 function ansText(q) {
+  if (q.type === 'write') return 'bố mẹ chấm theo bài mẫu';
   if (q.type === 'match') {
     return q.ans.split(',').map((k, i) => `${i + 1} → ${q.right[Number(k)]}`).join(' · ');
   }
@@ -565,6 +580,7 @@ function ansText(q) {
 
 /* câu trả lời của học sinh, viết ra cho dễ đọc */
 function pickedText(q, a) {
+  if (q.type === 'write') return (WRITE_LV.find(l => l.v === String(a)) || {}).t || a;
   if (q.type === 'order') return `“${orderWords(q, a)}”`;
   if (q.type === 'match') {
     return a.split(',').map((k, i) => `${i + 1} → ${k === '-' ? '…' : q.right[Number(k)]}`).join(' · ');
@@ -618,6 +634,29 @@ function vOrder(q, i, picked, review) {
     <div class="ordpool">${pool}</div>
   </div>`;
 }
+
+/* ── tự luận chấm tay: làm ra giấy, bố mẹ chấm rồi bấm mức đạt ──────────────
+   Lúc xem lại vẫn chấm (lại) được — bé thường làm xong trên app rồi mới đưa
+   bài viết cho bố mẹ, nên điểm được tính lại ngay khi bố mẹ bấm.            */
+function vWrite(q, i, picked, review) {
+  const oral = !q.lines;
+  const lv = WRITE_LV.map(l => `<button class="pick ${String(picked) === l.v ? 'active' : ''}"
+      onclick="gradeWrite(${i}, '${l.v}')">${l.t}</button>`).join('');
+  return `<div class="wbox">
+    <div class="wnote">${oral
+      ? '🗣 Em đọc to cho bố mẹ nghe rồi trả lời câu hỏi. <b>Bố mẹ chấm</b> theo hướng dẫn bên dưới.'
+      : '✍️ Câu này làm <b>ra giấy</b> (bấm 🖨 ở danh sách đề để in). Làm xong nhờ <b>bố mẹ chấm</b> theo bài mẫu.'}</div>
+    <details class="wmodel"${review ? ' open' : ''}><summary>${oral ? 'Hướng dẫn chấm' : 'Bài mẫu &amp; hướng dẫn chấm'} (dành cho bố mẹ)</summary>
+      <div>${q.model || ''}</div></details>
+    <div class="wlv"><span class="small muted">Bố mẹ chấm:</span> ${lv}</div>
+  </div>`;
+}
+
+window.gradeWrite = (i, v) => {
+  state.answers[i] = v;
+  if (state.mode === 'review') regradeSaved();
+  reRender();
+};
 
 /* ── nối ảnh với từ: bấm ảnh để chọn, rồi bấm từ để nối ──────────────────── */
 function vMatch(q, i, picked, review) {
@@ -687,6 +726,7 @@ function vQcard(exam, i) {
   const imgs = q.imgs || (q.img ? [q.img] : []);
   const ok = isCorrect(q, picked);
   const body = q.type === 'type' ? vType(q, i, picked, review)
+    : q.type === 'write' ? vWrite(q, i, picked, review)
     : q.type === 'order' ? vOrder(q, i, picked, review)
       : q.type === 'match' ? vMatch(q, i, picked, review)
         : vOpts(q, i, picked, review);
@@ -702,8 +742,9 @@ function vQcard(exam, i) {
       ${q.html || ''}
       ${imgs.map(src => `<img class="qimg" src="${src}" alt="Hình minh họa">`).join('')}
       ${body}
-      ${vHint(q, i, review)}
-      ${review ? `<div class="why"><b>Đáp án đúng: ${ansText(q)}.</b> ${q.why}
+      ${q.type === 'write' ? '' : vHint(q, i, review)}
+      ${review && q.type === 'write' ? (q.why ? `<div class="why">${q.why}</div>` : '')
+        : review ? `<div class="why"><b>Đáp án đúng: ${ansText(q)}.</b> ${q.why}
         ${picked ? (ok ? ' <b style="color:var(--secondary)">✓ Em làm đúng!</b>' : ` <b style="color:var(--error)">✗ Em đã trả lời ${pickedText(q, picked)}.</b>`) : ' <b style="color:var(--tertiary)">Em chưa trả lời câu này.</b>'}</div>` : ''}
     </div>`;
 }
@@ -925,6 +966,8 @@ window.askSubmit = () => {
       <p>${unanswered > 0
         ? `Em còn <b style="color:var(--error)">${unanswered} câu chưa trả lời</b> — vẫn còn thời gian để thử nữa nhé!`
         : 'Tuyệt vời, em đã trả lời <b style="color:var(--secondary)">tất cả các câu</b>!'}</p>
+      ${exam.questions.some((q, i) => q.type === 'write' && !state.answers[i])
+        ? '<p class="small muted">Câu tự luận (chính tả, tập làm văn…) bố mẹ chấm sau cũng được: nộp bài xong bấm <b>Xem lại</b> rồi chọn mức đạt, điểm tự tính lại.</p>' : ''}
       <div class="row">
         <button class="btn btn-ghost" onclick="closeModal()">Làm tiếp</button>
         <button class="btn btn-primary" onclick="doSubmit()">Nộp bài ✓</button>
@@ -971,23 +1014,41 @@ window.doSubmit = (auto = false) => {
   setTimeout(() => finishSubmit(auto), 1000);
 };
 
-function finishSubmit(auto) {
-  const exam = curExam();
+/* Chấm một lượt làm bài. Câu tự luận chấm tay cộng q.pts × mức bố mẹ chấm. */
+function scoreOf(exam, answers) {
   let score = 0, correct = 0, wrong = 0, skip = 0;
   exam.questions.forEach((q, i) => {
-    const a = state.answers[i];
+    const a = answers[i];
     if (!a) skip++;
+    else if (q.type === 'write') { score += q.pts * writeFrac(a); if (writeFrac(a) === 1) correct++; else wrong++; }
     else if (isCorrect(q, a)) { correct++; score += q.pts; }
     else wrong++;
   });
   // làm ít câu hơn thì quy điểm về đúng thang của đề gốc (thường là thang 10)
-  const full = getExam(state.examId);
+  const full = getExam(exam.id);
   if (exam.questions.length < full.questions.length) {
     const part = exam.questions.reduce((t, q) => t + q.pts, 0);
     const whole = full.questions.reduce((t, q) => t + q.pts, 0);
     if (part > 0) score = score / part * whole;
   }
-  score = Math.round(score * 100) / 100;
+  return { score: Math.round(score * 100) / 100, correct, wrong, skip };
+}
+
+/* Bố mẹ chấm (lại) câu tự luận lúc xem lại → tính lại điểm của lượt đã lưu. */
+function regradeSaved() {
+  const exam = curExam();
+  const all = store.results;
+  const rec = all[exam.id];
+  if (!rec || !rec.last) return;
+  const last = Object.assign({}, rec.last, { answers: { ...state.answers } }, scoreOf(exam, state.answers));
+  all[exam.id] = { best: Math.max(rec.best || 0, last.score), last };
+  localStorage.setItem('otk.results', JSON.stringify(all));
+  if (state.lastResultExam === exam.id) state.lastResult = last;
+}
+
+function finishSubmit(auto) {
+  const exam = curExam();
+  const { score, correct, wrong, skip } = scoreOf(exam, state.answers);
   const prevRec = store.results[exam.id];
   const prevBest = (prevRec || {}).best || 0;
   const hints = { ...state.hintTxt };                               // để xem lại vẫn thấy gợi ý đã xin

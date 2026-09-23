@@ -76,8 +76,19 @@
      trúc đó, nên từ khối 6 giữ nguyên đề. */
   const KEEP_WHOLE_FROM_GRADE = 6;
 
+  /* Bank đề cuối kì trọn đề (`full: true`): in ra phải y như đề giấy của trường, nên
+     cũng giữ nguyên — chỉ viết lại dòng giới thiệu cho khớp số đề · số câu thật. */
+  const fullMeta = (sub) => {
+    const n = sub.exams.length;
+    const nQ = sub.exams.reduce((t, e) => t + e.questions.length, 0);
+    const sem = (k) => sub.exams.filter(e => (e.sem || sub.sem) === k).length;
+    const parts = [sem(1) && `${sem(1)} đề cuối kì 1`, sem(2) && `${sem(2)} đề cuối kì 2`].filter(Boolean);
+    return `📚 ${n} đề${parts.length ? ` (${parts.join(' · ')})` : ''} &nbsp;•&nbsp; ${nQ} câu &nbsp;•&nbsp; trọn đề như đề giấy, in được PDF`;
+  };
+
   for (const sub of SUBJECTS) {
     if (!sub.exams || !sub.exams.length) continue;
+    if (sub.full) { sub.heroMeta = fullMeta(sub); continue; }
     if ((sub.grade || 2) >= KEEP_WHOLE_FROM_GRADE) continue;
     const list = sub.exams.flatMap(splitExam);
     if (list.length !== sub.exams.length) {

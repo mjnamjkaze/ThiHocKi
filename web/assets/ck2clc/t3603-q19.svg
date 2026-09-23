@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 190" width="450" height="190">
+<rect width="450" height="190" fill="#fff"/>
+<text x="10" y="76" text-anchor="start" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">Hùng:</text>
+<text x="10" y="131" text-anchor="start" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">Dũng:</text>
+<line x1="90" y1="70" x2="330" y2="70" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="90" y1="62" x2="90" y2="78" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="330" y1="62" x2="330" y2="78" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="90" y1="125" x2="420" y2="125" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="90" y1="117" x2="90" y2="133" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="330" y1="117" x2="330" y2="133" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="420" y1="117" x2="420" y2="133" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M90 58 q0 -8 10 -8 H202.0 q8 0 8 -8 q0 8 8 8 H320 q10 0 10 8" fill="none" stroke="#222" stroke-width="2"/>
+<text x="210.0" y="36" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">59 viên bi</text>
+<path d="M330 113 q0 -8 10 -8 H367.0 q8 0 8 -8 q0 8 8 8 H410 q10 0 10 8" fill="none" stroke="#222" stroke-width="2"/>
+<text x="375.0" y="91" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">7 viên bi</text>
+<path d="M90 137 q0 8 10 8 H247.0 q8 0 8 8 q0 -8 8 -8 H410 q10 0 10 -8" fill="none" stroke="#222" stroke-width="2"/>
+<text x="255.0" y="175" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">? viên bi</text>
+</svg>

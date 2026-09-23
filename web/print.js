@@ -42,10 +42,19 @@
     sheet: 'ANSWER SHEET', sheetNote: 'circle the letter you choose; write your answer on the line',
     key: 'ANSWER KEY' };
 
+  /* n dòng kẻ để viết / trình bày bài làm */
+  const vLines = (n) => n > 0 ? `<div class="p-work">${'<div class="l"></div>'.repeat(n)}</div>` : '';
+
   /* ── phần làm bài của từng kiểu câu hỏi ─────────────────────────────── */
   function vBody(q, L) {
+    if (q.type === 'write') {
+      // lines = 0: đọc thành tiếng — bố mẹ nghe con đọc, không cần chỗ viết
+      return q.lines ? vLines(q.lines) : `<div class="p-tip">(Đọc thành tiếng — bố mẹ nghe con đọc và chấm)</div>`;
+    }
     if (q.type === 'type') {
-      return `<div class="p-fill"><span class="p-lbl">${L.ans}</span><span class="p-line"></span></div>`
+      // bài cần trình bày (đặt tính, bài giải) chừa thêm dòng kẻ phía trên dòng trả lời
+      return vLines(q.lines || 0)
+        + `<div class="p-fill"><span class="p-lbl">${L.ans}</span><span class="p-line"></span></div>`
         + (q.hint ? `<div class="p-tip">${L.hint} ${q.hint}</div>` : '');
     }
     if (q.type === 'order') {
@@ -89,7 +98,8 @@
 
   /* ── phiếu tô đáp án ────────────────────────────────────────────────── */
   function vSheet(exam, L) {
-    const items = exam.questions.map((q, i) => `<div class="p-as-item"><span class="n">${shortName(q, i)}.</span>${
+    // câu tự luận chấm tay viết ngay dưới đề, không đưa vào phiếu
+    const items = exam.questions.filter(q => q.type !== 'write').map((q, i) => `<div class="p-as-item"><span class="n">${shortName(q, i)}.</span>${
       isMcq(q) ? q.opts.map(x => `<span class="c">${x.k}</span>`).join('') : '<span class="w"></span>'
     }</div>`).join('');
     return `<div class="p-as">
@@ -100,10 +110,11 @@
 
   /* ── trang đáp án & lời giải (trang riêng, bố mẹ giữ) ───────────────── */
   function vKey(exam, sub, L) {
-    const row = exam.questions.map((q, i) =>
-      `<span><b>${shortName(q, i)}.</b> ${esc(plain(ansText(q)))}</span>`).join('');
-    const why = exam.questions.map((q, i) =>
-      `<div class="p-why"><span class="n">${q.name || 'Câu ' + (i + 1)}.</span> <b>${esc(plain(ansText(q)))}</b> — ${q.why || ''}</div>`).join('');
+    const row = exam.questions.map((q, i) => q.type === 'write' ? ''
+      : `<span><b>${shortName(q, i)}.</b> ${esc(plain(ansText(q)))}</span>`).join('');
+    const why = exam.questions.map((q, i) => q.type === 'write'
+      ? `<div class="p-why"><span class="n">${q.name || 'Câu ' + (i + 1)}.</span> <b>Bố mẹ chấm (${q.pts} ${L.pts})</b> — ${q.model || ''}${q.why ? '<br>' + q.why : ''}</div>`
+      : `<div class="p-why"><span class="n">${q.name || 'Câu ' + (i + 1)}.</span> <b>${esc(plain(ansText(q)))}</b> — ${q.why || ''}</div>`).join('');
     return `<div class="p-key">
       <h2>${L.key}</h2>
       <div class="p-keysub">${esc(plain(exam.title))} — ${esc(sub.name || '')}</div>
@@ -121,7 +132,9 @@
        thì tờ đề rối mắt. Chỉ kẻ thanh khi chủ đề đó gom từ 2 câu liền nhau trở lên,
        còn lại ghi nhỏ cạnh số điểm. */
     const secs = exam.questions.map(q => String(q.sec || '').trim());
-    const grouped = secs.map((s, i) => !!s && (s === secs[i - 1] || s === secs[i + 1]));
+    // Đề trọn (đề giấy của trường) thì phần nào cũng có thanh tiêu đề, kể cả phần chỉ 1 câu
+    // (Đọc thành tiếng, Tập làm văn…).
+    const grouped = secs.map((s, i) => !!s && (!!sub.full || s === secs[i - 1] || s === secs[i + 1]));
     const qs = exam.questions.map((q, i) => {
       const head = grouped[i] && secs[i] !== secs[i - 1] ? `<div class="p-sec">${secs[i]}</div>` : '';
       // đoạn văn đọc hiểu dùng chung cho nhiều câu liền nhau: chỉ in một lần
@@ -164,7 +177,7 @@
   }
 
   window.printExam = (id) => {
-    const exam = trimExam(getExam(id), state.qCount);
+    const exam = trimExam(getExam(id), qCountFor(subjectOfExam(id)));  // bank trọn đề: in đủ mọi câu
     if (!exam) return;
     const o = readOpts();
     const ck = (k, t, d) => `<label><input type="checkbox" id="pk-${k}" ${o[k] ? 'checked' : ''}>
@@ -191,7 +204,7 @@
   };
 
   window.doPrint = (id) => {
-    const exam = trimExam(getExam(id), state.qCount);
+    const exam = trimExam(getExam(id), qCountFor(subjectOfExam(id)));  // bank trọn đề: in đủ mọi câu
     if (!exam) return;
     const o = {};
     for (const k of Object.keys(DEF)) {
