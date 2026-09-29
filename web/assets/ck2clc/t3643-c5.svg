@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 204" width="320" height="204">
+<rect width="320" height="204" fill="#fff"/>
+<line x1="24" y1="170" x2="300" y2="170" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="120" y1="30" x2="24" y2="170" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="120" y1="30" x2="300" y2="170" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="120" y1="30" x2="120" y2="170" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="120" cy="30" r="3.5" fill="#222"/>
+<circle cx="24" cy="170" r="3.5" fill="#222"/>
+<circle cx="120" cy="170" r="3.5" fill="#222"/>
+<circle cx="300" cy="170" r="3.5" fill="#222"/>
+<text x="120" y="22" text-anchor="middle" font-size="18" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">A</text>
+<text x="16" y="194" text-anchor="middle" font-size="18" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">B</text>
+<text x="120" y="194" text-anchor="middle" font-size="18" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">D</text>
+<text x="306" y="194" text-anchor="middle" font-size="18" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">C</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 170" width="420" height="170">
+<rect width="420" height="170" fill="#fff"/>
+<g fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round">
+<polygon points="95,25 285,25 400,145 20,145"/>
+<line x1="285" y1="25" x2="190" y2="145"/>
+<line x1="285" y1="25" x2="285" y2="145"/>
+</g>
+</svg>

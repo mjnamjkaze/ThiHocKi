@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 185" width="650" height="185">
+<rect width="650" height="185" fill="#fff"/>
+<path d="M125,178 L205,178 L190,164 L140,164 Z" fill="#ddd" stroke="#222" stroke-width="2"/>
+<line x1="165" y1="164" x2="165" y2="144" stroke="#222" stroke-width="4"/>
+<line x1="55" y1="144" x2="275" y2="144" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+<line x1="165" y1="144" x2="165" y2="132" stroke="#222" stroke-width="2"/>
+<line x1="70" y1="144" x2="70" y2="134" stroke="#222" stroke-width="3"/>
+<rect x="12" y="130" width="116" height="5" rx="2" fill="#bbb" stroke="#222" stroke-width="1.5"/>
+<line x1="260" y1="144" x2="260" y2="134" stroke="#222" stroke-width="3"/>
+<rect x="202" y="130" width="116" height="5" rx="2" fill="#bbb" stroke="#222" stroke-width="1.5"/>
+<ellipse cx="74" cy="110" rx="24" ry="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M94,102 L106,88 L100,108 Z" fill="#fff" stroke="#222" stroke-width="1.8"/>
+<circle cx="54" cy="88" r="11" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M48,78 q3,-8 6,0 q3,-8 6,0" fill="#777" stroke="#222" stroke-width="1.5"/>
+<path d="M43,86 L36,90 L44,92 Z" fill="#999" stroke="#222" stroke-width="1.2"/>
+<circle cx="51" cy="86" r="1.6" fill="#222"/>
+<path d="M68,127 L68,130 M78,127 L78,130" stroke="#222" stroke-width="2"/>
+<path d="M207,130 L241,130 L237,100 L211,100 Z" fill="#e6e6e6" stroke="#222" stroke-width="1.8"/>
+<rect x="218" y="94" width="12" height="6" fill="#e6e6e6" stroke="#222" stroke-width="1.5"/>
+<text x="224" y="121" text-anchor="middle" font-size="11" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">1 kg</text>
+<path d="M243,130 L277,130 L273,100 L247,100 Z" fill="#e6e6e6" stroke="#222" stroke-width="1.8"/>
+<rect x="254" y="94" width="12" height="6" fill="#e6e6e6" stroke="#222" stroke-width="1.5"/>
+<text x="260" y="121" text-anchor="middle" font-size="11" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">1 kg</text>
+<path d="M279,130 L313,130 L309,100 L283,100 Z" fill="#e6e6e6" stroke="#222" stroke-width="1.8"/>
+<rect x="290" y="94" width="12" height="6" fill="#e6e6e6" stroke="#222" stroke-width="1.5"/>
+<text x="296" y="121" text-anchor="middle" font-size="11" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">1 kg</text>
+<path d="M445,178 L525,178 L510,164 L460,164 Z" fill="#ddd" stroke="#222" stroke-width="2"/>
+<line x1="485" y1="164" x2="485" y2="144" stroke="#222" stroke-width="4"/>
+<line x1="375" y1="144" x2="595" y2="144" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+<line x1="485" y1="144" x2="485" y2="132" stroke="#222" stroke-width="2"/>
+<line x1="390" y1="144" x2="390" y2="134" stroke="#222" stroke-width="3"/>
+<rect x="332" y="130" width="116" height="5" rx="2" fill="#bbb" stroke="#222" stroke-width="1.5"/>
+<line x1="580" y1="144" x2="580" y2="134" stroke="#222" stroke-width="3"/>
+<rect x="522" y="130" width="116" height="5" rx="2" fill="#bbb" stroke="#222" stroke-width="1.5"/>
+<ellipse cx="382" cy="110" rx="24" ry="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M402,102 L414,88 L408,108 Z" fill="#fff" stroke="#222" stroke-width="1.8"/>
+<circle cx="362" cy="88" r="11" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M356,78 q3,-8 6,0 q3,-8 6,0" fill="#777" stroke="#222" stroke-width="1.5"/>
+<path d="M351,86 L344,90 L352,92 Z" fill="#999" stroke="#222" stroke-width="1.2"/>
+<circle cx="359" cy="86" r="1.6" fill="#222"/>
+<path d="M376,127 L376,130 M386,127 L386,130" stroke="#222" stroke-width="2"/>
+<path d="M408,130 L442,130 L438,100 L412,100 Z" fill="#e6e6e6" stroke="#222" stroke-width="1.8"/>
+<rect x="419" y="94" width="12" height="6" fill="#e6e6e6" stroke="#222" stroke-width="1.5"/>
+<text x="425" y="121" text-anchor="middle" font-size="11" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">1 kg</text>
+<ellipse cx="580" cy="100" rx="30" ry="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="580" cy="56" r="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="580" cy="67" rx="10" ry="6" fill="#999" stroke="#222" stroke-width="1.6"/>
+<circle cx="574" cy="51" r="2" fill="#222"/><circle cx="586" cy="51" r="2" fill="#222"/>
+<ellipse cx="568" cy="128" rx="11" ry="4" fill="#999" stroke="#222" stroke-width="1.5"/>
+<ellipse cx="592" cy="128" rx="11" ry="4" fill="#999" stroke="#222" stroke-width="1.5"/>
+</svg>

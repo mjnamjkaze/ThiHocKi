@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 712 220" width="712" height="220">
+<rect width="712" height="220" fill="#fff"/>
+<rect x="14" y="52" width="28" height="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M14,52 L21,45 L49,45 L42,52 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M42,52 L49,45 L49,73 L42,80 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M73,40 L73,76 A15,5 0 0 0 103,76 L103,40" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="88" cy="40" rx="15" ry="5" fill="#e6e6e6" stroke="#222" stroke-width="2"/>
+<rect x="125" y="56" width="38" height="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M125,56 L132,49 L170,49 L163,56 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M163,56 L170,49 L170,73 L163,80 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="209" cy="59" r="20" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M189,59 A20,6.0 0 0 0 229,59" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3,3"/>
+<rect x="246" y="52" width="28" height="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M246,52 L253,45 L281,45 L274,52 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M274,52 L281,45 L281,73 L274,80 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M305,40 L305,76 A15,5 0 0 0 335,76 L335,40" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="320" cy="40" rx="15" ry="5" fill="#e6e6e6" stroke="#222" stroke-width="2"/>
+<rect x="357" y="56" width="38" height="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M357,56 L364,49 L402,49 L395,56 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M395,56 L402,49 L402,73 L395,80 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="441" cy="59" r="20" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M421,59 A20,6.0 0 0 0 461,59" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3,3"/>
+<rect x="476" y="36" width="42" height="40" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="497" y="65" text-anchor="middle" font-size="24" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">?</text>
+<path d="M537,40 L537,76 A15,5 0 0 0 567,76 L567,40" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="552" cy="40" rx="15" ry="5" fill="#e6e6e6" stroke="#222" stroke-width="2"/>
+<rect x="589" y="56" width="38" height="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M589,56 L596,49 L634,49 L627,56 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M627,56 L634,49 L634,73 L627,80 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="673" cy="59" r="20" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M653,59 A20,6.0 0 0 0 693,59" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3,3"/>
+<text x="40" y="185" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">A.</text>
+<path d="M61,165 L61,201 A15,5 0 0 0 91,201 L91,165" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="76" cy="165" rx="15" ry="5" fill="#e6e6e6" stroke="#222" stroke-width="2"/>
+<text x="215" y="185" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">B.</text>
+<rect x="230" y="181" width="38" height="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M230,181 L237,174 L275,174 L268,181 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M268,181 L275,174 L275,198 L268,205 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="390" y="185" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">C.</text>
+<rect x="410" y="177" width="28" height="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M410,177 L417,170 L445,170 L438,177 Z" fill="#e6e6e6" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M438,177 L445,170 L445,198 L438,205 Z" fill="#cfcfcf" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="565" y="185" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">D.</text>
+<path d="M586,165 L586,201 A15,5 0 0 0 616,201 L616,165" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="601" cy="165" rx="15" ry="5" fill="#e6e6e6" stroke="#222" stroke-width="2"/>
+</svg>

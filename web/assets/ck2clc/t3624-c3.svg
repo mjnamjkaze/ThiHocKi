@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+<rect width="520" height="300" fill="#fff"/>
+<text x="260" y="40" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">THÁNG 12</text>
+<rect x="15" y="60" width="490" height="228" rx="0" fill="none" stroke="#222" stroke-width="2"/>
+<text x="50.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Hai</text>
+<text x="120.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Ba</text>
+<text x="190.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Tư</text>
+<text x="260.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Năm</text>
+<text x="330.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Sáu</text>
+<text x="400.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Thứ Bảy</text>
+<text x="470.0" y="85" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Chủ nhật</text>
+<line x1="15" y1="98" x2="505" y2="98" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="15" y1="136" x2="505" y2="136" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="15" y1="174" x2="505" y2="174" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="15" y1="212" x2="505" y2="212" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="15" y1="250" x2="505" y2="250" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="85" y1="60" x2="85" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="155" y1="60" x2="155" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="225" y1="60" x2="225" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="295" y1="60" x2="295" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="365" y1="60" x2="365" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="435" y1="60" x2="435" y2="288" stroke="#222" stroke-width="1.2" stroke-linecap="round"/>
+<text x="50.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">1</text>
+<text x="120.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">2</text>
+<text x="190.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">3</text>
+<text x="260.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">4</text>
+<text x="330.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">5</text>
+<text x="400.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">6</text>
+<text x="470.0" y="124" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">7</text>
+<text x="50.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">8</text>
+<text x="120.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">9</text>
+<text x="190.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">10</text>
+<text x="260.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">11</text>
+<text x="330.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">12</text>
+<text x="400.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">13</text>
+<text x="470.0" y="162" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">14</text>
+<text x="50.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">15</text>
+<text x="120.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">16</text>
+<text x="190.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">17</text>
+<text x="260.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">18</text>
+<text x="330.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">19</text>
+<text x="400.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">20</text>
+<text x="470.0" y="200" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">21</text>
+<text x="50.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">22</text>
+<text x="120.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">23</text>
+<text x="190.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">24</text>
+<text x="260.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">25</text>
+<text x="330.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">26</text>
+<text x="400.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">27</text>
+<text x="470.0" y="238" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">28</text>
+<text x="50.0" y="276" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">29</text>
+<text x="120.0" y="276" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">30</text>
+<text x="190.0" y="276" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">31</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 220" width="310" height="220">
+<rect width="310" height="220" fill="#fff"/>
+<rect x="30" y="100" width="80" height="100" rx="16" fill="#fff" stroke="#222" stroke-width="3"/>
+<rect x="42" y="125" width="56" height="50" rx="8" fill="none" stroke="#222" stroke-width="2"/>
+<rect x="40" y="78" width="22" height="22" rx="4" fill="#fff" stroke="#222" stroke-width="3"/>
+<path d="M74 100 v-14 h28 v14" fill="none" stroke="#222" stroke-width="3"/>
+<text x="70.0" y="159.0" text-anchor="middle" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-style="italic" fill="#222">3 l</text>
+<rect x="150" y="40" width="130" height="160" rx="16" fill="#fff" stroke="#222" stroke-width="3"/>
+<rect x="170" y="80" width="91" height="80" rx="8" fill="none" stroke="#222" stroke-width="2"/>
+<rect x="160" y="18" width="36" height="22" rx="4" fill="#fff" stroke="#222" stroke-width="3"/>
+<path d="M222 40 v-14 h46 v14" fill="none" stroke="#222" stroke-width="3"/>
+<text x="215.0" y="129.0" text-anchor="middle" font-size="26" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-style="italic" fill="#222">10 l</text>
+</svg>

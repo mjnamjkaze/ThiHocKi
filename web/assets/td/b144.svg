@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 150">
+<ellipse cx="80" cy="122" rx="50" ry="14" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+<rect x="30" y="60" width="100" height="62" rx="0" fill="#cbd5e1" stroke="none" stroke-width="0"/>
+<line x1="30" y1="60" x2="30" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="130" y1="60" x2="130" y2="122" stroke="#334155" stroke-width="2" />
+<ellipse cx="80" cy="60" rx="50" ry="14" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+<rect x="30" y="78" width="100" height="44" rx="0" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<line x1="30" y1="78" x2="30" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="130" y1="78" x2="130" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="62" y1="133" x2="62" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="62" y1="66" x2="122" y2="52" stroke="#0f172a" stroke-width="4" />
+<text x="42" y="28" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >①</text>
+<ellipse cx="230" cy="122" rx="50" ry="14" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+<rect x="180" y="60" width="100" height="62" rx="0" fill="#cbd5e1" stroke="none" stroke-width="0"/>
+<line x1="180" y1="60" x2="180" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="280" y1="60" x2="280" y2="122" stroke="#334155" stroke-width="2" />
+<ellipse cx="230" cy="60" rx="50" ry="14" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+<rect x="180" y="78" width="100" height="44" rx="0" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<line x1="180" y1="78" x2="180" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="280" y1="78" x2="280" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="212" y1="133" x2="212" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="248" y1="133" x2="248" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="212" y1="66" x2="256" y2="50" stroke="#0f172a" stroke-width="4" />
+<line x1="248" y1="66" x2="204" y2="50" stroke="#0f172a" stroke-width="4" />
+<text x="192" y="28" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >②</text>
+<ellipse cx="380" cy="122" rx="50" ry="14" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+<rect x="330" y="60" width="100" height="62" rx="0" fill="#cbd5e1" stroke="none" stroke-width="0"/>
+<line x1="330" y1="60" x2="330" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="430" y1="60" x2="430" y2="122" stroke="#334155" stroke-width="2" />
+<ellipse cx="380" cy="60" rx="50" ry="14" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+<rect x="330" y="78" width="100" height="44" rx="0" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<line x1="330" y1="78" x2="330" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="430" y1="78" x2="430" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="362" y1="133" x2="362" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="398" y1="133" x2="398" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="362" y1="66" x2="380" y2="56" stroke="#0f172a" stroke-width="4" />
+<line x1="398" y1="133" x2="398" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="398" y1="66" x2="380" y2="56" stroke="#0f172a" stroke-width="4" />
+<path d="M 380 52 C 354 30 350 56 380 52 C 406 30 410 56 380 52" fill="none" stroke="#0f172a" stroke-width="4"/>
+<text x="342" y="28" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >③</text>
+<ellipse cx="530" cy="122" rx="50" ry="14" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+<rect x="480" y="60" width="100" height="62" rx="0" fill="#cbd5e1" stroke="none" stroke-width="0"/>
+<line x1="480" y1="60" x2="480" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="580" y1="60" x2="580" y2="122" stroke="#334155" stroke-width="2" />
+<ellipse cx="530" cy="60" rx="50" ry="14" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+<rect x="480" y="78" width="100" height="44" rx="0" fill="#94a3b8" stroke="none" stroke-width="0"/>
+<line x1="480" y1="78" x2="480" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="580" y1="78" x2="580" y2="122" stroke="#334155" stroke-width="2" />
+<line x1="512" y1="133" x2="512" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="548" y1="133" x2="548" y2="66" stroke="#0f172a" stroke-width="4" />
+<line x1="512" y1="66" x2="530" y2="56" stroke="#0f172a" stroke-width="4" />
+<line x1="548" y1="66" x2="530" y2="56" stroke="#0f172a" stroke-width="4" />
+<line x1="474" y1="116" x2="530" y2="56" stroke="#0f172a" stroke-width="3" />
+<line x1="586" y1="116" x2="530" y2="56" stroke="#0f172a" stroke-width="3" />
+<path d="M 530 52 C 504 30 500 56 530 52 C 556 30 560 56 530 52" fill="none" stroke="#0f172a" stroke-width="4"/>
+<text x="492" y="28" font-family="Arial" font-weight="bold" font-size="24" fill="#0f172a" text-anchor="middle" >④</text>
+</svg>

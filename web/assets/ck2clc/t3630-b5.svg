@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 130" width="640" height="130">
+<rect width="640" height="130" fill="#fff"/>
+<polygon points="55.0,28.0 66.3,46.6 87.8,43.8 80.3,64.2 95.9,79.3 75.3,86.2 73.2,107.8 55.0,96.0 36.8,107.8 34.7,86.2 14.1,79.3 29.7,64.2 22.2,43.8 43.7,46.6" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="55" y="76" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">…..</text>
+<line x1="100" y1="70" x2="185" y2="70" stroke="#222" stroke-width="2" stroke-linecap="round"/><polygon points="185,70 175.8,73.9 175.8,66.1" fill="#222" stroke="#222" stroke-width="1" stroke-linejoin="round"/>
+<text x="142" y="60" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">- 15</text>
+<circle cx="225" cy="70" r="36" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="225" y="77" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">8</text>
+<line x1="262" y1="70" x2="345" y2="70" stroke="#222" stroke-width="2" stroke-linecap="round"/><polygon points="345,70 335.8,73.9 335.8,66.1" fill="#222" stroke="#222" stroke-width="1" stroke-linejoin="round"/>
+<text x="303" y="60" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">x 5</text>
+<polygon points="430.0,70.0 410.0,104.6 370.0,104.6 350.0,70.0 370.0,35.4 410.0,35.4" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="390" y="76" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">….</text>
+<line x1="432" y1="70" x2="515" y2="70" stroke="#222" stroke-width="2" stroke-linecap="round"/><polygon points="515,70 505.8,73.9 505.8,66.1" fill="#222" stroke="#222" stroke-width="1" stroke-linejoin="round"/>
+<text x="473" y="60" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">+ 37</text>
+<path d="M570,108 C510,68 522,26 570,46 C618,26 630,68 570,108 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="570" y="72" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">……</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 120" width="530" height="120">
+<rect width="530" height="120" fill="#fff"/>
+<text x="20.0" y="70.0" text-anchor="start" font-size="18" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">A.</text>
+<rect x="45" y="45" width="120" height="55" fill="#fff" stroke="#222" stroke-width="2"/>
+<polygon points="45.0,45.0 63.0,27.0 183.0,27.0 165.0,45.0" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="165.0,45.0 183.0,27.0 183.0,82.0 165.0,100.0" fill="#ccc" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="215.0" y="70.0" text-anchor="start" font-size="18" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">B.</text>
+<rect x="240" y="40" width="60" height="60" fill="#fff" stroke="#222" stroke-width="2"/>
+<polygon points="240.0,40.0 256.0,24.0 316.0,24.0 300.0,40.0" fill="none" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="300.0,40.0 316.0,24.0 316.0,84.0 300.0,100.0" fill="#ccc" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="345.0" y="70.0" text-anchor="start" font-size="18" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">C.</text>
+<path d="M375,42 L375,92 A70,12 0 0 0 515,92 L515,42" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="445" cy="42" rx="70" ry="12" fill="#fff" stroke="#222" stroke-width="2"/>
+</svg>

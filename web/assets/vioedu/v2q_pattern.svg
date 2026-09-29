@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" font-family="Arial, Helvetica, sans-serif">
+  <rect width="720" height="230" fill="#fff"/>
+  <g fill="none" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round">
+    <path d="M110 40 L190 175 L30 175 Z"/>
+    <path d="M360 40 L440 175 L280 175 Z"/>
+    <path d="M610 40 L690 175 L530 175 Z"/>
+  </g>
+  <g font-size="28" font-weight="bold" fill="#1a56db" text-anchor="middle">
+    <text x="110" y="32">4</text><text x="16" y="200">3</text><text x="204" y="200">2</text>
+    <text x="360" y="32">5</text><text x="266" y="200">1</text><text x="454" y="200">6</text>
+    <text x="610" y="32">2</text><text x="516" y="200">4</text><text x="704" y="200">1</text>
+  </g>
+  <g font-size="34" font-weight="bold" fill="#b3261e" text-anchor="middle">
+    <text x="110" y="146">9</text>
+    <text x="360" y="146">12</text>
+    <text x="610" y="146">?</text>
+  </g>
+  <g font-size="20" fill="#555" text-anchor="middle">
+    <text x="110" y="222">Hình 1</text><text x="360" y="222">Hình 2</text><text x="610" y="222">Hình 3</text>
+  </g>
+</svg>

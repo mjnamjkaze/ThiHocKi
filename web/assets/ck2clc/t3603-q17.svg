@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 190" width="610" height="190">
+<rect width="610" height="190" fill="#fff"/>
+<polyline points="30,150 150,40 270,150 470,150 580,50" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="30" cy="150" r="3.5" fill="#222"/>
+<circle cx="150" cy="40" r="3.5" fill="#222"/>
+<circle cx="270" cy="150" r="3.5" fill="#222"/>
+<circle cx="470" cy="150" r="3.5" fill="#222"/>
+<circle cx="580" cy="50" r="3.5" fill="#222"/>
+<text x="20" y="170" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">A</text>
+<text x="150" y="30" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">B</text>
+<text x="270" y="175" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">C</text>
+<text x="470" y="175" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">D</text>
+<text x="590" y="45" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">E</text>
+<text x="62" y="90" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">4 dm</text>
+<text x="240" y="90" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">5 dm</text>
+<text x="370" y="140" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">7 dm</text>
+<text x="505" y="90" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">3 dm</text>
+</svg>

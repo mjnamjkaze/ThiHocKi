@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="300" height="220" fill="#fff"/>
+<rect x="14" y="14" width="272" height="192" rx="14"
+    fill="#eaf6ff" stroke="#2b2b2b" stroke-width="3"/><path d="M15.5 184 H284.5 V192 a14 14 0 0 1 -14 14 H29.5 a14 14 0 0 1 -14 -14 Z"
+    fill="#dbf0cf" stroke="#2b2b2b" stroke-width="2.5"/><path d="M98 92 L202 92 L192 184 L108 184 Z"
+    fill="#c9a882" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"/><ellipse cx="150" cy="92" rx="52" ry="11" fill="#6b4f3a" stroke="#2b2b2b" stroke-width="3"/><text x="115.8" y="94.3" font-size="28" text-anchor="middle">🍌</text><text x="150" y="94.3" font-size="28" text-anchor="middle">🍎</text><text x="184.2" y="94.3" font-size="28" text-anchor="middle">🥬</text><text x="150" y="152" font-size="30" text-anchor="middle">🪱</text>
+</svg>

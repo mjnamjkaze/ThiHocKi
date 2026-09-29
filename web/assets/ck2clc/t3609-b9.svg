@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" width="360" height="240">
+<rect width="360" height="240" fill="#fff"/>
+<rect x="10" y="10" width="340" height="222" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<line x1="10" y1="42" x2="350" y2="42" stroke="#222" stroke-width="1.6"/>
+<line x1="10" y1="196" x2="350" y2="196" stroke="#222" stroke-width="1.6"/>
+<text x="180" y="33" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">SỐ NGÀY MƯA TRONG THÁNG 3</text>
+<circle cx="52.5" cy="179" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="52.5" cy="151" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="52.5" cy="123" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="52.5" cy="95" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="52.5" y="221" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tuần 1</text>
+<line x1="95.0" y1="42" x2="95.0" y2="232" stroke="#222" stroke-width="1.6"/>
+<circle cx="137.5" cy="179" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="137.5" cy="151" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="137.5" cy="123" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="137.5" y="221" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tuần 2</text>
+<line x1="180.0" y1="42" x2="180.0" y2="232" stroke="#222" stroke-width="1.6"/>
+<circle cx="222.5" cy="179" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="222.5" cy="151" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="222.5" cy="123" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="222.5" cy="95" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="222.5" cy="67" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="222.5" y="221" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tuần 3</text>
+<line x1="265.0" y1="42" x2="265.0" y2="232" stroke="#222" stroke-width="1.6"/>
+<circle cx="307.5" cy="179" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<circle cx="307.5" cy="151" r="12" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="307.5" y="221" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tuần 4</text>
+</svg>

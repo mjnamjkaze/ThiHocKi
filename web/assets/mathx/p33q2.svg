@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 210">
+  <rect x="0" y="0" width="700" height="210" fill="#fff" rx="8"/>
+  <g font-family="system-ui" font-size="40" font-weight="bold" text-anchor="middle">
+    <g fill="#1565c0">
+      <text x="350" y="55">B</text><text x="405" y="55">A</text>
+      <text x="350" y="110">C</text><text x="405" y="110">B</text>
+    </g>
+    <text x="285" y="108" fill="#e05a2b">+</text>
+    <line x1="265" y1="128" x2="440" y2="128" stroke="#333" stroke-width="4"/>
+    <g fill="#222">
+      <text x="295" y="178">1</text><text x="350" y="178">6</text><text x="405" y="178">2</text>
+    </g>
+  </g>
+</svg>

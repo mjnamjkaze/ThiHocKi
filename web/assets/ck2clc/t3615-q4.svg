@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 140" width="640" height="140">
+<rect width="640" height="140" fill="#fff"/>
+<g fill="none" stroke="#222" stroke-width="2.2" stroke-linejoin="round">
+<rect x="20" y="40" width="80" height="75"/><polyline points="20,40 38,22 118,22 100,40"/><polyline points="118,22 118,97 100,115"/>
+<ellipse cx="290" cy="30" rx="45" ry="10"/><path d="M245,30 L245,112 M335,30 L335,112"/><path d="M245,112 A45,10 0 0 0 335,112"/>
+<rect x="470" y="42" width="130" height="72"/><polyline points="470,42 490,22 620,22 600,42"/><polyline points="620,22 620,94 600,114"/>
+</g>
+<g font-family="Consolas, 'Courier New', monospace" font-size="19" fill="#222" text-anchor="middle">
+<text x="60" y="72">492</text><text x="60" y="98">kg</text>
+<text x="290" y="65">352</text><text x="290" y="90">kg</text>
+<text x="535" y="85">722 kg</text>
+</g>
+</svg>

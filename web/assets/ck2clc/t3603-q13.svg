@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="600" height="120">
+<rect width="600" height="120" fill="#fff"/>
+<line x1="20" y1="70" x2="553" y2="70" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<path d="M568 70 l-16 -8 v16 Z" fill="#222"/>
+<line x1="40" y1="61" x2="40" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="92" y1="61" x2="92" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="144" y1="61" x2="144" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="196" y1="61" x2="196" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="248" y1="61" x2="248" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="300" y1="61" x2="300" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="352" y1="61" x2="352" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="404" y1="61" x2="404" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="456" y1="61" x2="456" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="508" y1="61" x2="508" y2="79" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<text x="40" y="104" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">30</text>
+<text x="92" y="104" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">32</text>
+<text x="144" y="104" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">34</text>
+<text x="508" y="104" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">48</text>
+<polygon points="404.0,14.0 409.0,27.1 423.0,27.8 412.1,36.6 415.8,50.2 404.0,42.5 392.2,50.2 395.9,36.6 385.0,27.8 399.0,27.1" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

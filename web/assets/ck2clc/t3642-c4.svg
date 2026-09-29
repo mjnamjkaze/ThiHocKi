@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+<rect width="480" height="270" fill="#fff"/>
+<path d="M150,262 L330,262 L318,244 L162,244 Z" fill="#eee" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<rect x="228" y="176" width="24" height="68" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<circle cx="240" cy="176" r="18" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/><line x1="240" y1="176" x2="240" y2="162" stroke="#222" stroke-width="2.2"/>
+<line x1="70" y1="170" x2="410" y2="170" stroke="#222" stroke-width="4"/>
+<line x1="110" y1="160" x2="110" y2="170" stroke="#222" stroke-width="4"/>
+<path d="M25,150 Q110,172 195,150 Z" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<line x1="370" y1="160" x2="370" y2="170" stroke="#222" stroke-width="4"/>
+<path d="M285,150 Q370,172 455,150 Z" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M40,150 Q34,112 66,98 L60,88 L84,88 L78,98 Q110,112 104,150 Z" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="72" y="132" text-anchor="middle" font-size="20" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">3 kg</text>
+<path d="M100,150 L100,72 Q100,52 116,48 L124,36 L148,36 L154,48 Q180,52 180,72 L180,150 Z" fill="#fff" stroke="#222" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="140" y="108" text-anchor="middle" font-size="22" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">9 kg</text>
+<path d="M300,150 Q292,104 322,86 L314,74 L344,74 L336,86 Q366,104 358,150 Z" fill="#fff" stroke="#222" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="329" y="126" text-anchor="middle" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">?</text>
+<path d="M372,150 Q364,104 394,86 L386,74 L416,74 L408,86 Q438,104 430,150 Z" fill="#fff" stroke="#222" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="401" y="126" text-anchor="middle" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#222">?</text>
+</svg>

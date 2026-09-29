@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 210" width="500" height="210">
+<rect width="500" height="210" fill="#fff"/>
+<polygon points="40,150 86,150 86,196 40,196" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/><polygon points="86,150 100,145.8 100,191.8 86,196" fill="#ddd" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="136,150 182,150 182,196 136,196" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/><polygon points="182,150 196,145.8 196,191.8 182,196" fill="#ddd" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="232,150 278,150 278,196 232,196" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/><polygon points="278,150 292,145.8 292,191.8 278,196" fill="#ddd" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="328,150 374,150 374,196 328,196" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/><polygon points="374,150 388,145.8 388,191.8 374,196" fill="#ddd" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="20,100 460,100 460,150 20,150" fill="#f2f2f2" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="20,100 36,86 476,86 460,100" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="460,100 476,86 476,136 460,150" fill="#ccc" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<path d="M70,46 L155,46 A10,26 0 0 1 155,98 L70,98" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="70" cy="72" rx="10" ry="26" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M320,46 L405,46 A10,26 0 0 1 405,98 L320,98" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="320" cy="72" rx="10" ry="26" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M218,20 L218,92 A24,7 0 0 0 266,92 L266,20" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="242" cy="20" rx="24" ry="7" fill="#fff" stroke="#222" stroke-width="2"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 210" width="330" height="210">
+<rect width="330" height="210" fill="#fff"/>
+<polyline points="40,35 180,35 180,160 290,160" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="miter"/>
+<g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">
+<text x="28" y="30">A</text><text x="192" y="28">B</text><text x="308" y="166">C</text>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#222" text-anchor="middle">
+<text x="110" y="62">2cm</text><text x="215" y="102">2cm</text><text x="235" y="190">2cm</text>
+</g>
+</svg>

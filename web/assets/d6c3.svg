@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 150">
+<ellipse cx="70" cy="80" rx="48" ry="42" fill="#f4b183" stroke="#c55a11" stroke-width="3"/>
+<text x="70" y="93" text-anchor="middle" font-size="36" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">7</text>
+<line x1="130" y1="80" x2="240" y2="80" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M240 80 l-15 -8 v16 Z" fill="#2b2b2b"/>
+<text x="185" y="66" text-anchor="middle" font-size="30" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">+ 6</text>
+<rect x="252" y="38" width="84" height="84" fill="#a9d18e" stroke="#538135" stroke-width="3"/>
+<line x1="348" y1="80" x2="458" y2="80" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M458 80 l-15 -8 v16 Z" fill="#2b2b2b"/>
+<text x="403" y="66" text-anchor="middle" font-size="30" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">− 8</text>
+<path d="M515 34 L565 122 H465 Z" fill="#ffd966" stroke="#bf9000" stroke-width="3"/>
+<line x1="580" y1="80" x2="690" y2="80" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M690 80 l-15 -8 v16 Z" fill="#2b2b2b"/>
+<text x="635" y="66" text-anchor="middle" font-size="30" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">× 4</text>
+<rect x="702" y="44" width="120" height="72" fill="#b4c7e7" stroke="#2f5496" stroke-width="3"/>
+<line x1="834" y1="80" x2="944" y2="80" stroke="#2b2b2b" stroke-width="4"/>
+<path d="M944 80 l-15 -8 v16 Z" fill="#2b2b2b"/>
+<text x="889" y="66" text-anchor="middle" font-size="30" font-weight="bold" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">: 2</text>
+<path d="M1000 30 L1042 80 L1000 130 L958 80 Z" fill="#f7a8d8" stroke="#c74aa0" stroke-width="3"/>
+</svg>

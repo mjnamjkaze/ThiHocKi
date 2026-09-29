@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 305" width="350" height="305">
+<rect width="350" height="305" fill="#fff"/>
+<rect x="30" y="110" width="110" height="150" rx="12" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<rect x="43.2" y="90.5" width="33.0" height="19.5" rx="3" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<rect x="85.0" y="95.0" width="44.0" height="24.0" rx="8" fill="none" stroke="#222" stroke-width="2.5"/>
+<rect x="49.8" y="134.0" width="70.4" height="93.0" rx="6" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="85.0" y="188.0" text-anchor="middle" font-size="20" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">25 <tspan font-family="Times New Roman, serif" font-style="italic">l</tspan></text>
+<rect x="180" y="50" width="140" height="210" rx="12" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<rect x="196.8" y="22.7" width="42.0" height="27.3" rx="3" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<rect x="250.0" y="29.0" width="56.0" height="33.6" rx="8" fill="none" stroke="#222" stroke-width="2.5"/>
+<rect x="205.2" y="83.6" width="89.60000000000001" height="130.2" rx="6" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="250.0" y="159.2" text-anchor="middle" font-size="20" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">38 <tspan font-family="Times New Roman, serif" font-style="italic">l</tspan></text>
+<text x="85.0" y="290.0" text-anchor="middle" font-size="15" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">Can bé</text>
+<text x="250.0" y="290.0" text-anchor="middle" font-size="15" font-weight="normal" font-family="Arial, Helvetica, sans-serif" fill="#222">Can to</text>
+</svg>

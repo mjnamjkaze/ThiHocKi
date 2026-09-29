@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 225" width="470" height="225">
+<rect width="470" height="225" fill="#fff"/>
+<path d="M18,40 L18,190 A42,12 0 0 0 102,190 L102,40" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="60" cy="40" rx="42" ry="12" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="108" y="140" width="72" height="70" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="185" y="140" width="165" height="70" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M110,94.0 L185,94.0 A9.24,21.0 0 0 1 185,136.0 L110,136.0 A9.24,21.0 0 0 1 110,94.0 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="185" cy="115" rx="9.24" ry="21.0" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="143" cy="67" r="22" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M121,67 A22,7.699999999999999 0 0 0 165,67" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="222" cy="98" r="40" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M182,98 A40,14.0 0 0 0 262,98" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="270" y="112" width="80" height="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M270,67.0 L350,67.0 A9.24,21.0 0 0 1 350,109.0 L270,109.0 A9.24,21.0 0 0 1 270,67.0 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="350" cy="88" rx="9.24" ry="21.0" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M360,80 L360,210 A45,12 0 0 0 450,210 L450,80" fill="#fff" stroke="#222" stroke-width="2"/>
+<ellipse cx="405" cy="80" rx="45" ry="12" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="405" cy="45" r="28" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M377,45 A28,9.799999999999999 0 0 0 433,45" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

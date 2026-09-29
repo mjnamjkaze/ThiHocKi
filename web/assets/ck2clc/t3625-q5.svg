@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 210" width="560" height="210">
+<rect width="560" height="210" fill="#fff"/>
+<text x="20" y="24" text-anchor="start" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">a)</text>
+<rect x="95" y="185" width="70" height="12" rx="4" fill="#fff" stroke="#222" stroke-width="2"/>
+<line x1="130" y1="185" x2="130" y2="132" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+<line x1="30" y1="132" x2="230" y2="132" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+<path d="M130 120 l-7 12 h14 Z" fill="#222"/>
+<path d="M3 120 h104 l-10 12 h-84 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M153 120 h104 l-10 12 h-84 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M17.0 82 h30 l6 38 h-42 Z" fill="#555" stroke="#222" stroke-width="1.5"/>
+<path d="M24 82 a8 7 0 0 1 16 0" fill="none" stroke="#222" stroke-width="3"/>
+<text x="32" y="108" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">2 kg</text>
+<path d="M63.0 82 h30 l6 38 h-42 Z" fill="#555" stroke="#222" stroke-width="1.5"/>
+<path d="M70 82 a8 7 0 0 1 16 0" fill="none" stroke="#222" stroke-width="3"/>
+<text x="78" y="108" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">5 kg</text>
+<ellipse cx="205" cy="98" rx="30" ry="22" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="205" cy="62" r="18" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M190 52 l2 -16 l10 9 M220 52 l-2 -16 l-10 9" fill="none" stroke="#222" stroke-width="2"/>
+<circle cx="199" cy="60" r="2.5" fill="#222"/><circle cx="211" cy="60" r="2.5" fill="#222"/>
+<text x="205" y="105" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">mèo</text>
+<text x="310" y="24" text-anchor="start" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">b)</text>
+<rect x="395" y="185" width="70" height="12" rx="4" fill="#fff" stroke="#222" stroke-width="2"/>
+<line x1="430" y1="185" x2="430" y2="132" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+<line x1="330" y1="132" x2="530" y2="132" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+<path d="M430 120 l-7 12 h14 Z" fill="#222"/>
+<path d="M303 120 h104 l-10 12 h-84 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M453 120 h104 l-10 12 h-84 Z" fill="#fff" stroke="#222" stroke-width="2"/>
+<path d="M310.0 82 h30 l6 38 h-42 Z" fill="#555" stroke="#222" stroke-width="1.5"/>
+<path d="M317 82 a8 7 0 0 1 16 0" fill="none" stroke="#222" stroke-width="3"/>
+<text x="325" y="108" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">2 kg</text>
+<ellipse cx="377" cy="92" rx="28" ry="26" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="377" y="98" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">dưa</text>
+<path d="M490.0 82 h30 l6 38 h-42 Z" fill="#555" stroke="#222" stroke-width="1.5"/>
+<path d="M497 82 a8 7 0 0 1 16 0" fill="none" stroke="#222" stroke-width="3"/>
+<text x="505" y="108" text-anchor="middle" font-size="15" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">5 kg</text>
+</svg>

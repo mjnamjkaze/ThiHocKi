@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="600" height="360" font-family="sans-serif">
+<rect width="600" height="360" fill="#fff"/>
+<line x1="65" y1="82" x2="235" y2="82" stroke="#000" stroke-width="3"/><path d="M20,80 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><path d="M190,80 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><line x1="150" y1="82" x2="150" y2="130" stroke="#000" stroke-width="4"/><polygon points="120,140 180,140 168,130 132,130" fill="#fff" stroke="#000" stroke-width="2"/><polygon points="144,76 156,76 150,66" fill="#000"/>
+<rect x="41" y="58" width="22" height="22" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<circle cx="52" cy="47" r="11" fill="#000"/>
+<rect x="67" y="58" width="22" height="22" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<circle cx="78" cy="47" r="11" fill="#000"/>
+<polygon points="197,80 221,80 209,58" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<polygon points="223,80 247,80 235,58" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<polygon points="249,80 273,80 261,58" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<text x="150" y="165" font-size="16" text-anchor="middle">Cân 1</text>
+<line x1="365" y1="82" x2="535" y2="82" stroke="#000" stroke-width="3"/><path d="M320,80 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><path d="M490,80 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><line x1="450" y1="82" x2="450" y2="130" stroke="#000" stroke-width="4"/><polygon points="420,140 480,140 468,130 432,130" fill="#fff" stroke="#000" stroke-width="2"/><polygon points="444,76 456,76 450,66" fill="#000"/>
+<polygon points="353,80 377,80 365,58" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<circle cx="512" cy="69" r="11" fill="#000"/>
+<circle cx="535" cy="69" r="11" fill="#000"/>
+<circle cx="558" cy="69" r="11" fill="#000"/>
+<circle cx="535" cy="47" r="11" fill="#000"/>
+<text x="450" y="165" font-size="16" text-anchor="middle">Cân 2</text>
+<line x1="215" y1="217" x2="385" y2="217" stroke="#000" stroke-width="3"/><path d="M170,215 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><path d="M340,215 h90 l-8,12 h-74 z" fill="#fff" stroke="#000" stroke-width="2"/><line x1="300" y1="217" x2="300" y2="265" stroke="#000" stroke-width="4"/><polygon points="270,275 330,275 318,265 282,265" fill="#fff" stroke="#000" stroke-width="2"/><polygon points="294,211 306,211 300,201" fill="#000"/>
+<rect x="204" y="193" width="22" height="22" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<text x="385" y="209" font-size="30" font-weight="bold" text-anchor="middle">?</text>
+<text x="300" y="300" font-size="16" text-anchor="middle">Cân 3</text>
+<rect x="29" y="323" width="22" height="22" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<text x="58" y="340" font-size="14">hình vuông</text>
+<circle cx="160" cy="334" r="11" fill="#000"/>
+<text x="178" y="340" font-size="14">hình tròn</text>
+<polygon points="263,345 287,345 275,323" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<text x="293" y="340" font-size="14">hình tam giác</text>
+<text x="420" y="340" font-size="14">(các cân đều thăng bằng)</text>
+</svg>

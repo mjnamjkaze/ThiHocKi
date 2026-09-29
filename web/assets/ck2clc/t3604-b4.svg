@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260">
+<rect width="420" height="260" fill="#fff"/>
+<line x1="210" y1="150" x2="210" y2="230" stroke="#222" stroke-width="6" stroke-linecap="round"/>
+<path d="M170 250 h80 l-15 -20 h-50 Z" fill="#555"/>
+<line x1="60" y1="150" x2="360" y2="150" stroke="#222" stroke-width="6" stroke-linecap="round"/>
+<path d="M20 140 h160 l-15 20 h-130 Z" fill="#f2c94c" stroke="#222" stroke-width="2"/>
+<path d="M240 140 h160 l-15 20 h-130 Z" fill="#f2c94c" stroke="#222" stroke-width="2"/>
+<path d="M84 60 a16 10 0 0 1 33 0" fill="none" stroke="#222" stroke-width="4"/>
+<path d="M62 64 h77 l16 80 h-110 Z" fill="#333"/>
+<text x="100.0" y="112.0" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">5 kg</text>
+<path d="M274 90 a10 10 0 0 1 21 0" fill="none" stroke="#222" stroke-width="4"/>
+<path d="M260 94 h49 l10 50 h-70 Z" fill="#333"/>
+<text x="285.0" y="127.0" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#fff">2 kg</text>
+<ellipse cx="360" cy="115" rx="32" ry="24" fill="#f7d774" stroke="#222" stroke-width="2"/>
+<circle cx="378" cy="82" r="14" fill="#f7d774" stroke="#222" stroke-width="2"/>
+<path d="M370 69 q4 -12 8 -2 q4 -10 8 0 q4 -8 6 4" fill="#e74c3c" stroke="#222" stroke-width="1.5"/>
+<path d="M391 80 l12 5 l-12 4 Z" fill="#e67e22" stroke="#222" stroke-width="1.5"/>
+<circle cx="382" cy="79" r="2.5" fill="#222"/>
+<path d="M330 108 q-18 -18 -10 -30 q8 12 14 18" fill="#f7d774" stroke="#222" stroke-width="2"/>
+<text x="360" y="125" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#222">gà</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 105">
+<polygon points="89,94 121,94 105,62" fill="#7dd3fc" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round"/>
+<line x1="27" y1="44" x2="183" y2="76" stroke="#7dd3fc" stroke-width="9" stroke-linecap="round"/>
+<line x1="27" y1="44" x2="183" y2="76" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+<text x="39" y="36" font-size="28" text-anchor="middle">🐶</text>
+<text x="171" y="68" font-size="34" text-anchor="middle">🦁</text>
+<polygon points="299,94 331,94 315,62" fill="#7dd3fc" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round"/>
+<line x1="237" y1="76" x2="393" y2="44" stroke="#7dd3fc" stroke-width="9" stroke-linecap="round"/>
+<line x1="237" y1="76" x2="393" y2="44" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+<text x="249" y="68" font-size="36" text-anchor="middle">🦛</text>
+<text x="381" y="36" font-size="30" text-anchor="middle">🦁</text>
+<polygon points="509,94 541,94 525,62" fill="#7dd3fc" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round"/>
+<line x1="447" y1="44" x2="603" y2="76" stroke="#7dd3fc" stroke-width="9" stroke-linecap="round"/>
+<line x1="447" y1="44" x2="603" y2="76" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+<text x="459" y="36" font-size="26" text-anchor="middle">🦊</text>
+<text x="591" y="68" font-size="28" text-anchor="middle">🐶</text>
+</svg>

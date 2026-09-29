@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 230">
+<g stroke="#7f9db9" stroke-width="4" fill="none">
+<path d="M45 170 L235 95 L425 165 L565 40 L730 175"/>
+</g>
+<circle cx="45" cy="170" r="6" fill="#222"/><circle cx="235" cy="95" r="6" fill="#222"/><circle cx="425" cy="165" r="6" fill="#222"/><circle cx="565" cy="40" r="6" fill="#222"/><circle cx="730" cy="175" r="6" fill="#222"/>
+<text x="30" y="205" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif">A</text>
+<text x="228" y="75" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif">B</text>
+<text x="418" y="203" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif">C</text>
+<text x="558" y="25" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif">D</text>
+<text x="740" y="170" font-size="28" font-weight="bold" font-family="Arial, Helvetica, sans-serif">E</text>
+</svg>

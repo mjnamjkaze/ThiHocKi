@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="240" rx="8" fill="#fff"/>
+  <defs>
+    <g id="cyl" stroke="#333" stroke-width="2">
+      <rect x="-30" y="-35" width="60" height="70" fill="currentColor" stroke="none"/>
+      <line x1="-30" y1="-35" x2="-30" y2="35"/>
+      <line x1="30" y1="-35" x2="30" y2="35"/>
+      <ellipse cx="0" cy="35" rx="30" ry="11" fill="currentColor"/>
+      <ellipse cx="0" cy="-35" rx="30" ry="11" fill="currentColor"/>
+      <ellipse cx="0" cy="-35" rx="30" ry="11" fill="#ffffff" fill-opacity="0.35"/>
+    </g>
+    <g id="sph" stroke="#333" stroke-width="2">
+      <circle cx="0" cy="0" r="30" fill="currentColor"/>
+      <ellipse cx="-10" cy="-12" rx="9" ry="5" fill="#ffffff" fill-opacity="0.6" stroke="none"/>
+    </g>
+    <g id="cube" stroke="#333" stroke-width="2" stroke-linejoin="round">
+      <polygon points="-25,-15 25,-15 25,35 -25,35" fill="currentColor"/>
+      <polygon points="-25,-15 -10,-33 40,-33 25,-15" fill="currentColor"/>
+      <polygon points="-25,-15 -10,-33 40,-33 25,-15" fill="#ffffff" fill-opacity="0.35" stroke="none"/>
+      <polygon points="25,-15 40,-33 40,17 25,35" fill="currentColor"/>
+      <polygon points="25,-15 40,-33 40,17 25,35" fill="#000000" fill-opacity="0.15" stroke="none"/>
+    </g>
+    <g id="box" stroke="#333" stroke-width="2" stroke-linejoin="round">
+      <polygon points="-45,-5 45,-5 45,35 -45,35" fill="currentColor"/>
+      <polygon points="-45,-5 -30,-25 60,-25 45,-5" fill="currentColor"/>
+      <polygon points="-45,-5 -30,-25 60,-25 45,-5" fill="#ffffff" fill-opacity="0.35" stroke="none"/>
+      <polygon points="45,-5 60,-25 60,15 45,35" fill="currentColor"/>
+      <polygon points="45,-5 60,-25 60,15 45,35" fill="#000000" fill-opacity="0.15" stroke="none"/>
+    </g>
+    <g id="lcyl" stroke="#333" stroke-width="2">
+      <rect x="-45" y="-24" width="90" height="48" fill="currentColor" stroke="none"/>
+      <line x1="-45" y1="-24" x2="45" y2="-24"/>
+      <line x1="-45" y1="24" x2="45" y2="24"/>
+      <ellipse cx="-45" cy="0" rx="13" ry="24" fill="currentColor"/>
+      <ellipse cx="45" cy="0" rx="13" ry="24" fill="currentColor"/>
+      <ellipse cx="45" cy="0" rx="13" ry="24" fill="#ffffff" fill-opacity="0.35"/>
+    </g>
+  </defs>
+  <use href="#cyl" x="95" y="85" color="#42a5f5"/>
+  <use href="#sph" x="185" y="88" color="#fdd835"/>
+  <use href="#cyl" x="268" y="85" color="#c07a3a"/>
+  <use href="#sph" x="348" y="88" color="#8e24aa"/>
+  <use href="#box" x="455" y="82" color="#43a047"/>
+  <use href="#cyl" x="605" y="85" color="#e53935"/>
+  <use href="#lcyl" x="150" y="188" color="#e53935"/>
+  <use href="#lcyl" x="305" y="188" color="#43a047"/>
+  <use href="#cube" x="435" y="182" color="#fdd835"/>
+  <use href="#sph" x="545" y="188" color="#d81b60"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160">
+<rect width="520" height="160" fill="#fff"/>
+<polyline points="30,110 215,70 330,120 480,80" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="30" cy="110" r="3.5" fill="#222"/>
+<circle cx="215" cy="70" r="3.5" fill="#222"/>
+<circle cx="330" cy="120" r="3.5" fill="#222"/>
+<circle cx="480" cy="80" r="3.5" fill="#222"/>
+<text x="22" y="135" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">A</text>
+<text x="215" y="58" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">B</text>
+<text x="330" y="145" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">C</text>
+<text x="490" y="70" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">D</text>
+<text x="118" y="78" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">46 cm</text>
+<text x="285" y="82" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">28 cm</text>
+<text x="410" y="88" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" fill="#222">36 cm</text>
+</svg>

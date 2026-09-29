@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300">
+  <rect x="0" y="0" width="700" height="300" fill="#fff" rx="8"/>
+  
+  <g stroke="#333" stroke-width="3" fill="#fdf6d8" stroke-linejoin="round">
+    
+    <rect x="280" y="10" width="140" height="70"/>
+    
+    <rect x="210" y="80" width="280" height="140"/>
+    
+    <rect x="210" y="220" width="210" height="70"/>
+  </g>
+  <g stroke="#333" stroke-width="3" fill="none">
+    
+    <line x1="280" y1="80" x2="280" y2="220"/>
+    <line x1="350" y1="80" x2="350" y2="220"/>
+    <line x1="420" y1="80" x2="420" y2="220"/>
+    <line x1="280" y1="150" x2="420" y2="150"/>
+    
+    <line x1="280" y1="220" x2="280" y2="290"/>
+  </g>
+</svg>

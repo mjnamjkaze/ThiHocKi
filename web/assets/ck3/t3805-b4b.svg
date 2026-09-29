@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" width="520" height="250">
+<rect width="520" height="250" fill="#fff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#222"/></marker></defs>
+<path d="M64,92 Q120.0,30 176,92" fill="none" stroke="#222" stroke-width="2.5" marker-end="url(#ar)"/>
+<path d="M204,148 Q260.0,210 316,148" fill="none" stroke="#222" stroke-width="2.5" marker-end="url(#ar)"/>
+<path d="M344,92 Q400.0,30 456,92" fill="none" stroke="#222" stroke-width="2.5" marker-end="url(#ar)"/>
+<rect x="88.0" y="16" width="64" height="40" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="120.0" y="43" text-anchor="middle" font-size="19" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">× 3</text>
+<rect x="228.0" y="194" width="64" height="40" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="260.0" y="221" text-anchor="middle" font-size="19" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">– 1</text>
+<rect x="368.0" y="16" width="64" height="40" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="400.0" y="43" text-anchor="middle" font-size="19" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">: …</text>
+<circle cx="50" cy="120" r="30" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="50" y="127" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">…</text>
+<circle cx="190" cy="120" r="30" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="190" y="127" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">…</text>
+<circle cx="330" cy="120" r="30" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="330" y="127" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">…</text>
+<circle cx="470" cy="120" r="30" fill="#fff" stroke="#222" stroke-width="2.5"/>
+<text x="470" y="127" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">4</text>
+</svg>

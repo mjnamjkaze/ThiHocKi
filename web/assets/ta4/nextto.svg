@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 230" font-family="system-ui, 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', Arial, sans-serif">
+<rect width="340" height="230" fill="#fff"/>
+<rect x="6" y="6" width="328" height="218" rx="16"
+    fill="#fdfbf6" stroke="#2b2b2b" stroke-width="3"/><rect x="90" y="96" width="160" height="76" rx="8" fill="#f0e6d6" stroke="#2b2b2b" stroke-width="3"/><circle cx="290" cy="134" r="22" fill="#fff" stroke="#2b2b2b" stroke-width="3"/>
+<path d="M268 134 h44 M290 112 v44" stroke="#2b2b2b" stroke-width="2.5" fill="none"/><path d="M18 186 H322" stroke="#2b2b2b" stroke-width="3"/>
+</svg>

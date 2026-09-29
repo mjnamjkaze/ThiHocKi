@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="240" height="200">
+<rect width="240" height="200" fill="#fff"/>
+<circle cx="120" cy="45" r="14" fill="#fff" stroke="#222" stroke-width="2"/>
+<polygon points="96,36 144,36 132,26 108,26" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<line x1="120" y1="59" x2="120" y2="130" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="120" y1="130" x2="100" y2="190" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="120" y1="130" x2="140" y2="190" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+<line x1="40" y1="72" x2="200" y2="72" stroke="#222" stroke-width="4" stroke-linecap="round"/>
+<line x1="120" y1="75" x2="80" y2="95" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+<line x1="120" y1="75" x2="160" y2="95" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+<line x1="50" y1="72" x2="50" y2="120" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="190" y1="72" x2="190" y2="120" stroke="#222" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="28,120 72,120 66,180 34,180" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="168,120 212,120 206,180 174,180" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="50" y="158" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">7<tspan font-style="italic">l</tspan></text>
+<text x="190" y="158" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">8<tspan font-style="italic">l</tspan></text>
+</svg>

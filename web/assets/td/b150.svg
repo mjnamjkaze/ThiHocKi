@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 262">
+<rect x="20" y="16" width="266" height="228" rx="0" fill="#dbeafe" stroke="none" stroke-width="0"/>
+<line x1="20" y1="16" x2="20" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="58" y1="16" x2="58" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="96" y1="16" x2="96" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="134" y1="16" x2="134" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="172" y1="16" x2="172" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="210" y1="16" x2="210" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="248" y1="16" x2="248" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="286" y1="16" x2="286" y2="244" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="16" x2="286" y2="16" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="54" x2="286" y2="54" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="92" x2="286" y2="92" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="130" x2="286" y2="130" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="168" x2="286" y2="168" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="206" x2="286" y2="206" stroke="#ffffff" stroke-width="2" />
+<line x1="20" y1="244" x2="286" y2="244" stroke="#ffffff" stroke-width="2" />
+<defs><marker id="ah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e11d48"/></marker></defs>
+<line x1="210" y1="54" x2="67.5" y2="54" stroke="#e11d48" stroke-width="3" marker-end="url(#ah)"/>
+<circle cx="58" cy="54" r="4.5" fill="#e11d48" stroke="#fff" stroke-width="1"/>
+<circle cx="210" cy="54" r="4.5" fill="#e11d48" stroke="#fff" stroke-width="1"/>
+<circle cx="153" cy="130" r="4.5" fill="#e11d48" stroke="#fff" stroke-width="1"/>
+<text x="56" y="42" font-family="Arial" font-weight="bold" font-size="22" fill="#0f172a" text-anchor="middle" >B</text>
+<text x="226" y="76" font-family="Arial" font-weight="bold" font-size="22" fill="#0f172a" text-anchor="middle" >A</text>
+<text x="169" y="150" font-family="Arial" font-weight="bold" font-size="22" fill="#0f172a" text-anchor="middle" >C</text>
+<line x1="32" y1="206" x2="84" y2="206" stroke="#a16207" stroke-width="3" />
+<line x1="58" y1="180" x2="58" y2="232" stroke="#a16207" stroke-width="3" />
+<path d="M 32 206 l 8 -5 v 10 Z" fill="#a16207"/>
+<path d="M 84 206 l -8 -5 v 10 Z" fill="#a16207"/>
+<path d="M 58 180 l -5 8 h 10 Z" fill="#a16207"/>
+<path d="M 58 232 l -5 -8 h 10 Z" fill="#a16207"/>
+<text x="58" y="174" font-family="Arial" font-weight="bold" font-size="18" fill="#0f172a" text-anchor="middle" >B</text>
+<text x="58" y="252" font-family="Arial" font-weight="bold" font-size="18" fill="#0f172a" text-anchor="middle" >N</text>
+<text x="20" y="212" font-family="Arial" font-weight="bold" font-size="18" fill="#0f172a" text-anchor="middle" >T</text>
+<text x="96" y="212" font-family="Arial" font-weight="bold" font-size="18" fill="#0f172a" text-anchor="middle" >Đ</text>
+</svg>

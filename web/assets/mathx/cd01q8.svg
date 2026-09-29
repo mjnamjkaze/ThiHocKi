@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" font-family="system-ui">
+  <rect x="0" y="0" width="700" height="260" rx="8" fill="#fff"/>
+  <g stroke="#16399f" stroke-width="3" fill="none" stroke-linejoin="round">
+    <polygon points="60,230 180,50 460,50 640,230"/>
+    <line x1="180" y1="50" x2="180" y2="230"/>
+    <line x1="460" y1="50" x2="460" y2="230"/>
+    <line x1="180" y1="50" x2="460" y2="230"/>
+    <line x1="460" y1="50" x2="180" y2="230"/>
+  </g>
+</svg>

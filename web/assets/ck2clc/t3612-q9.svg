@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" width="360" height="290">
+<rect width="360" height="290" fill="#fff"/>
+<polyline points="50,200 95,40 285,40 140,145 285,250" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+<g fill="#222"><circle cx="50" cy="200" r="4"/><circle cx="95" cy="40" r="4"/><circle cx="285" cy="40" r="4"/><circle cx="140" cy="145" r="4"/><circle cx="285" cy="250" r="4"/></g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">
+<text x="42" y="225">A</text><text x="92" y="28">B</text><text x="292" y="28">C</text><text x="120" y="150">D</text><text x="292" y="275">E</text>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#222" text-anchor="middle">
+<text x="45" y="120">4cm</text><text x="190" y="30">3cm</text><text x="235" y="100">3cm</text><text x="190" y="225">4cm</text>
+</g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 260" width="560" height="260">
+<rect width="560" height="260" fill="#fff"/>
+<rect x="15" y="10" width="160" height="100" rx="10" fill="none" stroke="#222" stroke-width="2"/>
+<text x="95" y="42" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tranh 1</text>
+<text x="95" y="70" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Nam đi học</text>
+<text x="95" y="94" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">lúc 7 giờ sáng.</text>
+<rect x="195" y="10" width="160" height="100" rx="10" fill="none" stroke="#222" stroke-width="2"/>
+<text x="275" y="42" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tranh 2</text>
+<text x="275" y="70" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Việt xem bóng đá</text>
+<text x="275" y="94" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">lúc 7 giờ tối.</text>
+<rect x="375" y="10" width="160" height="100" rx="10" fill="none" stroke="#222" stroke-width="2"/>
+<text x="455" y="42" text-anchor="middle" font-size="18" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">Tranh 3</text>
+<text x="455" y="70" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Rô-bốt vẽ tranh</text>
+<text x="455" y="94" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">lúc 2 giờ chiều.</text>
+<rect x="35" y="190" width="120" height="54" rx="8" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="95" y="229" text-anchor="middle" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">19:00</text>
+<rect x="215" y="190" width="120" height="54" rx="8" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="275" y="229" text-anchor="middle" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">14:00</text>
+<rect x="395" y="190" width="120" height="54" rx="8" fill="#fff" stroke="#222" stroke-width="3"/>
+<text x="455" y="229" text-anchor="middle" font-size="30" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">07:00</text>
+</svg>

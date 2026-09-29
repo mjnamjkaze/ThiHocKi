@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 250" width="740" height="250">
+<rect width="740" height="250" fill="#fff"/>
+<ellipse cx="84" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(-15 84 40)"/>
+<ellipse cx="98" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(15 98 40)"/>
+<ellipse cx="108" cy="82" rx="42" ry="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="72" cy="68" r="17" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="66" cy="65" r="2" fill="#222"/>
+<circle cx="78" cy="65" r="2" fill="#222"/>
+<circle cx="152" cy="80" r="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="112" y="89" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">30</text>
+<ellipse cx="264" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(-15 264 40)"/>
+<ellipse cx="278" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(15 278 40)"/>
+<ellipse cx="288" cy="82" rx="42" ry="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="252" cy="68" r="17" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="246" cy="65" r="2" fill="#222"/>
+<circle cx="258" cy="65" r="2" fill="#222"/>
+<circle cx="332" cy="80" r="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="292" y="89" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">56</text>
+<ellipse cx="444" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(-15 444 40)"/>
+<ellipse cx="458" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(15 458 40)"/>
+<ellipse cx="468" cy="82" rx="42" ry="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="432" cy="68" r="17" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="426" cy="65" r="2" fill="#222"/>
+<circle cx="438" cy="65" r="2" fill="#222"/>
+<circle cx="512" cy="80" r="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="472" y="89" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">38</text>
+<ellipse cx="624" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(-15 624 40)"/>
+<ellipse cx="638" cy="40" rx="7" ry="20" fill="#fff" stroke="#222" stroke-width="2" transform="rotate(15 638 40)"/>
+<ellipse cx="648" cy="82" rx="42" ry="24" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="612" cy="68" r="17" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="606" cy="65" r="2" fill="#222"/>
+<circle cx="618" cy="65" r="2" fill="#222"/>
+<circle cx="692" cy="80" r="6" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="652" y="89" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">80</text>
+<polygon points="25,190 100,150 175,190" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="38" y="190" width="124" height="44" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="100" y="219" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">35 + 45</text>
+<polygon points="205,190 280,150 355,190" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="218" y="190" width="124" height="44" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="280" y="219" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">87 - 49</text>
+<polygon points="385,190 460,150 535,190" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="398" y="190" width="124" height="44" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="460" y="219" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">5 + 45 - 20</text>
+<polygon points="565,190 640,150 715,190" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="578" y="190" width="124" height="44" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="640" y="219" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222" font-weight="bold">70 - 27 + 13</text>
+</svg>

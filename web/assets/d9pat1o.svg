@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 110">
+<text x="20" y="70" font-size="30" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">A.</text>
+<path d="M60 25.72 V76.28 A27 9.719999999999999 0 0 0 114 76.28 V25.72" fill="#7ac143"/>
+<ellipse cx="87" cy="25.72" rx="27" ry="9.719999999999999" fill="#a8e06c"/>
+<text x="250" y="70" font-size="30" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">B.</text>
+<defs><radialGradient id="ro1" cx="0.35" cy="0.3" r="0.9"><stop offset="0%" stop-color="#f28b8b"/><stop offset="100%" stop-color="#d94040"/></radialGradient></defs>
+<circle cx="320" cy="55" r="30" fill="url(#ro1)"/>
+<text x="470" y="70" font-size="30" font-family="Arial, Helvetica, sans-serif" fill="#2b2b2b">C.</text>
+<defs><radialGradient id="ro2" cx="0.35" cy="0.3" r="0.9"><stop offset="0%" stop-color="#a8e06c"/><stop offset="100%" stop-color="#7ac143"/></radialGradient></defs>
+<circle cx="540" cy="55" r="30" fill="url(#ro2)"/>
+</svg>

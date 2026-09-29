@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" width="520" height="150">
+<rect width="520" height="150" fill="#fff"/>
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#222"/></marker></defs>
+<rect x="15" y="50" width="80" height="60" rx="10" fill="none" stroke="#222" stroke-width="2.5"/>
+<text x="55" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#222">43</text>
+<line x1="98" y1="80" x2="205" y2="80" stroke="#222" stroke-width="2" marker-end="url(#ar)"/>
+<text x="152" y="68" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#222">− 38</text>
+<polygon points="260,20 315,130 205,130" fill="none" stroke="#222" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="300" y1="80" x2="398" y2="80" stroke="#222" stroke-width="2" marker-end="url(#ar)"/>
+<text x="350" y="68" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#222">× 4</text>
+<ellipse cx="450" cy="80" rx="50" ry="42" fill="none" stroke="#222" stroke-width="2.5"/>
+</svg>

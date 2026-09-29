@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" width="300" height="280">
+<rect width="300" height="280" fill="#fff"/>
+<circle cx="150" cy="140" r="100" fill="none" stroke="#222" stroke-width="2.5"/>
+<line x1="150" y1="40" x2="150" y2="240" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="50" y1="140" x2="250" y2="140" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="214.3" y1="63.4" x2="59.4" y2="182.3" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="150" cy="140" r="3.5" fill="#222"/>
+<text x="166" y="164" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">O</text>
+<text x="150" y="30" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">A</text>
+<text x="150" y="266" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">B</text>
+<text x="34" y="147" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">C</text>
+<text x="266" y="147" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">D</text>
+<text x="228.3" y="57.4" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">G</text>
+<text x="45.4" y="202.3" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="bold" fill="#222">E</text>
+</svg>

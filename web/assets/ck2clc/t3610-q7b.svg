@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="540" height="120">
+<rect width="540" height="120" fill="#fff"/>
+<rect x="10" y="20" width="80" height="80" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="50" y="67" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" fill="#222">40m</text>
+<line x1="90" y1="60" x2="178" y2="60" stroke="#222" stroke-width="2"/><path d="M180,60 L168,53 L168,67 Z" fill="#222"/>
+<rect x="112" y="22" width="44" height="26" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="134" y="41" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222">: 5</text>
+<ellipse cx="245" cy="60" rx="64" ry="30" fill="#fff" stroke="#222" stroke-width="2"/>
+<text x="245" y="68" text-anchor="middle" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#222">?</text>
+<line x1="309" y1="60" x2="398" y2="60" stroke="#222" stroke-width="2"/><path d="M400,60 L388,53 L388,67 Z" fill="#222"/>
+<rect x="330" y="22" width="44" height="26" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="352" y="41" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#222">× 2</text>
+<polygon points="465,10 405,108 525,108" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<text x="465" y="90" text-anchor="middle" font-size="22" font-family="Arial, Helvetica, sans-serif" fill="#222">?</text>
+</svg>
