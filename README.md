@@ -13,7 +13,7 @@ Không cần tạo tài khoản, không cần mật khẩu, không quảng cáo:
 - ✅ **Đề thi cuối kì thật của trường**: đề kiểm tra cuối học kì I và cuối học kì II do các trường tiểu học ở Hà Nội, Hải Phòng, TP.HCM, Đà Nẵng, Quảng Nam, Đắk Lắk, Vĩnh Long, Điện Biên, Sơn La, Ninh Bình… công bố. Đề được chép **trọn đề**, đúng cấu trúc, đúng biểu điểm và ghi rõ nguồn.
 - ✅ **Có đáp án và lời giải chi tiết**: mọi câu đều được giải lại độc lập. Chỗ nào đáp án của trường sai thì đã được sửa và ghi chú rõ.
 - ✅ **Bám chương trình GDPT 2018**, đủ ba bộ sách *Kết nối tri thức*, *Chân trời sáng tạo* và *Cánh diều*.
-- ✅ **Làm bài trắc nghiệm online, chấm điểm ngay**: có đồng hồ đếm giờ, xem lại bài, nút gợi ý khi bé bí.
+- ✅ **Làm bài trắc nghiệm online, chấm điểm ngay**: có đồng hồ đếm giờ, xem lại bài, 20 bạn thú ra ăn mừng sau mỗi lần nộp.
 - ✅ **In đề PDF** để làm trên giấy như đề kiểm tra ở lớp. Phần tự luận (chính tả, tập làm văn, đọc thành tiếng, trình bày bài giải) có bài mẫu và hướng dẫn chấm để bố mẹ chấm tại nhà.
 - ✅ **Toán tư duy, Toán nâng cao, Toán qua hình**: luyện thêm các dạng thi ASMO, AMO, FMO, MathX, VioEdu và bồi dưỡng học sinh giỏi.
 - ✅ **Miễn phí 100%**, chạy mượt trên điện thoại, máy tính bảng và máy tính.
