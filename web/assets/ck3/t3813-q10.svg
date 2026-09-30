@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278 145" width="278" height="145" font-family="sans-serif">
+<rect width="278" height="145" fill="#fff"/>
+<text x="70" y="40" font-size="28" font-weight="bold" text-anchor="middle">2</text>
+<text x="112" y="40" font-size="28" font-weight="bold" text-anchor="middle">…</text>
+<text x="154" y="40" font-size="28" font-weight="bold" text-anchor="middle">1</text>
+<text x="196" y="40" font-size="28" font-weight="bold" text-anchor="middle">5</text>
+<text x="238" y="40" font-size="28" font-weight="bold" text-anchor="middle">…</text>
+<text x="238" y="84" font-size="28" font-weight="bold" text-anchor="middle">3</text>
+<text x="70" y="128" font-size="28" font-weight="bold" text-anchor="middle">…</text>
+<text x="112" y="128" font-size="28" font-weight="bold" text-anchor="middle">1</text>
+<text x="154" y="128" font-size="28" font-weight="bold" text-anchor="middle">…</text>
+<text x="196" y="128" font-size="28" font-weight="bold" text-anchor="middle">…</text>
+<text x="238" y="128" font-size="28" font-weight="bold" text-anchor="middle">6</text>
+<text x="30" y="84" font-size="26" font-weight="bold" text-anchor="middle">×</text>
+<line x1="20" y1="98" x2="258" y2="98" stroke="#000" stroke-width="2.5"/>
+</svg>

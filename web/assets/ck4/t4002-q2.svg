@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" font-family="Times New Roman, serif">
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="22" y="182" font-size="24">A.</text>
+<path d="M56,78 C56,10 144,10 144,78" fill="none" stroke="#000" stroke-width="3"/>
+<path d="M50,80 L62,185 Q100,195 138,185 L150,80" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<ellipse cx="100" cy="80" rx="50" ry="10" fill="#f2f2f2" stroke="#000" stroke-width="2.5"/>
+<text x="94" y="128" font-size="24" text-anchor="middle">23</text>
+<line x1="78" y1="136" x2="110" y2="136" stroke="#000" stroke-width="2"/>
+<text x="94" y="162" font-size="24" text-anchor="middle">16</text>
+<text x="122" y="146" font-size="28" font-style="italic" font-weight="bold" text-anchor="middle">l</text>
+<text x="172" y="182" font-size="24">B.</text>
+<path d="M206,78 C206,10 294,10 294,78" fill="none" stroke="#000" stroke-width="3"/>
+<path d="M200,80 L212,185 Q250,195 288,185 L300,80" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<ellipse cx="250" cy="80" rx="50" ry="10" fill="#f2f2f2" stroke="#000" stroke-width="2.5"/>
+<text x="244" y="128" font-size="24" text-anchor="middle">5</text>
+<line x1="228" y1="136" x2="260" y2="136" stroke="#000" stroke-width="2"/>
+<text x="244" y="162" font-size="24" text-anchor="middle">4</text>
+<text x="272" y="146" font-size="28" font-style="italic" font-weight="bold" text-anchor="middle">l</text>
+<text x="322" y="182" font-size="24">C.</text>
+<path d="M356,78 C356,10 444,10 444,78" fill="none" stroke="#000" stroke-width="3"/>
+<path d="M350,80 L362,185 Q400,195 438,185 L450,80" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<ellipse cx="400" cy="80" rx="50" ry="10" fill="#f2f2f2" stroke="#000" stroke-width="2.5"/>
+<text x="394" y="128" font-size="24" text-anchor="middle">1</text>
+<line x1="378" y1="136" x2="410" y2="136" stroke="#000" stroke-width="2"/>
+<text x="394" y="162" font-size="24" text-anchor="middle">2</text>
+<text x="422" y="146" font-size="28" font-style="italic" font-weight="bold" text-anchor="middle">l</text>
+<text x="472" y="182" font-size="24">D.</text>
+<path d="M506,78 C506,10 594,10 594,78" fill="none" stroke="#000" stroke-width="3"/>
+<path d="M500,80 L512,185 Q550,195 588,185 L600,80" fill="#fff" stroke="#000" stroke-width="2.5"/>
+<ellipse cx="550" cy="80" rx="50" ry="10" fill="#f2f2f2" stroke="#000" stroke-width="2.5"/>
+<text x="544" y="128" font-size="24" text-anchor="middle">11</text>
+<line x1="528" y1="136" x2="560" y2="136" stroke="#000" stroke-width="2"/>
+<text x="544" y="162" font-size="24" text-anchor="middle">8</text>
+<text x="572" y="146" font-size="28" font-style="italic" font-weight="bold" text-anchor="middle">l</text>
+</svg>

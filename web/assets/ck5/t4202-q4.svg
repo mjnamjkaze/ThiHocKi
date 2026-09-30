@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 320" width="340" height="320">
+<rect width="340" height="320" fill="#fff"/>
+<path d="M170,160 L170.0,30.0 A130,130 0 0 1 300.0,160.0 Z" fill="#cfe2f3" stroke="#3d5a80" stroke-width="2" stroke-linejoin="round"/>
+<path d="M170,160 L300.0,160.0 A130,130 0 0 1 249.7,262.7 Z" fill="#f8c4b4" stroke="#3d5a80" stroke-width="2" stroke-linejoin="round"/>
+<path d="M170,160 L249.7,262.7 A130,130 0 0 1 50.7,108.4 Z" fill="#d9ead3" stroke="#3d5a80" stroke-width="2" stroke-linejoin="round"/>
+<path d="M170,160 L50.7,108.4 A130,130 0 0 1 170.0,30.0 Z" fill="#fff2b3" stroke="#3d5a80" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="170,146 184,146 184,160" fill="none" stroke="#3d5a80" stroke-width="1.5"/>
+<text x="227.0" y="99.0" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Bún chả</text>
+<text x="227.0" y="119.0" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">?%</text>
+<text x="242.4" y="191.5" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Nem rán</text>
+<text x="242.4" y="211.5" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">?%</text>
+<text x="120.6" y="219.7" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Phở</text>
+<text x="120.6" y="239.7" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">42%</text>
+<text x="125.7" y="88.6" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">Bún đậu</text>
+<text x="125.7" y="108.6" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#222">18,5%</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 210" width="700" height="210">
+<rect width="700" height="210" fill="#fff"/>
+<polygon points="14,78 34,58 98,58 78,78" fill="#b3b3b3" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="78,78 98,58 98,122 78,142" fill="#fff" stroke="#222" stroke-width="2" stroke-linejoin="round"/>
+<rect x="14" y="78" width="64" height="64" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="46.0" cy="110.0" r="8" fill="#b3b3b3" stroke="#222" stroke-width="1.5"/>
+<rect x="174" y="14" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="140" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="174" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="208" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="174" y="82" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="174" y="116" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<circle cx="191.0" cy="65.0" r="7" fill="#b3b3b3" stroke="#222" stroke-width="1.5"/>
+<text x="191.0" y="180" text-anchor="middle" font-size="20" font-family="Times New Roman, serif" fill="#222">A</text>
+<rect x="314" y="14" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="280" y="48" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<rect x="314" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="348" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="314" y="82" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="314" y="116" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="365.0" cy="65.0" r="7" fill="#b3b3b3" stroke="#222" stroke-width="1.5"/>
+<text x="331.0" y="180" text-anchor="middle" font-size="20" font-family="Times New Roman, serif" fill="#222">B</text>
+<rect x="454" y="14" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="420" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="454" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="488" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="454" y="82" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="454" y="116" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<circle cx="471.0" cy="99.0" r="7" fill="#b3b3b3" stroke="#222" stroke-width="1.5"/>
+<text x="471.0" y="180" text-anchor="middle" font-size="20" font-family="Times New Roman, serif" fill="#222">C</text>
+<rect x="594" y="14" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<rect x="560" y="48" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<rect x="594" y="48" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<rect x="628" y="48" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<rect x="594" y="82" width="34" height="34" fill="#b3b3b3" stroke="#222" stroke-width="2"/>
+<rect x="594" y="116" width="34" height="34" fill="#fff" stroke="#222" stroke-width="2"/>
+<circle cx="611.0" cy="65.0" r="7" fill="#b3b3b3" stroke="#222" stroke-width="1.5"/>
+<text x="611.0" y="180" text-anchor="middle" font-size="20" font-family="Times New Roman, serif" fill="#222">D</text>
+</svg>
