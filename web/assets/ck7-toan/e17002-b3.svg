@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 268" width="420" height="268">
+<path d="M130,125 L130.0,20.0 A105,105 0 0 1 229.9,92.6 Z" fill="#ffffff" stroke="#000" stroke-width="1.8"/>
+<rect x="145.0" y="61.0" width="44" height="20" rx="3" fill="#fff" stroke="#000" stroke-width="0.8"/>
+<text x="167.0" y="76.0" text-anchor="middle" font-size="14" font-family="Arial" font-weight="bold" fill="#000">20%</text>
+<path d="M130,125 L229.9,92.6 A105,105 0 0 1 30.1,157.4 Z" fill="#d0d0d0" stroke="#000" stroke-width="1.8"/>
+<rect x="127.5" y="171.9" width="44" height="20" rx="3" fill="#fff" stroke="#000" stroke-width="0.8"/>
+<text x="149.5" y="186.9" text-anchor="middle" font-size="14" font-family="Arial" font-weight="bold" fill="#000">50%</text>
+<path d="M130,125 L30.1,157.4 A105,105 0 0 1 30.1,92.6 Z" fill="#404040" stroke="#000" stroke-width="1.8"/>
+<rect x="45.0" y="112.0" width="44" height="20" rx="3" fill="#fff" stroke="#000" stroke-width="0.8"/>
+<text x="67.0" y="127.0" text-anchor="middle" font-size="14" font-family="Arial" font-weight="bold" fill="#000">10%</text>
+<path d="M130,125 L30.1,92.6 A105,105 0 0 1 130.0,20.0 Z" fill="#8c8c8c" stroke="#000" stroke-width="1.8"/>
+<rect x="71.0" y="61.0" width="44" height="20" rx="3" fill="#fff" stroke="#000" stroke-width="0.8"/>
+<text x="93.0" y="76.0" text-anchor="middle" font-size="14" font-family="Arial" font-weight="bold" fill="#000">20%</text>
+<rect x="275" y="55" width="24" height="20" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+<text x="309.0" y="71.0" text-anchor="start" font-size="16" font-family="Arial" fill="#000">Xôi</text>
+<rect x="275" y="89" width="24" height="20" fill="#d0d0d0" stroke="#000" stroke-width="1.2"/>
+<text x="309.0" y="105.0" text-anchor="start" font-size="16" font-family="Arial" fill="#000">Bánh mì</text>
+<rect x="275" y="123" width="24" height="20" fill="#404040" stroke="#000" stroke-width="1.2"/>
+<text x="309.0" y="139.0" text-anchor="start" font-size="16" font-family="Arial" fill="#000">Bún cá</text>
+<rect x="275" y="157" width="24" height="20" fill="#8c8c8c" stroke="#000" stroke-width="1.2"/>
+<text x="309.0" y="173.0" text-anchor="start" font-size="16" font-family="Arial" fill="#000">Phở bò</text>
+<text x="210.0" y="258.0" text-anchor="middle" font-size="14" font-family="Arial" font-weight="bold" fill="#000">Tỉ lệ các món ăn sáng yêu thích của học sinh khối 7</text>
+</svg>

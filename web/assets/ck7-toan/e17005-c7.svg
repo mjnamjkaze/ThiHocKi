@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+<line x1="20.2" y1="7.6" x2="279.8" y2="112.4" stroke="#000" stroke-width="2"/>
+<line x1="20.2" y1="112.4" x2="279.8" y2="7.6" stroke="#000" stroke-width="2"/>
+<circle cx="150.0" cy="60.0" r="3" fill="#000"/>
+<text x="124.0" y="65.0" text-anchor="middle" font-size="15" font-family="Arial" font-style="italic" fill="#000">2</text>
+<text x="176.0" y="65.0" text-anchor="middle" font-size="15" font-family="Arial" font-style="italic" fill="#000">1</text>
+<text x="150.0" y="86.0" text-anchor="middle" font-size="15" font-family="Arial" fill="#000">O</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 150" width="340" height="150">
+<line x1="20.0" y1="120.0" x2="320.0" y2="120.0" stroke="#000" stroke-width="2"/>
+<line x1="170.0" y1="120.0" x2="151.8" y2="16.6" stroke="#000" stroke-width="2"/>
+<circle cx="170.0" cy="120.0" r="3" fill="#000"/>
+<path d="M190.0,120.0 A20,20 0 0 0 166.5,100.3" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="24.0" y="142.0" text-anchor="middle" font-size="16" font-family="Arial" font-style="italic" fill="#000">x</text>
+<text x="316.0" y="142.0" text-anchor="middle" font-size="16" font-family="Arial" font-style="italic" fill="#000">z</text>
+<text x="141.8" y="20.6" text-anchor="middle" font-size="16" font-family="Arial" font-style="italic" fill="#000">y</text>
+<text x="170.0" y="142.0" text-anchor="middle" font-size="15" font-family="Arial" fill="#000">O</text>
+<text x="202.2" y="93.0" text-anchor="middle" font-size="14" font-family="Arial" fill="#000">100°</text>
+</svg>

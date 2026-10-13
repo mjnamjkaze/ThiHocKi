@@ -1,4 +1,4 @@
-# Ôn Thi Học Kì — Đề thi cuối kì 1, cuối kì 2 lớp 1–6 có đáp án, luyện online miễn phí
+# Ôn Thi Học Kì — Đề thi cuối kì 1, cuối kì 2 lớp 1–7 có đáp án, luyện online miễn phí
 
 **Ôn Thi Học Kì** là web luyện đề và in đề thi học kì **miễn phí** cho học sinh tiểu học và THCS. Web có **1 496 đề với 18 518 câu hỏi** các môn Toán, Tiếng Việt, Tiếng Anh, Khoa học, Lịch sử & Địa lí, TN&XH, Đạo đức, Tin học & Công nghệ và KHTN. Trong đó có **139 đề kiểm tra cuối kì thật của các trường tiểu học** trên cả nước. Học sinh làm bài ngay trên điện thoại hoặc máy tính và được chấm điểm tức thì, kèm lời giải chi tiết từng câu. Phụ huynh in được đề ra PDF đúng như đề giấy.
 
@@ -27,7 +27,8 @@ Không cần tạo tài khoản, không cần mật khẩu, không quảng cáo:
 | **Lớp 3** | 269 | **Toán cuối kì (25 đề)**, **Tiếng Việt cuối kì (23 đề)**, Toán tư duy, Toán nâng cao, Tiếng Việt đọc hiểu, Tiếng Anh, TN&XH, Đạo đức, Tin học & Công nghệ |
 | **Lớp 4** | 248 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
 | **Lớp 5** | 246 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
-| **Lớp 6** | 150 | Toán 6, Khoa học tự nhiên 6, Tiếng Anh 6: mỗi đề 30 câu theo ma trận nhận biết, thông hiểu, vận dụng, nâng cao |
+| **Lớp 6** | 155 | **Tiếng Anh cuối kì (5 đề thật các trường)**, Toán 6, Khoa học tự nhiên 6, Tiếng Anh 6: mỗi đề 30 câu theo ma trận nhận biết, thông hiểu, vận dụng, nâng cao |
+| **Lớp 7** | 10 | **Toán cuối kì (5 đề)**, **Ngữ văn cuối kì (5 đề)**: đề kiểm tra cuối học kì I thật của các trường THCS |
 
 Kho đề được bổ sung thường xuyên. Mỗi đợt cập nhật được ghi ở mục [Releases](../../releases).
 
@@ -50,6 +51,6 @@ Chọn đề rồi bấm **In đề**, sau đó chọn "Lưu dưới dạng PDF"
 
 ---
 
-**Từ khoá:** đề thi cuối kì 1 lớp 2, đề thi cuối kì 2 lớp 3, đề thi học kì 1 toán lớp 4, đề thi học kì 2 tiếng việt lớp 5, đề kiểm tra cuối học kì có đáp án, đề thi toán tiểu học, đề thi tiếng việt tiểu học, luyện thi trắc nghiệm online, in đề thi PDF, Kết nối tri thức, Chân trời sáng tạo, Cánh diều, toán tư duy, toán nâng cao, ôn thi học kì.
+**Từ khoá:** đề thi cuối kì 1 lớp 2, đề thi cuối kì 2 lớp 3, đề thi học kì 1 toán lớp 4, đề thi học kì 2 tiếng việt lớp 5, đề thi cuối kì 1 toán 7, đề thi cuối kì 1 ngữ văn 7, đề thi học kì 1 tiếng anh 6, đề kiểm tra cuối học kì có đáp án, đề thi toán tiểu học, đề thi tiếng việt tiểu học, luyện thi trắc nghiệm online, in đề thi PDF, Kết nối tri thức, Chân trời sáng tạo, Cánh diều, toán tư duy, toán nâng cao, ôn thi học kì.
 
 <sub>Repo này chứa bản web đã build và được đồng bộ tự động. Web chạy trên GitHub Pages.</sub>
