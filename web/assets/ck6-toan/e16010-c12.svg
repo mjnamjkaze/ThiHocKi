@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 120" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<polygon points="20,15 120,95 245,100"/>
+<g fill="#000" stroke="none" font-style="italic">
+<circle cx="20" cy="15" r="2.5"/><circle cx="120" cy="95" r="2.5"/><circle cx="245" cy="100" r="2.5"/>
+<text x="8" y="12">A</text><text x="120" y="112" text-anchor="middle">C</text><text x="254" y="112">B</text>
+</g>
+</svg>

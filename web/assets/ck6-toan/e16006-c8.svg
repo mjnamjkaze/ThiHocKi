@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<line x1="12" y1="30" x2="248" y2="30"/>
+<g fill="#000" stroke="none">
+<circle cx="30" cy="30" r="2.5"/><circle cx="90" cy="30" r="2.5"/><circle cx="170" cy="30" r="2.5"/><circle cx="230" cy="30" r="2.5"/>
+<text x="30" y="20" text-anchor="middle" font-style="italic">I</text>
+<text x="90" y="20" text-anchor="middle" font-style="italic">J</text>
+<text x="170" y="20" text-anchor="middle" font-style="italic">K</text>
+<text x="230" y="20" text-anchor="middle" font-style="italic">L</text>
+</g>
+</svg>

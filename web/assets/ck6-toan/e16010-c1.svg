@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 125" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<g stroke="#d52b1e" stroke-width="9" fill="#ffe000" stroke-linejoin="round">
+<polygon points="60,12 12,92 108,92"/><polygon points="190,12 142,92 238,92"/>
+<polygon points="320,12 272,92 368,92"/><polygon points="450,12 402,92 498,92"/>
+</g>
+<g stroke="#000" stroke-width="6" fill="none" stroke-linecap="round">
+<polyline points="48,80 54,58 48,40"/><polyline points="72,80 66,58 72,40"/>
+<polyline points="178,80 184,58 178,40"/><polyline points="202,80 196,58 202,40"/>
+<line x1="308" y1="80" x2="308" y2="40"/><polyline points="332,80 326,58 332,40"/>
+<line x1="438" y1="80" x2="438" y2="40"/><line x1="462" y1="40" x2="462" y2="80"/>
+</g>
+<g fill="#000" stroke="none" font-size="13" text-anchor="middle">
+<text x="60" y="118">Hình 1</text><text x="190" y="118">Hình 2</text>
+<text x="320" y="118">Hình 3</text><text x="450" y="118">Hình 4</text>
+</g>
+</svg>

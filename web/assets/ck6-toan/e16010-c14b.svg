@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 150" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<line x1="75" y1="130" x2="15" y2="63"/>
+<line x1="75" y1="130" x2="140" y2="42"/>
+<line x1="75" y1="130" x2="215" y2="130"/>
+<g fill="#000" stroke="none"><circle cx="75" cy="130" r="2.5"/><circle cx="15" cy="63" r="2.5"/><circle cx="140" cy="42" r="2.5"/>
+<circle cx="202" cy="130" r="2.5"/><circle cx="70" cy="70" r="2.5"/><circle cx="158" cy="95" r="2.5"/></g>
+<g fill="#000" stroke="none" font-style="italic">
+<text x="70" y="146">A</text><text x="2" y="58">B</text><text x="146" y="40">C</text><text x="202" y="146">D</text>
+<text x="74" y="66">N</text><text x="164" y="98">M</text>
+</g>
+</svg>

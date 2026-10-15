@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<line x1="10" y1="40" x2="310" y2="40"/>
+<g fill="#000" stroke="none" font-style="italic">
+<circle cx="60" cy="40" r="2.5"/><circle cx="120" cy="40" r="2.5"/><circle cx="190" cy="40" r="2.5"/><circle cx="270" cy="40" r="2.5"/>
+<text x="60" y="30" text-anchor="middle">A</text><text x="120" y="30" text-anchor="middle">B</text>
+<text x="190" y="30" text-anchor="middle">C</text><text x="270" y="30" text-anchor="middle">E</text>
+<text x="10" y="60">d</text>
+</g>
+</svg>

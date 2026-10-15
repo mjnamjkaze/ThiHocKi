@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 310" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.5">
+<line x1="60" y1="260" x2="400" y2="260"/><line x1="60" y1="260" x2="60" y2="40"/>
+<line x1="56" y1="260" x2="60" y2="260"/><text x="52" y="264" text-anchor="end" stroke="none" fill="#000" font-size="11">0</text><line x1="56" y1="220" x2="60" y2="220"/><text x="52" y="224" text-anchor="end" stroke="none" fill="#000" font-size="11">20</text><line x1="56" y1="180" x2="60" y2="180"/><text x="52" y="184" text-anchor="end" stroke="none" fill="#000" font-size="11">40</text><line x1="56" y1="140" x2="60" y2="140"/><text x="52" y="144" text-anchor="end" stroke="none" fill="#000" font-size="11">60</text><line x1="56" y1="100" x2="60" y2="100"/><text x="52" y="104" text-anchor="end" stroke="none" fill="#000" font-size="11">80</text><line x1="56" y1="60" x2="60" y2="60"/><text x="52" y="64" text-anchor="end" stroke="none" fill="#000" font-size="11">100</text>
+<g stroke-width="1.2"><rect x="90" y="200" width="30" height="60" fill="none"/><rect x="122" y="166" width="30" height="94" fill="#2a8a2a"/><rect x="210" y="176" width="30" height="84" fill="none"/><rect x="242" y="118" width="30" height="142" fill="#2a8a2a"/><rect x="330" y="154" width="30" height="106" fill="none"/><rect x="362" y="84" width="30" height="176" fill="#2a8a2a"/></g>
+<g fill="#000" stroke="none" font-size="11"><text x="121" y="278" text-anchor="middle">Cửa hàng 1</text><text x="105" y="194" text-anchor="middle">30</text><text x="137" y="160" text-anchor="middle">47</text><text x="241" y="278" text-anchor="middle">Cửa hàng 2</text><text x="225" y="170" text-anchor="middle">42</text><text x="257" y="112" text-anchor="middle">71</text><text x="361" y="278" text-anchor="middle">Cửa hàng 3</text><text x="345" y="148" text-anchor="middle">53</text><text x="377" y="78" text-anchor="middle">88</text>
+<text x="66" y="34" font-style="italic">Số tivi bán được</text>
+<text x="398" y="290" font-style="italic" text-anchor="end">Cửa hàng</text>
+</g>
+<rect x="130" y="296" width="10" height="8" fill="#fff" stroke="#000" stroke-width="1"/>
+<text x="145" y="304" font-size="11" stroke="none" fill="#000">Tháng 5</text>
+<rect x="215" y="296" width="10" height="8" fill="#2a8a2a" stroke="none"/>
+<text x="230" y="304" font-size="11" stroke="none" fill="#000">Tháng 6</text>
+</svg>
