@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" font-family="Arial" font-size="14">
+  <polygon points="40,260 320,260 320,204 110,204 110,64 40,64" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="22" y="62">F</text>
+  <text x="116" y="58">E</text>
+  <text x="96" y="198">D</text>
+  <text x="326" y="200">C</text>
+  <text x="326" y="276">B</text>
+  <text x="22" y="276">A</text>
+  <text x="66" y="56">5m</text>
+  <text x="8" y="166">14m</text>
+  <text x="330" y="236">4m</text>
+  <text x="166" y="290">20m</text>
+</svg>

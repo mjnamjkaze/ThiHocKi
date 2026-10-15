@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" font-family="Arial" font-size="12" fill="none" stroke="#000" stroke-width="1.2">
+  <path d="M100 100 L100 15 A85 85 0 0 1 126.3 180.8 Z"/>
+  <path d="M100 100 L126.3 180.8 A85 85 0 0 1 31.2 50 Z"/>
+  <path d="M100 100 L31.2 50 A85 85 0 0 1 100 15 Z"/>
+  <g fill="#000" stroke="none" text-anchor="middle">
+    <text x="150" y="96">Đạt</text><text x="150" y="110">45%</text>
+    <text x="62" y="146">Khá</text><text x="62" y="160">40%</text>
+    <text x="62" y="62">Giỏi</text><text x="62" y="76">15%</text>
+  </g>
+</svg>

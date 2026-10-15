@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" font-family="Arial" font-size="14">
+  <polygon points="76,20 20,212 76,212" fill="#b07aa1" fill-opacity="0.85"/>
+  <polygon points="316,20 316,212 372,212" fill="#c98a80" fill-opacity="0.85"/>
+  <polygon points="20,212 76,20 316,20 372,212" fill="none" stroke="#000" stroke-width="2"/>
+  <line x1="76" y1="212" x2="316" y2="212" stroke="#000" stroke-width="2"/>
+  <line x1="76" y1="20" x2="76" y2="212" stroke="#000" stroke-width="2"/>
+  <line x1="316" y1="20" x2="316" y2="212" stroke="#000" stroke-width="2"/>
+  <text x="60" y="14">A</text>
+  <text x="322" y="14">B</text>
+  <text x="66" y="234">D</text>
+  <text x="312" y="234">C</text>
+  <text x="374" y="234">E</text>
+  <text x="6" y="234">F</text>
+  <text x="180" y="12">30m</text>
+  <text x="292" y="120">24m</text>
+</svg>

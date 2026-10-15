@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 160" font-family="Arial" font-size="13" fill="none" stroke="#000" stroke-width="1.2">
+  <path d="M70 20 L20 130 L200 130 Z"/>
+  <line x1="110" y1="8" x2="110" y2="150"/>
+  <path d="M104 130 L104 124 L110 124" stroke-width="1"/>
+  <path d="M65 125 L65 135 M155 125 L155 135" stroke-width="1"/>
+  <g fill="#000" stroke="none">
+    <text x="62" y="14">B</text>
+    <text x="6" y="146">A</text>
+    <text x="204" y="146">C</text>
+    <text x="116" y="16">d</text>
+  </g>
+</svg>

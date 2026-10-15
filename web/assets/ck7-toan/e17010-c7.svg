@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" font-family="Arial" font-size="13" fill="none" stroke="#000" stroke-width="1.2">
+  <line x1="5" y1="135" x2="290" y2="135"/>
+  <path d="M88 15 L63 135"/>
+  <path d="M88 15 L135 135"/>
+  <path d="M88 15 L210 135"/>
+  <path d="M88 15 L88 135" stroke-dasharray="3 3"/>
+  <g fill="#000" stroke="none">
+    <text x="84" y="10">A</text>
+    <text x="48" y="150">D</text>
+    <text x="94" y="150">H</text>
+    <text x="130" y="150">B</text>
+    <text x="206" y="150">C</text>
+    <text x="268" y="128">d</text>
+  </g>
+</svg>

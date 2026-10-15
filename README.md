@@ -27,8 +27,8 @@ Không cần tạo tài khoản, không cần mật khẩu, không quảng cáo:
 | **Lớp 3** | 269 | **Toán cuối kì (25 đề)**, **Tiếng Việt cuối kì (23 đề)**, Toán tư duy, Toán nâng cao, Tiếng Việt đọc hiểu, Tiếng Anh, TN&XH, Đạo đức, Tin học & Công nghệ |
 | **Lớp 4** | 248 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
 | **Lớp 5** | 246 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
-| **Lớp 6** | 155 | **Tiếng Anh cuối kì (5 đề thật các trường)**, Toán 6, Khoa học tự nhiên 6, Tiếng Anh 6: mỗi đề 30 câu theo ma trận nhận biết, thông hiểu, vận dụng, nâng cao |
-| **Lớp 7** | 10 | **Toán cuối kì (5 đề)**, **Ngữ văn cuối kì (5 đề)**: đề kiểm tra cuối học kì I thật của các trường THCS |
+| **Lớp 6** | 160 | **Toán cuối kì (5 đề thật các trường)**, **Tiếng Anh cuối kì (5 đề thật các trường)**, Toán 6, Khoa học tự nhiên 6, Tiếng Anh 6: mỗi đề 30 câu theo ma trận nhận biết, thông hiểu, vận dụng, nâng cao |
+| **Lớp 7** | 15 | **Toán cuối kì (10 đề)**, **Ngữ văn cuối kì (5 đề)**: đề kiểm tra cuối học kì I thật của các trường THCS |
 
 Kho đề được bổ sung thường xuyên. Mỗi đợt cập nhật được ghi ở mục [Releases](../../releases).
 

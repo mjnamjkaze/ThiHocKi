@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 280" font-family="Arial" font-size="13" fill="none" stroke="#000" stroke-width="1.2">
+  <path d="M40 240 L260 240 L150 40 Z"/>
+  <path d="M150 40 L150 240" stroke-dasharray="4 3"/>
+  <path d="M40 240 L205 140"/>
+  <path d="M260 240 L95 140"/>
+  <g fill="#000" stroke="none">
+    <text x="144" y="28">E</text>
+    <text x="22" y="258">D</text>
+    <text x="268" y="258">F</text>
+    <text x="144" y="262">M</text>
+    <text x="70" y="140">N</text>
+    <text x="160" y="180">G</text>
+  </g>
+</svg>

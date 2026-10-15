@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="Arial" font-size="14" fill="none" stroke="#000" stroke-width="1.2">
+  <path d="M100 260 L300 260 L200 40 Z"/>
+  <line x1="200" y1="40" x2="200" y2="260" stroke-dasharray="4 3"/>
+  <path d="M100 260 L300 113.3"/>
+  <path d="M300 113.3 L300 260"/>
+  <path d="M300 260 L200 186.7"/>
+  <path d="M300 113.3 L200 260"/>
+  <g fill="#000" stroke="none">
+    <text x="192" y="30">A</text>
+    <text x="80" y="268">B</text>
+    <text x="304" y="268">C</text>
+    <text x="193" y="278">H</text>
+    <text x="254" y="146">N</text>
+    <text x="134" y="146">M</text>
+    <text x="180" y="184">G</text>
+    <text x="308" y="118">K</text>
+    <text x="236" y="222">I</text>
+  </g>
+</svg>

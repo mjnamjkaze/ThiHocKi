@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 180" font-family="Arial" font-size="13" fill="none" stroke="#000" stroke-width="1.2">
+  <path d="M20 150 L200 150 L70 20 Z"/>
+  <path d="M70 20 L70 150"/>
+  <path d="M20 150 L126.7 76.7"/>
+  <path d="M62 150 L62 142 L70 142" stroke-width="1"/>
+  <g fill="#000" stroke="none">
+    <text x="76" y="14">A</text>
+    <text x="6" y="164">B</text>
+    <text x="50" y="170">M</text>
+    <text x="204" y="164">C</text>
+    <text x="134" y="74">I</text>
+  </g>
+</svg>

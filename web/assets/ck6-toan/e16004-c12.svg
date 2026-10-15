@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 130" font-family="Arial" font-size="12">
+  <g fill="none" stroke="#000" stroke-width="2">
+    <g transform="translate(0,0)">
+      <polygon points="60,10 115,100 5,100"/>
+      <text x="30" y="122">Tam giác đều</text>
+    </g>
+    <g transform="translate(150,0)">
+      <line x1="25" y1="15" x2="95" y2="85" stroke-width="9" stroke-linecap="round"/>
+      <line x1="95" y1="15" x2="25" y2="85" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="60" cy="50" r="8" fill="#fff"/>
+      <text x="30" y="122">Cánh quạt</text>
+    </g>
+    <g transform="translate(300,0)">
+      <path d="M60,95 C20,65 5,45 15,25 C25,5 50,5 60,25 C70,5 95,5 105,25 C115,45 100,65 60,95 Z"/>
+      <text x="36" y="122">Trái tim</text>
+    </g>
+    <g transform="translate(450,0)">
+      <polygon points="60,8 108,48 60,100 18,40"/>
+      <text x="30" y="122">Cánh diều</text>
+    </g>
+  </g>
+</svg>
