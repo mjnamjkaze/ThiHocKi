@@ -23,7 +23,7 @@ Không cần tạo tài khoản, không cần mật khẩu, không quảng cáo:
 | Lớp | Số đề | Môn học |
 |---|---:|---|
 | **Lớp 1** | 150 | Toán, Tiếng Việt, Tiếng Anh, Toán tư duy, Tự nhiên & Xã hội |
-| **Lớp 2** | 433 | **Toán cuối kì (63 đề)**, **Tiếng Việt cuối kì (43 đề)**, Toán tư duy, Toán nâng cao, Tiếng Việt đọc hiểu, Tiếng Anh, TN&XH, VioEdu |
+| **Lớp 2** | 438 | **Toán cuối kì (63 đề)**, **Tiếng Việt cuối kì (43 đề)**, Toán tư duy, Toán tư duy tổng hợp, Toán nâng cao, Tiếng Việt đọc hiểu, Tiếng Anh, TN&XH, VioEdu |
 | **Lớp 3** | 269 | **Toán cuối kì (25 đề)**, **Tiếng Việt cuối kì (23 đề)**, Toán tư duy, Toán nâng cao, Tiếng Việt đọc hiểu, Tiếng Anh, TN&XH, Đạo đức, Tin học & Công nghệ |
 | **Lớp 4** | 248 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
 | **Lớp 5** | 246 | **Toán cuối kì (33 đề)**, **Tiếng Việt cuối kì**, Tiếng Việt, Toán tư duy, Toán nâng cao, Khoa học, Lịch sử & Địa lí, Tiếng Anh, Đạo đức, Tin học & Công nghệ |
